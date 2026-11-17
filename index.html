@@ -479,10 +479,9 @@
                     }
                 ],
                 docs: [
-                    { title: 'Đề cương ôn tập Giữa Học kỳ I - Toán 8 (GDPT 2018)', type: 'PDF • Đề cương', pages: '14 trang', size: '1.8 MB' },
-                    { title: 'Tuyển tập 50 bài tập Hằng đẳng thức & Phân tích đa thức', type: 'PDF • Phiếu bài tập', pages: '10 trang', size: '1.2 MB' },
-                    { title: 'Sơ đồ tư duy Hình học 8: Tứ giác & Định lý Thalès', type: 'PDF • Sơ đồ', pages: '04 trang', size: '2.1 MB' },
-                    { title: 'Bộ đề ôn tập Cuối Học kỳ II Toán 8 (Có lời giải chi tiết)', type: 'PDF • Đề thi', pages: '12 trang', size: '1.5 MB' }
+                    { title: 'Bảng hệ thống công thức tính toán KHTN 8 (Lý - Hóa)', type: 'PDF • Công thức', pages: '08 trang', size: '1.1 MB', url: '' },
+                    { title: 'Chuyên đề Acid - Base - Oxide - Muối và cách gọi tên IUPAC', type: 'PDF • Chuyên đề', pages: '16 trang', size: '1.9 MB', url: '' },
+                    { title: 'Đề cương ôn tập Học kỳ I & II KHTN 8 (Đủ 3 phân môn)', type: 'PDF • Đề cương', pages: '18 trang', size: '2.2 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'toan-c1', name: 'Chương 1: Đa thức nhiều biến' },
@@ -2465,6 +2464,20 @@
             const sub = SUBJECTS.find(s => s.id === subId);
             if (!sub || !sub.docs[docIdx]) return;
             const doc = sub.docs[docIdx];
+
+            // Nếu đã gắn đường dẫn file PDF thật (GitHub hoặc Google Drive), mở/tải trực tiếp file đó
+            if (doc.url && doc.url.trim() !== '') {
+                const a = document.createElement('a');
+                a.href = doc.url.trim();
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.download = '';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                showToast(`📥 Đang mở/tải file PDF: "${doc.title}"`);
+                return;
+            }
 
             const lines = [
                 `============================================================`,
