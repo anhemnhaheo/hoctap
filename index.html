@@ -1883,20 +1883,41 @@
             currentView: 'home',       // 'home' hoặc id môn học
             currentTab: 'theory',      // 'theory' | 'docs' | 'quiz'
             selectedQuizTopic: {},     // { [subjectId]: 'all' | topicId }
-            shuffleQuizOptions: {},    // { [subjectId]: boolean }
-            quizOptionMaps: {},        // { [subjectId]: { [globalQIndex]: [0,1,2,3] } }
+            quizQuestionOrders: {},    // { [subjectId]: [globalQIndex, ...] } - Thứ tự câu hỏi đã xáo trộn
+            quizOptionMaps: {},        // { [subjectId]: { [globalQIndex]: [0,1,2,3] } } - Thứ tự đáp án đã xáo trộn
             quizAnswers: {},           // { [subjectId]: { [globalQIndex]: originalOptionIndex } }
             quizSubmitted: {},         // { [subjectId]: boolean }
             expandedTheory: {}         // { [theoryId]: boolean }
         };
 
-        // Mặc định mở sẵn thẻ Chương 1 và chọn 'all' cho chuyên đề trắc nghiệm của mỗi môn
+        function fisherYatesShuffle(arr) {
+            const copy = [...arr];
+            for (let i = copy.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [copy[i], copy[j]] = [copy[j], copy[i]];
+            }
+            return copy;
+        }
+
+        // Khởi tạo hoặc xáo trộn lại cả thứ tự câu hỏi lẫn thứ tự đáp án A, B, C, D cho một môn
+        function randomizeSubjectQuizOrder(subId) {
+            const sub = SUBJECTS.find(s => s.id === subId);
+            if (!sub) return;
+            const indices = sub.quiz.map((_, idx) => idx);
+            appState.quizQuestionOrders[subId] = fisherYatesShuffle(indices);
+            appState.quizOptionMaps[subId] = {};
+            sub.quiz.forEach((_, idx) => {
+                appState.quizOptionMaps[subId][idx] = fisherYatesShuffle([0, 1, 2, 3]);
+            });
+        }
+
+        // Mặc định mở sẵn thẻ Chương 1, chọn 'all' và xáo trộn sẵn câu hỏi + đáp án cho mỗi môn
         SUBJECTS.forEach(s => {
             if (s.theory.length > 0) {
                 appState.expandedTheory[s.theory[0].id] = true;
             }
             appState.selectedQuizTopic[s.id] = 'all';
-            appState.shuffleQuizOptions[s.id] = false;
+            randomizeSubjectQuizOrder(s.id);
         });
 
         function fisherYatesShuffle(arr) {
@@ -1945,8 +1966,11 @@
                 appState.currentTab = tabId;
                 if (tabId === 'theory' && targetId) {
                     appState.expandedTheory[targetId] = true;
-                } else if (tabId === 'quiz' && targetId) {
-                    appState.selectedQuizTopic[viewId] = targetId;
+                } else if (tabId === 'quiz') {
+                    if (targetId) appState.selectedQuizTopic[viewId] = targetId;
+                    if (!appState.quizSubmitted[viewId]) {
+                        randomizeSubjectQuizOrder(viewId);
+                    }
                 }
             }
             hideAllSearchDropdowns();
@@ -1959,6 +1983,8 @@
             appState.currentView = subId;
             appState.currentTab = 'quiz';
             appState.selectedQuizTopic[subId] = quizTopicId || 'all';
+            appState.quizSubmitted[subId] = false;
+            randomizeSubjectQuizOrder(subId);
             renderNavigation();
             renderContent();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1966,6 +1992,12 @@
 
         function switchSubjectTab(tabId) {
             appState.currentTab = tabId;
+            if (tabId === 'quiz' && appState.currentView !== 'home') {
+                const subId = appState.currentView;
+                if (!appState.quizSubmitted[subId]) {
+                    randomizeSubjectQuizOrder(subId);
+                }
+            }
             renderContent();
         }
 
@@ -2461,31 +2493,33 @@
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
-
-            showToast(`📥 Đang tải xuống "${doc.title}"!`);
+            showToast(`📥 Đang tải xuống tài liệu: "${doc.title}"`);
         }
 
-        // TAB 3: LUYỆN TẬP TRẮC NGHIỆM (CHỌN TỪNG NỘI DUNG + XÁO TRỘN ĐÁP ÁN + CHẤM ĐIỂM THANG 10)
+        // TAB 3: LUYỆN TẬP TRẮC NGHIỆM (CHỌN TỪNG CHƯƠNG + TỰ ĐỘNG XÁO TRỘN CÂU HỎI & ĐÁP ÁN + CHẤM ĐIỂM THANG 10)
         function renderQuizTab(sub) {
             const activeTopic = appState.selectedQuizTopic[sub.id] || 'all';
-            const isShuffled = !!appState.shuffleQuizOptions[sub.id];
             const subAnswers = appState.quizAnswers[sub.id] || {};
             const isSubmitted = !!appState.quizSubmitted[sub.id];
 
-            // Đảm bảo có bản đồ thứ tự đáp án cho từng câu hỏi của môn
+            // Đảm bảo luôn có thứ tự câu hỏi & bản đồ thứ tự đáp án đã xáo trộn cho môn học
+            if (!appState.quizQuestionOrders[sub.id] || appState.quizQuestionOrders[sub.id].length !== sub.quiz.length) {
+                randomizeSubjectQuizOrder(sub.id);
+            }
             if (!appState.quizOptionMaps[sub.id]) {
                 appState.quizOptionMaps[sub.id] = {};
             }
             sub.quiz.forEach((_, idx) => {
                 if (!appState.quizOptionMaps[sub.id][idx]) {
-                    appState.quizOptionMaps[sub.id][idx] = [0, 1, 2, 3];
+                    appState.quizOptionMaps[sub.id][idx] = fisherYatesShuffle([0, 1, 2, 3]);
                 }
             });
 
-            // Lọc danh sách câu hỏi theo nội dung đang chọn (giữ nguyên globalIndex để lưu đáp án không bị lệch)
-            const filteredItems = sub.quiz
-                .map((qObj, globalIdx) => ({ qObj, globalIdx }))
-                .filter(item => activeTopic === 'all' || item.qObj.topicId === activeTopic);
+            // Lấy danh sách câu hỏi theo thứ tự đã xáo trộn, sau đó lọc theo chương đang chọn
+            const shuffledOrder = appState.quizQuestionOrders[sub.id];
+            const filteredItems = shuffledOrder
+                .map(globalIdx => ({ qObj: sub.quiz[globalIdx], globalIdx }))
+                .filter(item => item.qObj && (activeTopic === 'all' || item.qObj.topicId === activeTopic));
 
             const totalQ = filteredItems.length;
             const answeredCount = filteredItems.filter(item => subAnswers[item.globalIdx] !== undefined).length;
@@ -2504,20 +2538,25 @@
 
             return `
                 <div class="space-y-5">
-                    <!-- BỘ CHỌN CHƯƠNG TRẮC NGHIỆM (ĐỒNG BỘ THEO TỪNG CHƯƠNG LÝ THUYẾT) + NÚT XÁO TRỘN ĐÁP ÁN -->
+                    <!-- BỘ CHỌN CHƯƠNG TRẮC NGHIỆM (ĐỒNG BỘ THEO TỪNG CHƯƠNG LÝ THUYẾT) + NÚT XÁO TRỘN NGẪU NHIÊN -->
                     <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm space-y-3.5">
                         <div class="flex flex-wrap items-center justify-between gap-2">
-                            <span class="text-xs sm:text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
-                                <span>📚 Chọn Chương luyện tập (đồng bộ theo Tóm tắt lý thuyết):</span>
-                            </span>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="text-xs sm:text-sm font-extrabold text-slate-800">
+                                    📚 Chọn Chương luyện tập:
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                                    🔀 Tự động xáo trộn câu hỏi &amp; đáp án
+                                </span>
+                            </div>
                             <div class="flex flex-wrap items-center gap-2">
                                 <button type="button" onclick="openQuizManagerModal('import', '${sub.id}')"
                                     class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border border-teal-200 bg-teal-50 hover:bg-teal-100 text-teal-800 transition-all">
                                     <span>📥 Nhập thêm câu hỏi (Excel/JSON)</span>
                                 </button>
-                                <button type="button" onclick="toggleShuffleSubjectOptions('${sub.id}')"
-                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border transition-all ${isShuffled ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'}">
-                                    <span>🔀 ${isShuffled ? 'Đang xáo trộn đáp án' : 'Xáo trộn đáp án'}</span>
+                                <button type="button" onclick="reshuffleSubjectQuiz('${sub.id}')"
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border bg-indigo-600 hover:bg-indigo-700 text-white border-indigo-600 shadow-sm transition-all active:scale-95">
+                                    <span>🔀 Đảo đề &amp; đáp án mới</span>
                                 </button>
                             </div>
                         </div>
@@ -2700,26 +2739,19 @@
         function selectQuizTopicFilter(subId, topicId) {
             appState.selectedQuizTopic[subId] = topicId;
             appState.quizSubmitted[subId] = false;
+            randomizeSubjectQuizOrder(subId);
             renderContent();
         }
 
-        function toggleShuffleSubjectOptions(subId) {
-            const sub = SUBJECTS.find(s => s.id === subId);
-            if (!sub) return;
-            const nextState = !appState.shuffleQuizOptions[subId];
-            appState.shuffleQuizOptions[subId] = nextState;
-
-            if (!appState.quizOptionMaps[subId]) {
-                appState.quizOptionMaps[subId] = {};
+        function reshuffleSubjectQuiz(subId) {
+            if (appState.quizSubmitted[subId]) {
+                resetSubjectQuiz(subId);
+                showToast('🔀 Đã làm mới bài và xáo trộn ngẫu nhiên thứ tự câu hỏi cùng đáp án A, B, C, D!');
+                return;
             }
-            sub.quiz.forEach((_, idx) => {
-                appState.quizOptionMaps[subId][idx] = nextState
-                    ? fisherYatesShuffle([0, 1, 2, 3])
-                    : [0, 1, 2, 3];
-            });
-
+            randomizeSubjectQuizOrder(subId);
             renderContent();
-            showToast(nextState ? '🔀 Đã bật xáo trộn ngẫu nhiên đáp án A, B, C, D!' : 'Đã khôi phục thứ tự đáp án gốc.');
+            showToast('🔀 Đã xáo trộn ngẫu nhiên thứ tự câu hỏi và các đáp án A, B, C, D!');
         }
 
         function selectQuizOption(subId, qIdx, origOptIdx) {
@@ -2760,12 +2792,10 @@
             sub.quiz.forEach((q, idx) => {
                 if (activeTopic === 'all' || q.topicId === activeTopic) {
                     delete appState.quizAnswers[subId][idx];
-                    if (appState.shuffleQuizOptions[subId] && appState.quizOptionMaps[subId]) {
-                        appState.quizOptionMaps[subId][idx] = fisherYatesShuffle([0, 1, 2, 3]);
-                    }
                 }
             });
             appState.quizSubmitted[subId] = false;
+            randomizeSubjectQuizOrder(subId);
             renderContent();
         }
 
@@ -3363,7 +3393,7 @@
                     appState.quizAnswers[sub.id] = {};
                     appState.quizSubmitted[sub.id] = false;
                     appState.selectedQuizTopic[sub.id] = 'all';
-                    appState.quizOptionMaps[sub.id] = {};
+                    randomizeSubjectQuizOrder(sub.id);
                 }
             });
             updateCustomQuizHeaderBadge();
@@ -3478,6 +3508,7 @@
         // Khởi chạy ứng dụng
         window.addEventListener('DOMContentLoaded', () => {
             loadCustomQuizzesFromStorage();
+            SUBJECTS.forEach(sub => randomizeSubjectQuizOrder(sub.id));
             renderNavigation();
             renderContent();
         });
