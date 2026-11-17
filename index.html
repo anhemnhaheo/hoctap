@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Tốt Lớp 8 - Cổng Học Tập Chương Trình GDPT 2018</title>
-    <!-- Google Fonts: Be Vietnam Pro & Plus Jakarta Sans -->
+    <title>HọcTốt8 - Đồng hành chinh phục kiến thức Lớp 8 (GDPT 2018)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
-                        display: ['"Plus Jakarta Sans"', '"Be Vietnam Pro"', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     colors: {
                         tealBrand: {
@@ -46,7 +44,6 @@
             color: #1e293b;
             -webkit-tap-highlight-color: transparent;
         }
-        /* Ẩn thanh cuộn nhưng vẫn cho phép cuộn ngang mượt mà trên mobile */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -79,18 +76,13 @@
     <!-- ================= TOP HEADER & NAVIGATION ================= -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <!-- Dòng trên: Logo + Nút tìm kiếm nhanh + Badge GDPT 2018 -->
             <div class="flex items-center justify-between h-16 gap-3">
                 <button onclick="navigateTo('home')" class="flex items-center gap-3 text-left group focus:outline-none">
-                    <!-- Logo biểu tượng Sách mở + Sao tri thức & Số 8 hiện đại -->
                     <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-teal-500 via-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-md shadow-teal-600/25 ring-2 ring-teal-100 group-hover:scale-105 group-hover:rotate-1 transition-all shrink-0">
                         <svg class="w-7 h-7" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Ánh sáng ngôi sao tri thức phía trên -->
                             <path d="M18 4L19.4 7.6L23 9L19.4 10.4L18 14L16.6 10.4L13 9L16.6 7.6L18 4Z" fill="#FDE047"/>
-                            <!-- Hai trang sách mở -->
                             <path d="M7 14.5C7 13.67 7.67 13 8.5 13H15.5C16.88 13 18 14.12 18 15.5V27.5C18 26.4 17.1 25.5 16 25.5H8.5C7.67 25.5 7 24.83 7 24V14.5Z" fill="white" fill-opacity="0.95"/>
                             <path d="M29 14.5C29 13.67 28.33 13 27.5 13H20.5C19.12 13 18 14.12 18 15.5V27.5C18 26.4 18.9 25.5 20 25.5H27.5C28.33 25.5 29 24.83 29 24V14.5Z" fill="#CCFBF1"/>
-                            <!-- Đường gáy sách & nét chữ trang trí -->
                             <path d="M18 15.5V27.5" stroke="#0F766E" stroke-width="1.6" stroke-linecap="round"/>
                             <path d="M10.5 17.5H14.5M10.5 21H14.5" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M21.5 17.5H25.5M21.5 21H25.5" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round"/>
@@ -101,14 +93,17 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-1.5">
-                            <span class="font-display font-extrabold text-lg sm:text-xl text-slate-800 tracking-tight">Anh em nhà Heo <span class="text-teal-600"></span></span>
+                            <span class="font-display font-extrabold text-lg sm:text-xl text-slate-800 tracking-tight">HọcTốt<span class="text-teal-600">8</span></span>
                             <span class="hidden sm:inline-block text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-200/80">GDPT 2018</span>
+                            <span id="github-sync-badge" class="hidden sm:inline-flex items-center gap-1 text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200" title="Đã tự động đồng bộ câu hỏi từ file cau_hoi_bo_sung.json trên GitHub">
+                                ☁️ Đã đồng bộ GitHub
+                            </span>
                         </div>
                         <p class="text-xs text-slate-500 hidden sm:block">Đồng hành chinh phục kiến thức Lớp 8</p>
                     </div>
                 </button>
 
-                <!-- Thanh tìm kiếm nhanh trên Header (hiện trên màn hình vừa & lớn) -->
+                <!-- Thanh tìm kiếm nhanh trên Header -->
                 <div class="relative flex-1 max-w-md hidden md:block">
                     <div class="relative">
                         <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -144,22 +139,18 @@
                 </div>
             </div>
 
-            <!-- Dòng dưới: Thanh Menu chính 8 mục (Trang chủ + 7 môn học) cuộn ngang mượt trên mobile -->
-            <nav aria-label="Menu môn học" class="flex items-center gap-1.5 py-2.5 overflow-x-auto no-scrollbar border-t border-slate-100" id="main-nav">
-                <!-- Render bằng JavaScript -->
-            </nav>
+            <!-- Thanh Menu chính 8 mục -->
+            <nav aria-label="Menu môn học" class="flex items-center gap-1.5 py-2.5 overflow-x-auto no-scrollbar border-t border-slate-100" id="main-nav"></nav>
         </div>
     </header>
 
     <!-- ================= MAIN VIEWPORT ================= -->
-    <main id="app-content" class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
-        <!-- Nội dung Trang chủ hoặc Trang môn học sẽ được render tại đây -->
-    </main>
+    <main id="app-content" class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8"></main>
 
     <!-- ================= TOAST NOTIFICATION ================= -->
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
-    <!-- ================= MODAL NHẬP / XUẤT ĐỀ (EXCEL CSV & JSON + FILE MẪU) ================= -->
+    <!-- ================= MODAL NHẬP / XUẤT ĐỀ (EXCEL CSV & JSON + ĐỒNG BỘ GITHUB) ================= -->
     <div id="quiz-manager-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-xs" onclick="closeQuizManagerModal()"></div>
         <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in">
@@ -167,10 +158,10 @@
             <div class="bg-gradient-to-r from-teal-700 via-teal-800 to-emerald-800 text-white px-5 sm:px-6 py-4 flex items-center justify-between gap-3 shrink-0">
                 <div>
                     <h3 class="font-display text-base sm:text-lg font-extrabold flex items-center gap-2">
-                        <span>📥 Quản lý &amp; Nhập/Xuất Câu Hỏi Trắc Nghiệm (Excel / JSON)</span>
+                        <span>📥 Quản lý &amp; Đồng bộ Câu Hỏi Trắc Nghiệm (Excel / JSON / GitHub)</span>
                     </h3>
                     <p id="qm-subtitle" class="text-xs text-teal-100 mt-0.5">
-                        Hỗ trợ nhập hàng loạt cho tất cả 7 môn học lớp 8 kèm tải file mẫu chuẩn
+                        Tự động đọc file <code>cau_hoi_bo_sung.json</code> từ GitHub + hỗ trợ nhập Excel (.csv)
                     </p>
                 </div>
                 <button onclick="closeQuizManagerModal()" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold flex items-center justify-center transition">
@@ -187,7 +178,7 @@
                     </button>
                     <button id="qm-tab-template" onclick="switchQmTab('template')"
                         class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-bold border-t border-x border-transparent text-slate-600 hover:text-slate-900">
-                        2. Tải File Mẫu (Template) &amp; Xuất Đề
+                        2. Xuất file GitHub &amp; File Mẫu
                     </button>
                     <button id="qm-tab-paste" onclick="switchQmTab('paste')"
                         class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-bold border-t border-x border-transparent text-slate-600 hover:text-slate-900">
@@ -197,7 +188,7 @@
 
                 <button id="qm-btn-reset-default" onclick="restoreDefaultQuizzes()"
                     class="hidden mb-1.5 px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-extrabold transition">
-                    ↺ Khôi phục đề gốc
+                    ↺ Xóa cache trình duyệt
                 </button>
             </div>
 
@@ -206,12 +197,18 @@
 
                 <!-- TAB 1: NHẬP TỪ FILE -->
                 <div id="qm-panel-import" class="space-y-4">
+                    <!-- Hướng dẫn quy trình lưu vĩnh viễn lên GitHub -->
+                    <div class="rounded-2xl bg-sky-50 border border-sky-200 p-3.5 text-xs text-sky-950 space-y-1">
+                        <p class="font-extrabold text-sky-900">☁️ Quy trình lưu vĩnh viễn cho mọi học sinh trên GitHub:</p>
+                        <p>1. Nhập file Excel (<code>.csv</code>) hoặc <code>.json</code> của bạn ở dưới đây → 2. Sang <strong>Tab 2</strong> bấm nút <strong>"Xuất file cau_hoi_bo_sung.json để up lên GitHub"</strong> → 3. Tải file đó lên kho GitHub (cùng thư mục với <code>index.html</code>). Trang web sẽ tự động nạp mỗi khi học sinh mở link!</p>
+                    </div>
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <label class="cursor-pointer rounded-2xl border-2 p-3.5 flex items-start gap-3 transition has-[:checked]:border-teal-600 has-[:checked]:bg-teal-50/60 border-slate-200 hover:border-slate-300">
                             <input type="radio" name="qmImportMode" value="append" checked class="mt-1 accent-teal-600">
                             <div>
                                 <div class="text-xs sm:text-sm font-extrabold text-slate-800">➕ Thêm nối tiếp vào bộ đề hiện có</div>
-                                <p class="text-xs text-slate-500 mt-0.5">Giữ nguyên các câu hỏi hiện tại và cộng thêm câu hỏi mới vào đúng môn học &amp; chuyên đề.</p>
+                                <p class="text-xs text-slate-500 mt-0.5">Giữ nguyên các câu hỏi hiện tại và cộng thêm câu hỏi mới vào đúng môn học &amp; chương.</p>
                             </div>
                         </label>
                         <label class="cursor-pointer rounded-2xl border-2 p-3.5 flex items-start gap-3 transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50/60 border-slate-200 hover:border-slate-300">
@@ -267,8 +264,26 @@
                     </div>
                 </div>
 
-                <!-- TAB 2: TẢI FILE MẪU (TEMPLATE) & XUẤT ĐỀ -->
+                <!-- TAB 2: XUẤT FILE ĐỒNG BỘ GITHUB & TẢI FILE MẪU -->
                 <div id="qm-panel-template" class="hidden space-y-5">
+                    <!-- Nút xuất trực tiếp file cau_hoi_bo_sung.json cho GitHub -->
+                    <div class="rounded-2xl border-2 border-emerald-400 bg-gradient-to-r from-emerald-50 to-teal-50 p-5 space-y-3">
+                        <div class="flex items-center justify-between flex-wrap gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl">☁️</span>
+                                <h4 class="font-display font-extrabold text-sm sm:text-base text-emerald-950">Xuất file đồng bộ vĩnh viễn lên GitHub</h4>
+                            </div>
+                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-bold">Khuyên dùng</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed">
+                            Sau khi nhập câu hỏi từ Excel/JSON vào web, bấm nút dưới đây để tải về tệp <strong><code>cau_hoi_bo_sung.json</code></strong> (chứa toàn bộ câu hỏi bổ sung). Bạn chỉ cần tải tệp này lên kho GitHub (cùng chỗ với <code>index.html</code>) là tất cả học sinh sẽ thấy ngay!
+                        </p>
+                        <button onclick="exportGitHubSyncJson()"
+                            class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2 transition active:scale-95">
+                            <span>⬇️ Tải file cau_hoi_bo_sung.json để up lên GitHub</span>
+                        </button>
+                    </div>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <!-- Tải Template -->
                         <div class="rounded-2xl border border-amber-200 bg-amber-50/50 p-5 space-y-3">
@@ -277,11 +292,11 @@
                                 <h4 class="font-display font-extrabold text-sm sm:text-base text-amber-950">Tải File Mẫu Chuẩn (Template)</h4>
                             </div>
                             <p class="text-xs text-slate-600 leading-relaxed">
-                                Tải file mẫu có sẵn dữ liệu ví dụ của các môn học. Bạn chỉ cần mở bằng Excel, nhập thêm các dòng câu hỏi mới, lưu lại và tải lên ở <strong>Tab 1</strong>.
+                                Tải file mẫu có sẵn dữ liệu ví dụ của các môn học. Mở bằng Excel, nhập thêm các dòng câu hỏi mới, lưu lại và tải lên ở <strong>Tab 1</strong>.
                             </p>
                             <div class="flex flex-col gap-2 pt-1">
                                 <button onclick="downloadSubjectCsvTemplate()"
-                                    class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-sm flex items-center justify-center gap-2 transition">
+                                    class="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm shadow-sm flex items-center justify-center gap-2 transition">
                                     <span>📊 Tải file Excel mẫu (.csv chuẩn UTF-8)</span>
                                 </button>
                                 <button onclick="downloadSubjectJsonTemplate()"
@@ -291,11 +306,11 @@
                             </div>
                         </div>
 
-                        <!-- Xuất Đề Hiện Tại -->
+                        <!-- Xuất Toàn Bộ Đề Hiện Tại -->
                         <div class="rounded-2xl border border-teal-200 bg-teal-50/50 p-5 space-y-3">
                             <div class="flex items-center gap-2">
                                 <span class="text-xl">💾</span>
-                                <h4 class="font-display font-extrabold text-sm sm:text-base text-teal-950">Xuất Ngân Hàng Câu Hỏi Hiện Tại</h4>
+                                <h4 class="font-display font-extrabold text-sm sm:text-base text-teal-950">Xuất Toàn Bộ Câu Hỏi Hiện Tại</h4>
                             </div>
                             <p class="text-xs text-slate-600 leading-relaxed">
                                 Xuất toàn bộ <strong id="qm-export-total">0</strong> câu hỏi trắc nghiệm đang có trên web ra file Excel (.csv) hoặc JSON (.json) để sao lưu hoặc chỉnh sửa.
@@ -323,7 +338,7 @@
                             </div>
                             <div class="bg-white p-2.5 rounded-xl border border-slate-200">
                                 <strong class="text-slate-800">Mã cột ChuyenDe &amp; DapAnDung:</strong><br>
-                                • <code>ChuyenDe</code>: Điền <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> (hoặc mã như <code>toan-t1</code>, hoặc nhập tên chuyên đề mới).<br>
+                                • <code>ChuyenDe</code>: Điền <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> (hoặc mã như <code>toan-c3</code>, hoặc nhập tên chương mới).<br>
                                 • <code>DapAnDung</code>: Điền <code>A</code>, <code>B</code>, <code>C</code> hoặc <code>D</code>.
                             </div>
                         </div>
@@ -345,7 +360,7 @@
                         placeholder='[
   {
     "subject": "toan",
-    "topicId": "toan-t1",
+    "topicId": "toan-c2",
     "q": "Khai triển (x + 2)² ta được:",
     "options": ["x² + 4x + 4", "x² + 2x + 4", "x² + 4", "x² - 4x + 4"],
     "ans": 0,
@@ -382,10 +397,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
             <div class="flex items-center gap-2">
                 <span class="w-7 h-7 rounded-lg bg-teal-600 text-white font-bold flex items-center justify-center text-xs">8</span>
-                <span class="font-semibold text-slate-700">Anh em nhà Heo — Đồng hành học tập Lớp 8 (GDPT 2018)</span>
+                <span class="font-semibold text-slate-700">HọcTốt8 — Hệ thống hỗ trợ học tập Lớp 8 (GDPT 2018)</span>
             </div>
             <p class="text-center sm:text-right text-xs sm:text-sm">
-                Bám sát chương trình Kết nối tri thức.
+                Bám sát chương trình Kết nối tri thức, Chân trời sáng tạo &amp; Cánh diều.
             </p>
         </div>
     </footer>
@@ -393,7 +408,7 @@
     <!-- ================= JAVASCRIPT DATA & LOGIC ================= -->
     <script>
         // ---------------------------------------------------------------------
-        // 1. DỮ LIỆU CHƯƠNG TRÌNH LỚP 8 (GDPT 2018) - BÁM SÁT TỪNG CHƯƠNG & CHUYÊN ĐỀ TRẮC NGHIỆM
+        // 1. DỮ LIỆU CHƯƠNG TRÌNH LỚP 8 (GDPT 2018)
         // ---------------------------------------------------------------------
         const SUBJECTS = [
             {
@@ -479,9 +494,9 @@
                     }
                 ],
                 docs: [
-                    { title: 'Bảng hệ thống công thức tính toán KHTN 8 (Lý - Hóa)', type: 'PDF • Công thức', pages: '08 trang', size: '1.1 MB', url: '' },
-                    { title: 'Chuyên đề Acid - Base - Oxide - Muối và cách gọi tên IUPAC', type: 'PDF • Chuyên đề', pages: '16 trang', size: '1.9 MB', url: '' },
-                    { title: 'Đề cương ôn tập Học kỳ I & II KHTN 8 (Đủ 3 phân môn)', type: 'PDF • Đề cương', pages: '18 trang', size: '2.2 MB', url: '' }
+                    { title: 'Tổng hợp Công thức Đại số & Hình học Lớp 8 trọng tâm', type: 'PDF • Tóm tắt', pages: '12 trang', size: '1.4 MB', url: '' },
+                    { title: 'Chuyên đề 7 Hằng đẳng thức đáng nhớ & Phân tích đa thức', type: 'PDF • Chuyên đề', pages: '15 trang', size: '1.8 MB', url: '' },
+                    { title: 'Bộ 10 đề kiểm tra Giữa kỳ & Cuối kỳ Toán 8 (Có lời giải)', type: 'PDF • Đề thi', pages: '24 trang', size: '3.1 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'toan-c1', name: 'Chương 1: Đa thức nhiều biến' },
@@ -491,7 +506,6 @@
                     { id: 'toan-c5', name: 'Chương 5: Hàm số bậc nhất & Dữ liệu - Xác suất' }
                 ],
                 quiz: [
-                    // Chương 1: Đa thức nhiều biến
                     {
                         topicId: 'toan-c1',
                         q: 'Bậc của đơn thức -5x³y²z là bao nhiêu?',
@@ -514,14 +528,6 @@
                         exp: '2x · (3x² - 5x + 1) = 2x·3x² - 2x·5x + 2x·1 = 6x³ - 10x² + 2x.'
                     },
                     {
-                        topicId: 'toan-c1',
-                        q: 'Kết quả của phép chia (12x⁴y³ - 8x³y²) : (4x²y²) là:',
-                        options: ['3x²y - 2x', '3x²y - 2xy', '8x²y - 4x', '3xy - 2x'],
-                        ans: 0,
-                        exp: 'Chia từng hạng tử cho 4x²y²: (12x⁴y³ : 4x²y²) - (8x³y² : 4x²y²) = 3x²y - 2x.'
-                    },
-                    // Chương 2: Hằng đẳng thức đáng nhớ & Ứng dụng
-                    {
                         topicId: 'toan-c2',
                         q: 'Khai triển hằng đẳng thức (2x - 3)² ta được kết quả nào sau đây?',
                         options: ['4x² - 6x + 9', '4x² - 12x + 9', '2x² - 12x + 9', '4x² + 12x + 9'],
@@ -536,31 +542,11 @@
                         exp: 'Áp dụng hiệu hai bình phương A² - B² = (A - B)(A + B) với A = x, B = 3y: x² - (3y)² = (x - 3y)(x + 3y).'
                     },
                     {
-                        topicId: 'toan-c2',
-                        q: 'Giá trị của biểu thức M = x³ + 3x² + 3x + 1 tại x = 9 là:',
-                        options: ['100', '1000', '729', '810'],
-                        ans: 1,
-                        exp: 'Nhận thấy M = x³ + 3x²·1 + 3x·1² + 1³ = (x + 1)³. Thay x = 9 ta được M = (9 + 1)³ = 10³ = 1000.'
-                    },
-                    // Chương 3: Tứ giác
-                    {
                         topicId: 'toan-c3',
                         q: 'Cho tứ giác ABCD có ∠A = 70°, ∠B = 100°, ∠C = 80°. Số đo ∠D bằng:',
                         options: ['110°', '100°', '90°', '120°'],
                         ans: 0,
                         exp: 'Tổng 4 góc trong của tứ giác bằng 360° ⇒ ∠D = 360° - (70° + 100° + 80°) = 110°.'
-                    },
-                    {
-                        topicId: 'toan-c3',
-                        q: 'Khẳng định nào sau đây là SAI về dấu hiệu nhận biết Hình bình hành?',
-                        options: [
-                            'Tứ giác có các cạnh đối song song là hình bình hành.',
-                            'Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành.',
-                            'Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau là hình bình hành.',
-                            'Tứ giác có hai cạnh đối vừa song song vừa bằng nhau là hình bình hành.'
-                        ],
-                        ans: 2,
-                        exp: 'Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau có thể là hình thang cân (hai cạnh bên bằng nhau).'
                     },
                     {
                         topicId: 'toan-c3',
@@ -575,14 +561,6 @@
                         exp: 'Dấu hiệu nhận biết: Hình bình hành có hai đường chéo bằng nhau (hoặc có một góc vuông) là hình chữ nhật.'
                     },
                     {
-                        topicId: 'toan-c3',
-                        q: 'Diện tích của hình thoi có độ dài hai đường chéo lần lượt là 8 cm và 12 cm bằng:',
-                        options: ['96 cm²', '48 cm²', '20 cm²', '40 cm²'],
-                        ans: 1,
-                        exp: 'Diện tích hình thoi bằng nửa tích hai đường chéo: S = (8 × 12) : 2 = 48 cm².'
-                    },
-                    // Chương 4: Định lí Thalès & Tam giác đồng dạng
-                    {
                         topicId: 'toan-c4',
                         q: 'Cho ΔABC có AB = 6 cm, AC = 9 cm. Trên cạnh AB lấy điểm D sao cho AD = 2 cm. Qua D kẻ đường thẳng song song với BC cắt AC tại E. Độ dài đoạn thẳng AE bằng:',
                         options: ['3 cm', '4 cm', '4,5 cm', '6 cm'],
@@ -590,54 +568,11 @@
                         exp: 'Vì DE // BC, áp dụng định lý Thalès: AD/AB = AE/AC ⇔ 2/6 = AE/9 ⇒ AE = (2 × 9)/6 = 3 cm.'
                     },
                     {
-                        topicId: 'toan-c4',
-                        q: 'Cho ΔABC có M, N lần lượt là trung điểm của AB và AC. Biết BC = 14 cm, độ dài đoạn thẳng MN là:',
-                        options: ['28 cm', '7 cm', '14 cm', '3,5 cm'],
-                        ans: 1,
-                        exp: 'MN là đường trung bình của ΔABC nên MN = BC / 2 = 14 / 2 = 7 cm.'
-                    },
-                    {
-                        topicId: 'toan-c4',
-                        q: 'Cho ΔABC có AD là tia phân giác của góc A (D ∈ BC). Biết AB = 4 cm, AC = 6 cm. Tỉ số DB/DC bằng:',
-                        options: ['3/2', '2/3', '2/5', '3/5'],
-                        ans: 1,
-                        exp: 'Theo tính chất đường phân giác trong tam giác: DB/DC = AB/AC = 4/6 = 2/3.'
-                    },
-                    {
-                        topicId: 'toan-c4',
-                        q: 'Nếu ΔABC ∽ ΔDEF theo tỉ số đồng dạng k = 2/3 thì tỉ số chu vi của ΔABC và ΔDEF bằng:',
-                        options: ['4/9', '3/2', '2/3', '9/4'],
-                        ans: 2,
-                        exp: 'Tỉ số chu vi của hai tam giác đồng dạng bằng chính tỉ số đồng dạng k = 2/3.'
-                    },
-                    // Chương 5: Hàm số bậc nhất & Dữ liệu - Xác suất
-                    {
-                        topicId: 'toan-c5',
-                        q: 'Hàm số nào sau đây là hàm số bậc nhất?',
-                        options: ['y = 2x² + 1', 'y = 3/x - 2', 'y = -2x + 5', 'y = 0x + 4'],
-                        ans: 2,
-                        exp: 'Hàm số bậc nhất có dạng y = ax + b với a ≠ 0. Hàm số y = -2x + 5 có a = -2 ≠ 0, b = 5.'
-                    },
-                    {
                         topicId: 'toan-c5',
                         q: 'Đồ thị hàm số y = 2x - 4 cắt trục tung tại điểm có tọa độ là:',
                         options: ['(2; 0)', '(0; -4)', '(-4; 0)', '(0; 2)'],
                         ans: 1,
                         exp: 'Giao điểm với trục tung có hoành độ x = 0 ⇒ y = 2·0 - 4 = -4. Tọa độ giao điểm là (0; -4).'
-                    },
-                    {
-                        topicId: 'toan-c5',
-                        q: 'Hai đường thẳng y = (m - 1)x + 3 và y = 2x - 5 song song với nhau khi giá trị của m là:',
-                        options: ['m = 2', 'm = 3', 'm = 1', 'm = -1'],
-                        ans: 1,
-                        exp: 'Hai đường thẳng song song khi a = a\' và b ≠ b\' ⇒ m - 1 = 2 (với 3 ≠ -5) ⇒ m = 3.'
-                    },
-                    {
-                        topicId: 'toan-c5',
-                        q: 'Gieo một con xúc xắc cân đối 50 lần thấy mặt 6 chấm xuất hiện 8 lần. Xác suất thực nghiệm của biến cố "Mặt xuất hiện có 6 chấm" là:',
-                        options: ['0,08', '0,16', '0,25', '0,6'],
-                        ans: 1,
-                        exp: 'Xác suất thực nghiệm = số lần xuất hiện / tổng số lần gieo = 8 / 50 = 0,16.'
                     }
                 ]
             },
@@ -673,7 +608,7 @@
                         summary: 'Mối quan hệ giữa luận đề, luận điểm, lí lẽ, bằng chứng và cách trình bày văn bản thông tin giải thích hiện tượng tự nhiên.',
                         points: [
                             '<strong>Cấu trúc văn bản nghị luận:</strong> Luận đề (vấn đề trung tâm) → Các luận điểm chính → Lí lẽ sắc bén + Bằng chứng xác thực.',
-                            '<strong>Văn bản thông tin giải thích hiện tượng tự nhiên:</strong> Thường triển khai theo trình tự nguyên nhân – kết quả, sử dụng thuật ngữ khoa học và phương tiện phi ngôn ngữ (hình ảnh, sơ đồ).'
+                            '<strong>Văn bản thông tin giải thích hiện tượng tự nhiên:</strong> Thường triển khai theo trình tự nguyên nhân – kết quả, sử dụng thuật ngữ khoa học và phương tiện phi ngôn ngữ.'
                         ]
                     },
                     {
@@ -684,7 +619,7 @@
                         title: 'Chương 3: Truyện cười, Hài kịch & Thơ tự do',
                         summary: 'Thủ pháp gây cười, xung đột kịch và mạch cảm xúc phóng khoáng trong thơ tự do.',
                         points: [
-                            '<strong>Truyện cười & Hài kịch:</strong> Tạo tiếng cười thông qua sự mâu thuẫn giữa cái bên trong và cái bên ngoài, thói hư tật xấu của con người (trưởng giả học làm sang, tham lam, keo kiệt...).',
+                            '<strong>Truyện cười & Hài kịch:</strong> Tạo tiếng cười thông qua sự mâu thuẫn giữa cái bên trong và cái bên ngoài, thói hư tật xấu của con người.',
                             '<strong>Thơ tự do:</strong> Không bị ràng buộc bởi số chữ trong một dòng, số dòng trong một khổ hay quy tắc niêm luật cố định.'
                         ]
                     },
@@ -697,15 +632,14 @@
                         summary: 'Biện pháp tu từ đảo ngữ, câu hỏi tu từ, nghĩa tường minh - hàm ý và dàn ý bài văn nghị luận.',
                         points: [
                             '<strong>Đảo ngữ:</strong> Thay đổi trật tự thông thường của từ ngữ trong câu để nhấn mạnh đặc điểm, cảm xúc.',
-                            '<strong>Nghĩa tường minh & Hàm ý:</strong> Nghĩa tường minh được diễn đạt trực tiếp bằng từ ngữ; hàm ý là phần thông báo tuy không nói trực tiếp nhưng có thể suy ra từ ngữ cảnh.',
-                            '<strong>Dàn ý Nghị luận xã hội:</strong> Mở bài (nêu vấn đề) → Thân bài (giải thích, phân tích, dẫn chứng, phản đề) → Kết bài (bài học nhận thức & hành động).'
+                            '<strong>Nghĩa tường minh & Hàm ý:</strong> Nghĩa tường minh diễn đạt trực tiếp; hàm ý suy ra từ ngữ cảnh.',
+                            '<strong>Dàn ý Nghị luận xã hội:</strong> Mở bài → Thân bài (giải thích, phân tích, dẫn chứng, phản đề) → Kết bài.'
                         ]
                     }
                 ],
                 docs: [
-                    { title: 'Cẩm nang Đọc hiểu Ngữ văn 8 theo thể loại (GDPT 2018)', type: 'PDF • Chuyên đề', pages: '18 trang', size: '2.3 MB' },
-                    { title: 'Tuyển tập dàn ý Nghị luận xã hội & Phân tích tác phẩm văn học', type: 'PDF • Văn mẫu', pages: '22 trang', size: '2.7 MB' },
-                    { title: 'Hệ thống kiến thức Thực hành Tiếng Việt lớp 8 trọng tâm', type: 'PDF • Sổ tay', pages: '10 trang', size: '1.1 MB' }
+                    { title: 'Cẩm nang Đọc hiểu Ngữ văn 8 theo thể loại (GDPT 2018)', type: 'PDF • Chuyên đề', pages: '18 trang', size: '2.3 MB', url: '' },
+                    { title: 'Tuyển tập dàn ý Nghị luận xã hội & Phân tích tác phẩm văn học', type: 'PDF • Văn mẫu', pages: '22 trang', size: '2.7 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'van-c1', name: 'Chương 1: Truyện lịch sử & Thơ Đường luật' },
@@ -714,7 +648,6 @@
                     { id: 'van-c4', name: 'Chương 4: Thực hành Tiếng Việt & Tập làm văn' }
                 ],
                 quiz: [
-                    // Chương 1
                     {
                         topicId: 'van-c1',
                         q: 'Trong hai câu thơ: "Lom khom dưới núi, tiều vài chú / Lác đác bên sông, chợ mấy nhà" (Bà Huyện Thanh Quan), tác giả sử dụng nổi bật biện pháp tu từ nào?',
@@ -723,64 +656,12 @@
                         exp: 'Tác giả đảo các từ láy "lom khom", "lác đác" lên đầu câu (đảo ngữ) kết hợp cấu trúc đối xứng ở cặp câu Thực.'
                     },
                     {
-                        topicId: 'van-c1',
-                        q: 'Một bài thơ thất ngôn bát cú Đường luật chuẩn mực gồm bao nhiêu câu và mỗi câu có bao nhiêu chữ?',
-                        options: ['4 câu, mỗi câu 7 chữ', '8 câu, mỗi câu 5 chữ', '8 câu, mỗi câu 7 chữ', '6 câu, mỗi câu 8 chữ'],
-                        ans: 2,
-                        exp: '"Thất ngôn" là 7 chữ mỗi câu, "bát cú" là 8 câu.'
-                    },
-                    {
-                        topicId: 'van-c1',
-                        q: 'Đặc điểm nào sau đây thuộc về thể loại Truyện lịch sử?',
-                        options: [
-                            'Hoàn toàn là chuyện hoang đường, kì ảo không có thật.',
-                            'Lấy đề tài từ sự kiện, nhân vật lịch sử và kết hợp hư cấu nghệ thuật.',
-                            'Chỉ ghi chép khô khan ngày tháng năm như biên niên sử.',
-                            'Bắt buộc viết theo thể thơ lục bát.'
-                        ],
-                        ans: 1,
-                        exp: 'Truyện lịch sử dựa trên bối cảnh, sự kiện và nhân vật có thật trong lịch sử, đồng thời nhà văn sử dụng hư cấu nghệ thuật để khắc họa sinh động.'
-                    },
-                    {
-                        topicId: 'van-c1',
-                        q: 'Bố cục thông thường của một bài thơ thất ngôn bát cú Đường luật gồm 4 phần theo thứ tự:',
-                        options: ['Khai – Thừa – Chuyển – Hợp', 'Đề – Thực – Luận – Kết', 'Mở – Thân – Luận – Kết', 'Nhập – Đề – Giải – Kết'],
-                        ans: 1,
-                        exp: 'Bốn cặp câu trong bài thất ngôn bát cú tương ứng với: Đề (câu 1-2), Thực (câu 3-4), Luận (câu 5-6), Kết (câu 7-8).'
-                    },
-                    // Chương 2
-                    {
                         topicId: 'van-c2',
                         q: 'Trong văn bản nghị luận, yếu tố nào đóng vai trò là vấn đề trung tâm bao trùm toàn bộ bài viết?',
                         options: ['Bằng chứng', 'Luận đề', 'Lí lẽ', 'Chú thích'],
                         ans: 1,
                         exp: 'Luận đề là vấn đề trung tâm, xuyên suốt mà người viết đặt ra để bàn luận và thuyết phục người đọc.'
                     },
-                    {
-                        topicId: 'van-c2',
-                        q: 'Văn bản thông tin giải thích một hiện tượng tự nhiên thường sử dụng cách trình bày thông tin nào là chủ yếu?',
-                        options: [
-                            'Trình tự nguyên nhân – kết quả và phân loại đối tượng.',
-                            'Trình tự diễn biến tâm lí nhân vật.',
-                            'Đối thoại kịch tính giữa các nhân vật.',
-                            'Gieo vần và ngắt nhịp theo luật bằng trắc.'
-                        ],
-                        ans: 0,
-                        exp: 'Để giải thích hiện tượng tự nhiên (như lũ lụt, nhật thực, biến đổi khí hậu...), văn bản thường trình bày nguyên nhân dẫn đến kết quả và cơ chế hình thành.'
-                    },
-                    {
-                        topicId: 'van-c2',
-                        q: 'Để tăng tính thuyết phục cho một luận điểm trong bài văn nghị luận, người viết cần kết hợp:',
-                        options: [
-                            'Chỉ cần nêu cảm xúc cá nhân.',
-                            'Lí lẽ chặt chẽ và bằng chứng tiêu biểu, xác thực.',
-                            'Nhiều từ tượng thanh và từ địa phương.',
-                            'Các yếu tố kì ảo, thần thoại.'
-                        ],
-                        ans: 1,
-                        exp: 'Sức thuyết phục của văn nghị luận được tạo nên bởi hệ thống lí lẽ sắc bén đi kèm bằng chứng cụ thể, xác thực.'
-                    },
-                    // Chương 3
                     {
                         topicId: 'van-c3',
                         q: 'Đối tượng trào phúng, phê phán chủ yếu của thể loại Hài kịch là gì?',
@@ -794,50 +675,11 @@
                         exp: 'Hài kịch dùng tiếng cười để chế giễu, phê phán những thói hư tật xấu, sự giả dối, kệch cỡm trong xã hội.'
                     },
                     {
-                        topicId: 'van-c3',
-                        q: 'Đặc điểm nổi bật nhất về hình thức của Thơ tự do là gì?',
-                        options: [
-                            'Mỗi dòng thơ bắt buộc có đúng 8 tiếng.',
-                            'Không bị ràng buộc bởi số chữ trong dòng, số dòng trong khổ và niêm luật.',
-                            'Luôn gieo vần lưng ở chữ thứ 6.',
-                            'Chỉ gồm đúng 4 câu thơ.'
-                        ],
-                        ans: 1,
-                        exp: 'Thơ tự do giải phóng hình thức khỏi các quy tắc gò bó về số tiếng, số dòng và luật bằng trắc.'
-                    },
-                    {
-                        topicId: 'van-c3',
-                        q: 'Trong kịch bản văn học, phần chữ in nghiêng đặt trong ngoặc đơn (ví dụ: "(Bước ra, vẻ hốt hoảng)") được gọi là gì?',
-                        options: ['Lời thoại nhân vật', 'Chỉ dẫn sân khấu', 'Lời bình của độc giả', 'Nhan đề vở kịch'],
-                        ans: 1,
-                        exp: 'Chỉ dẫn sân khấu là lời chú thích của tác giả về bối cảnh, hành động, cử chỉ, sắc thái biểu cảm của nhân vật.'
-                    },
-                    // Chương 4
-                    {
-                        topicId: 'van-c4',
-                        q: 'Mục đích chính của câu hỏi tu từ trong văn bản văn học là gì?',
-                        options: [
-                            'Yêu cầu người nghe cung cấp thông tin còn thiếu.',
-                            'Khẳng định, phủ định hoặc bộc lộ cảm xúc, thái độ của người viết.',
-                            'Dùng để kiểm tra kiến thức ngữ pháp.',
-                            'Thay thế cho dấu chấm câu.'
-                        ],
-                        ans: 1,
-                        exp: 'Câu hỏi tu từ có hình thức nghi vấn nhưng không dùng để hỏi mà để nhấn mạnh ý nghĩa biểu cảm, khẳng định hoặc phủ định.'
-                    },
-                    {
                         topicId: 'van-c4',
                         q: 'Phần thông báo tuy không được diễn đạt trực tiếp bằng từ ngữ trong câu nhưng có thể suy ra từ ngữ cảnh được gọi là:',
                         options: ['Nghĩa tường minh', 'Hàm ý', 'Từ đồng âm', 'Biệt ngữ xã hội'],
                         ans: 1,
                         exp: 'Hàm ý là phần thông báo ngầm ẩn sau câu chữ, người nghe/đọc suy ra dựa vào tình huống giao tiếp.'
-                    },
-                    {
-                        topicId: 'van-c4',
-                        q: 'Từ nào sau đây là từ tượng hình?',
-                        options: ['Rì rào', 'Xào xạc', 'Chênh vênh', 'Leng keng'],
-                        ans: 2,
-                        exp: '"Chênh vênh" gợi tả hình ảnh, dáng vẻ không vững chắc (từ tượng hình); các từ còn lại mô phỏng âm thanh (từ tượng thanh).'
                     }
                 ]
             },
@@ -860,8 +702,8 @@
                         summary: 'Động từ chỉ sự yêu thích (V-ing / to-V), So sánh hơn của trạng từ và Câu ghép (Compound sentences).',
                         points: [
                             '<strong>Unit 1 (Verbs of liking):</strong> <em>detest, fancy, dislike, enjoy, mind</em> + <span class="math-formula">V-ing</span>; <em>like, love, hate, prefer</em> + <span class="math-formula">V-ing / to-V</span>.',
-                            '<strong>Unit 2 (Comparative adverbs):</strong> Trạng từ ngắn: <span class="math-formula">adv + -er + than</span> (faster, harder); Trạng từ dài: <span class="math-formula">more/less + adv + than</span>; Bất quy tắc: <em>well → better, badly → worse</em>.',
-                            '<strong>Unit 3 (Compound sentences):</strong> Nối 2 mệnh đề độc lập bằng FANBOYS (<em>for, and, nor, but, or, yet, so</em>) hoặc trạng từ liên kết (<span class="math-formula">; however, / ; therefore,</span>).'
+                            '<strong>Unit 2 (Comparative adverbs):</strong> Trạng từ ngắn: <span class="math-formula">adv + -er + than</span>; Trạng từ dài: <span class="math-formula">more/less + adv + than</span>.',
+                            '<strong>Unit 3 (Compound sentences):</strong> Nối 2 mệnh đề độc lập bằng FANBOYS hoặc trạng từ liên kết (<span class="math-formula">; however, / ; therefore,</span>).'
                         ]
                     },
                     {
@@ -870,11 +712,11 @@
                         chapter: 'Chương 2 • Unit 4 – Unit 6',
                         quizTopicId: 'anh-c2',
                         title: 'Chương 2: Ethnic Groups, Customs & Traditions, Lifestyles',
-                        summary: 'Câu hỏi Yes/No & Wh-questions, Danh từ đếm được/không đếm được, Mạo từ (a/an/the/zero) & Thì tương lai đơn (will).',
+                        summary: 'Danh từ đếm được/không đếm được, Mạo từ (a/an/the/zero) & Thì tương lai đơn / Câu điều kiện loại 1.',
                         points: [
-                            '<strong>Unit 4 (Nouns & Questions):</strong> Phân biệt danh từ đếm được (<em>a stilt house, terraced fields</em>) và không đếm được (<em>sticky rice, folk music</em>).',
-                            '<strong>Unit 5 (Articles):</strong> Dùng <em>the</em> trước nhạc cụ (<em>play the flute</em>), danh từ duy nhất; dùng <em>zero article (Ø)</em> trước bữa ăn, môn thể thao, tên quốc gia số ít.',
-                            '<strong>Unit 6 (Future Simple & First Conditional):</strong> <span class="math-formula">S + will + V(bare)</span> diễn tả dự đoán/quyết định tức thời; Câu điều kiện loại 1: <span class="math-formula">If + S + V(s/es), S + will + V</span>.'
+                            '<strong>Unit 4 (Nouns & Questions):</strong> Phân biệt danh từ đếm được (<em>a stilt house</em>) và không đếm được (<em>sticky rice</em>).',
+                            '<strong>Unit 5 (Articles):</strong> Dùng <em>the</em> trước nhạc cụ, tên dân tộc; dùng <em>zero article (Ø)</em> trước bữa ăn, môn thể thao.',
+                            '<strong>Unit 6 (First Conditional):</strong> <span class="math-formula">If + S + V(s/es), S + will + V</span>.'
                         ]
                     },
                     {
@@ -883,11 +725,11 @@
                         chapter: 'Chương 3 • Unit 7 – Unit 9',
                         quizTopicId: 'anh-c3',
                         title: 'Chương 3: Environmental Protection, Shopping & Natural Disasters',
-                        summary: 'Câu phức với mệnh đề trạng ngữ chỉ thời gian, Trạng từ chỉ tần suất, Thì hiện tại đơn mang nghĩa tương lai & Quá khứ tiếp diễn.',
+                        summary: 'Mệnh đề trạng ngữ chỉ thời gian, Hiện tại đơn mang nghĩa tương lai & Quá khứ tiếp diễn.',
                         points: [
-                            '<strong>Unit 7 (Complex sentences with time clauses):</strong> Dùng liên từ <em>when, while, before, after, as soon as, until</em>. Lưu ý: Mệnh đề thời gian không chia thì tương lai.',
-                            '<strong>Unit 8 (Adverbs of frequency & Present Simple for future):</strong> Trạng từ tần suất đứng trước động từ thường, sau <em>to be</em>. Hiện tại đơn diễn tả lịch trình tàu xe, siêu thị mở cửa.',
-                            '<strong>Unit 9 (Past Continuous):</strong> <span class="math-formula">S + was/were + V-ing</span> diễn tả hành động đang xảy ra tại một thời điểm xác định trong quá khứ hoặc đang xảy ra thì hành động khác xen vào (<em>when / while</em>).'
+                            '<strong>Unit 7 (Time clauses):</strong> Dùng liên từ <em>when, while, before, after, as soon as, until</em>.',
+                            '<strong>Unit 8 (Present Simple for future):</strong> Diễn tả lịch trình tàu xe, giờ mở/đóng cửa cố định.',
+                            '<strong>Unit 9 (Past Continuous):</strong> <span class="math-formula">S + was/were + V-ing</span>.'
                         ]
                     },
                     {
@@ -896,18 +738,16 @@
                         chapter: 'Chương 4 • Unit 10 – Unit 12',
                         quizTopicId: 'anh-c4',
                         title: 'Chương 4: Communication, Science & Technology, Life on Other Planets',
-                        summary: 'Giới từ chỉ thời gian & nơi chốn, Đại từ sở hữu (mine, yours, ours...) và Câu tường thuật (Reported Speech).',
+                        summary: 'Giới từ chỉ thời gian & nơi chốn, Đại từ sở hữu (mine, yours, ours...) và Câu tường thuật.',
                         points: [
-                            '<strong>Unit 10 (Prepositions & Possessive pronouns):</strong> Giới từ <em>in / on / at</em>; Đại từ sở hữu <span class="math-formula">mine, yours, his, hers, ours, theirs</span> thay thế cho <em>tính từ sở hữu + danh từ</em>.',
-                            '<strong>Unit 11 (Reported Speech - Statements):</strong> Lùi thì động từ (hiện tại đơn → quá khứ đơn; will → would; can → could) và đổi đại từ, trạng từ thời gian/nơi chốn (<em>now → then, here → there, tomorrow → the next day</em>).',
-                            '<strong>Unit 12 (Reported Speech - Questions):</strong> Câu hỏi Yes/No dùng <span class="math-formula">asked + (O) + if/whether + S + V(lùi thì)</span>; Câu hỏi Wh- giữ nguyên từ để hỏi.'
+                            '<strong>Unit 10 (Possessive pronouns):</strong> <span class="math-formula">mine, yours, his, hers, ours, theirs</span>.',
+                            '<strong>Unit 11–12 (Reported Speech):</strong> Lùi thì động từ và đổi trạng từ thời gian/nơi chốn.'
                         ]
                     }
                 ],
                 docs: [
-                    { title: 'Tổng hợp Ngữ pháp & Từ vựng Tiếng Anh 8 (Global Success)', type: 'PDF • Sổ tay', pages: '20 trang', size: '2.5 MB' },
-                    { title: 'Bộ đề ôn tập Giữa kỳ I & Cuối kỳ I Tiếng Anh 8 (Có đáp án)', type: 'PDF • Đề thi', pages: '14 trang', size: '1.7 MB' },
-                    { title: 'Chuyên đề Câu tường thuật & Câu điều kiện Tiếng Anh 8 (HK2)', type: 'PDF • Luyện tập', pages: '10 trang', size: '1.2 MB' }
+                    { title: 'Tổng hợp Ngữ pháp & Từ vựng Tiếng Anh 8 (Global Success)', type: 'PDF • Sổ tay', pages: '20 trang', size: '2.5 MB', url: '' },
+                    { title: 'Bộ đề ôn tập Giữa kỳ I & Cuối kỳ I Tiếng Anh 8 (Có đáp án)', type: 'PDF • Đề thi', pages: '14 trang', size: '1.7 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'anh-c1', name: 'Chương 1: Unit 1–3 (V-ing, So sánh, Câu ghép)' },
@@ -916,42 +756,12 @@
                     { id: 'anh-c4', name: 'Chương 4: Unit 10–12 (Đại từ sở hữu, Câu tường thuật)' }
                 ],
                 quiz: [
-                    // Chương 1 (Unit 1-3)
                     {
                         topicId: 'anh-c1',
                         q: 'My sister is really keen on _______ origami in her free time.',
                         options: ['make', 'making', 'to make', 'made'],
                         ans: 1,
                         exp: 'Cấu trúc "be keen on + V-ing" (yêu thích làm gì) nên chọn "making".'
-                    },
-                    {
-                        topicId: 'anh-c1',
-                        q: 'In the countryside, people often live _______ than those in big cities.',
-                        options: ['more peacefully', 'peacefullier', 'most peacefully', 'more peaceful'],
-                        ans: 0,
-                        exp: 'Động từ "live" cần trạng từ "peacefully". Dạng so sánh hơn của trạng từ dài là "more peacefully".'
-                    },
-                    {
-                        topicId: 'anh-c1',
-                        q: 'Minh had a lot of homework to do; _______, he still helped his mother water the plants.',
-                        options: ['therefore', 'otherwise', 'however', 'so'],
-                        ans: 2,
-                        exp: 'Hai mệnh đề mang nghĩa tương phản và đứng giữa dấu chấm phẩy (;) và dấu phẩy (,) nên dùng "however".'
-                    },
-                    {
-                        topicId: 'anh-c1',
-                        q: 'Does your brother detest _______ up early on cold winter mornings?',
-                        options: ['get', 'to get', 'getting', 'got'],
-                        ans: 2,
-                        exp: 'Sau động từ "detest" (ghét cay ghét đắng) luôn dùng dạng V-ing → "getting".'
-                    },
-                    // Chương 2 (Unit 4-6)
-                    {
-                        topicId: 'anh-c2',
-                        q: 'In Viet Nam, _______ Kinh have the largest population among the 54 ethnic groups.',
-                        options: ['a', 'an', 'the', 'Ø (no article)'],
-                        ans: 2,
-                        exp: 'Dùng mạo từ "the" trước tên một dân tộc/nhóm người nói chung (the Kinh, the Tay...).'
                     },
                     {
                         topicId: 'anh-c2',
@@ -961,28 +771,6 @@
                         exp: 'Câu điều kiện loại 1: Mệnh đề If chia thì hiện tại đơn ("plant"), mệnh đề chính dùng "will + V".'
                     },
                     {
-                        topicId: 'anh-c2',
-                        q: 'How _______ sticky rice do we need to make Chung cakes for Tet?',
-                        options: ['many', 'much', 'few', 'a lot'],
-                        ans: 1,
-                        exp: '"Sticky rice" (gạo nếp) là danh từ không đếm được nên dùng "How much" để hỏi số lượng.'
-                    },
-                    {
-                        topicId: 'anh-c2',
-                        q: 'In many Vietnamese families, children have the tradition of _______ their grandparents on the first day of Tet.',
-                        options: ['visit', 'visiting', 'to visit', 'visited'],
-                        ans: 1,
-                        exp: 'Sau giới từ "of" (have the tradition of + V-ing) động từ chia ở dạng V-ing → "visiting".'
-                    },
-                    // Chương 3 (Unit 7-9)
-                    {
-                        topicId: 'anh-c3',
-                        q: 'We should turn off all electrical appliances _______ we leave the classroom.',
-                        options: ['before', 'while', 'until', 'during'],
-                        ans: 0,
-                        exp: 'Về nghĩa: Chúng ta nên tắt các thiết bị điện TRƯỚC KHI (before) rời khỏi lớp học.'
-                    },
-                    {
                         topicId: 'anh-c3',
                         q: 'At 8 p.m. yesterday, our family _______ a documentary about volcanic eruptions.',
                         options: ['watched', 'was watching', 'were watching', 'watches'],
@@ -990,47 +778,11 @@
                         exp: 'Có mốc thời gian xác định trong quá khứ ("At 8 p.m. yesterday") → dùng thì Quá khứ tiếp diễn "was watching".'
                     },
                     {
-                        topicId: 'anh-c3',
-                        q: 'According to the timetable, the last train to Da Nang _______ at 10:30 tonight.',
-                        options: ['leaves', 'left', 'was leaving', 'has left'],
-                        ans: 0,
-                        exp: 'Thì hiện tại đơn ("leaves") được dùng để diễn tả lịch trình tàu xe, giờ mở/đóng cửa cố định trong tương lai.'
-                    },
-                    {
-                        topicId: 'anh-c3',
-                        q: 'While the rescue workers _______ the villagers, another landslide occurred.',
-                        options: ['helped', 'were helping', 'are helping', 'help'],
-                        ans: 1,
-                        exp: 'Hành động đang diễn ra trong quá khứ ("While ... were helping") thì một hành động khác xen vào ("occurred").'
-                    },
-                    // Chương 4 (Unit 10-12)
-                    {
-                        topicId: 'anh-c4',
-                        q: 'Is this blue tablet yours, or is it _______?',
-                        options: ['her', 'she', 'hers', 'herself'],
-                        ans: 2,
-                        exp: 'Vị trí cuối câu cần một đại từ sở hữu thay cho "her tablet" → chọn "hers".'
-                    },
-                    {
                         topicId: 'anh-c4',
                         q: 'Nam said that he _______ a robot to help with housework the following year.',
                         options: ['will design', 'would design', 'designs', 'designed'],
                         ans: 1,
                         exp: 'Trong câu tường thuật với động từ tường thuật ở quá khứ ("said"), "will" lùi thì thành "would" + V(bare).'
-                    },
-                    {
-                        topicId: 'anh-c4',
-                        q: 'Lan asked me _______ I was interested in astronomy and space exploration.',
-                        options: ['what', 'whether', 'where', 'who'],
-                        ans: 1,
-                        exp: 'Tường thuật câu hỏi Yes/No dùng "if" hoặc "whether" sau động từ "asked".'
-                    },
-                    {
-                        topicId: 'anh-c4',
-                        q: 'Our online English class starts _______ 7:30 a.m. _______ Monday mornings.',
-                        options: ['in / on', 'at / on', 'on / at', 'at / in'],
-                        ans: 1,
-                        exp: 'Dùng "at" trước giờ cụ thể (at 7:30 a.m.) và "on" trước các buổi của thứ trong tuần (on Monday mornings).'
                     }
                 ]
             },
@@ -1050,12 +802,15 @@
                         chapter: 'Chương 1 • Phân môn Hóa học',
                         quizTopicId: 'khtn-c1',
                         title: 'Chương 1: Phản ứng hóa học & Mol - Nồng độ dung dịch',
-                        summary: 'Định luật bảo toàn khối lượng, công thức tính số mol, tỉ khối chất khí và nồng độ dung dịch.',
+                        summary: 'Biến đổi vật lí – hóa học, lập phương trình hóa học, định luật bảo toàn khối lượng, mol, tỉ khối khí, độ tan, nồng độ dung dịch và hiệu suất phản ứng.',
                         points: [
-                            '<strong>Định luật bảo toàn khối lượng:</strong> Tổng khối lượng các chất sản phẩm bằng tổng khối lượng các chất tham gia phản ứng.',
-                            '<strong>Công thức tính số mol:</strong> <span class="math-formula">n = m / M</span> hoặc ở điều kiện chuẩn (25°C, 1 bar): <span class="math-formula">n = V / 24,79</span>.',
-                            '<strong>Tỉ khối chất khí:</strong> <span class="math-formula">d<sub>A/B</sub> = M<sub>A</sub> / M<sub>B</sub></span> (Với không khí: <span class="math-formula">M<sub>kk</sub> ≈ 29</span>).',
-                            '<strong>Nồng độ dung dịch:</strong> <span class="math-formula">C% = (m<sub>ct</sub> / m<sub>dd</sub>) × 100%</span> và <span class="math-formula">C<sub>M</sub> = n / V</span>.'
+                            '<strong>1. Biến đổi vật lí &amp; Biến đổi hóa học:</strong><br>• <em>Biến đổi vật lí:</em> Chất chỉ biến đổi về trạng thái, hình dạng, kích thước (ví dụ: nước đá tan chảy, hòa tan đường vào nước), <strong>không</strong> tạo ra chất mới.<br>• <em>Biến đổi hóa học:</em> Có sự tạo thành <strong>chất mới</strong> có tính chất khác chất ban đầu (ví dụ: sắt bị gỉ, đốt cháy than). Dấu hiệu nhận biết: đổi màu sắc, xuất hiện chất khí (sủi bọt), tạo chất kết tủa, tỏa nhiệt/phát sáng.',
+                            '<strong>2. Phản ứng hóa học &amp; Lập phương trình hóa học (PTHH):</strong><br>• Trong phản ứng hóa học, chỉ có liên kết giữa các nguyên tử thay đổi làm phân tử này biến đổi thành phân tử khác; <strong>số nguyên tử của mỗi nguyên tố được giữ nguyên</strong>.<br>• <em>3 bước lập PTHH:</em> (1) Viết sơ đồ phản ứng → (2) Cân bằng số nguyên tử mỗi nguyên tố bằng cách đặt hệ số thích hợp trước công thức hóa học (không thay đổi chỉ số chân) → (3) Viết thành PTHH hoàn chỉnh (dùng mũi tên <code>→</code>).',
+                            '<strong>3. Định luật bảo toàn khối lượng (ĐLBTKL):</strong><br>• Trong một phản ứng hóa học, tổng khối lượng của các chất sản phẩm bằng tổng khối lượng của các chất tham gia phản ứng:<br><span class="math-formula">m<sub>A</sub> + m<sub>B</sub> = m<sub>C</sub> + m<sub>D</sub></span> (với phản ứng A + B → C + D).',
+                            '<strong>4. Mol &amp; Các công thức chuyển đổi (n, m, V):</strong><br>• Tính số mol theo khối lượng: <span class="math-formula">n = m / M</span> ⇒ <span class="math-formula">m = n × M</span> ; <span class="math-formula">M = m / n</span>.<br>• Tính số mol chất khí ở <strong>điều kiện chuẩn (25°C, 1 bar)</strong>: <span class="math-formula">n = V / 24,79</span> ⇒ <span class="math-formula">V = n × 24,79</span>.',
+                            '<strong>5. Tỉ khối của chất khí:</strong><br>• <span class="math-formula">d<sub>A/B</sub> = M<sub>A</sub> / M<sub>B</sub></span> ; Với không khí (<span class="math-formula">M<sub>kk</sub> ≈ 29</span>): <span class="math-formula">d<sub>A/kk</sub> = M<sub>A</sub> / 29</span>.',
+                            '<strong>6. Độ tan (S) &amp; Nồng độ dung dịch (C%, C<sub>M</sub>):</strong><br>• <em>Độ tan:</em> <span class="math-formula">S = (m<sub>ct</sub> / m<sub>H₂O</sub>) × 100</span> (g/100g nước).<br>• <em>Nồng độ phần trăm:</em> <span class="math-formula">C% = (m<sub>ct</sub> / m<sub>dd</sub>) × 100%</span> ; <em>Nồng độ mol:</em> <span class="math-formula">C<sub>M</sub> = n / V</span>.',
+                            '<strong>7. Hiệu suất phản ứng (H%):</strong> <span class="math-formula">H% = (m<sub>thực tế</sub> / m<sub>lí thuyết</sub>) × 100%</span>.'
                         ]
                     },
                     {
@@ -1068,8 +823,7 @@
                         points: [
                             '<strong>Acid (HCl, H₂SO₄...):</strong> Làm quỳ tím hóa <strong>đỏ</strong>; tác dụng với nhiều kim loại (Mg, Zn, Fe...) giải phóng khí H₂.',
                             '<strong>Base (NaOH, Ca(OH)₂...):</strong> Base tan (kiềm) làm quỳ tím hóa <strong>xanh</strong>, làm phenolphthalein không màu hóa <strong>hồng</strong>.',
-                            '<strong>Thang đo pH:</strong> pH &lt; 7 (môi trường acid), pH = 7 (trung tính), pH &gt; 7 (môi trường base).',
-                            '<strong>Oxide & Muối:</strong> Phân biệt oxide acid (CO₂, SO₂) và oxide base (CaO, CuO); phản ứng trao đổi tạo kết tủa hoặc chất khí.'
+                            '<strong>Thang đo pH:</strong> pH &lt; 7 (môi trường acid), pH = 7 (trung tính), pH &gt; 7 (môi trường base).'
                         ]
                     },
                     {
@@ -1082,7 +836,7 @@
                         points: [
                             '<strong>Khối lượng riêng:</strong> <span class="math-formula">D = m / V</span> (kg/m³ hoặc g/cm³).',
                             '<strong>Áp suất chất rắn:</strong> <span class="math-formula">p = F / S</span> (đơn vị: Pa hoặc N/m²).',
-                            '<strong>Áp suất chất lỏng & Lực đẩy Archimedes:</strong> <span class="math-formula">p = d · h</span> và <span class="math-formula">F<sub>A</sub> = d · V</span> (V là thể tích phần chất lỏng bị vật chiếm chỗ).'
+                            '<strong>Áp suất chất lỏng & Lực đẩy Archimedes:</strong> <span class="math-formula">p = d · h</span> và <span class="math-formula">F<sub>A</sub> = d · V</span>.'
                         ]
                     },
                     {
@@ -1093,9 +847,8 @@
                         title: 'Chương 4: Tác dụng làm quay của lực & Điện học',
                         summary: 'Moment lực, đòn bẩy, dòng điện, nguồn điện và tác dụng của dòng điện.',
                         points: [
-                            '<strong>Moment lực:</strong> Đặc trưng cho tác dụng làm quay của lực quanh một trục; lực càng lớn và giá của lực càng cách xa trục quay thì moment lực càng lớn.',
-                            '<strong>Dòng điện & Chiều dòng điện:</strong> Dòng điện là dòng các điện tích dịch chuyển có hướng; chiều quy ước đi từ cực dương qua dây dẫn tới cực âm của nguồn điện.',
-                            '<strong>Các tác dụng của dòng điện:</strong> Tác dụng nhiệt, phát sáng, hóa học, sinh lí.'
+                            '<strong>Moment lực:</strong> Đặc trưng cho tác dụng làm quay của lực quanh một trục.',
+                            '<strong>Chiều dòng điện quy ước:</strong> Đi từ cực dương qua dây dẫn tới cực âm của nguồn điện.'
                         ]
                     },
                     {
@@ -1106,16 +859,15 @@
                         title: 'Chương 5: Nhiệt học & Sinh học cơ thể người',
                         summary: 'Năng lượng nhiệt, truyền nhiệt, sự nở vì nhiệt và các hệ cơ quan trong cơ thể người.',
                         points: [
-                            '<strong>Truyền nhiệt:</strong> Gồm 3 hình thức: Dẫn nhiệt (chủ yếu ở chất rắn), Đối lưu (chất lỏng và chất khí) và Bức xạ nhiệt (truyền được cả trong chân không).',
-                            '<strong>Máu & Hệ tuần hoàn:</strong> Hồng cầu vận chuyển O₂/CO₂; Bạch cầu bảo vệ cơ thể; Tiểu cầu giúp đông máu.',
-                            '<strong>Hệ thần kinh & Nội tiết:</strong> Điều hòa và phối hợp hoạt động của các cơ quan, duy trì sự ổn định môi trường trong cơ thể.'
+                            '<strong>Truyền nhiệt:</strong> Dẫn nhiệt, Đối lưu và Bức xạ nhiệt.',
+                            '<strong>Máu & Hệ tuần hoàn:</strong> Hồng cầu vận chuyển O₂/CO₂; Bạch cầu bảo vệ cơ thể; Tiểu cầu giúp đông máu.'
                         ]
                     }
                 ],
                 docs: [
-                    { title: 'Bảng hệ thống công thức tính toán KHTN 8 (Lý - Hóa)', type: 'PDF • Công thức', pages: '08 trang', size: '1.1 MB' },
-                    { title: 'Chuyên đề Acid - Base - Oxide - Muối và cách gọi tên IUPAC', type: 'PDF • Chuyên đề', pages: '16 trang', size: '1.9 MB' },
-                    { title: 'Đề cương ôn tập Học kỳ I & II KHTN 8 (Đủ 3 phân môn)', type: 'PDF • Đề cương', pages: '18 trang', size: '2.2 MB' }
+                    { title: 'Bảng hệ thống công thức tính toán KHTN 8 (Lý - Hóa)', type: 'PDF • Công thức', pages: '08 trang', size: '1.1 MB', url: '' },
+                    { title: 'Chuyên đề Acid - Base - Oxide - Muối và cách gọi tên IUPAC', type: 'PDF • Chuyên đề', pages: '16 trang', size: '1.9 MB', url: '' },
+                    { title: 'Đề cương ôn tập Học kỳ I & II KHTN 8 (Đủ 3 phân môn)', type: 'PDF • Đề cương', pages: '18 trang', size: '2.2 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'khtn-c1', name: 'Chương 1: Phản ứng hóa học & Mol - Nồng độ' },
@@ -1125,7 +877,6 @@
                     { id: 'khtn-c5', name: 'Chương 5: Nhiệt học & Sinh học cơ thể người' }
                 ],
                 quiz: [
-                    // Chương 1: Phản ứng hóa học & Mol
                     {
                         topicId: 'khtn-c1',
                         q: 'Ở điều kiện chuẩn (25°C, 1 bar), 4,958 lít khí oxygen (O₂) có số mol là bao nhiêu?',
@@ -1134,21 +885,6 @@
                         exp: 'Áp dụng công thức n = V / 24,79 = 4,958 / 24,79 = 0,2 mol.'
                     },
                     {
-                        topicId: 'khtn-c1',
-                        q: 'Tỉ khối của khí carbon dioxide (CO₂, M = 44) đối với khí hydrogen (H₂, M = 2) bằng:',
-                        options: ['44', '22', '11', '88'],
-                        ans: 1,
-                        exp: 'd(CO₂/H₂) = M(CO₂) / M(H₂) = 44 / 2 = 22.'
-                    },
-                    {
-                        topicId: 'khtn-c1',
-                        q: 'Hòa tan 20 gam muối ăn (NaCl) vào 180 gam nước thu được dung dịch có nồng độ phần trăm (C%) là:',
-                        options: ['11,1%', '10%', '20%', '9%'],
-                        ans: 1,
-                        exp: 'Khối lượng dung dịch m_dd = 20 + 180 = 200 g ⇒ C% = (20 / 200) × 100% = 10%.'
-                    },
-                    // Chương 2: Acid - Base - pH - Oxide - Muối
-                    {
                         topicId: 'khtn-c2',
                         q: 'Dung dịch nào sau đây làm giấy quỳ tím chuyển sang màu xanh?',
                         options: ['Dung dịch HCl', 'Dung dịch NaOH', 'Dung dịch NaCl', 'Nước cất'],
@@ -1156,52 +892,12 @@
                         exp: 'NaOH là dung dịch base tan (kiềm) nên làm quỳ tím chuyển sang màu xanh.'
                     },
                     {
-                        topicId: 'khtn-c2',
-                        q: 'Một dung dịch có giá trị pH = 2. Môi trường của dung dịch đó là:',
-                        options: ['Môi trường base mạnh', 'Môi trường trung tính', 'Môi trường acid', 'Không xác định được'],
-                        ans: 2,
-                        exp: 'Dung dịch có pH < 7 mang tính acid (pH càng nhỏ tính acid càng mạnh).'
-                    },
-                    {
-                        topicId: 'khtn-c2',
-                        q: 'Oxide nào sau đây thuộc loại oxide acid (tác dụng với dung dịch kiềm tạo thành muối và nước)?',
-                        options: ['CaO', 'CuO', 'CO₂', 'MgO'],
-                        ans: 2,
-                        exp: 'CO₂ là oxide acid (tương ứng với acid H₂CO₃); CaO, CuO, MgO là các oxide base.'
-                    },
-                    // Chương 3: Khối lượng riêng & Áp suất
-                    {
                         topicId: 'khtn-c3',
                         q: 'Một khối sắt có thể tích 0,02 m³ và khối lượng 156 kg. Khối lượng riêng của sắt là:',
                         options: ['780 kg/m³', '7800 kg/m³', '3120 kg/m³', '78 kg/m³'],
                         ans: 1,
                         exp: 'Áp dụng công thức D = m / V = 156 / 0,02 = 7800 kg/m³.'
                     },
-                    {
-                        topicId: 'khtn-c3',
-                        q: 'Lực đẩy Archimedes tác dụng lên một vật nhúng chìm trong chất lỏng phụ thuộc vào hai yếu tố nào?',
-                        options: [
-                            'Khối lượng riêng của vật và độ sâu của vật.',
-                            'Trọng lượng riêng của chất lỏng và thể tích phần chất lỏng bị vật chiếm chỗ.',
-                            'Hình dạng của vật và diện tích mặt đáy bình chứa.',
-                            'Nhiệt độ của vật và áp suất khí quyển.'
-                        ],
-                        ans: 1,
-                        exp: 'Công thức F_A = d · V, trong đó d là trọng lượng riêng chất lỏng và V là thể tích phần chất lỏng bị vật chiếm chỗ.'
-                    },
-                    {
-                        topicId: 'khtn-c3',
-                        q: 'Để tăng áp suất tác dụng lên một mặt bị ép, ta có thể thực hiện cách nào sau đây?',
-                        options: [
-                            'Giảm áp lực và tăng diện tích bị ép.',
-                            'Tăng áp lực và giảm diện tích bị ép.',
-                            'Giữ nguyên áp lực và tăng diện tích bị ép.',
-                            'Giảm cả áp lực và diện tích bị ép theo cùng tỉ lệ.'
-                        ],
-                        ans: 1,
-                        exp: 'Từ công thức p = F / S, muốn tăng áp suất p thì tăng áp lực F hoặc giảm diện tích bị ép S.'
-                    },
-                    // Chương 4: Moment lực & Điện học
                     {
                         topicId: 'khtn-c4',
                         q: 'Theo quy ước, chiều dòng điện trong mạch điện kín chạy như thế nào?',
@@ -1215,52 +911,11 @@
                         exp: 'Chiều dòng điện quy ước đi từ cực dương qua dây dẫn và các dụng cụ điện tới cực âm của nguồn điện.'
                     },
                     {
-                        topicId: 'khtn-c4',
-                        q: 'Khi mở cánh cửa, ta đặt tay ở tay nắm cách xa bản lề sẽ mở cửa dễ dàng hơn đặt tay gần bản lề vì:',
-                        options: [
-                            'Khối lượng cánh cửa giảm đi.',
-                            'Khoảng cách từ giá của lực tới trục quay lớn hơn nên tác dụng làm quay (moment lực) lớn hơn.',
-                            'Lực ma sát ở bản lề biến mất.',
-                            'Áp suất không khí tác dụng lên cửa nhỏ hơn.'
-                        ],
-                        ans: 1,
-                        exp: 'Moment lực càng lớn khi lực tác dụng càng lớn và giá của lực càng cách xa trục quay.'
-                    },
-                    {
-                        topicId: 'khtn-c4',
-                        q: 'Thiết bị nào sau đây hoạt động dựa trên tác dụng nhiệt của dòng điện?',
-                        options: ['Chuông điện', 'Bàn là (bàn ủi) điện', 'Quạt điện', 'Đèn LED báo hiệu'],
-                        ans: 1,
-                        exp: 'Bàn là điện, bếp điện, ấm siêu tốc hoạt động chủ yếu dựa trên tác dụng nhiệt của dòng điện.'
-                    },
-                    // Chương 5: Nhiệt học & Sinh học cơ thể người
-                    {
-                        topicId: 'khtn-c5',
-                        q: 'Hình thức truyền nhiệt chủ yếu xảy ra trong chất lỏng và chất khí là gì?',
-                        options: ['Dẫn nhiệt', 'Đối lưu', 'Bức xạ nhiệt', 'Khuếch tán'],
-                        ans: 1,
-                        exp: 'Đối lưu là sự truyền nhiệt bằng các dòng chất lỏng hoặc chất khí di chuyển thành vòng tuần hoàn.'
-                    },
-                    {
                         topicId: 'khtn-c5',
                         q: 'Năng lượng nhiệt từ Mặt Trời truyền tới Trái Đất chủ yếu bằng hình thức nào?',
                         options: ['Dẫn nhiệt qua không khí', 'Đối lưu trong vũ trụ', 'Bức xạ nhiệt', 'Truyền sóng âm'],
                         ans: 2,
                         exp: 'Khoảng không gian giữa Mặt Trời và Trái Đất là chân không nên nhiệt chỉ truyền được bằng bức xạ nhiệt.'
-                    },
-                    {
-                        topicId: 'khtn-c5',
-                        q: 'Thành phần nào của máu có chức năng chính là vận chuyển khí oxygen (O₂) từ phổi đến các tế bào?',
-                        options: ['Bạch cầu', 'Tiểu cầu', 'Hồng cầu', 'Huyết tương'],
-                        ans: 2,
-                        exp: 'Hồng cầu chứa huyết sắc tố (hemoglobin) có chức năng vận chuyển O₂ và CO₂.'
-                    },
-                    {
-                        topicId: 'khtn-c5',
-                        q: 'Tuyến nội tiết nào tiết ra hormone insulin giúp điều hòa làm giảm lượng đường (glucose) trong máu?',
-                        options: ['Tuyến giáp', 'Tuyến tụy', 'Tuyến yên', 'Tuyến trên thận'],
-                        ans: 1,
-                        exp: 'Đảo tụy trong tuyến tụy tiết ra hormone insulin giúp chuyển hóa glucose thành glycogen dự trữ, làm hạ đường huyết.'
                     }
                 ]
             },
@@ -1282,8 +937,8 @@
                         title: 'Chương 1: Lịch sử thế giới cận đại & Cách mạng công nghiệp',
                         summary: 'Các cuộc cách mạng tư sản tiêu biểu (Anh, Mỹ, Pháp) và tác động của Cách mạng công nghiệp thế kỷ XVIII–XIX.',
                         points: [
-                            '<strong>Cách mạng tư sản Anh, Chiến tranh giành độc lập ở Bắc Mỹ & Cách mạng tư sản Pháp (1789):</strong> Lật đổ chế độ phong kiến/thực dân, mở đường cho chủ nghĩa tư bản phát triển.',
-                            '<strong>Cách mạng công nghiệp (bắt đầu từ nước Anh):</strong> Chuyển từ lao động thủ công sang lao động bằng máy móc (máy hơi nước của James Watt), hình thành hai giai cấp cơ bản là tư sản và vô sản.'
+                            '<strong>Cách mạng tư sản Anh, Bắc Mỹ & Pháp (1789):</strong> Lật đổ chế độ phong kiến/thực dân, mở đường cho chủ nghĩa tư bản phát triển.',
+                            '<strong>Cách mạng công nghiệp (bắt đầu từ nước Anh):</strong> Chuyển từ lao động thủ công sang lao động bằng máy móc.'
                         ]
                     },
                     {
@@ -1292,10 +947,10 @@
                         chapter: 'Chương 2 • Phân môn Lịch sử',
                         quizTopicId: 'sd-c2',
                         title: 'Chương 2: Việt Nam từ thế kỷ XVI đến đầu thế kỷ XX',
-                        summary: 'Xung đột Nam – Bắc triều, Trịnh – Nguyễn, Phong trào Tây Sơn và cuộc kháng chiến chống thực dân Pháp xâm lược.',
+                        summary: 'Phong trào Tây Sơn và cuộc kháng chiến chống thực dân Pháp xâm lược.',
                         points: [
-                            '<strong>Phong trào Tây Sơn (1771–1789):</strong> Lật đổ chúa Nguyễn, chúa Trịnh; đánh tan quân Xiêm tại <em>Rạch Gầm – Xoài Mút (1785)</em> và đại phá 29 vạn quân Thanh tại <em>Ngọc Hồi – Đống Đa (1789)</em>.',
-                            '<strong>Việt Nam nửa sau thế kỷ XIX:</strong> Thực dân Pháp nổ súng xâm lược (1858); phong trào Cần vương và khởi nghĩa Yên Thế bùng nổ mạnh mẽ.'
+                            '<strong>Phong trào Tây Sơn (1771–1789):</strong> Đánh tan quân Xiêm tại <em>Rạch Gầm – Xoài Mút (1785)</em> và đại phá 29 vạn quân Thanh tại <em>Ngọc Hồi – Đống Đa (1789)</em>.',
+                            '<strong>Kháng chiến chống Pháp (1858–cuối TK XIX):</strong> Phong trào Cần vương và khởi nghĩa Yên Thế.'
                         ]
                     },
                     {
@@ -1306,9 +961,8 @@
                         title: 'Chương 3: Vị trí địa lý, Địa hình & Khí hậu Việt Nam',
                         summary: 'Đặc điểm vị trí chiến lược, cấu trúc địa hình đồi núi và tính chất nhiệt đới ẩm gió mùa.',
                         points: [
-                            '<strong>Vị trí địa lý:</strong> Nằm ở rìa phía đông bán đảo Đông Dương, gần trung tâm khu vực Đông Nam Á, tiếp giáp Biển Đông rộng lớn.',
-                            '<strong>Địa hình:</strong> Đồi núi chiếm 3/4 diện tích (chủ yếu đồi núi thấp dưới 1000m); hai hướng chính là Tây Bắc – Đông Nam và vòng cung.',
-                            '<strong>Khí hậu:</strong> Nhiệt đới ẩm gió mùa, có sự phân hóa đa dạng theo chiều Bắc – Nam, Đông – Tây và theo độ cao.'
+                            '<strong>Địa hình:</strong> Đồi núi chiếm 3/4 diện tích; hai hướng chính là Tây Bắc – Đông Nam và vòng cung.',
+                            '<strong>Khí hậu:</strong> Nhiệt đới ẩm gió mùa, phân hóa đa dạng.'
                         ]
                     },
                     {
@@ -1317,17 +971,16 @@
                         chapter: 'Chương 4 • Phân môn Địa lý',
                         quizTopicId: 'sd-c4',
                         title: 'Chương 4: Thủy văn, Thổ nhưỡng & Biển đảo Việt Nam',
-                        summary: 'Mạng lưới sông ngòi dày đặc, ba nhóm đất chính và chủ quyền biển đảo thiêng liêng của Tổ quốc.',
+                        summary: 'Mạng lưới sông ngòi, ba nhóm đất chính và chủ quyền biển đảo Việt Nam.',
                         points: [
-                            '<strong>Sông ngòi:</strong> Mạng lưới dày đặc (2.360 con sông dài trên 10 km), chế độ nước theo mùa (mùa lũ và mùa cạn rõ rệt).',
-                            '<strong>Ba nhóm đất chính:</strong> Đất feralit ở vùng đồi núi, đất phù sa ở đồng bằng và đất mùn núi cao.',
-                            '<strong>Biển đảo Việt Nam:</strong> Vùng biển thuộc chủ quyền Việt Nam rộng khoảng 1 triệu km² trên Biển Đông với hai quần đảo Hoàng Sa (Đà Nẵng) và Trường Sa (Khánh Hòa).'
+                            '<strong>Ba nhóm đất chính:</strong> Đất feralit ở đồi núi, đất phù sa ở đồng bằng và đất mùn núi cao.',
+                            '<strong>Biển đảo Việt Nam:</strong> Quần đảo Hoàng Sa (Đà Nẵng) và Trường Sa (Khánh Hòa).'
                         ]
                     }
                 ],
                 docs: [
-                    { title: 'Niên biểu các sự kiện Lịch sử Việt Nam & Thế giới lớp 8', type: 'PDF • Niên biểu', pages: '10 trang', size: '1.3 MB' },
-                    { title: 'Atlat tóm tắt & Câu hỏi trắc nghiệm Địa lý tự nhiên Việt Nam', type: 'PDF • Tài liệu', pages: '14 trang', size: '2.4 MB' }
+                    { title: 'Niên biểu các sự kiện Lịch sử Việt Nam & Thế giới lớp 8', type: 'PDF • Niên biểu', pages: '10 trang', size: '1.3 MB', url: '' },
+                    { title: 'Atlat tóm tắt & Câu hỏi trắc nghiệm Địa lý tự nhiên Việt Nam', type: 'PDF • Tài liệu', pages: '14 trang', size: '2.4 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'sd-c1', name: 'Chương 1: Lịch sử thế giới cận đại' },
@@ -1336,118 +989,33 @@
                     { id: 'sd-c4', name: 'Chương 4: Thủy văn, Thổ nhưỡng & Biển đảo Việt Nam' }
                 ],
                 quiz: [
-                    // Chương 1: Lịch sử thế giới
                     {
                         topicId: 'sd-c1',
                         q: 'Cuộc Cách mạng công nghiệp thế kỷ XVIII khởi đầu đầu tiên ở quốc gia nào?',
                         options: ['Pháp', 'Anh', 'Mỹ', 'Đức'],
                         ans: 1,
-                        exp: 'Cách mạng công nghiệp bắt đầu từ nước Anh vào những năm 60 của thế kỷ XVIII với phát minh máy kéo sợi và máy hơi nước.'
+                        exp: 'Cách mạng công nghiệp bắt đầu từ nước Anh vào những năm 60 của thế kỷ XVIII.'
                     },
-                    {
-                        topicId: 'sd-c1',
-                        q: 'Sự kiện nào mở đầu cho cuộc Cách mạng tư sản Pháp năm 1789?',
-                        options: [
-                            'Quần chúng nhân dân tấn công pháo đài – nhà tù Ba-xti (14/7/1789).',
-                            'Tuyên ngôn Độc lập được thông qua tại Phi-la-đen-phi-a.',
-                            'James Watt phát minh ra động cơ hơi nước.',
-                            'Napoléon lên ngôi hoàng đế.'
-                        ],
-                        ans: 0,
-                        exp: 'Ngày 14/7/1789, quần chúng nhân dân Pa-ri tấn công chiếm pháo đài – nhà tù Ba-xti, mở đầu thắng lợi cho Cách mạng tư sản Pháp.'
-                    },
-                    {
-                        topicId: 'sd-c1',
-                        q: 'Hệ quả xã hội quan trọng nhất của Cách mạng công nghiệp là sự hình thành hai giai cấp cơ bản nào?',
-                        options: [
-                            'Chủ nô và nô lệ.',
-                            'Địa chủ phong kiến và nông dân.',
-                            'Tư sản công nghiệp và vô sản công nghiệp.',
-                            'Quý tộc và tăng lữ.'
-                        ],
-                        ans: 2,
-                        exp: 'Cách mạng công nghiệp làm hình thành hai giai cấp đối lập trong xã hội tư bản là giai cấp tư sản và giai cấp vô sản.'
-                    },
-                    // Chương 2: Lịch sử Việt Nam
                     {
                         topicId: 'sd-c2',
                         q: 'Chiến thắng Rạch Gầm – Xoài Mút (năm 1785) của nghĩa quân Tây Sơn đã đánh tan quân xâm lược nào?',
                         options: ['Quân Thanh', 'Quân Xiêm', 'Quân Minh', 'Quân Nam Hán'],
                         ans: 1,
-                        exp: 'Đầu năm 1785, Nguyễn Huệ chỉ huy nghĩa quân Tây Sơn đánh tan 5 vạn quân Xiêm xâm lược trên sông Tiền (Rạch Gầm – Xoài Mút).'
+                        exp: 'Đầu năm 1785, Nguyễn Huệ chỉ huy nghĩa quân Tây Sơn đánh tan 5 vạn quân Xiêm xâm lược trên sông Tiền.'
                     },
-                    {
-                        topicId: 'sd-c2',
-                        q: 'Mùa xuân năm Kỷ Dậu (1789), vua Quang Trung đã lãnh đạo quân dân ta đánh bại cuộc xâm lược của:',
-                        options: ['29 vạn quân Thanh', '5 vạn quân Xiêm', 'Quân Tống', 'Quân Nguyên'],
-                        ans: 0,
-                        exp: 'Tết Kỷ Dậu 1789, vua Quang Trung đại phá 29 vạn quân Thanh với chiến thắng Ngọc Hồi – Đống Đa lịch sử.'
-                    },
-                    {
-                        topicId: 'sd-c2',
-                        q: 'Thực dân Pháp chính thức nổ súng mở đầu cuộc chiến tranh xâm lược Việt Nam vào năm 1858 tại địa điểm nào?',
-                        options: ['Cửa biển Thuận An (Huế)', 'Bán đảo Sơn Trà (Đà Nẵng)', 'Thành Gia Định', 'Cửa biển Cần Giờ'],
-                        ans: 1,
-                        exp: 'Ngày 1/9/1858, liên quân Pháp – Tây Ban Nha nổ súng tấn công bán đảo Sơn Trà (Đà Nẵng), mở đầu cuộc xâm lược nước ta.'
-                    },
-                    // Chương 3: Địa hình & Khí hậu
                     {
                         topicId: 'sd-c3',
                         q: 'Đồi núi chiếm khoảng bao nhiêu phần diện tích phần đất liền của nước ta?',
                         options: ['1/4 diện tích', '1/2 diện tích', '3/4 diện tích', '2/3 diện tích'],
                         ans: 2,
-                        exp: 'Địa hình nước ta có 3/4 diện tích là đồi núi (chủ yếu đồi núi thấp dưới 1000m) và 1/4 diện tích là đồng bằng.'
+                        exp: 'Địa hình nước ta có 3/4 diện tích là đồi núi và 1/4 diện tích là đồng bằng.'
                     },
-                    {
-                        topicId: 'sd-c3',
-                        q: 'Dãy núi Hoàng Liên Sơn có hướng chạy chủ yếu là hướng nào?',
-                        options: ['Hướng vòng cung', 'Hướng Tây Bắc – Đông Nam', 'Hướng Đông – Tây', 'Hướng Bắc – Nam'],
-                        ans: 1,
-                        exp: 'Dãy Hoàng Liên Sơn chạy theo hướng Tây Bắc – Đông Nam.'
-                    },
-                    {
-                        topicId: 'sd-c3',
-                        q: 'Khí hậu Việt Nam mang tính chất chung là:',
-                        options: [
-                            'Ôn đới hải dương lạnh quanh năm.',
-                            'Nhiệt đới ẩm gió mùa.',
-                            'Cận nhiệt đới địa trung hải.',
-                            'Khí hậu hoang mạc khô hạn.'
-                        ],
-                        ans: 1,
-                        exp: 'Nước ta nằm trong vùng nội chí tuyến và chịu tác động của gió mùa châu Á nên có khí hậu nhiệt đới ẩm gió mùa.'
-                    },
-                    // Chương 4: Thủy văn, Thổ nhưỡng & Biển đảo
                     {
                         topicId: 'sd-c4',
                         q: 'Nhóm đất nào chiếm diện tích lớn nhất ở vùng đồi núi nước ta?',
                         options: ['Đất phù sa sông', 'Đất feralit', 'Đất mặn ven biển', 'Đất cát pha'],
                         ans: 1,
                         exp: 'Đất feralit hình thành trên các vùng đồi núi thấp, chiếm diện tích lớn nhất ở nước ta.'
-                    },
-                    {
-                        topicId: 'sd-c4',
-                        q: 'Hai quần đảo xa bờ thuộc chủ quyền thiêng liêng của Việt Nam trên Biển Đông là:',
-                        options: [
-                            'Hoàng Sa và Trường Sa.',
-                            'Côn Đảo và Phú Quốc.',
-                            'Cát Bà và Bạch Long Vĩ.',
-                            'Lý Sơn và Phú Quý.'
-                        ],
-                        ans: 0,
-                        exp: 'Quần đảo Hoàng Sa (TP. Đà Nẵng) và quần đảo Trường Sa (tỉnh Khánh Hòa) là hai quần đảo xa bờ thuộc chủ quyền của Việt Nam.'
-                    },
-                    {
-                        topicId: 'sd-c4',
-                        q: 'Chế độ nước của sông ngòi Việt Nam có đặc điểm nổi bật nào sau đây?',
-                        options: [
-                            'Nước đầy quanh năm, không có mùa cạn.',
-                            'Có hai mùa rõ rệt: mùa lũ và mùa cạn.',
-                            'Đóng băng hoàn toàn vào mùa đông.',
-                            'Chỉ chảy theo hướng từ Đông sang Tây.'
-                        ],
-                        ans: 1,
-                        exp: 'Do khí hậu có hai mùa mưa và khô rõ rệt nên sông ngòi nước ta có mùa lũ và mùa cạn tương ứng.'
                     }
                 ]
             },
@@ -1469,8 +1037,8 @@
                         title: 'Chương 1: Lịch sử phát triển máy tính & Thông tin số',
                         summary: 'Các thế hệ máy tính điện tử và đặc điểm thông tin trong môi trường số.',
                         points: [
-                            '<strong>5 thế hệ máy tính điện tử:</strong> Đèn điện tử chân không (TH1) → Bóng bán dẫn (TH2) → Mạch tích hợp IC (TH3) → Vi xử lý (TH4) → Trí tuệ nhân tạo AI (TH5).',
-                            '<strong>Đặc điểm thông tin số:</strong> Dễ dàng sao chép, lan truyền nhanh, khó thu hồi hoàn toàn và có độ tin cậy khác nhau (cần kiểm chứng nguồn tin).'
+                            '<strong>5 thế hệ máy tính:</strong> Đèn điện tử chân không → Bóng bán dẫn → Mạch tích hợp IC → Vi xử lý → Trí tuệ nhân tạo AI.',
+                            '<strong>Thông tin số:</strong> Dễ sao chép, lan truyền nhanh, cần kiểm chứng độ tin cậy.'
                         ]
                     },
                     {
@@ -1479,9 +1047,8 @@
                         chapter: 'Chương 2 • Đạo đức & Văn hóa số',
                         quizTopicId: 'tin-c2',
                         title: 'Chương 2: Đạo đức, Pháp luật & Văn hóa trong môi trường số',
-                        summary: 'Ứng xử văn minh trên mạng, tôn trọng bản quyền và phòng tránh vi phạm pháp luật số.',
+                        summary: 'Ứng xử văn minh trên mạng và tôn trọng bản quyền.',
                         points: [
-                            '<strong>Ứng xử có văn hóa:</strong> Không đăng tải thông tin sai sự thật, không xúc phạm danh dự người khác trên mạng xã hội.',
                             '<strong>Tôn trọng bản quyền:</strong> Ghi rõ nguồn trích dẫn, không sao chép hoặc phát tán trái phép sản phẩm số có bản quyền.'
                         ]
                     },
@@ -1491,11 +1058,9 @@
                         chapter: 'Chương 3 • Ứng dụng Tin học',
                         quizTopicId: 'tin-c3',
                         title: 'Chương 3: Bảng tính điện tử nâng cao (Excel)',
-                        summary: 'Địa chỉ tương đối/tuyệt đối, Sắp xếp dữ liệu, Lọc dữ liệu (Filter) và Biểu đồ trực quan.',
+                        summary: 'Địa chỉ tương đối/tuyệt đối, Sắp xếp và Lọc dữ liệu (Filter).',
                         points: [
-                            '<strong>Địa chỉ tương đối (A1):</strong> Tự động thay đổi khi sao chép công thức.',
-                            '<strong>Địa chỉ tuyệt đối ($A$1):</strong> Cố định cả cột và hàng bằng dấu <span class="math-formula">$</span> (phím tắt <strong>F4</strong>).',
-                            '<strong>Sắp xếp & Lọc dữ liệu:</strong> Sắp xếp tăng/giảm dần (Sort) và lọc các hàng thỏa mãn điều kiện nhất định (Filter).'
+                            '<strong>Địa chỉ tuyệt đối ($A$1):</strong> Cố định cả cột và hàng bằng dấu <span class="math-formula">$</span> (phím tắt <strong>F4</strong>).'
                         ]
                     },
                     {
@@ -1504,17 +1069,15 @@
                         chapter: 'Chương 4 • Lập trình trực quan',
                         quizTopicId: 'tin-c4',
                         title: 'Chương 4: Lập trình trực quan Scratch (Biến, Rẽ nhánh & Lặp)',
-                        summary: 'Sử dụng biến nhớ, biểu thức điều kiện và các cấu trúc điều khiển để tạo chương trình giải quyết bài toán.',
+                        summary: 'Sử dụng biến nhớ, biểu thức điều kiện và các cấu trúc điều khiển.',
                         points: [
-                            '<strong>Biến (Variable):</strong> Là vùng nhớ được đặt tên dùng để lưu trữ giá trị có thể thay đổi trong quá trình thực hiện chương trình.',
-                            '<strong>Cấu trúc rẽ nhánh:</strong> Khối lệnh <em>Nếu ... thì ...</em> (dạng thiếu) và <em>Nếu ... thì ... nếu không thì ...</em> (dạng đủ).',
-                            '<strong>Cấu trúc lặp:</strong> <em>Lặp lại N lần</em> (biết trước số lần) và <em>Lặp lại cho đến khi &lt;điều kiện&gt;</em>.'
+                            '<strong>Biến (Variable):</strong> Vùng nhớ được đặt tên lưu trữ giá trị thay đổi trong quá trình chạy chương trình.'
                         ]
                     }
                 ],
                 docs: [
-                    { title: 'Tài liệu thực hành Bảng tính Excel nâng cao lớp 8', type: 'PDF • Thực hành', pages: '12 trang', size: '1.5 MB' },
-                    { title: 'Hướng dẫn lập trình Scratch lớp 8 theo từng bài học', type: 'PDF • Lập trình', pages: '16 trang', size: '2.1 MB' }
+                    { title: 'Tài liệu thực hành Bảng tính Excel nâng cao lớp 8', type: 'PDF • Thực hành', pages: '12 trang', size: '1.5 MB', url: '' },
+                    { title: 'Hướng dẫn lập trình Scratch lớp 8 theo từng bài học', type: 'PDF • Lập trình', pages: '16 trang', size: '2.1 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'tin-c1', name: 'Chương 1: Lịch sử máy tính & Thông tin số' },
@@ -1523,52 +1086,13 @@
                     { id: 'tin-c4', name: 'Chương 4: Lập trình trực quan Scratch' }
                 ],
                 quiz: [
-                    // Chương 1
                     {
                         topicId: 'tin-c1',
                         q: 'Linh kiện điện tử chủ yếu được sử dụng trong máy tính thế hệ thứ nhất là gì?',
                         options: ['Bóng bán dẫn', 'Đèn điện tử chân không', 'Mạch tích hợp (IC)', 'Bộ vi xử lý'],
                         ans: 1,
-                        exp: 'Máy tính thế hệ thứ nhất (1945–1955) sử dụng đèn điện tử chân không, kích thước rất lớn và tiêu thụ nhiều điện năng.'
+                        exp: 'Máy tính thế hệ thứ nhất (1945–1955) sử dụng đèn điện tử chân không.'
                     },
-                    {
-                        topicId: 'tin-c1',
-                        q: 'Đặc điểm nào sau đây KHÔNG đúng về thông tin trong môi trường số?',
-                        options: [
-                            'Có thể sao chép và lan truyền rất nhanh.',
-                            'Khó có thể thu hồi hoặc xóa bỏ hoàn toàn một khi đã phát tán công khai.',
-                            'Mọi thông tin trên Internet đều đã được kiểm duyệt và chính xác 100%.',
-                            'Có thể lưu trữ với dung lượng lớn trên nhiều thiết bị.'
-                        ],
-                        ans: 2,
-                        exp: 'Thông tin trên Internet rất đa dạng và có nhiều nguồn tin giả, sai lệch nên người dùng phải biết kiểm chứng độ tin cậy.'
-                    },
-                    // Chương 2
-                    {
-                        topicId: 'tin-c2',
-                        q: 'Hành động nào sau đây thể hiện văn hóa ứng xử lành mạnh trên môi trường mạng?',
-                        options: [
-                            'Chia sẻ thông tin giật gân khi chưa kiểm chứng nguồn tin.',
-                            'Sử dụng hình ảnh riêng tư của bạn bè để chế ảnh trêu đùa.',
-                            'Tôn trọng bản quyền tác giả và trích dẫn nguồn rõ ràng khi sử dụng tài liệu.',
-                            'Bình luận công kích người khác trên diễn đàn.'
-                        ],
-                        ans: 2,
-                        exp: 'Tôn trọng bản quyền và trích dẫn nguồn rõ ràng là chuẩn mực đạo đức, văn hóa số cần thiết.'
-                    },
-                    {
-                        topicId: 'tin-c2',
-                        q: 'Khi tìm thấy một bài viết hay trên Internet và muốn đưa vào bài thuyết trình của nhóm, em nên làm gì để tôn trọng bản quyền?',
-                        options: [
-                            'Sao chép nguyên văn và nhận là do mình tự viết.',
-                            'Ghi rõ tên tác giả và đường dẫn nguồn trích dẫn.',
-                            'Sửa vài từ rồi đăng bán trên mạng.',
-                            'Xóa tên tác giả gốc khỏi bài viết.'
-                        ],
-                        ans: 1,
-                        exp: 'Ghi rõ tên tác giả và nguồn trích dẫn là cách tôn trọng quyền tác giả và tuân thủ pháp luật trong môi trường số.'
-                    },
-                    // Chương 3: Excel
                     {
                         topicId: 'tin-c3',
                         q: 'Trong phần mềm bảng tính Excel, kí hiệu nào dùng để tạo địa chỉ tuyệt đối cho cả cột và hàng?',
@@ -1576,26 +1100,6 @@
                         ans: 0,
                         exp: 'Dấu đô-la ($) đặt trước cả tên cột và số hàng ($A$1) tạo thành địa chỉ tuyệt đối.'
                     },
-                    {
-                        topicId: 'tin-c3',
-                        q: 'Tại ô C1 có công thức =A1+$B$1. Khi sao chép công thức từ ô C1 xuống ô C2, công thức tại ô C2 sẽ là gì?',
-                        options: ['=A2+$B$2', '=A2+$B$1', '=A1+$B$1', '=B2+$B$1'],
-                        ans: 1,
-                        exp: 'A1 là địa chỉ tương đối nên đổi thành A2; $B$1 là địa chỉ tuyệt đối nên giữ nguyên là $B$1.'
-                    },
-                    {
-                        topicId: 'tin-c3',
-                        q: 'Chức năng Lọc dữ liệu (Filter) trong bảng tính điện tử dùng để làm gì?',
-                        options: [
-                            'Xóa vĩnh viễn các hàng không thỏa mãn điều kiện.',
-                            'Chỉ hiển thị các hàng thỏa mãn điều kiện nhất định và tạm ẩn các hàng khác.',
-                            'Tự động tính tổng toàn bộ bảng tính.',
-                            'Đổi màu nền cho toàn bộ trang tính.'
-                        ],
-                        ans: 1,
-                        exp: 'Lọc dữ liệu (Filter) giúp chọn ra và hiển thị những hàng thỏa mãn tiêu chí cụ thể mà không làm mất dữ liệu gốc.'
-                    },
-                    // Chương 4: Scratch
                     {
                         topicId: 'tin-c4',
                         q: 'Trong lập trình Scratch, "Biến" (Variable) được dùng để làm gì?',
@@ -1606,26 +1110,7 @@
                             'Xóa toàn bộ các khối lệnh đang có.'
                         ],
                         ans: 1,
-                        exp: 'Biến là vùng nhớ được đặt tên dùng để lưu trữ giá trị (như điểm số, thời gian, bộ đếm) thay đổi trong quá trình chạy.'
-                    },
-                    {
-                        topicId: 'tin-c4',
-                        q: 'Khối lệnh "Lặp lại cho đến khi <điều kiện>" trong Scratch sẽ dừng lại khi nào?',
-                        options: [
-                            'Khi điều kiện trong khung lục giác nhận giá trị ĐÚNG (True).',
-                            'Khi điều kiện nhận giá trị SAI (False).',
-                            'Sau đúng 10 lần lặp cố định.',
-                            'Ngay khi vừa bắt đầu chạy chương trình.'
-                        ],
-                        ans: 0,
-                        exp: 'Vòng lặp "Lặp lại cho đến khi <điều kiện>" thực hiện các lệnh bên trong cho tới khi điều kiện trở thành Đúng thì dừng.'
-                    },
-                    {
-                        topicId: 'tin-c4',
-                        q: 'Để kiểm tra xem một số N có chia hết cho 2 hay không trong Scratch, ta dùng phép toán nào?',
-                        options: ['N / 2 = 0', '(N chia lấy dư 2) = 0', 'N * 2 = 0', 'N - 2 = 0'],
-                        ans: 1,
-                        exp: 'Một số chia hết cho 2 khi số dư của phép chia số đó cho 2 bằng 0 (khối lệnh "chia lấy dư").'
+                        exp: 'Biến là vùng nhớ được đặt tên dùng để lưu trữ giá trị thay đổi trong quá trình chạy.'
                     }
                 ]
             },
@@ -1645,10 +1130,9 @@
                         chapter: 'Chương 1 • Giá trị truyền thống & Văn hóa',
                         quizTopicId: 'gdcd-c1',
                         title: 'Chương 1: Tự hào truyền thống dân tộc & Tôn trọng sự đa dạng',
-                        summary: 'Giữ gìn bản sắc văn hóa dân tộc Việt Nam và tôn trọng sự đa dạng của các dân tộc trên thế giới.',
+                        summary: 'Giữ gìn bản sắc văn hóa dân tộc Việt Nam và tôn trọng sự đa dạng của các dân tộc.',
                         points: [
-                            '<strong>Truyền thống tốt đẹp của dân tộc:</strong> Yêu nước, đoàn kết, nhân nghĩa, hiếu học, tôn sư trọng đạo, cần cù lao động...',
-                            '<strong>Tôn trọng sự đa dạng của các dân tộc:</strong> Tôn trọng tiếng nói, trang phục, phong tục tập quán tốt đẹp của 54 dân tộc anh em và các nền văn hóa khác.'
+                            '<strong>Truyền thống dân tộc:</strong> Yêu nước, đoàn kết, hiếu học, tôn sư trọng đạo, cần cù lao động.'
                         ]
                     },
                     {
@@ -1657,10 +1141,9 @@
                         chapter: 'Chương 2 • Phẩm chất cá nhân',
                         quizTopicId: 'gdcd-c2',
                         title: 'Chương 2: Lao động cần cù, sáng tạo & Bảo vệ lẽ phải',
-                        summary: 'Rèn luyện thái độ học tập tích cực và bản lĩnh bảo vệ điều đúng đắn trong cuộc sống.',
+                        summary: 'Rèn luyện thái độ học tập tích cực và bản lĩnh bảo vệ điều đúng đắn.',
                         points: [
-                            '<strong>Lao động cần cù, sáng tạo:</strong> Chăm chỉ, miệt mài kết hợp suy nghĩ tìm tòi phương pháp mới để nâng cao năng suất, hiệu quả.',
-                            '<strong>Bảo vệ lẽ phải:</strong> Công nhận, ủng hộ, tuân theo và bảo vệ những điều đúng đắn, phù hợp với đạo lý và pháp luật.'
+                            '<strong>Bảo vệ lẽ phải:</strong> Ủng hộ, tuân theo và bảo vệ những điều đúng đắn, phù hợp với đạo lý và pháp luật.'
                         ]
                     },
                     {
@@ -1671,8 +1154,7 @@
                         title: 'Chương 3: Bảo vệ môi trường & Phòng chống bạo lực gia đình',
                         summary: 'Trách nhiệm bảo vệ tài nguyên thiên nhiên và kỹ năng tự bảo vệ trước bạo lực.',
                         points: [
-                            '<strong>Bảo vệ môi trường & tài nguyên:</strong> Tiết kiệm điện nước, phân loại rác thải, trồng cây xanh, lên án hành vi khai thác cạn kiệt tài nguyên.',
-                            '<strong>Phòng, chống bạo lực gia đình:</strong> Gồm bạo lực thể chất, tinh thần, kinh tế, tình dục. Đường dây nóng bảo vệ trẻ em miễn phí 24/7: <strong>111</strong>.'
+                            '<strong>Đường dây nóng bảo vệ trẻ em miễn phí 24/7:</strong> <strong>111</strong>.'
                         ]
                     },
                     {
@@ -1683,14 +1165,12 @@
                         title: 'Chương 4: Lập kế hoạch chi tiêu & Phòng ngừa tai nạn vũ khí, cháy nổ',
                         summary: 'Quản lý tiền tiêu vặt hợp lý và tuân thủ quy định an toàn phòng cháy chữa cháy.',
                         points: [
-                            '<strong>Lập kế hoạch chi tiêu:</strong> Xác định mục tiêu tài chính, phân biệt giữa "nhu cầu thiết yếu" và "mong muốn", ghi chép thu chi và dành một khoản tiết kiệm.',
-                            '<strong>Phòng ngừa tai nạn vũ khí, cháy nổ:</strong> Tuyệt đối không tàng trữ, sử dụng pháo nổ, vũ khí tự chế; nắm vững kỹ năng thoát hiểm khi có hỏa hoạn (số cứu hỏa: <strong>114</strong>).'
+                            '<strong>Số điện thoại cứu hỏa khẩn cấp:</strong> <strong>114</strong>.'
                         ]
                     }
                 ],
                 docs: [
-                    { title: 'Tóm tắt kiến thức & Tình huống thực tế GDCD 8 (GDPT 2018)', type: 'PDF • Tài liệu', pages: '09 trang', size: '1.0 MB' },
-                    { title: 'Bộ 40 câu trắc nghiệm ôn tập Học kỳ I & II GDCD 8 có đáp án', type: 'PDF • Đề ôn', pages: '08 trang', size: '900 KB' }
+                    { title: 'Tóm tắt kiến thức & Tình huống thực tế GDCD 8 (GDPT 2018)', type: 'PDF • Tài liệu', pages: '09 trang', size: '1.0 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'gdcd-c1', name: 'Chương 1: Truyền thống dân tộc & Đa dạng văn hóa' },
@@ -1699,57 +1179,6 @@
                     { id: 'gdcd-c4', name: 'Chương 4: Lập kế hoạch chi tiêu & An toàn cháy nổ' }
                 ],
                 quiz: [
-                    // Chương 1
-                    {
-                        topicId: 'gdcd-c1',
-                        q: 'Việc làm nào sau đây thể hiện sự tôn trọng sự đa dạng của các dân tộc và các nền văn hóa?',
-                        options: [
-                            'Chế giễu giọng nói hoặc trang phục truyền thống của người dân tộc thiểu số.',
-                            'Tìm hiểu, trân trọng các lễ hội và nét đẹp văn hóa của 54 dân tộc Việt Nam.',
-                            'Chỉ tiếp thu văn hóa nước ngoài và xem nhẹ văn hóa truyền thống.',
-                            'Cho rằng chỉ có phong tục ở nơi mình sống mới là văn minh.'
-                        ],
-                        ans: 1,
-                        exp: 'Tôn trọng sự đa dạng văn hóa thể hiện ở thái độ tìm hiểu, trân trọng và tôn trọng bản sắc của các dân tộc khác.'
-                    },
-                    {
-                        topicId: 'gdcd-c1',
-                        q: 'Truyền thống nào sau đây là truyền thống hiếu học, tôn sư trọng đạo của dân tộc Việt Nam?',
-                        options: [
-                            'Thờ ơ với việc học tập của bản thân.',
-                            'Kính trọng, biết ơn thầy cô giáo và không ngừng nỗ lực vươn lên trong học tập.',
-                            'Chỉ học khi có sự nhắc nhở của cha mẹ.',
-                            'Coi thường kiến thức sách vở.'
-                        ],
-                        ans: 1,
-                        exp: 'Tôn sư trọng đạo và hiếu học là truyền thống quý báu được giữ gìn qua nhiều thế hệ người Việt.'
-                    },
-                    // Chương 2
-                    {
-                        topicId: 'gdcd-c2',
-                        q: 'Biểu hiện nào dưới đây thể hiện người học sinh lao động cần cù, sáng tạo?',
-                        options: [
-                            'Học thuộc lòng máy móc toàn bộ sách giáo khoa mà không cần hiểu.',
-                            'Chỉ làm bài tập khi thầy cô kiểm tra.',
-                            'Chăm chỉ ôn bài mỗi ngày và tự thiết kế sơ đồ tư duy để ghi nhớ nhanh hơn.',
-                            'Sao chép bài giải của bạn để tiết kiệm thời gian.'
-                        ],
-                        ans: 2,
-                        exp: 'Chăm chỉ ôn tập hằng ngày thể hiện tính cần cù; tự thiết kế sơ đồ tư duy để nâng cao hiệu quả thể hiện tính sáng tạo.'
-                    },
-                    {
-                        topicId: 'gdcd-c2',
-                        q: 'Hành vi nào sau đây thể hiện tinh thần bảo vệ lẽ phải?',
-                        options: [
-                            'Im lặng làm ngơ khi thấy bạn bị bắt nạt.',
-                            'Bao che cho lỗi sai của bạn thân.',
-                            'Dũng cảm góp ý, bênh vực điều đúng đắn và tuân thủ nội quy trường lớp.',
-                            'Luôn hùa theo ý kiến của số đông dù biết là sai.'
-                        ],
-                        ans: 2,
-                        exp: 'Bảo vệ lẽ phải là dũng cảm ủng hộ và bảo vệ những điều đúng đắn, phù hợp với đạo lý và pháp luật.'
-                    },
-                    // Chương 3
                     {
                         topicId: 'gdcd-c3',
                         q: 'Số điện thoại đường dây nóng của Tổng đài Quốc gia Bảo vệ Trẻ em (miễn phí 24/7) tại Việt Nam là số nào?',
@@ -1758,61 +1187,16 @@
                         exp: 'Tổng đài Quốc gia Bảo vệ Trẻ em có đầu số 111, hoạt động 24/7 và miễn phí.'
                     },
                     {
-                        topicId: 'gdcd-c3',
-                        q: 'Hành vi thường xuyên chửi mắng, xúc phạm danh dự, nhân phẩm thành viên trong gia đình thuộc loại bạo lực nào?',
-                        options: ['Bạo lực thể chất', 'Bạo lực tinh thần', 'Bạo lực kinh tế', 'Tai nạn sinh hoạt'],
-                        ans: 1,
-                        exp: 'Lời nói xúc phạm, lăng mạ, cô lập gây tổn thương tâm lý là hành vi bạo lực tinh thần.'
-                    },
-                    {
-                        topicId: 'gdcd-c3',
-                        q: 'Việc làm nào sau đây góp phần trực tiếp bảo vệ môi trường và tài nguyên thiên nhiên?',
-                        options: [
-                            'Xả rác thải nhựa trực tiếp xuống kênh rạch.',
-                            'Phân loại rác tại nguồn, hạn chế túi ni-lông và tắt điện khi ra khỏi phòng.',
-                            'Đốt rừng làm nương rẫy bừa bãi.',
-                            'Sử dụng lãng phí nước sạch.'
-                        ],
-                        ans: 1,
-                        exp: 'Phân loại rác, hạn chế đồ nhựa dùng một lần và tiết kiệm điện năng là hành động thiết thực bảo vệ môi trường.'
-                    },
-                    // Chương 4
-                    {
-                        topicId: 'gdcd-c4',
-                        q: 'Khi lập kế hoạch chi tiêu cá nhân, học sinh nên ưu tiên khoản chi nào trước tiên?',
-                        options: [
-                            'Mua sắm đồ chơi và phụ kiện theo trào lưu.',
-                            'Các nhu cầu thiết yếu phục vụ học tập, sức khỏe và dành một phần tiết kiệm.',
-                            'Chi tiêu hết toàn bộ số tiền hiện có ngay lập tức.',
-                            'Vay mượn bạn bè để mua đồ đắt tiền.'
-                        ],
-                        ans: 1,
-                        exp: 'Lập kế hoạch chi tiêu hợp lý là ưu tiên nhu cầu thiết yếu (sách vở, dụng cụ học tập...) và luôn có khoản tiết kiệm dự phòng.'
-                    },
-                    {
                         topicId: 'gdcd-c4',
                         q: 'Số điện thoại khẩn cấp gọi lực lượng Cảnh sát Phòng cháy chữa cháy và Cứu nạn cứu hộ tại Việt Nam là:',
                         options: ['111', '113', '114', '115'],
                         ans: 2,
-                        exp: '114 là số điện thoại khẩn cấp của lực lượng Cảnh sát PCCC và Cứu nạn cứu hộ (113: Công an, 115: Cấp cứu y tế).'
-                    },
-                    {
-                        topicId: 'gdcd-c4',
-                        q: 'Khi phát hiện vật liệu nghi là bom, mìn hoặc pháo nổ tự chế còn sót lại, em cần làm gì?',
-                        options: [
-                            'Tự ý nhặt lên mang về nhà tháo xem bên trong.',
-                            'Dùng que chọc thử xem còn hoạt động không.',
-                            'Giữ khoảng cách an toàn, không chạm vào và báo ngay cho người lớn hoặc cơ quan chức năng.',
-                            'Đem ném vào đống lửa.'
-                        ],
-                        ans: 2,
-                        exp: 'Tuyệt đối không tiếp xúc, không tác động lực vào vật nghi là bom mìn, vật liệu nổ và báo ngay cho người lớn/cơ quan công an.'
+                        exp: '114 là số điện thoại khẩn cấp của lực lượng Cảnh sát PCCC và Cứu nạn cứu hộ.'
                     }
                 ]
             }
         ];
 
-        // Dữ liệu Thông báo Lịch ôn thi & Mẹo học tập trên Trang chủ
         const EXAM_SCHEDULES = [
             {
                 term: 'Ôn tập Giữa Học kỳ I',
@@ -1879,14 +1263,14 @@
         // 2. TRẠNG THÁI ỨNG DỤNG (STATE)
         // ---------------------------------------------------------------------
         let appState = {
-            currentView: 'home',       // 'home' hoặc id môn học
-            currentTab: 'theory',      // 'theory' | 'docs' | 'quiz'
-            selectedQuizTopic: {},     // { [subjectId]: 'all' | topicId }
-            quizQuestionOrders: {},    // { [subjectId]: [globalQIndex, ...] } - Thứ tự câu hỏi đã xáo trộn
-            quizOptionMaps: {},        // { [subjectId]: { [globalQIndex]: [0,1,2,3] } } - Thứ tự đáp án đã xáo trộn
-            quizAnswers: {},           // { [subjectId]: { [globalQIndex]: originalOptionIndex } }
-            quizSubmitted: {},         // { [subjectId]: boolean }
-            expandedTheory: {}         // { [theoryId]: boolean }
+            currentView: 'home',
+            currentTab: 'theory',
+            selectedQuizTopic: {},
+            quizQuestionOrders: {},
+            quizOptionMaps: {},
+            quizAnswers: {},
+            quizSubmitted: {},
+            expandedTheory: {}
         };
 
         function fisherYatesShuffle(arr) {
@@ -1898,7 +1282,6 @@
             return copy;
         }
 
-        // Khởi tạo hoặc xáo trộn lại cả thứ tự câu hỏi lẫn thứ tự đáp án A, B, C, D cho một môn
         function randomizeSubjectQuizOrder(subId) {
             const sub = SUBJECTS.find(s => s.id === subId);
             if (!sub) return;
@@ -1910,7 +1293,6 @@
             });
         }
 
-        // Mặc định mở sẵn thẻ Chương 1, chọn 'all' và xáo trộn sẵn câu hỏi + đáp án cho mỗi môn
         SUBJECTS.forEach(s => {
             if (s.theory.length > 0) {
                 appState.expandedTheory[s.theory[0].id] = true;
@@ -1918,15 +1300,6 @@
             appState.selectedQuizTopic[s.id] = 'all';
             randomizeSubjectQuizOrder(s.id);
         });
-
-        function fisherYatesShuffle(arr) {
-            const copy = [...arr];
-            for (let i = copy.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [copy[i], copy[j]] = [copy[j], copy[i]];
-            }
-            return copy;
-        }
 
         // ---------------------------------------------------------------------
         // 3. ĐIỀU HƯỚNG & RENDER MENU
@@ -2001,12 +1374,11 @@
         }
 
         // ---------------------------------------------------------------------
-        // 4. TÌM KIẾM BÀI HỌC NHANH ACROSS ALL 7 SUBJECTS
+        // 4. TÌM KIẾM BÀI HỌC NHANH
         // ---------------------------------------------------------------------
         function buildSearchIndex() {
             const index = [];
             SUBJECTS.forEach(sub => {
-                // Thêm môn học
                 index.push({
                     type: 'Môn học',
                     subjectId: sub.id,
@@ -2015,7 +1387,6 @@
                     title: `Môn ${sub.name} Lớp 8`,
                     snippet: sub.desc
                 });
-                // Thêm các bài lý thuyết
                 sub.theory.forEach(th => {
                     const cleanText = th.points.join(' ').replace(/<[^>]*>/g, '');
                     index.push({
@@ -2029,7 +1400,6 @@
                         fullText: `${th.title} ${th.chapter} ${th.summary} ${cleanText}`.toLowerCase()
                     });
                 });
-                // Thêm tài liệu PDF
                 sub.docs.forEach(doc => {
                     index.push({
                         type: 'Tài liệu PDF',
@@ -2106,16 +1476,15 @@
         });
 
         function escapeHtml(str) {
-            return str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+            return String(str ?? '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
         }
 
         // ---------------------------------------------------------------------
-        // 5. RENDER TRANG CHỦ (HOME VIEW)
+        // 5. RENDER TRANG CHỦ
         // ---------------------------------------------------------------------
         function renderHomeView() {
             return `
                 <div class="space-y-8 animate-fade-in">
-                    <!-- HERO BANNER + THANH TÌM KIẾM NHANH -->
                     <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-800 text-white p-6 sm:p-10 shadow-lg shadow-teal-900/10">
                         <div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
                         <div class="absolute right-10 bottom-0 w-48 h-48 rounded-full bg-amber-400/20 blur-xl pointer-events-none"></div>
@@ -2125,13 +1494,12 @@
                                 ✨ Chương trình Giáo dục Phổ thông 2018
                             </span>
                             <h1 class="font-display text-2xl sm:text-4xl font-extrabold leading-tight mb-3">
-                                Chào mừng Anh em nhà Heo <span class="text-amber-300">Học tập Lớp 8</span>!
+                                Chào mừng các bạn học sinh <span class="text-amber-300">Lớp 8</span>!
                             </h1>
                             <p class="text-teal-50 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
                                 Hệ thống tóm tắt lý thuyết trọng tâm, kho đề cương PDF miễn phí và phòng luyện trắc nghiệm chấm điểm tự động cho đầy đủ 7 môn học lớp 8.
                             </p>
 
-                            <!-- Thanh tìm kiếm bài học nhanh trung tâm -->
                             <div class="relative max-w-2xl">
                                 <div class="flex items-center bg-white rounded-2xl p-1.5 shadow-xl">
                                     <div class="pl-3.5 pr-2 text-slate-400">
@@ -2153,7 +1521,6 @@
                                 <div id="hero-search-results" class="hidden absolute left-0 right-0 mt-2 bg-white text-slate-800 rounded-2xl shadow-2xl border border-slate-200 max-h-80 overflow-y-auto z-50 divide-y divide-slate-100"></div>
                             </div>
 
-                            <!-- Từ khóa gợi ý nhanh -->
                             <div class="flex flex-wrap items-center gap-2 mt-4 text-xs">
                                 <span class="text-teal-200 font-medium">Gợi ý nhanh:</span>
                                 ${['Hằng đẳng thức', 'Định lý Thalès', 'Verbs of liking', 'Mol', 'Địa chỉ tuyệt đối'].map(tag => `
@@ -2166,7 +1533,6 @@
                         </div>
                     </section>
 
-                    <!-- LƯỚI TRUY CẬP NHANH 7 MÔN HỌC -->
                     <section>
                         <div class="flex items-center justify-between mb-4">
                             <div>
@@ -2185,7 +1551,7 @@
                                                 ${sub.icon}
                                             </div>
                                             <span class="text-[11px] font-bold px-2.5 py-1 rounded-full ${sub.badgeColor}">
-                                                ${sub.theory.length} chuyên đề
+                                                ${sub.quiz.length} câu hỏi
                                             </span>
                                         </div>
                                         <h3 class="font-display font-bold text-base text-slate-800 group-hover:text-teal-700 transition-colors mb-1.5">
@@ -2204,9 +1570,7 @@
                         </div>
                     </section>
 
-                    <!-- BẢNG THÔNG BÁO LỊCH ÔN THI & GÓC MẸO HỌC TẬP HIỆU QUẢ -->
                     <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                        <!-- Cột trái (7/12): Bảng thông báo lịch ôn thi -->
                         <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden">
                             <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-gradient-to-r from-teal-50/70 to-white">
                                 <div class="flex items-center gap-2.5">
@@ -2241,7 +1605,6 @@
                             </div>
                         </div>
 
-                        <!-- Cột phải (5/12): Góc Mẹo học tập hiệu quả -->
                         <div class="lg:col-span-5 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-5">
                             <div class="flex items-center gap-2.5 mb-4">
                                 <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center">
@@ -2273,14 +1636,13 @@
         }
 
         // ---------------------------------------------------------------------
-        // 6. RENDER TRANG MÔN HỌC (SUBJECT VIEW VỚI 3 TABS CHỨC NĂNG)
+        // 6. RENDER TRANG MÔN HỌC
         // ---------------------------------------------------------------------
         function renderSubjectView(sub) {
             const tab = appState.currentTab;
 
             return `
                 <div class="space-y-6 animate-fade-in">
-                    <!-- Banner đầu môn học -->
                     <div class="rounded-3xl bg-gradient-to-r ${sub.gradient} text-white p-6 sm:p-8 shadow-md">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                             <div>
@@ -2300,7 +1662,6 @@
                         </div>
                     </div>
 
-                    <!-- Thanh 3 Tab chức năng -->
                     <div class="bg-white p-1.5 rounded-2xl border border-slate-200/90 shadow-sm grid grid-cols-1 sm:grid-cols-3 gap-1.5">
                         <button onclick="switchSubjectTab('theory')"
                             class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold transition-all ${tab === 'theory' ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100'}">
@@ -2327,7 +1688,6 @@
                         </button>
                     </div>
 
-                    <!-- Nội dung Tab tương ứng -->
                     <div>
                         ${tab === 'theory' ? renderTheoryTab(sub) : tab === 'docs' ? renderDocsTab(sub) : renderQuizTab(sub)}
                     </div>
@@ -2335,7 +1695,6 @@
             `;
         }
 
-        // TAB 1: TÓM TẮT LÝ THUYẾT TRỌNG TÂM THEO TỪNG CHƯƠNG (MỞ RỘNG / THU GỌN + NÚT LUYỆN CHƯƠNG)
         function renderTheoryTab(sub) {
             return `
                 <div class="space-y-4">
@@ -2422,7 +1781,6 @@
             renderContent();
         }
 
-        // TAB 2: KHO TÀI LIỆU & ĐỀ THI PDF (TẢI XUỐNG TỆP ÔN TẬP)
         function renderDocsTab(sub) {
             return `
                 <div class="space-y-4">
@@ -2465,7 +1823,6 @@
             if (!sub || !sub.docs[docIdx]) return;
             const doc = sub.docs[docIdx];
 
-            // Nếu đã gắn đường dẫn file PDF thật (GitHub hoặc Google Drive), mở/tải trực tiếp file đó
             if (doc.url && doc.url.trim() !== '') {
                 const a = document.createElement('a');
                 a.href = doc.url.trim();
@@ -2509,13 +1866,11 @@
             showToast(`📥 Đang tải xuống tài liệu: "${doc.title}"`);
         }
 
-        // TAB 3: LUYỆN TẬP TRẮC NGHIỆM (CHỌN TỪNG CHƯƠNG + TỰ ĐỘNG XÁO TRỘN CÂU HỎI & ĐÁP ÁN + CHẤM ĐIỂM THANG 10)
         function renderQuizTab(sub) {
             const activeTopic = appState.selectedQuizTopic[sub.id] || 'all';
             const subAnswers = appState.quizAnswers[sub.id] || {};
             const isSubmitted = !!appState.quizSubmitted[sub.id];
 
-            // Đảm bảo luôn có thứ tự câu hỏi & bản đồ thứ tự đáp án đã xáo trộn cho môn học
             if (!appState.quizQuestionOrders[sub.id] || appState.quizQuestionOrders[sub.id].length !== sub.quiz.length) {
                 randomizeSubjectQuizOrder(sub.id);
             }
@@ -2528,7 +1883,6 @@
                 }
             });
 
-            // Lấy danh sách câu hỏi theo thứ tự đã xáo trộn, sau đó lọc theo chương đang chọn
             const shuffledOrder = appState.quizQuestionOrders[sub.id];
             const filteredItems = shuffledOrder
                 .map(globalIdx => ({ qObj: sub.quiz[globalIdx], globalIdx }))
@@ -2551,7 +1905,6 @@
 
             return `
                 <div class="space-y-5">
-                    <!-- BỘ CHỌN CHƯƠNG TRẮC NGHIỆM (ĐỒNG BỘ THEO TỪNG CHƯƠNG LÝ THUYẾT) + NÚT XÁO TRỘN NGẪU NHIÊN -->
                     <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm space-y-3.5">
                         <div class="flex flex-wrap items-center justify-between gap-2">
                             <div class="flex flex-wrap items-center gap-2">
@@ -2563,7 +1916,7 @@
                                 </span>
                             </div>
                             <div class="flex flex-wrap items-center gap-2">
-                                <button type="button" onclick="openQuizManagerModal('import', '${sub.id}')"
+                                <button type="button" onclick="openQuizManagerModal('import')"
                                     class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border border-teal-200 bg-teal-50 hover:bg-teal-100 text-teal-800 transition-all">
                                     <span>📥 Nhập thêm câu hỏi (Excel/JSON)</span>
                                 </button>
@@ -2592,7 +1945,6 @@
                         </div>
                     </div>
 
-                    <!-- Bảng kết quả sau khi bấm Nộp bài -->
                     ${isSubmitted ? `
                         <div class="rounded-2xl bg-gradient-to-r from-teal-50 via-white to-amber-50 border-2 border-teal-500 p-5 sm:p-6 shadow-md animate-fade-in">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -2633,7 +1985,6 @@
                         </div>
                     `}
 
-                    <!-- Danh sách câu hỏi -->
                     <div class="space-y-4">
                         ${filteredItems.map(({ qObj, globalIdx }, dispIdx) => {
                             const userChoice = subAnswers[globalIdx];
@@ -2712,7 +2063,6 @@
                                         ${optionsHtml}
                                     </div>
 
-                                    <!-- Khung Giải thích chi tiết (hiện sau khi nộp bài) -->
                                     ${isSubmitted ? `
                                         <div class="mt-4 p-4 rounded-xl bg-sky-50/90 border border-sky-200 text-sky-950 text-xs sm:text-sm leading-relaxed animate-fade-in">
                                             <div class="font-extrabold text-sky-800 mb-1 flex items-center gap-1.5">
@@ -2726,7 +2076,6 @@
                         }).join('')}
                     </div>
 
-                    <!-- Thanh nút Nộp bài / Làm lại bài -->
                     <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm flex flex-wrap items-center justify-between gap-3">
                         <span class="text-xs sm:text-sm text-slate-500">
                             ${isSubmitted ? 'Bạn có thể bấm "Làm lại nội dung này" hoặc chọn chuyên đề khác ở phía trên.' : `Hoàn thành ${answeredCount}/${totalQ} câu hỏi trong nội dung này.`}
@@ -2812,9 +2161,6 @@
             renderContent();
         }
 
-        // ---------------------------------------------------------------------
-        // 7. RENDER CHÍNH & TOAST THÔNG BÁO
-        // ---------------------------------------------------------------------
         function renderContent() {
             const container = document.getElementById('app-content');
             if (appState.currentView === 'home') {
@@ -2845,13 +2191,14 @@
                 toast.style.opacity = '0';
                 toast.style.transition = 'opacity 0.3s ease';
                 setTimeout(() => toast.remove(), 300);
-            }, 3200);
+            }, 3400);
         }
 
         // ---------------------------------------------------------------------
-        // 8. QUẢN LÝ NHẬP / XUẤT ĐỀ TỪ EXCEL (.CSV) & JSON + TẢI FILE MẪU
+        // 8. QUẢN LÝ NHẬP / XUẤT ĐỀ + TỰ ĐỘNG ĐỒNG BỘ FILE cau_hoi_bo_sung.json TỪ GITHUB
         // ---------------------------------------------------------------------
-        const CUSTOM_QUIZ_STORAGE_KEY = 'hoc_tot_lop_8_custom_quizzes_v1';
+        const CUSTOM_QUIZ_STORAGE_KEY = 'hoc_tot_lop_8_custom_quizzes_v2';
+        const GITHUB_SYNC_FILE = './cau_hoi_bo_sung.json';
         const DEFAULT_QUIZ_SNAPSHOT = {};
         SUBJECTS.forEach(s => {
             DEFAULT_QUIZ_SNAPSHOT[s.id] = {
@@ -2862,6 +2209,69 @@
 
         let qmPendingQuestions = [];
         let qmPendingMode = 'append';
+        let githubSyncedQuestions = []; // Lưu danh sách câu hỏi đã tải từ file cau_hoi_bo_sung.json trên GitHub
+
+        // Gộp danh sách câu hỏi chuẩn hóa vào SUBJECTS (tránh trùng lặp nội dung câu hỏi)
+        function mergeQuestionsIntoSubjects(normalizedList, mode = 'append') {
+            const groupedBySub = {};
+            normalizedList.forEach(item => {
+                if (!groupedBySub[item.subject]) groupedBySub[item.subject] = [];
+                groupedBySub[item.subject].push(item);
+            });
+
+            const affectedSubIds = Object.keys(groupedBySub);
+            affectedSubIds.forEach(subId => {
+                const sub = SUBJECTS.find(s => s.id === subId);
+                if (!sub) return;
+                const incoming = groupedBySub[subId];
+
+                if (mode === 'replace') {
+                    sub.quiz = [];
+                    sub.quizTopics = [];
+                }
+
+                const existingQTexts = new Set(sub.quiz.map(q => q.q.trim()));
+                incoming.forEach(item => {
+                    if (!sub.quizTopics.some(t => t.id === item.topicId)) {
+                        sub.quizTopics.push({ id: item.topicId, name: item.topicName });
+                    }
+                    if (!existingQTexts.has(item.q.trim())) {
+                        existingQTexts.add(item.q.trim());
+                        sub.quiz.push({
+                            topicId: item.topicId,
+                            q: item.q,
+                            options: item.options,
+                            ans: item.ans,
+                            exp: item.exp
+                        });
+                    }
+                });
+            });
+            return affectedSubIds;
+        }
+
+        // Tự động tải file cau_hoi_bo_sung.json cùng thư mục trên GitHub Pages (nếu có)
+        async function loadExternalGitHubQuestions() {
+            try {
+                const res = await fetch(`${GITHUB_SYNC_FILE}?v=${Date.now()}`, { cache: 'no-store' });
+                if (!res.ok) return 0; // Chưa có file cau_hoi_bo_sung.json trên GitHub -> bỏ qua êm ái
+                const rawText = await res.text();
+                const parsed = validateQmJson(rawText);
+                if (parsed.valid.length > 0) {
+                    githubSyncedQuestions = parsed.valid;
+                    mergeQuestionsIntoSubjects(parsed.valid, 'append');
+                    const badge = document.getElementById('github-sync-badge');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.textContent = `☁️ +${parsed.valid.length} câu từ GitHub`;
+                    }
+                    return parsed.valid.length;
+                }
+            } catch (e) {
+                // Bỏ qua nếu mở trực tiếp file:// trên máy tính mà trình duyệt chặn fetch cục bộ
+            }
+            return 0;
+        }
 
         function loadCustomQuizzesFromStorage() {
             try {
@@ -2873,8 +2283,8 @@
                 const savedMap = JSON.parse(raw);
                 SUBJECTS.forEach(sub => {
                     if (savedMap[sub.id]) {
-                        sub.quizTopics = savedMap[sub.id].quizTopics || DEFAULT_QUIZ_SNAPSHOT[sub.id].quizTopics;
-                        sub.quiz = savedMap[sub.id].quiz || DEFAULT_QUIZ_SNAPSHOT[sub.id].quiz;
+                        sub.quizTopics = savedMap[sub.id].quizTopics || sub.quizTopics;
+                        sub.quiz = savedMap[sub.id].quiz || sub.quiz;
                     }
                 });
             } catch (e) {
@@ -2911,7 +2321,7 @@
             const totalNow = getTotalCurrentQuestionCount();
             const totalDef = getTotalDefaultQuestionCount();
             const diff = totalNow - totalDef;
-            const hasCustom = !!localStorage.getItem(CUSTOM_QUIZ_STORAGE_KEY);
+            const hasLocalCustom = !!localStorage.getItem(CUSTOM_QUIZ_STORAGE_KEY);
 
             const badge = document.getElementById('header-custom-quiz-badge');
             const resetBtn = document.getElementById('qm-btn-reset-default');
@@ -2919,15 +2329,18 @@
 
             if (expTotalEl) expTotalEl.textContent = totalNow;
 
-            if (hasCustom) {
+            if (diff > 0 || hasLocalCustom) {
                 if (badge) {
                     badge.classList.remove('hidden');
                     badge.textContent = diff > 0 ? `+${diff}` : `${totalNow}`;
                 }
-                if (resetBtn) resetBtn.classList.remove('hidden');
-            } else {
-                if (badge) badge.classList.add('hidden');
-                if (resetBtn) resetBtn.classList.add('hidden');
+            } else if (badge) {
+                badge.classList.add('hidden');
+            }
+
+            if (resetBtn) {
+                if (hasLocalCustom) resetBtn.classList.remove('hidden');
+                else resetBtn.classList.add('hidden');
             }
         }
 
@@ -3028,7 +2441,6 @@
                 return topics[0] ? { id: topics[0].id, name: topics[0].name } : { id: `${subId}-c1`, name: 'Chương 1' };
             }
 
-            // Nếu nhập số thứ tự chương: 1, 2, 3, 4, 5
             if (/^\d+$/.test(val)) {
                 const idx = parseInt(val, 10) - 1;
                 if (topics[idx]) {
@@ -3037,14 +2449,12 @@
                 return { id: `${subId}-c${val}`, name: `Chương ${val}` };
             }
 
-            // Khớp chính xác id hoặc tên chương có sẵn
             const lower = val.toLowerCase();
             const matched = topics.find(t => t.id.toLowerCase() === lower || t.name.toLowerCase() === lower || t.name.toLowerCase().includes(lower));
             if (matched) {
                 return { id: matched.id, name: matched.name };
             }
 
-            // Tạo chương mới cho môn
             const slug = `${subId}-` + lower.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
             return { id: slug || `${subId}-custom`, name: val };
         }
@@ -3312,53 +2722,23 @@
         function applyQmImportedQuestions() {
             if (!qmPendingQuestions || qmPendingQuestions.length === 0) return;
 
-            // Nhóm câu hỏi mới theo môn học
-            const groupedBySub = {};
-            qmPendingQuestions.forEach(item => {
-                if (!groupedBySub[item.subject]) groupedBySub[item.subject] = [];
-                groupedBySub[item.subject].push(item);
-            });
-
-            const affectedSubIds = Object.keys(groupedBySub);
+            const countAdded = qmPendingQuestions.length;
+            const affectedSubIds = mergeQuestionsIntoSubjects(qmPendingQuestions, qmPendingMode);
 
             affectedSubIds.forEach(subId => {
-                const sub = SUBJECTS.find(s => s.id === subId);
-                if (!sub) return;
-                const incoming = groupedBySub[subId];
-
-                if (qmPendingMode === 'replace') {
-                    sub.quiz = [];
-                    sub.quizTopics = [];
-                }
-
-                incoming.forEach(item => {
-                    if (!sub.quizTopics.some(t => t.id === item.topicId)) {
-                        sub.quizTopics.push({ id: item.topicId, name: item.topicName });
-                    }
-                    sub.quiz.push({
-                        topicId: item.topicId,
-                        q: item.q,
-                        options: item.options,
-                        ans: item.ans,
-                        exp: item.exp
-                    });
-                });
-
-                // Đặt lại trạng thái bài làm của môn vừa cập nhật
                 appState.quizAnswers[subId] = {};
                 appState.quizSubmitted[subId] = false;
                 appState.selectedQuizTopic[subId] = 'all';
-                appState.quizOptionMaps[subId] = {};
+                randomizeSubjectQuizOrder(subId);
             });
 
             saveCustomQuizzesToStorage();
             clearQmPreview();
             closeQuizManagerModal();
 
-            // Chuyển thẳng sang tab Trắc nghiệm của môn đầu tiên vừa nhập
             const targetSubId = affectedSubIds[0];
             navigateTo(targetSubId, 'quiz');
-            showToast(`🎉 Đã nạp thành công ${qmPendingQuestions.length} câu hỏi trắc nghiệm mới!`);
+            showToast(`🎉 Đã nạp ${countAdded} câu hỏi! Vào Tab 2 xuất file cau_hoi_bo_sung.json để lưu lên GitHub nhé.`);
         }
 
         function handleQmDirectPaste() {
@@ -3403,16 +2783,21 @@
                 if (DEFAULT_QUIZ_SNAPSHOT[sub.id]) {
                     sub.quizTopics = JSON.parse(JSON.stringify(DEFAULT_QUIZ_SNAPSHOT[sub.id].quizTopics));
                     sub.quiz = JSON.parse(JSON.stringify(DEFAULT_QUIZ_SNAPSHOT[sub.id].quiz));
-                    appState.quizAnswers[sub.id] = {};
-                    appState.quizSubmitted[sub.id] = false;
-                    appState.selectedQuizTopic[sub.id] = 'all';
-                    randomizeSubjectQuizOrder(sub.id);
                 }
+            });
+            if (githubSyncedQuestions.length > 0) {
+                mergeQuestionsIntoSubjects(githubSyncedQuestions, 'append');
+            }
+            SUBJECTS.forEach(sub => {
+                appState.quizAnswers[sub.id] = {};
+                appState.quizSubmitted[sub.id] = false;
+                appState.selectedQuizTopic[sub.id] = 'all';
+                randomizeSubjectQuizOrder(sub.id);
             });
             updateCustomQuizHeaderBadge();
             closeQuizManagerModal();
             renderContent();
-            showToast('↺ Đã khôi phục toàn bộ ngân hàng câu hỏi gốc của 7 môn học!');
+            showToast('↺ Đã xóa dữ liệu tạm trên trình duyệt và đồng bộ lại từ GitHub!');
         }
 
         function escapeCsvVal(val) {
@@ -3430,6 +2815,40 @@
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
+        }
+
+        // Xuất riêng các câu hỏi bổ sung (ngoài bộ đề mặc định) thành file cau_hoi_bo_sung.json để tải thẳng lên GitHub
+        function exportGitHubSyncJson() {
+            const supplementary = [];
+            SUBJECTS.forEach(sub => {
+                const defaultSet = new Set((DEFAULT_QUIZ_SNAPSHOT[sub.id]?.quiz || []).map(q => q.q.trim()));
+                const topicMap = Object.fromEntries((sub.quizTopics || []).map(t => [t.id, t.name]));
+                sub.quiz.forEach(q => {
+                    if (!defaultSet.has(q.q.trim())) {
+                        supplementary.push({
+                            subject: sub.id,
+                            topicId: q.topicId,
+                            topicName: topicMap[q.topicId] || q.topicId,
+                            q: q.q,
+                            options: q.options,
+                            ans: q.ans,
+                            exp: q.exp
+                        });
+                    }
+                });
+            });
+
+            if (supplementary.length === 0) {
+                showToast('Chưa có câu hỏi bổ sung mới nào. Hãy nhập thêm câu hỏi ở Tab 1 hoặc Tab 3 trước nhé!', 'warning');
+                return;
+            }
+
+            triggerFileDownload(
+                JSON.stringify(supplementary, null, 2),
+                'cau_hoi_bo_sung.json',
+                'application/json;charset=utf-8;'
+            );
+            showToast(`☁️ Đã xuất ${supplementary.length} câu hỏi bổ sung ra file cau_hoi_bo_sung.json! Hãy tải file này lên GitHub.`);
         }
 
         function downloadSubjectCsvTemplate() {
@@ -3518,8 +2937,9 @@
             showToast(`📤 Đã xuất ${payload.length} câu hỏi ra file JSON (.json)!`);
         }
 
-        // Khởi chạy ứng dụng
-        window.addEventListener('DOMContentLoaded', () => {
+        // Khởi chạy ứng dụng & tự động đồng bộ từ GitHub
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadExternalGitHubQuestions();
             loadCustomQuizzesFromStorage();
             SUBJECTS.forEach(sub => randomizeSubjectQuizOrder(sub.id));
             renderNavigation();
