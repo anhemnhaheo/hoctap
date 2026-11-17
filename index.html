@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Tốt Lớp 8 - Cổng Học Tập Chương Trình GDPT 2018</title>
+    <!-- Google Fonts: Be Vietnam Pro & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', '"Be Vietnam Pro"', 'sans-serif'],
+                    },
+                    colors: {
+                        tealBrand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                        },
+                        amberBrand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Ẩn thanh cuộn nhưng vẫn cho phép cuộn ngang mượt mà trên mobile */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .math-formula {
+            font-family: "Cambria Math", "Times New Roman", serif;
+            background: #f0fdfa;
+            border: 1px solid #99f6e4;
+            color: #0f766e;
+            padding: 3px 10px;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 2px 0;
+        }
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: slideUpFade 0.25s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- ================= TOP HEADER & NAVIGATION ================= -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <!-- Dòng trên: Logo + Nút tìm kiếm nhanh + Badge GDPT 2018 -->
+            <div class="flex items-center justify-between h-16 gap-3">
+                <button onclick="navigateTo('home')" class="flex items-center gap-2.5 text-left group focus:outline-none">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+                        <!-- Graduation Cap SVG -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-display font-extrabold text-lg sm:text-xl text-slate-800 tracking-tight">HọcTốt<span class="text-teal-600">8</span></span>
+                            <span class="hidden sm:inline-block text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">GDPT 2018</span>
+                        </div>
+                        <p class="text-xs text-slate-500 hidden sm:block">Đồng hành chinh phục kiến thức Lớp 8</p>
+                    </div>
+                </button>
+
+                <!-- Thanh tìm kiếm nhanh trên Header (hiện trên màn hình vừa & lớn) -->
+                <div class="relative flex-1 max-w-md hidden md:block">
+                    <div class="relative">
+                        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="header-search-input"
+                            placeholder="Tìm nhanh bài học, công thức (VD: Hằng đẳng thức, Thalès...)"
+                            class="w-full pl-10 pr-4 py-2 text-sm bg-slate-100/90 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition-all"
+                            oninput="handleGlobalSearch(this.value, 'header-search-results')"
+                            onfocus="handleGlobalSearch(this.value, 'header-search-results')">
+                    </div>
+                    <div id="header-search-results" class="hidden absolute left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-slate-200 max-h-80 overflow-y-auto z-50 divide-y divide-slate-100"></div>
+                </div>
+
+                <!-- Nút nhảy nhanh vào Luyện đề -->
+                <div class="flex items-center gap-2">
+                    <button onclick="navigateTo('toan', 'quiz')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs sm:text-sm font-bold shadow-sm shadow-amber-500/25 transition-all active:scale-95">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Luyện đề ngay</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dòng dưới: Thanh Menu chính 8 mục (Trang chủ + 7 môn học) cuộn ngang mượt trên mobile -->
+            <nav aria-label="Menu môn học" class="flex items-center gap-1.5 py-2.5 overflow-x-auto no-scrollbar border-t border-slate-100" id="main-nav">
+                <!-- Render bằng JavaScript -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= MAIN VIEWPORT ================= -->
+    <main id="app-content" class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <!-- Nội dung Trang chủ hoặc Trang môn học sẽ được render tại đây -->
+    </main>
+
+    <!-- ================= TOAST NOTIFICATION ================= -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-white border-t border-slate-200 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+            <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-teal-600 text-white font-bold flex items-center justify-center text-xs">8</span>
+                <span class="font-semibold text-slate-700">HọcTốt8 — Hệ thống hỗ trợ học tập Lớp 8 (GDPT 2018)</span>
+            </div>
+            <p class="text-center sm:text-right text-xs sm:text-sm">
+                Bám sát chương trình Kết nối tri thức, Chân trời sáng tạo &amp; Cánh diều.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT DATA & LOGIC ================= -->
+    <script>
+        // ---------------------------------------------------------------------
+        // 1. DỮ LIỆU CHƯƠNG TRÌNH LỚP 8 (GDPT 2018) - ĐẦY ĐỦ 7 MÔN HỌC
+        // ---------------------------------------------------------------------
+        const SUBJECTS = [
+            {
+                id: 'toan',
+                name: 'Toán học',
+                shortName: 'Toán học',
+                badgeColor: 'bg-teal-100 text-teal-700',
+                gradient: 'from-teal-500 to-emerald-600',
+                borderHover: 'hover:border-teal-400',
+                desc: 'Đại số (Đa thức, Hằng đẳng thức, Phân thức) & Hình học phẳng (Tứ giác, Định lý Thalès, Tam giác đồng dạng).',
+                icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+                theory: [
+                    {
+                        id: 'toan-1',
+                        chapter: 'Chương I & II • Đại số',
+                        title: 'Bảy hằng đẳng thức đáng nhớ',
+                        summary: 'Công cụ biến đổi đa thức, tính nhanh và phân tích đa thức thành nhân tử trọng tâm học kỳ I.',
+                        points: [
+                            'Bình phương của một tổng: <span class="math-formula">(A + B)² = A² + 2AB + B²</span>',
+                            'Bình phương của một hiệu: <span class="math-formula">(A - B)² = A² - 2AB + B²</span>',
+                            'Hiệu hai bình phương: <span class="math-formula">A² - B² = (A - B)(A + B)</span>',
+                            'Lập phương của một tổng / hiệu: <span class="math-formula">(A ± B)³ = A³ ± 3A²B + 3AB² ± B³</span>',
+                            'Tổng và hiệu hai lập phương: <span class="math-formula">A³ ± B³ = (A ± B)(A² ∓ AB + B²)</span>'
+                        ]
+                    },
+                    {
+                        id: 'toan-2',
+                        chapter: 'Chương III • Hình học phẳng',
+                        title: 'Tứ giác & Các tứ giác đặc biệt',
+                        summary: 'Hệ thống tính chất và dấu hiệu nhận biết từ Tứ giác tổng quát đến Hình vuông.',
+                        points: [
+                            '<strong>Tổng các góc của tứ giác:</strong> Tổng 4 góc trong bằng <span class="math-formula">360°</span>.',
+                            '<strong>Hình thang cân:</strong> Là hình thang có 2 góc kề một đáy bằng nhau hoặc 2 đường chéo bằng nhau.',
+                            '<strong>Hình bình hành:</strong> Các cạnh đối song song và bằng nhau; các góc đối bằng nhau; 2 đường chéo cắt nhau tại trung điểm mỗi đường.',
+                            '<strong>Hình chữ nhật:</strong> Tứ giác có 3 góc vuông; Hình bình hành có 1 góc vuông hoặc 2 đường chéo bằng nhau.',
+                            '<strong>Hình thoi & Hình vuông:</strong> Hình thoi có 2 đường chéo vuông góc và là phân giác các góc; Hình vuông hội tụ đủ tính chất của Hình chữ nhật và Hình thoi.'
+                        ]
+                    },
+                    {
+                        id: 'toan-3',
+                        chapter: 'Chương IV • Hình học phẳng',
+                        title: 'Định lý Thalès & Đường trung bình của tam giác',
+                        summary: 'Ứng dụng quan trọng để chứng minh song song và tính độ dài đoạn thẳng.',
+                        points: [
+                            '<strong>Định lý Thalès:</strong> Nếu một đường thẳng song song với một cạnh của tam giác và cắt hai cạnh còn lại thì nó định ra trên hai cạnh đó những đoạn thẳng tương ứng tỉ lệ: <span class="math-formula">AD/AB = AE/AC</span>.',
+                            '<strong>Đường trung bình của tam giác:</strong> Đoạn thẳng nối trung điểm hai cạnh của tam giác thì song song với cạnh thứ ba và bằng nửa cạnh ấy: <span class="math-formula">MN = ½ BC</span>.',
+                            '<strong>Tính chất đường phân giác:</strong> Trong ΔABC, tia phân giác AD của góc A chia cạnh đối diện BC thành hai đoạn tỉ lệ với hai cạnh kề: <span class="math-formula">DB/DC = AB/AC</span>.'
+                        ]
+                    }
+                ],
+                docs: [
+                    { title: 'Đề cương ôn tập Giữa Học kỳ I - Toán 8 (GDPT 2018)', type: 'PDF • Đề cương', pages: '14 trang', size: '1.8 MB' },
+                    { title: 'Tuyển tập 50 bài tập Hằng đẳng thức & Phân tích đa thức', type: 'PDF • Phiếu bài tập', pages: '10 trang', size: '1.2 MB' },
+                    { title: 'Đề thi thử Cuối Học kỳ I môn Toán 8 (Có đáp án chi tiết)', type: 'PDF • Đề thi', pages: '08 trang', size: '950 KB' },
+                    { title: 'Sơ đồ tư duy Hình học 8: Tứ giác & Định lý Thalès', type: 'PDF • Sơ đồ', pages: '04 trang', size: '2.1 MB' }
+                ],
+                quiz: [
+                    {
+                        q: 'Khai triển hằng đẳng thức (2x - 3)² ta được kết quả nào sau đây?',
+                        options: ['4x² - 6x + 9', '4x² - 12x + 9', '2x² - 12x + 9', '4x² + 12x + 9'],
+                        ans: 1,
+                        exp: 'Áp dụng hằng đẳng thức bình phương của một hiệu (A - B)² = A² - 2AB + B² với A = 2x, B = 3: (2x - 3)² = (2x)² - 2·2x·3 + 3² = 4x² - 12x + 9.'
+                    },
+                    {
+                        q: 'Khẳng định nào sau đây là SAI về dấu hiệu nhận biết Hình bình hành?',
+                        options: [
+                            'Tứ giác có các cạnh đối song song là hình bình hành.',
+                            'Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành.',
+                            'Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau là hình bình hành.',
+                            'Tứ giác có hai cạnh đối vừa song song vừa bằng nhau là hình bình hành.'
+                        ],
+                        ans: 2,
+                        exp: 'Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau chưa chắc là hình bình hành vì nó có thể là hình thang cân (hai cạnh bên bằng nhau).'
+                    },
+                    {
+                        q: 'Cho ΔABC có AB = 6 cm, AC = 9 cm. Trên cạnh AB lấy điểm D sao cho AD = 2 cm. Qua D kẻ đường thẳng song song với BC cắt AC tại E. Độ dài đoạn thẳng AE bằng:',
+                        options: ['3 cm', '4 cm', '4,5 cm', '6 cm'],
+                        ans: 0,
+                        exp: 'Vì DE // BC, áp dụng định lý Thalès trong ΔABC ta có: AD / AB = AE / AC ⇔ 2 / 6 = AE / 9 ⇒ AE = (2 × 9) / 6 = 3 cm.'
+                    }
+                ]
+            },
+            {
+                id: 'van',
+                name: 'Ngữ văn',
+                shortName: 'Ngữ văn',
+                badgeColor: 'bg-rose-100 text-rose-700',
+                gradient: 'from-rose-500 to-pink-600',
+                borderHover: 'hover:border-rose-400',
+                desc: 'Đọc hiểu văn bản (Thơ Đường luật, Truyện lịch sử, Hài kịch), Thực hành tiếng Việt & Viết bài văn nghị luận.',
+                icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>`,
+                theory: [
+                    {
+                        id: 'van-1',
+                        chapter: 'Đọc hiểu • Thơ Đường luật',
+                        title: 'Đặc điểm Thơ thất ngôn bát cú và tứ tuyệt Đường luật',
+                        summary: 'Nhận diện bố cục, niêm, luật bằng trắc, vần và phép đối trong thơ trung đại.',
+                        points: [
+                            '<strong>Bố cục bài thất ngôn bát cú (8 câu × 7 chữ):</strong> Đề (câu 1-2) – Thực (câu 3-4) – Luận (câu 5-6) – Kết (câu 7-8).',
+                            '<strong>Phép đối:</strong> Thường đặt ở hai câu Thực và hai câu Luận, tạo sự cân xứng hài hòa về thanh điệu, từ loại và ý nghĩa.',
+                            '<strong>Gieo vần:</strong> Thường gieo vần bằng ở cuối các câu 1, 2, 4, 6, 8 (với thất ngôn bát cú) hoặc câu 1, 2, 4 (với thất ngôn tứ tuyệt).'
+                        ]
+                    },
+                    {
+                        id: 'van-2',
+                        chapter: 'Thực hành Tiếng Việt',
+                        title: 'Biện pháp tu từ Đảo ngữ & Câu hỏi tu từ',
+                        summary: 'Hiểu rõ cấu tạo và tác dụng biểu đạt của các biện pháp tu từ thường gặp trong đề đọc hiểu.',
+                        points: [
+                            '<strong>Đảo ngữ:</strong> Thay đổi trật tự cấu tạo ngữ pháp thông thường của câu (đưa vị ngữ, bổ ngữ hoặc trạng ngữ lên trước chủ ngữ) nhằm nhấn mạnh đặc điểm, hoạt động, trạng thái và tăng sức gợi hình, gợi cảm.',
+                            '<strong>Câu hỏi tu từ:</strong> Là câu có hình thức nghi vấn nhưng không dùng để hỏi mà để khẳng định, phủ định, bộc lộ cảm xúc (ngạc nhiên, băn khoăn, xót xa...).',
+                            '<strong>Từ tượng hình & Từ tượng thanh:</strong> Gợi tả hình ảnh, dáng vẻ hoặc mô phỏng âm thanh của tự nhiên, con người.'
+                        ]
+                    },
+                    {
+                        id: 'van-3',
+                        chapter: 'Kỹ năng Viết',
+                        title: 'Viết bài văn Nghị luận về một vấn đề đời sống',
+                        summary: 'Dàn ý chuẩn 3 phần giúp học sinh lập luận chặt chẽ, thuyết phục.',
+                        points: [
+                            '<strong>Mở bài:</strong> Dẫn dắt và nêu rõ vấn đề đời sống cần bàn luận.',
+                            '<strong>Thân bài:</strong> Giải thích khái niệm → Phân tích biểu hiện, nguyên nhân, ý nghĩa/tác hại → Nêu bằng chứng thực tế tiêu biểu → Bàn luận mở rộng (phản đề).',
+                            '<strong>Kết bài:</strong> Khẳng định lại vấn đề và rút ra bài học nhận thức, hành động cho bản thân.'
+                        ]
+                    }
+                ],
+                docs: [
+                    { title: 'Cẩm nang Đọc hiểu Ngữ văn 8 theo thể loại (GDPT 2018)', type: 'PDF • Chuyên đề', pages: '18 trang', size: '2.3 MB' },
+                    { title: 'Tuyển tập dàn ý Nghị luận xã hội & Phân tích tác phẩm văn học', type: 'PDF • Văn mẫu', pages: '22 trang', size: '2.7 MB' },
+                    { title: 'Đề kiểm tra Cuối kỳ I môn Ngữ văn 8 (Kèm hướng dẫn chấm)', type: 'PDF • Đề thi', pages: '06 trang', size: '840 KB' }
+                ],
+                quiz: [
+                    {
+                        q: 'Trong hai câu thơ: "Lom khom dưới núi, tiều vài chú / Lác đác bên sông, chợ mấy nhà" (Bà Huyện Thanh Quan), tác giả đã sử dụng nổi bật biện pháp tu từ nào?',
+                        options: ['So sánh và nhân hóa', 'Đảo ngữ và phép đối', 'Ẩn dụ và hoán dụ', 'Nói quá và chơi chữ'],
+                        ans: 1,
+                        exp: 'Tác giả đảo các từ láy tượng hình "lom khom", "lác đác" lên đầu câu (đảo ngữ) kết hợp cấu trúc đối xứng giữa hai câu Thực nhằm nhấn mạnh sự thưa thớt, vắng lặng của cảnh vật.'
+                    },
+                    {
+                        q: 'Một bài thơ thất ngôn bát cú Đường luật chuẩn mực gồm có bao nhiêu câu và mỗi câu có bao nhiêu chữ?',
+                        options: ['4 câu, mỗi câu 7 chữ', '8 câu, mỗi câu 5 chữ', '8 câu, mỗi câu 7 chữ', '6 câu, mỗi câu 8 chữ'],
+                        ans: 2,
+                        exp: '"Thất ngôn" là 7 chữ mỗi câu, "bát cú" là 8 câu. Vậy thơ thất ngôn bát cú gồm 8 câu, mỗi câu 7 chữ.'
+                    },
+                    {
+                        q: 'Mục đích chính của câu hỏi tu từ trong văn bản văn học là gì?',
+                        options: [
+                            'Yêu cầu người nghe cung cấp thông tin còn thiếu.',
+                            'Khẳng định, phủ định hoặc bộc lộ cảm xúc, thái độ của người viết.',
+                            'Dùng để kiểm tra kiến thức của nhân vật đối thoại.',
+                            'Thay thế cho dấu chấm câu ở cuối đoạn văn.'
+                        ],
+                        ans: 1,
+                        exp: 'Câu hỏi tu từ mang hình thức câu nghi vấn nhưng không nhằm mục đích tìm kiếm câu trả lời mà để nhấn mạnh ý nghĩa biểu cảm, khẳng định hoặc phủ định.'
+                    }
+                ]
+            },
+            {
+                id: 'anh',
+                name: 'Tiếng Anh',
+                shortName: 'Tiếng Anh',
+                badgeColor: 'bg-sky-100 text-sky-700',
+                gradient: 'from-sky-500 to-blue-600',
+                borderHover: 'hover:border-sky-400',
+                desc: 'Ngữ pháp trọng tâm Global Success 8 (Verbs of liking, Comparative adverbs, Compound sentences, Conditionals).',
+                icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>`,
+                theory: [
+                    {
+                        id: 'anh-1',
+                        chapter: 'Unit 1 • Leisure Time',
+                        title: 'Verbs of liking / disliking (Động từ chỉ sự yêu thích)',
+                        summary: 'Cách chia động từ theo sau các động từ diễn tả sở thích trong thời gian rảnh.',
+                        points: [
+                            '<strong>Chỉ đi với V-ing:</strong> <em>detest, fancy, dislike, enjoy, mind</em> + <span class="math-formula">V-ing</span>. (Ví dụ: I fancy doing DIY.)',
+                            '<strong>Đi với cả V-ing và to-V (nghĩa tương đương):</strong> <em>like, love, hate, prefer</em> + <span class="math-formula">V-ing / to-V</span>.',
+                            '<strong>Cụm từ cố định:</strong> <em>be fond of / be keen on / be interested in / be crazy about</em> + <span class="math-formula">V-ing</span>.'
+                        ]
+                    },
+                    {
+                        id: 'anh-2',
+                        chapter: 'Unit 2 • Life in the Countryside',
+                        title: 'Comparative forms of adverbs (So sánh hơn của trạng từ)',
+                        summary: 'So sánh cách thức hành động diễn ra giữa hai đối tượng.',
+                        points: [
+                            '<strong>Trạng từ ngắn (1 âm tiết: fast, hard, early, late, soon):</strong> <span class="math-formula">adv + -er + than</span> (Ví dụ: Horses run faster than buffaloes.)',
+                            '<strong>Trạng từ dài (thường có đuôi -ly: carefully, fluently, happily):</strong> <span class="math-formula">more / less + adv + than</span>.',
+                            '<strong>Trạng từ bất quy tắc:</strong> <em>well → better</em>; <em>badly → worse</em>; <em>far → farther / further</em>.'
+                        ]
+                    },
+                    {
+                        id: 'anh-3',
+                        chapter: 'Unit 3 • Teenagers',
+                        title: 'Simple sentences & Compound sentences (Câu đơn và Câu ghép)',
+                        summary: 'Cách nối hai mệnh đề độc lập bằng liên từ kết hợp và trạng từ liên kết.',
+                        points: [
+                            '<strong>Liên từ kết hợp (FANBOYS):</strong> <em>for, and, nor, but, or, yet, so</em> (thường có dấu phẩy phía trước).',
+                            '<strong>Trạng từ liên kết (Conjunctive adverbs):</strong> <em>however, therefore, otherwise, moreover</em> → đặt sau dấu chấm phẩy (;) hoặc dấu chấm (.) và theo sau bởi dấu phẩy (,). Ví dụ: <span class="math-formula">...; however, ...</span>'
+                        ]
+                    }
+                ],
+                docs: [
+                    { title: 'Tổng hợp Ngữ pháp & Từ vựng Tiếng Anh 8 (Global Success)', type: 'PDF • Sổ tay', pages: '20 trang', size: '2.5 MB' },
+                    { title: 'Bộ đề ôn tập Giữa kỳ I Tiếng Anh 8 (Có file nghe & đáp án)', type: 'PDF • Đề thi', pages: '12 trang', size: '1.6 MB' },
+                    { title: '100 câu bài tập viết lại câu Tiếng Anh lớp 8 hay gặp', type: 'PDF • Luyện tập', pages: '09 trang', size: '1.1 MB' }
+                ],
+                quiz: [
+                    {
+                        q: 'My sister is really keen on _______ origami in her free time.',
+                        options: ['make', 'making', 'to make', 'made'],
+                        ans: 1,
+                        exp: 'Cấu trúc "be keen on + V-ing" (yêu thích/say mê làm gì), do đó động từ "make" phải chia ở dạng V-ing là "making".'
+                    },
+                    {
+                        q: 'In the countryside, people often live _______ than those in big cities.',
+                        options: ['more peacefully', 'peacefullier', 'most peacefully', 'more peaceful'],
+                        ans: 0,
+                        exp: 'Động từ thường "live" cần bổ nghĩa bằng trạng từ "peacefully". Vì "peacefully" là trạng từ dài nên dạng so sánh hơn là "more peacefully".'
+                    },
+                    {
+                        q: 'Minh had a lot of homework to do; _______, he still helped his mother water the plants.',
+                        options: ['therefore', 'otherwise', 'however', 'so'],
+                        ans: 2,
+                        exp: 'Hai vế câu mang nghĩa tương phản (có nhiều bài tập nhưng vẫn giúp mẹ tưới cây) và có dấu chấm phẩy phía trước, dấu phẩy phía sau nên dùng trạng từ liên kết "however" (tuy nhiên).'
+                    }
+                ]
+            },
+            {
+                id: 'khtn',
+                name: 'Khoa học tự nhiên',
+                shortName: 'KHTN (Lý-Hóa-Sinh)',
+                badgeColor: 'bg-emerald-100 text-emerald-700',
+                gradient: 'from-emerald-500 to-teal-600',
+                borderHover: 'hover:border-emerald-400',
+                desc: 'Tích hợp 3 phân môn: Hóa học (Mol, Tỉ khối, Acid-Base-Oxide-Muối), Vật lý (Khối lượng riêng, Áp suất, Điện) & Sinh học (Cơ thể người).',
+                icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+                theory: [
+                    {
+                        id: 'khtn-1',
+                        chapter: 'Phân môn Hóa học',
+                        title: 'Mol, Tỉ khối chất khí & Nồng độ dung dịch',
+                        summary: 'Các công thức tính toán nền tảng xuyên suốt môn Hóa học THCS và THPT.',
+                        points: [
+                            '<strong>Số mol chất:</strong> <span class="math-formula">n = m / M</span> hoặc ở điều kiện chuẩn (25°C, 1 bar): <span class="math-formula">n = V / 24,79</span>.',
+                            '<strong>Tỉ khối của khí A đối với khí B:</strong> <span class="math-formula">d<sub>A/B</sub> = M<sub>A</sub> / M<sub>B</sub></span> (Với không khí: <span class="math-formula">M<sub>kk</sub> ≈ 29</span>).',
+                            '<strong>Nồng độ phần trăm & Nồng độ mol:</strong> <span class="math-formula">C% = (m<sub>ct</sub> / m<sub>dd</sub>) × 100%</span> và <span class="math-formula">C<sub>M</sub> = n / V</span> (V tính bằng lít).'
+                        ]
+                    },
+                    {
+                        id: 'khtn-2',
+                        chapter: 'Phân môn Vật lý',
+                        title: 'Khối lượng riêng, Áp suất & Lực đẩy Archimedes',
+                        summary: 'Giải thích các hiện tượng cơ học trong chất rắn, chất lỏng và chất khí.',
+                        points: [
+                            '<strong>Khối lượng riêng:</strong> <span class="math-formula">D = m / V</span> (đơn vị: kg/m³ hoặc g/cm³).',
+                            '<strong>Áp suất trên một bề mặt:</strong> <span class="math-formula">p = F / S</span> (đơn vị: Pa hoặc N/m²).',
+                            '<strong>Lực đẩy Archimedes:</strong> <span class="math-formula">F<sub>A</sub> = d · V</span> (trong đó d là trọng lượng riêng chất lỏng, V là thể tích phần chất lỏng bị vật chiếm chỗ).'
+                        ]
+                    },
+                    {
+                        id: 'khtn-3',
+                        chapter: 'Phân môn Sinh học',
+                        title: 'Hệ tuần hoàn, Hệ hô hấp & Máu trong cơ thể người',
+                        summary: 'Cấu tạo và chức năng bảo vệ cơ thể của các thành phần trong máu.',
+                        points: [
+                            '<strong>Thành phần của máu:</strong> Gồm huyết tương (55%) và các tế bào máu (45%: hồng cầu, bạch cầu, tiểu cầu).',
+                            '<strong>Hồng cầu:</strong> Chứa huyết sắc tố (Hb) làm nhiệm vụ vận chuyển O₂ và CO₂.',
+                            '<strong>Bạch cầu:</strong> Tham gia bảo vệ cơ thể bằng cơ chế thực bào, tạo kháng thể. <strong>Tiểu cầu:</strong> Tham gia quá trình đông máu.'
+                        ]
+                    }
+                ],
+                docs: [
+                    { title: 'Bảng hệ thống công thức tính toán KHTN 8 (Lý - Hóa)', type: 'PDF • Công thức', pages: '08 trang', size: '1.1 MB' },
+                    { title: 'Chuyên đề Acid - Base - Oxide - Muối và cách gọi tên IUPAC', type: 'PDF • Chuyên đề', pages: '16 trang', size: '1.9 MB' },
+                    { title: 'Đề cương ôn tập Học kỳ I KHTN 8 (Đủ 3 phân môn)', type: 'PDF • Đề cương', pages: '15 trang', size: '2.0 MB' }
+                ],
+                quiz: [
+                    {
+                        q: '(Hóa học) Ở điều kiện chuẩn (25°C, 1 bar), 4,958 lít khí oxygen (O₂) có số mol là bao nhiêu?',
+                        options: ['0,1 mol', '0,2 mol', '0,25 mol', '0,5 mol'],
+                        ans: 1,
+                        exp: 'Áp dụng công thức tính số mol chất khí ở điều kiện chuẩn (25°C, 1 bar): n = V / 24,79 = 4,958 / 24,79 = 0,2 mol.'
+                    },
+                    {
+                        q: '(Vật lý) Một khối sắt có thể tích 0,02 m³ và khối lượng 156 kg. Khối lượng riêng của sắt là:',
+                        options: ['780 kg/m³', '7800 kg/m³', '3120 kg/m³', '78 kg/m³'],
+                        ans: 1,
+                        exp: 'Áp dụng công thức khối lượng riêng: D = m / V = 156 / 0,02 = 7800 kg/m³.'
+                    },
+                    {
+                        q: '(Sinh học) Thành phần nào của máu có chức năng chính là vận chuyển khí oxygen (O₂) từ phổi đến các tế bào?',
+                        options: ['Bạch cầu', 'Tiểu cầu', 'Hồng cầu', 'Huyết tương'],
+                        ans: 2,
+                        exp: 'Hồng cầu chứa hemoglobin (huyết sắc tố) có khả năng kết hợp lỏng lẻo với O₂ để vận chuyển từ phổi tới các tế bào của cơ thể.'
+                    }
+                ]
+            },
+            {
+                id: 'sudi',
+                name: 'Lịch sử & Địa lý',
+                shortName: 'Lịch sử & Địa lý',
+                badgeColor: 'bg-amber-100 text-amber-800',
+                gradient: 'from-amber-500 to-orange-600',
+                borderHover: 'hover:border-amber-400',
+                desc: 'Lịch sử Việt Nam từ thế kỷ XVI đến đầu thế kỷ XX & Địa lý tự nhiên Việt Nam (Vị trí, Địa hình, Khí hậu, Sông ngòi).',
+                icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+                theory: [
+                    {
+                        id: 'sd-1',
+                        chapter: 'Phân môn Lịch sử',
+                        title: 'Phong trào Tây Sơn & Công cuộc thống nhất đất nước (cuối TK XVIII)',
+                        summary: 'Những thắng lợi quân sự vang dội của nghĩa quân Tây Sơn và vua Quang Trung.',
+                        points: [
+                            '<strong>Năm 1771:</strong> Ba anh em Nguyễn Nhạc, Nguyễn Huệ, Nguyễn Lữ dựng cờ khởi nghĩa ở Tây Sơn (Bình Định).',
+                            '<strong>Năm 1785:</strong> Chiến thắng <em>Rạch Gầm – Xoài Mút</em> đánh tan 5 vạn quân Xiêm xâm lược.',
+                            '<strong>Tết Kỷ Dậu (1789):</strong> Đại phá 29 vạn quân Thanh với chiến thắng lịch sử <em>Ngọc Hồi – Đống Đa</em>, bảo vệ vững chắc nền độc lập dân tộc.'
+                        ]
+                    },
+                    {
+                        id: 'sd-2',
+                        chapter: 'Phân môn Địa lý',
+                        title: 'Đặc điểm chung của Địa hình Việt Nam',
+                        summary: 'Ba đặc điểm cơ bản chi phối toàn bộ tự nhiên và kinh tế nước ta.',
+                        points: [
+                            '<strong>Đồi núi chiếm phần lớn diện tích:</strong> Đồi núi chiếm 3/4 diện tích lãnh thổ (chủ yếu là đồi núi thấp dưới 1000m), đồng bằng chỉ chiếm 1/4.',
+                            '<strong>Hai hướng núi chính:</strong> Hướng Tây Bắc – Đông Nam (dãy Hoàng Liên Sơn, Trường Sơn Bắc) và hướng vòng cung (4 cánh cung lớn ở Đông Bắc).',
+                            '<strong>Địa hình chịu tác động mạnh của khí hậu nhiệt đới ẩm gió mùa và con người.</strong>'
+                        ]
+                    }
+                ],
+                docs: [
+                    { title: 'Niên biểu các sự kiện Lịch sử Việt Nam & Thế giới lớp 8', type: 'PDF • Niên biểu', pages: '10 trang', size: '1.3 MB' },
+                    { title: 'Atlat tóm tắt & Câu hỏi trắc nghiệm Địa lý tự nhiên Việt Nam', type: 'PDF • Tài liệu', pages: '14 trang', size: '2.4 MB' }
+                ],
+                quiz: [
+                    {
+                        q: '(Lịch sử) Chiến thắng Rạch Gầm – Xoài Mút (năm 1785) của nghĩa quân Tây Sơn đã đánh tan quân xâm lược nào?',
+                        options: ['Quân Thanh', 'Quân Xiêm', 'Quân Minh', 'Quân Nam Hán'],
+                        ans: 1,
+                        exp: 'Đầu năm 1785, Nguyễn Huệ chỉ huy nghĩa quân Tây Sơn bố trí trận địa mai phục tại khúc sông Rạch Gầm – Xoài Mút (Tiền Giang), đánh tan 5 vạn quân Xiêm.'
+                    },
+                    {
+                        q: '(Địa lý) Đồi núi chiếm khoảng bao nhiêu phần diện tích phần đất liền của nước ta?',
+                        options: ['1/4 diện tích', '1/2 diện tích', '3/4 diện tích', '2/3 diện tích'],
+                        ans: 2,
+                        exp: 'Địa hình nước ta có 3/4 diện tích là đồi núi (chủ yếu là đồi núi thấp dưới 1000m) và 1/4 diện tích là đồng bằng.'
+                    },
+                    {
+                        q: '(Địa lý) Dãy núi Hoàng Liên Sơn có hướng chạy chủ yếu là hướng nào?',
+                        options: ['Hướng vòng cung', 'Hướng Tây Bắc – Đông Nam', 'Hướng Đông – Tây', 'Hướng Bắc – Nam'],
+                        ans: 1,
+                        exp: 'Dãy Hoàng Liên Sơn (nơi có đỉnh Fansipan cao nhất nước ta) chạy theo hướng Tây Bắc – Đông Nam.'
+                    }
+                ]
+            },
+            {
+                id: 'tinhoc',
+                name: 'Tin học',
+                shortName: 'Tin học',
+                badgeColor: 'bg-indigo-100 text-indigo-700',
+                gradient: 'from-indigo-500 to-violet-600',
+                borderHover: 'hover:border-indigo-400',
+                desc: 'Bảng tính điện tử nâng cao (Địa chỉ tương đối/tuyệt đối, Sắp xếp & Lọc dữ liệu), Đạo đức số & Lập trình trực quan.',
+                icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+                theory: [
+                    {
+                        id: 'tin-1',
+                        chapter: 'Chủ đề 4 • Ứng dụng Tin học',
+                        title: 'Địa chỉ tương đối, Địa chỉ tuyệt đối & Địa chỉ hỗn hợp trong Excel',
+                        summary: 'Cách cố định dòng và cột khi sao chép công thức trong phần mềm bảng tính.',
+                        points: [
+                            '<strong>Địa chỉ tương đối (VD: A1):</strong> Tự động thay đổi cả tên cột và số hàng khi sao chép công thức sang ô khác.',
+                            '<strong>Địa chỉ tuyệt đối (VD: $A$1):</strong> Không thay đổi cả tên cột lẫn số hàng khi sao chép công thức (dùng dấu <span class="math-formula">$</span> trước cả cột và hàng).',
+                            '<strong>Địa chỉ hỗn hợp (VD: $A1 hoặc A$1):</strong> Cố định một thành phần (cột hoặc hàng) và để thành phần còn lại thay đổi.'
+                        ]
+                    },
+                    {
+                        id: 'tin-2',
+                        chapter: 'Chủ đề 6 • Giải quyết vấn đề với sự trợ giúp của máy tính',
+                        title: 'Cấu trúc rẽ nhánh và Cấu trúc lặp trong lập trình (Scratch / Python)',
+                        summary: 'Nền tảng tư duy thuật toán cho học sinh lớp 8.',
+                        points: [
+                            '<strong>Cấu trúc rẽ nhánh:</strong> Dạng thiếu (<em>Nếu &lt;điều kiện&gt; thì &lt;công việc&gt;</em>) và dạng đủ (<em>Nếu &lt;điều kiện&gt; thì &lt;việc 1&gt; ngược lại &lt;việc 2&gt;</em>).',
+                            '<strong>Cấu trúc lặp:</strong> Lặp với số lần biết trước và lặp có điều kiện kết thúc (lặp cho đến khi điều kiện đúng/sai).'
+                        ]
+                    }
+                ],
+                docs: [
+                    { title: 'Tài liệu thực hành Bảng tính Excel nâng cao lớp 8', type: 'PDF • Thực hành', pages: '12 trang', size: '1.5 MB' },
+                    { title: 'Đề cương ôn tập Tin học 8 (GDPT 2018) kèm đáp án', type: 'PDF • Đề cương', pages: '07 trang', size: '920 KB' }
+                ],
+                quiz: [
+                    {
+                        q: 'Trong phần mềm bảng tính Excel, kí hiệu nào dùng để tạo địa chỉ tuyệt đối cho cả cột và hàng?',
+                        options: ['$A$1', 'A$1', '$A1', '#A#1'],
+                        ans: 0,
+                        exp: 'Kí hiệu dấu đô-la ($) đặt trước cả tên cột và số hàng ($A$1) tạo thành địa chỉ tuyệt đối, giúp ô tham chiếu không đổi khi sao chép công thức.'
+                    },
+                    {
+                        q: 'Tại ô C1 có công thức =A1+$B$1. Khi sao chép công thức từ ô C1 xuống ô C2, công thức tại ô C2 sẽ là gì?',
+                        options: ['=A2+$B$2', '=A2+$B$1', '=A1+$B$1', '=B2+$B$1'],
+                        ans: 1,
+                        exp: 'A1 là địa chỉ tương đối nên khi xuống 1 hàng sẽ đổi thành A2; $B$1 là địa chỉ tuyệt đối nên giữ nguyên là $B$1. Kết quả là =A2+$B$1.'
+                    },
+                    {
+                        q: 'Hành động nào sau đây thể hiện văn hóa ứng xử lành mạnh trên môi trường mạng?',
+                        options: [
+                            'Chia sẻ thông tin giật gân khi chưa kiểm chứng nguồn tin.',
+                            'Sử dụng hình ảnh riêng tư của bạn bè để chế ảnh trêu đùa.',
+                            'Tôn trọng bản quyền tác giả và trích dẫn nguồn rõ ràng khi sử dụng tài liệu.',
+                            'Bình luận công kích, xúc phạm người khác trên diễn đàn.'
+                        ],
+                        ans: 2,
+                        exp: 'Tôn trọng bản quyền, trích dẫn nguồn và giao tiếp lịch sự là chuẩn mực đạo đức, văn hóa số cần thiết.'
+                    }
+                ]
+            },
+            {
+                id: 'gdcd',
+                name: 'Giáo dục công dân',
+                shortName: 'GDCD',
+                badgeColor: 'bg-purple-100 text-purple-700',
+                gradient: 'from-purple-500 to-fuchsia-600',
+                borderHover: 'hover:border-purple-400',
+                desc: 'Tự hào truyền thống dân tộc, Tôn trọng sự đa dạng của các dân tộc, Lao động cần cù sáng tạo & Phòng chống bạo lực gia đình.',
+                icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+                theory: [
+                    {
+                        id: 'gdcd-1',
+                        chapter: 'Bài 1 & 2 • Giá trị truyền thống & Văn hóa',
+                        title: 'Tự hào về truyền thống dân tộc & Tôn trọng sự đa dạng văn hóa',
+                        summary: 'Trách nhiệm của học sinh trong việc giữ gìn và phát huy bản sắc văn hóa Việt Nam.',
+                        points: [
+                            '<strong>Truyền thống tốt đẹp của dân tộc Việt Nam:</strong> Yêu nước, đoàn kết, nhân nghĩa, cần cù lao động, hiếu học, tôn sư trọng đạo...',
+                            '<strong>Tôn trọng sự đa dạng của các dân tộc:</strong> Tôn trọng tiếng nói, chữ viết, trang phục, phong tục tập quán tốt đẹp của 54 dân tộc anh em và các quốc gia trên thế giới; phê phán hành vi phân biệt, kì thị chủng tộc.'
+                        ]
+                    },
+                    {
+                        id: 'gdcd-2',
+                        chapter: 'Bài 3 & 4 • Phẩm chất cá nhân & Gia đình',
+                        title: 'Lao động cần cù, sáng tạo & Phòng, chống bạo lực gia đình',
+                        summary: 'Rèn luyện thói quen học tập chủ động và kỹ năng tự bảo vệ bản thân.',
+                        points: [
+                            '<strong>Lao động cần cù, sáng tạo:</strong> Chăm chỉ, miệt mài trong công việc kết hợp với việc luôn suy nghĩ, cải tiến phương pháp để đạt hiệu quả cao nhất.',
+                            '<strong>Bạo lực gia đình:</strong> Gồm bạo lực về thể chất, tinh thần, kinh tế và tình dục. Khi phát hiện hoặc bị bạo lực gia đình, trẻ em có thể gọi <strong>Tổng đài Quốc gia Bảo vệ Trẻ em 111</strong> (miễn phí 24/7).'
+                        ]
+                    }
+                ],
+                docs: [
+                    { title: 'Tóm tắt kiến thức & Tình huống thực tế GDCD 8 (GDPT 2018)', type: 'PDF • Tài liệu', pages: '09 trang', size: '1.0 MB' },
+                    { title: 'Bộ 40 câu trắc nghiệm ôn tập Học kỳ I GDCD 8 có đáp án', type: 'PDF • Đề ôn', pages: '06 trang', size: '820 KB' }
+                ],
+                quiz: [
+                    {
+                        q: 'Số điện thoại đường dây nóng của Tổng đài Quốc gia Bảo vệ Trẻ em (miễn phí 24/7) tại Việt Nam là số nào?',
+                        options: ['111', '113', '114', '115'],
+                        ans: 0,
+                        exp: 'Tổng đài Quốc gia Bảo vệ Trẻ em có đầu số 111, hoạt động 24/7 và hoàn toàn miễn phí cước gọi.'
+                    },
+                    {
+                        q: 'Việc làm nào sau đây thể hiện sự tôn trọng sự đa dạng của các dân tộc và các nền văn hóa?',
+                        options: [
+                            'Chế giễu giọng nói hoặc trang phục truyền thống của người dân tộc thiểu số.',
+                            'Tìm hiểu, trân trọng các lễ hội và nét đẹp văn hóa của 54 dân tộc Việt Nam.',
+                            'Chỉ tiếp thu văn hóa nước ngoài và xem nhẹ văn hóa truyền thống.',
+                            'Cho rằng chỉ có phong tục ở nơi mình sống mới là văn minh.'
+                        ],
+                        ans: 1,
+                        exp: 'Tôn trọng sự đa dạng văn hóa thể hiện ở thái độ cởi mở, tìm hiểu, trân trọng và học hỏi những nét đẹp văn hóa của các dân tộc khác.'
+                    },
+                    {
+                        q: 'Biểu hiện nào dưới đây thể hiện người học sinh lao động cần cù, sáng tạo?',
+                        options: [
+                            'Học thuộc lòng máy móc toàn bộ nội dung sách giáo khoa mà không cần hiểu.',
+                            'Chỉ làm bài tập khi thầy cô kiểm tra gắt gao.',
+                            'Chăm chỉ ôn bài mỗi ngày và tự thiết kế sơ đồ tư duy để ghi nhớ nhanh hơn.',
+                            'Sao chép bài giải của bạn để tiết kiệm thời gian.'
+                        ],
+                        ans: 2,
+                        exp: 'Chăm chỉ ôn tập hằng ngày thể hiện tính cần cù; tự thiết kế sơ đồ tư duy để nâng cao hiệu quả học tập thể hiện tính sáng tạo.'
+                    }
+                ]
+            }
+        ];
+
+        // Dữ liệu Thông báo Lịch ôn thi & Mẹo học tập trên Trang chủ
+        const EXAM_SCHEDULES = [
+            {
+                term: 'Ôn tập Giữa Học kỳ I',
+                time: 'Tuần 8 – Tuần 9 (Tháng 10 – 11)',
+                scope: 'Toán (Đa thức, Hằng đẳng thức, Tứ giác), Ngữ văn (Thơ Đường luật), Tiếng Anh (Unit 1–3).',
+                status: 'Đã hoàn thành',
+                statusStyle: 'bg-slate-100 text-slate-600'
+            },
+            {
+                term: 'Ôn tập Cuối Học kỳ I',
+                time: 'Tuần 16 – Tuần 18 (Tháng 12)',
+                scope: 'Tổng hợp toàn bộ kiến thức Trọng tâm HK1 của 7 môn học + Luyện đề chuẩn cấu trúc.',
+                status: 'Đang mở ôn tập',
+                statusStyle: 'bg-emerald-100 text-emerald-700 animate-pulse'
+            },
+            {
+                term: 'Ôn tập Giữa Học kỳ II',
+                time: 'Tuần 25 – Tuần 26 (Tháng 3)',
+                scope: 'Phân thức đại số, Định lý Thalès, Phương trình bậc nhất, Tiếng Anh (Unit 7–9).',
+                status: 'Sắp diễn ra',
+                statusStyle: 'bg-amber-100 text-amber-800'
+            },
+            {
+                term: 'Ôn tập Cuối Học kỳ II',
+                time: 'Tuần 33 – Tuần 35 (Tháng 5)',
+                scope: 'Tam giác đồng dạng, Hàm số bậc nhất, Tổng kết năm học lớp 8.',
+                status: 'Kế hoạch',
+                statusStyle: 'bg-sky-100 text-sky-700'
+            }
+        ];
+
+        const STUDY_TIPS = [
+            {
+                tag: 'Kỹ thuật ghi nhớ',
+                title: 'Phương pháp Pomodoro (25 phút tập trung)',
+                desc: 'Học tập trung cao độ trong 25 phút, tắt thông báo điện thoại, sau đó nghỉ giải lao 5 phút. Sau 4 chu kỳ thì nghỉ dài 15–20 phút để não bộ nạp lại năng lượng.',
+                color: 'border-teal-200 bg-teal-50/60',
+                tagColor: 'bg-teal-600 text-white'
+            },
+            {
+                tag: 'Mẹo môn Toán',
+                title: 'Học Hình học 8 theo "Sơ đồ gia phả"',
+                desc: 'Vẽ sơ đồ từ Tứ giác → Hình thang → Hình bình hành → Hình chữ nhật / Hình thoi → Hình vuông. Chỉ cần nhớ phần "điều kiện cộng thêm" ở mỗi mũi tên là thuộc hết dấu hiệu nhận biết!',
+                color: 'border-amber-200 bg-amber-50/60',
+                tagColor: 'bg-amber-500 text-white'
+            },
+            {
+                tag: 'Mẹo môn Tiếng Anh',
+                title: 'Ghi nhớ từ vựng theo cụm (Collocations)',
+                desc: 'Thay vì học từ đơn lẻ, hãy học cả cụm như "be fond of + V-ing", "do DIY", "herd buffaloes" kèm 1 câu ví dụ gắn với bản thân để nhớ lâu gấp 3 lần.',
+                color: 'border-sky-200 bg-sky-50/60',
+                tagColor: 'bg-sky-600 text-white'
+            },
+            {
+                tag: 'Tổng hợp kiến thức',
+                title: 'Sơ đồ tư duy 1 trang giấy (Mindmap)',
+                desc: 'Sau mỗi chương KHTN hoặc Lịch sử, tóm gọn ý chính vào 1 tờ giấy A4 ngang bằng bút màu. Nhìn lại 5 phút trước giờ kiểm tra giúp hệ thống toàn bộ bài học.',
+                color: 'border-rose-200 bg-rose-50/60',
+                tagColor: 'bg-rose-500 text-white'
+            }
+        ];
+
+        // ---------------------------------------------------------------------
+        // 2. TRẠNG THÁI ỨNG DỤNG (STATE)
+        // ---------------------------------------------------------------------
+        let appState = {
+            currentView: 'home',     // 'home' hoặc id môn học ('toan', 'van', 'anh', 'khtn', 'sudi', 'tinhoc', 'gdcd')
+            currentTab: 'theory',    // 'theory' | 'docs' | 'quiz'
+            quizAnswers: {},         // { [subjectId]: { [qIndex]: selectedOptionIndex } }
+            quizSubmitted: {},       // { [subjectId]: boolean }
+            expandedTheory: {}       // { [theoryId]: boolean }
+        };
+
+        // Mặc định mở sẵn thẻ lý thuyết đầu tiên của mỗi môn
+        SUBJECTS.forEach(s => {
+            if (s.theory.length > 0) {
+                appState.expandedTheory[s.theory[0].id] = true;
+            }
+        });
+
+        // ---------------------------------------------------------------------
+        // 3. ĐIỀU HƯỚNG & RENDER MENU
+        // ---------------------------------------------------------------------
+        function renderNavigation() {
+            const nav = document.getElementById('main-nav');
+            const isHome = appState.currentView === 'home';
+
+            let html = `
+                <button onclick="navigateTo('home')"
+                    class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${isHome ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span>Trang chủ</span>
+                </button>
+            `;
+
+            SUBJECTS.forEach(sub => {
+                const active = appState.currentView === sub.id;
+                html += `
+                    <button onclick="navigateTo('${sub.id}')"
+                        class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${active ? 'bg-teal-600 text-white shadow-sm font-bold' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}">
+                        ${sub.icon}
+                        <span>${sub.shortName}</span>
+                    </button>
+                `;
+            });
+
+            nav.innerHTML = html;
+        }
+
+        function navigateTo(viewId, tabId = 'theory', targetTheoryId = null) {
+            appState.currentView = viewId;
+            if (viewId !== 'home') {
+                appState.currentTab = tabId;
+                if (targetTheoryId) {
+                    appState.expandedTheory[targetTheoryId] = true;
+                }
+            }
+            // Đóng dropdown tìm kiếm nếu đang mở
+            hideAllSearchDropdowns();
+            renderNavigation();
+            renderContent();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function switchSubjectTab(tabId) {
+            appState.currentTab = tabId;
+            renderContent();
+        }
+
+        // ---------------------------------------------------------------------
+        // 4. TÌM KIẾM BÀI HỌC NHANH ACROSS ALL 7 SUBJECTS
+        // ---------------------------------------------------------------------
+        function buildSearchIndex() {
+            const index = [];
+            SUBJECTS.forEach(sub => {
+                // Thêm môn học
+                index.push({
+                    type: 'Môn học',
+                    subjectId: sub.id,
+                    subjectName: sub.name,
+                    tab: 'theory',
+                    title: `Môn ${sub.name} Lớp 8`,
+                    snippet: sub.desc
+                });
+                // Thêm các bài lý thuyết
+                sub.theory.forEach(th => {
+                    const cleanText = th.points.join(' ').replace(/<[^>]*>/g, '');
+                    index.push({
+                        type: 'Lý thuyết',
+                        subjectId: sub.id,
+                        subjectName: sub.name,
+                        tab: 'theory',
+                        theoryId: th.id,
+                        title: th.title,
+                        snippet: `${th.chapter} — ${th.summary}`,
+                        fullText: `${th.title} ${th.chapter} ${th.summary} ${cleanText}`.toLowerCase()
+                    });
+                });
+                // Thêm tài liệu PDF
+                sub.docs.forEach(doc => {
+                    index.push({
+                        type: 'Tài liệu PDF',
+                        subjectId: sub.id,
+                        subjectName: sub.name,
+                        tab: 'docs',
+                        title: doc.title,
+                        snippet: `${doc.type} • ${doc.pages} (${doc.size})`,
+                        fullText: `${doc.title} ${doc.type}`.toLowerCase()
+                    });
+                });
+            });
+            return index;
+        }
+
+        const SEARCH_INDEX = buildSearchIndex();
+
+        function handleGlobalSearch(query, dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (!dropdown) return;
+
+            const kw = query.trim().toLowerCase();
+            if (!kw) {
+                dropdown.classList.add('hidden');
+                dropdown.innerHTML = '';
+                return;
+            }
+
+            const matches = SEARCH_INDEX.filter(item => {
+                const target = item.fullText || `${item.title} ${item.snippet}`.toLowerCase();
+                return target.includes(kw);
+            }).slice(0, 8);
+
+            dropdown.classList.remove('hidden');
+            if (matches.length === 0) {
+                dropdown.innerHTML = `
+                    <div class="p-4 text-center text-sm text-slate-500">
+                        Không tìm thấy bài học nào khớp với "<strong class="text-slate-700">${escapeHtml(query)}</strong>".
+                    </div>
+                `;
+                return;
+            }
+
+            dropdown.innerHTML = matches.map(m => `
+                <button onclick="navigateTo('${m.subjectId}', '${m.tab}', '${m.theoryId || ''}')"
+                    class="w-full text-left px-4 py-3 hover:bg-teal-50/80 transition-colors flex items-start justify-between gap-3">
+                    <div class="min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-teal-100 text-teal-800">${m.subjectName}</span>
+                            <span class="text-[11px] font-medium text-slate-400">${m.type}</span>
+                        </div>
+                        <p class="text-sm font-bold text-slate-800 truncate">${m.title}</p>
+                        <p class="text-xs text-slate-500 truncate">${m.snippet}</p>
+                    </div>
+                    <svg class="w-4 h-4 text-teal-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            `).join('');
+        }
+
+        function hideAllSearchDropdowns() {
+            ['header-search-results', 'hero-search-results'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#header-search-input') && !e.target.closest('#header-search-results') &&
+                !e.target.closest('#hero-search-input') && !e.target.closest('#hero-search-results')) {
+                hideAllSearchDropdowns();
+            }
+        });
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+        }
+
+        // ---------------------------------------------------------------------
+        // 5. RENDER TRANG CHỦ (HOME VIEW)
+        // ---------------------------------------------------------------------
+        function renderHomeView() {
+            return `
+                <div class="space-y-8 animate-fade-in">
+                    <!-- HERO BANNER + THANH TÌM KIẾM NHANH -->
+                    <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-800 text-white p-6 sm:p-10 shadow-lg shadow-teal-900/10">
+                        <div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
+                        <div class="absolute right-10 bottom-0 w-48 h-48 rounded-full bg-amber-400/20 blur-xl pointer-events-none"></div>
+
+                        <div class="relative z-10 max-w-3xl">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-xs font-bold uppercase tracking-wider text-teal-100 mb-4">
+                                ✨ Chương trình Giáo dục Phổ thông 2018
+                            </span>
+                            <h1 class="font-display text-2xl sm:text-4xl font-extrabold leading-tight mb-3">
+                                Chào mừng các bạn học sinh <span class="text-amber-300">Lớp 8</span>!
+                            </h1>
+                            <p class="text-teal-50 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+                                Hệ thống tóm tắt lý thuyết trọng tâm, kho đề cương PDF miễn phí và phòng luyện trắc nghiệm chấm điểm tự động cho đầy đủ 7 môn học lớp 8.
+                            </p>
+
+                            <!-- Thanh tìm kiếm bài học nhanh trung tâm -->
+                            <div class="relative max-w-2xl">
+                                <div class="flex items-center bg-white rounded-2xl p-1.5 shadow-xl">
+                                    <div class="pl-3.5 pr-2 text-slate-400">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <path d="M21 21l-4.35-4.35"></path>
+                                        </svg>
+                                    </div>
+                                    <input type="text" id="hero-search-input"
+                                        placeholder="Nhập tên bài học, công thức hoặc chủ đề (VD: Hằng đẳng thức, Mol, Tây Sơn, Excel...)"
+                                        class="w-full py-2.5 px-2 text-sm sm:text-base text-slate-800 placeholder-slate-400 focus:outline-none"
+                                        oninput="handleGlobalSearch(this.value, 'hero-search-results')"
+                                        onfocus="handleGlobalSearch(this.value, 'hero-search-results')">
+                                    <button onclick="handleGlobalSearch(document.getElementById('hero-search-input').value, 'hero-search-results')"
+                                        class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shrink-0 transition-colors">
+                                        Tìm kiếm
+                                    </button>
+                                </div>
+                                <div id="hero-search-results" class="hidden absolute left-0 right-0 mt-2 bg-white text-slate-800 rounded-2xl shadow-2xl border border-slate-200 max-h-80 overflow-y-auto z-50 divide-y divide-slate-100"></div>
+                            </div>
+
+                            <!-- Từ khóa gợi ý nhanh -->
+                            <div class="flex flex-wrap items-center gap-2 mt-4 text-xs">
+                                <span class="text-teal-200 font-medium">Gợi ý nhanh:</span>
+                                ${['Hằng đẳng thức', 'Định lý Thalès', 'Verbs of liking', 'Mol', 'Địa chỉ tuyệt đối'].map(tag => `
+                                    <button onclick="document.getElementById('hero-search-input').value='${tag}'; handleGlobalSearch('${tag}', 'hero-search-results');"
+                                        class="px-2.5 py-1 rounded-lg bg-white/15 hover:bg-white/25 text-white font-medium transition-colors">
+                                        ${tag}
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- LƯỚI TRUY CẬP NHANH 7 MÔN HỌC -->
+                    <section>
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h2 class="font-display text-xl font-extrabold text-slate-800">Khám phá 7 Môn học Lớp 8</h2>
+                                <p class="text-xs sm:text-sm text-slate-500">Chọn môn học để xem lý thuyết, tải tài liệu PDF và làm bài trắc nghiệm</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            ${SUBJECTS.map(sub => `
+                                <div onclick="navigateTo('${sub.id}')"
+                                    class="group bg-white rounded-2xl p-5 border border-slate-200/90 ${sub.borderHover} shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-3">
+                                            <div class="w-11 h-11 rounded-xl bg-gradient-to-br ${sub.gradient} text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                                                ${sub.icon}
+                                            </div>
+                                            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full ${sub.badgeColor}">
+                                                ${sub.theory.length} chuyên đề
+                                            </span>
+                                        </div>
+                                        <h3 class="font-display font-bold text-base text-slate-800 group-hover:text-teal-700 transition-colors mb-1.5">
+                                            ${sub.name}
+                                        </h3>
+                                        <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-4">
+                                            ${sub.desc}
+                                        </p>
+                                    </div>
+                                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-teal-600">
+                                        <span>Vào học ngay</span>
+                                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+
+                    <!-- BẢNG THÔNG BÁO LỊCH ÔN THI & GÓC MẸO HỌC TẬP HIỆU QUẢ -->
+                    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                        <!-- Cột trái (7/12): Bảng thông báo lịch ôn thi -->
+                        <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden">
+                            <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-gradient-to-r from-teal-50/70 to-white">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-display font-extrabold text-base sm:text-lg text-slate-800">Bảng Thông Báo Lịch Ôn Thi</h2>
+                                        <p class="text-xs text-slate-500">Kế hoạch ôn tập trọng tâm các kỳ kiểm tra định kỳ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="divide-y divide-slate-100">
+                                ${EXAM_SCHEDULES.map(item => `
+                                    <div class="p-4 sm:p-5 hover:bg-slate-50/70 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                        <div class="space-y-1">
+                                            <div class="flex flex-wrap items-center gap-2">
+                                                <span class="font-bold text-sm sm:text-base text-slate-800">${item.term}</span>
+                                                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full ${item.statusStyle}">${item.status}</span>
+                                            </div>
+                                            <p class="text-xs font-semibold text-teal-700">⏰ Thời gian: ${item.time}</p>
+                                            <p class="text-xs text-slate-500 leading-relaxed">${item.scope}</p>
+                                        </div>
+                                        <button onclick="navigateTo('toan', 'docs')" class="self-start sm:self-center shrink-0 px-3 py-1.5 rounded-xl border border-slate-200 hover:border-teal-500 hover:text-teal-700 text-xs font-bold text-slate-600 transition-colors">
+                                            Xem đề cương
+                                        </button>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Cột phải (5/12): Góc Mẹo học tập hiệu quả -->
+                        <div class="lg:col-span-5 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-5">
+                            <div class="flex items-center gap-2.5 mb-4">
+                                <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h2 class="font-display font-extrabold text-base sm:text-lg text-slate-800">Góc Mẹo Học Tập Hiệu Quả</h2>
+                                    <p class="text-xs text-slate-500">Bí quyết học nhàn mà điểm cao cho học sinh lớp 8</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3">
+                                ${STUDY_TIPS.map(tip => `
+                                    <div class="p-3.5 rounded-xl border ${tip.color}">
+                                        <span class="inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md ${tip.tagColor} mb-1.5">
+                                            ${tip.tag}
+                                        </span>
+                                        <h3 class="font-bold text-sm text-slate-800 mb-1">${tip.title}</h3>
+                                        <p class="text-xs text-slate-600 leading-relaxed">${tip.desc}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            `;
+        }
+
+        // ---------------------------------------------------------------------
+        // 6. RENDER TRANG MÔN HỌC (SUBJECT VIEW VỚI 3 TABS CHỨC NĂNG)
+        // ---------------------------------------------------------------------
+        function renderSubjectView(sub) {
+            const tab = appState.currentTab;
+
+            return `
+                <div class="space-y-6 animate-fade-in">
+                    <!-- Banner đầu môn học -->
+                    <div class="rounded-3xl bg-gradient-to-r ${sub.gradient} text-white p-6 sm:p-8 shadow-md">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-2 text-xs font-semibold text-white/80 mb-2">
+                                    <button onclick="navigateTo('home')" class="hover:underline">Trang chủ</button>
+                                    <span>/</span>
+                                    <span>Môn ${sub.name}</span>
+                                </div>
+                                <h1 class="font-display text-2xl sm:text-3xl font-extrabold mb-1.5">Môn ${sub.name} — Lớp 8</h1>
+                                <p class="text-sm text-white/90 max-w-2xl">${sub.desc}</p>
+                            </div>
+                            <div class="flex items-center gap-2 self-start sm:self-center">
+                                <span class="px-3.5 py-1.5 rounded-xl bg-white/15 border border-white/25 text-xs font-bold">
+                                    Chuẩn GDPT 2018
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thanh 3 Tab chức năng -->
+                    <div class="bg-white p-1.5 rounded-2xl border border-slate-200/90 shadow-sm grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+                        <button onclick="switchSubjectTab('theory')"
+                            class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold transition-all ${tab === 'theory' ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100'}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            <span>1. Tóm tắt lý thuyết trọng tâm</span>
+                        </button>
+
+                        <button onclick="switchSubjectTab('docs')"
+                            class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold transition-all ${tab === 'docs' ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100'}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            <span>2. Kho tài liệu &amp; Đề thi PDF</span>
+                        </button>
+
+                        <button onclick="switchSubjectTab('quiz')"
+                            class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold transition-all ${tab === 'quiz' ? 'bg-amber-500 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100'}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>3. Luyện tập trắc nghiệm (${sub.quiz.length} câu)</span>
+                        </button>
+                    </div>
+
+                    <!-- Nội dung Tab tương ứng -->
+                    <div>
+                        ${tab === 'theory' ? renderTheoryTab(sub) : ''}
+                        ${tab === 'docs' ? renderDocsTab(sub) : ''}
+                        ${tab === 'quiz' ? renderQuizTab(sub) : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // TAB 1: TÓM TẮT LÝ THUYẾT TRỌNG TÂM (MỞ RỘNG / THU GỌN)
+        function renderTheoryTab(sub) {
+            return `
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <p class="text-xs sm:text-sm text-slate-500">Bấm vào từng thẻ bài học để mở rộng hoặc thu gọn nội dung chi tiết.</p>
+                        <div class="flex gap-2">
+                            <button onclick="toggleAllTheory('${sub.id}', true)" class="text-xs font-bold text-teal-700 hover:underline">Mở tất cả</button>
+                            <span class="text-slate-300">|</span>
+                            <button onclick="toggleAllTheory('${sub.id}', false)" class="text-xs font-bold text-slate-500 hover:underline">Thu gọn</button>
+                        </div>
+                    </div>
+
+                    ${sub.theory.map(item => {
+                        const isOpen = !!appState.expandedTheory[item.id];
+                        return `
+                            <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden transition-all">
+                                <button onclick="toggleTheoryCard('${item.id}')"
+                                    class="w-full text-left p-5 flex items-center justify-between gap-4 hover:bg-slate-50/70 transition-colors">
+                                    <div>
+                                        <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md ${sub.badgeColor} mb-1.5">
+                                            ${item.chapter}
+                                        </span>
+                                        <h3 class="font-display font-bold text-base sm:text-lg text-slate-800">${item.title}</h3>
+                                        <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${item.summary}</p>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-teal-100 text-teal-700' : ''}">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </button>
+
+                                ${isOpen ? `
+                                    <div class="px-5 pb-5 pt-2 border-t border-slate-100 bg-slate-50/40 animate-fade-in">
+                                        <ul class="space-y-2.5 text-sm text-slate-700 leading-relaxed">
+                                            ${item.points.map(pt => `
+                                                <li class="flex items-start gap-2.5">
+                                                    <span class="w-2 h-2 rounded-full bg-teal-500 mt-2 shrink-0"></span>
+                                                    <div>${pt}</div>
+                                                </li>
+                                            `).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+
+        function toggleTheoryCard(theoryId) {
+            appState.expandedTheory[theoryId] = !appState.expandedTheory[theoryId];
+            renderContent();
+        }
+
+        function toggleAllTheory(subId, expand) {
+            const sub = SUBJECTS.find(s => s.id === subId);
+            if (!sub) return;
+            sub.theory.forEach(t => {
+                appState.expandedTheory[t.id] = expand;
+            });
+            renderContent();
+        }
+
+        // TAB 2: KHO TÀI LIỆU & ĐỀ THI PDF (TẢI XUỐNG FILE TÓM TẮT THỰC TẾ + TOAST)
+        function renderDocsTab(sub) {
+            return `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    ${sub.docs.map((doc, idx) => `
+                        <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:border-teal-400 transition-all flex flex-col justify-between gap-4">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 flex flex-col items-center justify-center shrink-0 font-extrabold text-xs">
+                                    <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>PDF</span>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-md">${doc.type}</span>
+                                    <h3 class="font-bold text-sm sm:text-base text-slate-800 mt-1.5 leading-snug">${doc.title}</h3>
+                                    <p class="text-xs text-slate-500 mt-1">Số trang: <strong>${doc.pages}</strong> • Dung lượng: <strong>${doc.size}</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                                    ✓ Miễn phí cho học sinh
+                                </span>
+                                <button onclick="downloadStudyMaterial('${sub.id}', ${idx})"
+                                    class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs sm:text-sm font-bold shadow-sm transition-all active:scale-95">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                    <span>Tải xuống PDF</span>
+                                </button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function downloadStudyMaterial(subId, docIdx) {
+            const sub = SUBJECTS.find(s => s.id === subId);
+            if (!sub) return;
+            const doc = sub.docs[docIdx];
+
+            // Tạo nội dung tóm tắt tài liệu ôn tập thực tế để tải về máy học sinh
+            const lines = [
+                '====================================================================',
+                `HỌC TỐT LỚP 8 - CHƯƠNG TRÌNH GDPT 2018`,
+                `MÔN HỌC: ${sub.name.toUpperCase()}`,
+                `TÀI LIỆU: ${doc.title}`,
+                `Thông tin: ${doc.type} | ${doc.pages} | ${doc.size}`,
+                '====================================================================\n',
+                'I. TÓM TẮT KIẾN THỨC TRỌNG TÂM:\n'
+            ];
+
+            sub.theory.forEach((th, i) => {
+                lines.push(`${i + 1}. ${th.title} (${th.chapter})`);
+                lines.push(`   Tóm tắt: ${th.summary}`);
+                th.points.forEach(p => {
+                    lines.push(`   - ${p.replace(/<[^>]*>/g, '')}`);
+                });
+                lines.push('');
+            });
+
+            lines.push('II. CÂU HỎI TỰ LUYỆN & ĐÁP ÁN CHI TIẾT:\n');
+            sub.quiz.forEach((q, i) => {
+                lines.push(`Câu ${i + 1}: ${q.q}`);
+                ['A', 'B', 'C', 'D'].forEach((ltr, oIdx) => {
+                    lines.push(`   ${ltr}. ${q.options[oIdx]}`);
+                });
+                lines.push(`   => Đáp án đúng: ${['A', 'B', 'C', 'D'][q.ans]}`);
+                lines.push(`   => Giải thích: ${q.exp}\n`);
+            });
+
+            const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const safeSlug = sub.id + '_tai_lieu_on_tap_lop_8.txt';
+            a.href = url;
+            a.download = safeSlug;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            showToast(`Đã tải xuống tài liệu "${doc.title}" thành công!`);
+        }
+
+        // TAB 3: LUYỆN TẬP TRẮC NGHIỆM (CHẤM ĐIỂM THANG 10 + GIẢI THÍCH CHI TIẾT)
+        function renderQuizTab(sub) {
+            const subAnswers = appState.quizAnswers[sub.id] || {};
+            const isSubmitted = !!appState.quizSubmitted[sub.id];
+            const totalQ = sub.quiz.length;
+            const answeredCount = Object.keys(subAnswers).length;
+
+            let correctCount = 0;
+            let wrongCount = 0;
+            if (isSubmitted) {
+                sub.quiz.forEach((q, idx) => {
+                    if (subAnswers[idx] === q.ans) correctCount++;
+                    else wrongCount++;
+                });
+            }
+            const score10 = totalQ > 0 ? ((correctCount / totalQ) * 10).toFixed(1) : '0.0';
+            const letters = ['A', 'B', 'C', 'D'];
+
+            return `
+                <div class="space-y-5">
+                    <!-- Bảng kết quả sau khi bấm Nộp bài -->
+                    ${isSubmitted ? `
+                        <div class="rounded-2xl bg-gradient-to-r from-teal-50 via-white to-amber-50 border-2 border-teal-500 p-5 sm:p-6 shadow-md animate-fade-in">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div>
+                                    <span class="inline-block text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-teal-100 text-teal-800 mb-2">
+                                        Kết quả bài luyện tập • Môn ${sub.name}
+                                    </span>
+                                    <div class="flex flex-wrap items-baseline gap-4">
+                                        <p class="font-display text-2xl sm:text-3xl font-extrabold text-slate-800">
+                                            Điểm số: <span class="text-teal-600">${score10}</span> / 10
+                                        </p>
+                                        <div class="flex items-center gap-3 text-sm font-bold">
+                                            <span class="px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-700">✓ Đúng: ${correctCount}/${totalQ}</span>
+                                            <span class="px-2.5 py-1 rounded-lg bg-rose-100 text-rose-700">✕ Sai: ${wrongCount}/${totalQ}</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-slate-600 mt-1.5">
+                                        Hãy xem khung <strong>Giải thích chi tiết</strong> bên dưới mỗi câu hỏi để nắm chắc kiến thức nhé!
+                                    </p>
+                                </div>
+                                <button onclick="resetSubjectQuiz('${sub.id}')"
+                                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-sm transition-all shrink-0">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                    </svg>
+                                    <span>Làm lại bài</span>
+                                </button>
+                            </div>
+                        </div>
+                    ` : `
+                        <div class="bg-white rounded-2xl p-4 border border-slate-200/90 flex flex-wrap items-center justify-between gap-3">
+                            <p class="text-xs sm:text-sm text-slate-600">
+                                Chọn 1 đáp án đúng nhất (A, B, C hoặc D) cho mỗi câu hỏi, sau đó bấm <strong>Nộp bài</strong> để chấm điểm.
+                            </p>
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200">
+                                Đã chọn: ${answeredCount}/${totalQ} câu
+                            </span>
+                        </div>
+                    `}
+
+                    <!-- Danh sách câu hỏi -->
+                    <div class="space-y-4">
+                        ${sub.quiz.map((q, qIdx) => {
+                            const userChoice = subAnswers[qIdx];
+                            const hasChosen = userChoice !== undefined;
+                            const isCorrect = hasChosen && userChoice === q.ans;
+
+                            let cardBorder = 'border-slate-200/90';
+                            if (isSubmitted) {
+                                cardBorder = isCorrect ? 'border-emerald-400 ring-1 ring-emerald-400/40' : 'border-rose-400 ring-1 ring-rose-400/40';
+                            }
+
+                            return `
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 border ${cardBorder} shadow-sm transition-all">
+                                    <div class="flex items-center justify-between gap-2 mb-3">
+                                        <span class="px-3 py-1 rounded-lg bg-teal-50 text-teal-700 font-extrabold text-xs">
+                                            Câu ${qIdx + 1}
+                                        </span>
+                                        ${isSubmitted ? (
+                                            isCorrect
+                                                ? `<span class="text-xs font-bold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-700">✓ Chính xác</span>`
+                                                : `<span class="text-xs font-bold px-2.5 py-1 rounded-md bg-rose-100 text-rose-700">${hasChosen ? '✕ Chưa đúng' : 'Chưa chọn đáp án'}</span>`
+                                        ) : ''}
+                                    </div>
+
+                                    <p class="font-bold text-sm sm:text-base text-slate-800 leading-relaxed mb-4">
+                                        ${q.q}
+                                    </p>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                        ${q.options.map((optText, oIdx) => {
+                                            let optClass = 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-teal-50/60 hover:border-teal-300';
+                                            let badgeClass = 'bg-white border-slate-300 text-slate-600';
+
+                                            if (!isSubmitted) {
+                                                if (userChoice === oIdx) {
+                                                    optClass = 'bg-teal-50 border-teal-600 text-teal-900 font-semibold ring-1 ring-teal-600/30';
+                                                    badgeClass = 'bg-teal-600 border-teal-600 text-white';
+                                                }
+                                            } else {
+                                                if (oIdx === q.ans) {
+                                                    optClass = 'bg-emerald-50 border-emerald-500 text-emerald-900 font-bold';
+                                                    badgeClass = 'bg-emerald-500 border-emerald-500 text-white';
+                                                } else if (oIdx === userChoice && userChoice !== q.ans) {
+                                                    optClass = 'bg-rose-50 border-rose-500 text-rose-900 font-semibold';
+                                                    badgeClass = 'bg-rose-500 border-rose-500 text-white';
+                                                } else {
+                                                    optClass = 'bg-slate-50/70 border-slate-200 text-slate-400';
+                                                }
+                                            }
+
+                                            return `
+                                                <button type="button" ${isSubmitted ? 'disabled' : ''}
+                                                    onclick="selectQuizOption('${sub.id}', ${qIdx}, ${oIdx})"
+                                                    class="w-full text-left p-3.5 rounded-xl border transition-all flex items-start gap-3 ${optClass}">
+                                                    <span class="w-7 h-7 rounded-lg border flex items-center justify-center text-xs font-extrabold shrink-0 ${badgeClass}">
+                                                        ${letters[oIdx]}
+                                                    </span>
+                                                    <span class="text-sm leading-snug pt-0.5">${optText}</span>
+                                                </button>
+                                            `;
+                                        }).join('')}
+                                    </div>
+
+                                    <!-- Khung Giải thích chi tiết (hiện sau khi nộp bài) -->
+                                    ${isSubmitted ? `
+                                        <div class="mt-4 p-4 rounded-xl bg-sky-50/90 border border-sky-200 text-sky-950 text-xs sm:text-sm leading-relaxed animate-fade-in">
+                                            <div class="font-extrabold text-sky-800 mb-1 flex items-center gap-1.5">
+                                                <span>💡 Giải thích chi tiết (Đáp án đúng: ${letters[q.ans]}):</span>
+                                            </div>
+                                            <p>${q.exp}</p>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    <!-- Thanh nút Nộp bài / Làm lại bài -->
+                    <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs sm:text-sm text-slate-500">
+                            ${isSubmitted ? 'Bạn có thể bấm "Làm lại bài" để thử sức lại từ đầu.' : `Hoàn thành ${answeredCount}/${totalQ} câu hỏi.`}
+                        </span>
+                        <div class="flex items-center gap-3">
+                            ${isSubmitted ? `
+                                <button onclick="resetSubjectQuiz('${sub.id}')"
+                                    class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-sm transition-all">
+                                    🔄 Làm lại bài
+                                </button>
+                            ` : `
+                                <button onclick="submitSubjectQuiz('${sub.id}')"
+                                    class="px-6 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md shadow-teal-600/20 transition-all active:scale-95">
+                                    ✅ Nộp bài &amp; Chấm điểm
+                                </button>
+                            `}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectQuizOption(subId, qIdx, oIdx) {
+            if (appState.quizSubmitted[subId]) return;
+            if (!appState.quizAnswers[subId]) {
+                appState.quizAnswers[subId] = {};
+            }
+            appState.quizAnswers[subId][qIdx] = oIdx;
+            renderContent();
+        }
+
+        function submitSubjectQuiz(subId) {
+            const sub = SUBJECTS.find(s => s.id === subId);
+            if (!sub) return;
+            const ansObj = appState.quizAnswers[subId] || {};
+            if (Object.keys(ansObj).length === 0) {
+                showToast('Bạn hãy chọn ít nhất 1 đáp án trước khi bấm Nộp bài nhé!', 'warning');
+                return;
+            }
+            appState.quizSubmitted[subId] = true;
+            renderContent();
+            window.scrollTo({ top: 180, behavior: 'smooth' });
+        }
+
+        function resetSubjectQuiz(subId) {
+            appState.quizAnswers[subId] = {};
+            appState.quizSubmitted[subId] = false;
+            renderContent();
+        }
+
+        // ---------------------------------------------------------------------
+        // 7. RENDER CHÍNH & TOAST THÔNG BÁO
+        // ---------------------------------------------------------------------
+        function renderContent() {
+            const container = document.getElementById('app-content');
+            if (appState.currentView === 'home') {
+                container.innerHTML = renderHomeView();
+            } else {
+                const sub = SUBJECTS.find(s => s.id === appState.currentView);
+                if (sub) {
+                    container.innerHTML = renderSubjectView(sub);
+                }
+            }
+        }
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const bgClass = type === 'warning'
+                ? 'bg-amber-600 text-white'
+                : 'bg-teal-700 text-white';
+
+            toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl text-xs sm:text-sm font-semibold animate-fade-in ${bgClass}`;
+            toast.innerHTML = `
+                <span>${type === 'warning' ? '⚠️' : '✅'}</span>
+                <span>${message}</span>
+            `;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3200);
+        }
+
+        // Khởi chạy ứng dụng
+        window.addEventListener('DOMContentLoaded', () => {
+            renderNavigation();
+            renderContent();
+        });
+    </script>
+</body>
+</html>
