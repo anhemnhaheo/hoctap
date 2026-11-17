@@ -1,422 +1,394 @@
-\[
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Tổng số đo bốn góc trong của một tứ giác bất kỳ bằng:",
-"options": \[
-"180°",
-"270°",
-"360°",
-"540°"
-\],
-"ans": 2,
-"exp": "Định lý: Tổng các góc trong của một tứ giác bằng 360°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho tứ giác ABCD có ∠A = 70°, ∠B = 100°, ∠C = 80°. Số đo ∠D bằng:",
-"options": \[
-"110°",
-"100°",
-"90°",
-"120°"
-\],
-"ans": 0,
-"exp": "Tổng 4 góc trong của tứ giác bằng 360° ⇒ ∠D = 360° - (70° + 100° + 80°) = 110°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho tứ giác ABCD có tỉ lệ các góc ∠A : ∠B : ∠C : ∠D = 1 : 2 : 3 : 4. Số đo góc lớn nhất của tứ giác ABCD là:",
-"options": \[
-"108°",
-"120°",
-"144°",
-"150°"
-\],
-"ans": 2,
-"exp": "Tổng số phần bằng nhau: 1 + 2 + 3 + 4 = 10 phần ⇒ 1 phần = 360° : 10 = 36°. Góc lớn nhất ∠D = 4 × 36° = 144°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho tứ giác ABCD có ∠A = 85°. Số đo góc ngoài tại đỉnh A của tứ giác ABCD là:",
-"options": \[
-"85°",
-"95°",
-"105°",
-"275°"
-\],
-"ans": 1,
-"exp": "Góc ngoài và góc trong tại đỉnh A kề bù nhau nên góc ngoài tại đỉnh A = 180° - 85° = 95°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Một tứ giác lồi có nhiều nhất bao nhiêu góc nhọn?",
-"options": \[
-"1 góc nhọn",
-"2 góc nhọn",
-"3 góc nhọn",
-"4 góc nhọn"
-\],
-"ans": 2,
-"exp": "Nếu cả 4 góc đều nhọn (< 90°) thì tổng 4 góc nhỏ hơn 360° (vô lý), do đó tứ giác có nhiều nhất 3 góc nhọn."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Hình thang là tứ giác có:",
-"options": \[
-"Hai cạnh đối song song.",
-"Hai cạnh đối bằng nhau.",
-"Hai cạnh kề bằng nhau.",
-"Bốn góc bằng nhau."
-\],
-"ans": 0,
-"exp": "Định nghĩa: Hình thang là tứ giác có hai cạnh đối song song (gọi là hai cạnh đáy)."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình thang ABCD (AB ∥ CD) có ∠A = 115°. Số đo ∠D là:",
-"options": \[
-"115°",
-"90°",
-"65°",
-"75°"
-\],
-"ans": 2,
-"exp": "Vì AB ∥ CD nên ∠A và ∠D là hai góc trong cùng phía bù nhau ⇒ ∠D = 180° - 115° = 65°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Một hình thang có đáy nhỏ dài 6 cm, đáy lớn dài 10 cm. Độ dài đường trung bình của hình thang đó là:",
-"options": \[
-"16 cm",
-"8 cm",
-"4 cm",
-"60 cm"
-\],
-"ans": 1,
-"exp": "Độ dài đường trung bình của hình thang bằng nửa tổng hai đáy: (6 + 10) : 2 = 8 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Một hình thang có độ dài đường trung bình bằng 12 cm và đáy nhỏ bằng 8 cm. Độ dài đáy lớn là:",
-"options": \[
-"4 cm",
-"20 cm",
-"16 cm",
-"10 cm"
-\],
-"ans": 2,
-"exp": "Ta có (8 + đáy lớn) : 2 = 12 ⇒ 8 + đáy lớn = 24 ⇒ đáy lớn = 16 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình thang ABCD (AB ∥ CD) có ∠A - ∠D = 40°. Số đo ∠A là:",
-"options": \[
-"70°",
-"110°",
-"100°",
-"80°"
-\],
-"ans": 1,
-"exp": "Ta có ∠A + ∠D = 180° và ∠A - ∠D = 40° ⇒ 2∠A = 220° ⇒ ∠A = 110°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Dấu hiệu nào sau đây giúp nhận biết một hình thang là hình thang cân?",
-"options": \[
-"Hình thang có hai cạnh bên bằng nhau.",
-"Hình thang có hai đường chéo vuông góc.",
-"Hình thang có hai đường chéo bằng nhau.",
-"Hình thang có hai góc đối bằng nhau."
-\],
-"ans": 2,
-"exp": "Dấu hiệu nhận biết hình thang cân: Hình thang có hai góc kề một đáy bằng nhau HOẶC hình thang có hai đường chéo bằng nhau."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Khẳng định nào sau đây là SAI về hình thang cân?",
-"options": \[
-"Hai cạnh bên bằng nhau.",
-"Hai đường chéo bằng nhau.",
-"Hai góc kề một đáy bằng nhau.",
-"Hai cạnh đáy bằng nhau."
-\],
-"ans": 3,
-"exp": "Trong hình thang cân, hai cạnh đáy song song nhưng không bằng nhau."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠C = 65°. Số đo ∠D là:",
-"options": \[
-"65°",
-"115°",
-"125°",
-"75°"
-\],
-"ans": 0,
-"exp": "Trong hình thang cân ABCD (AB ∥ CD), hai góc kề đáy CD bằng nhau nên ∠D = ∠C = 65°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠A = 120°. Số đo ∠C là:",
-"options": \[
-"120°",
-"60°",
-"90°",
-"80°"
-\],
-"ans": 1,
-"exp": "Ta có ∠B = ∠A = 120° (hai góc kề đáy AB). Vì AB ∥ CD nên ∠B + ∠C = 180° ⇒ ∠C = 60°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình thang cân ABCD (AB ∥ CD) có AB = 4 cm, CD = 10 cm, cạnh bên AD = 5 cm. Độ dài đường cao AH (H ∈ CD) của hình thang cân bằng:",
-"options": \[
-"3 cm",
-"4 cm",
-"5 cm",
-"2 cm"
-\],
-"ans": 1,
-"exp": "Kẻ hai đường cao AH, BK xuống CD ta được DH = (10 - 4) : 2 = 3 cm. Áp dụng Pythagore cho ΔAHD vuông tại H: AH = √(5² - 3²) = 4 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Hình thang cân có bao nhiêu trục đối xứng?",
-"options": \[
-"0 trục",
-"1 trục",
-"2 trục",
-"4 trục"
-\],
-"ans": 1,
-"exp": "Hình thang cân có đúng 1 trục đối xứng là đường thẳng đi qua trung điểm của hai đáy."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Khẳng định nào sau đây là SAI về dấu hiệu nhận biết Hình bình hành?",
-"options": \[
-"Tứ giác có các cạnh đối song song là hình bình hành.",
-"Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành.",
-"Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau là hình bình hành.",
-"Tứ giác có hai cạnh đối vừa song song vừa bằng nhau là hình bình hành."
-\],
-"ans": 2,
-"exp": "Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau có thể là hình thang cân."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Trong hình bình hành, khẳng định nào sau đây là SAI?",
-"options": \[
-"Các cạnh đối bằng nhau.",
-"Các góc đối bằng nhau.",
-"Hai đường chéo cắt nhau tại trung điểm của mỗi đường.",
-"Hai đường chéo vuông góc với nhau."
-\],
-"ans": 3,
-"exp": "Hình bình hành thông thường hai đường chéo không vuông góc với nhau."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình bình hành ABCD có ∠A = 60°. Số đo ∠C bằng:",
-"options": \[
-"120°",
-"60°",
-"30°",
-"90°"
-\],
-"ans": 1,
-"exp": "Trong hình bình hành, các góc đối bằng nhau nên ∠C = ∠A = 60°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình bình hành ABCD có ∠B = 135°. Số đo ∠A bằng:",
-"options": \[
-"135°",
-"55°",
-"45°",
-"90°"
-\],
-"ans": 2,
-"exp": "Hai góc kề một cạnh của hình bình hành bù nhau ⇒ ∠A = 180° - 135° = 45°."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình bình hành ABCD có chu vi bằng 30 cm và AB = 9 cm. Độ dài cạnh AD là:",
-"options": \[
-"21 cm",
-"6 cm",
-"12 cm",
-"9 cm"
-\],
-"ans": 1,
-"exp": "Nửa chu vi AB + AD = 30 : 2 = 15 cm ⇒ AD = 15 - 9 = 6 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Tâm đối xứng của hình bình hành là:",
-"options": \[
-"Trung điểm một cạnh bất kỳ.",
-"Giao điểm hai đường chéo.",
-"Một đỉnh bất kỳ của hình bình hành.",
-"Hình bình hành không có tâm đối xứng."
-\],
-"ans": 1,
-"exp": "Giao điểm hai đường chéo của hình bình hành là tâm đối xứng của hình bình hành đó."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho hình bình hành ABCD. Tia phân giác của ∠A cắt cạnh CD tại E. Biết AB = 8 cm, AD = 5 cm. Độ dài đoạn thẳng EC bằng:",
-"options": \[
-"5 cm",
-"3 cm",
-"8 cm",
-"4 cm"
-\],
-"ans": 1,
-"exp": "Do AE là phân giác ∠A và AB ∥ CD nên ΔADE cân tại D ⇒ DE = AD = 5 cm ⇒ EC = CD - DE = 8 - 5 = 3 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Hình bình hành có thêm điều kiện nào sau đây sẽ trở thành hình chữ nhật?",
-"options": \[
-"Hai cạnh kề bằng nhau.",
-"Hai đường chéo vuông góc.",
-"Hai đường chéo bằng nhau.",
-"Một đường chéo là đường phân giác."
-\],
-"ans": 2,
-"exp": "Dấu hiệu nhận biết: Hình bình hành có hai đường chéo bằng nhau (hoặc có một góc vuông) là hình chữ nhật."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Dấu hiệu nhận biết nào sau đây về hình chữ nhật là ĐÚNG?",
-"options": \[
-"Tứ giác có hai góc vuông là hình chữ nhật.",
-"Hình bình hành có hai đường chéo cắt nhau tại trung điểm mỗi đường là hình chữ nhật.",
-"Hình thang cân có một góc vuông là hình chữ nhật.",
-"Hình thang có hai góc vuông là hình chữ nhật."
-\],
-"ans": 2,
-"exp": "Hình thang cân có một góc vuông là hình chữ nhật (ngoài ra còn: tứ giác có 3 góc vuông; hình bình hành có 1 góc vuông hoặc 2 đường chéo bằng nhau)."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Phát biểu nào sau đây là SAI về hình chữ nhật?",
-"options": \[
-"Hình chữ nhật cũng là một hình bình hành.",
-"Hình chữ nhật cũng là một hình thang cân.",
-"Hình chữ nhật có hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường.",
-"Hình chữ nhật có hai đường chéo vuông góc với nhau."
-\],
-"ans": 3,
-"exp": "Hình chữ nhật thông thường hai đường chéo không vuông góc với nhau."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Cho ΔABC vuông tại A, biết AB = 6 cm, AC = 8 cm. Độ dài đường trung tuyến AM ứng với cạnh huyền BC là:",
-"options": \[
-"10 cm",
-"5 cm",
-"7 cm",
-"4 cm"
-\],
-"ans": 1,
-"exp": "Áp dụng Pythagore: BC = √(6² + 8²) = 10 cm. Đường trung tuyến AM ứng với cạnh huyền bằng nửa cạnh huyền: AM = 10 : 2 = 5 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Hình chữ nhật có chiều dài 12 cm và chiều rộng 5 cm. Độ dài đường chéo của hình chữ nhật đó là:",
-"options": \[
-"17 cm",
-"13 cm",
-"7 cm",
-"60 cm"
-\],
-"ans": 1,
-"exp": "Áp dụng định lý Pythagore: d = √(12² + 5²) = √169 = 13 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Hình chữ nhật ABCD có hai đường chéo AC và BD cắt nhau tại O. Biết OA = 4,5 cm, độ dài đoạn thẳng BD là:",
-"options": \[
-"4,5 cm",
-"9 cm",
-"2,25 cm",
-"18 cm"
-\],
-"ans": 1,
-"exp": "Ta có AC = 2·OA = 9 cm. Trong hình chữ nhật, hai đường chéo bằng nhau nên BD = AC = 9 cm."
-},
-{
-"subject": "toan",
-"topicId": "toan-c3",
-"topicName": "Chương 3: Tứ giác",
-"q": "Sắp xếp theo thứ tự từ hình tổng quát nhất đến hình đặc biệt nhất (quan hệ tập hợp con):",
-"options": \[
-"Tứ giác → Hình chữ nhật → Hình bình hành → Hình thang.",
-"Tứ giác → Hình thang → Hình bình hành → Hình chữ nhật.",
-"Hình thang → Tứ giác → Hình bình hành → Hình chữ nhật.",
-"Tứ giác → Hình bình hành → Hình thang → Hình chữ nhật."
-\],
-"ans": 1,
-"exp": "Mọi hình chữ nhật đều là hình bình hành; mọi hình bình hành đều là hình thang; mọi hình thang đều là tứ giác."
-}
-\]
+[
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Tổng số đo bốn góc trong của một tứ giác bất kỳ bằng:",
+    "options": [
+      "180°",
+      "270°",
+      "360°",
+      "540°"
+    ],
+    "ans": 2,
+    "exp": "Định lý: Tổng các góc trong của một tứ giác bằng 360°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho tứ giác ABCD có tỉ lệ các góc ∠A : ∠B : ∠C : ∠D = 1 : 2 : 3 : 4. Số đo góc lớn nhất của tứ giác ABCD là:",
+    "options": [
+      "108°",
+      "120°",
+      "144°",
+      "150°"
+    ],
+    "ans": 2,
+    "exp": "Tổng số phần bằng nhau: 1 + 2 + 3 + 4 = 10 phần ⇒ 1 phần = 360° : 10 = 36°. Góc lớn nhất ∠D = 4 × 36° = 144°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho tứ giác ABCD có ∠A = 85°. Số đo góc ngoài tại đỉnh A của tứ giác ABCD là:",
+    "options": [
+      "85°",
+      "95°",
+      "105°",
+      "275°"
+    ],
+    "ans": 1,
+    "exp": "Góc ngoài và góc trong tại đỉnh A kề bù nhau nên góc ngoài tại đỉnh A = 180° - 85° = 95°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Một tứ giác lồi có nhiều nhất bao nhiêu góc nhọn?",
+    "options": [
+      "1 góc nhọn",
+      "2 góc nhọn",
+      "3 góc nhọn",
+      "4 góc nhọn"
+    ],
+    "ans": 2,
+    "exp": "Nếu cả 4 góc đều nhọn (< 90°) thì tổng 4 góc nhỏ hơn 360° (vô lý), do đó tứ giác có nhiều nhất 3 góc nhọn."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình thang là tứ giác có:",
+    "options": [
+      "Hai cạnh đối song song.",
+      "Hai cạnh đối bằng nhau.",
+      "Hai cạnh kề bằng nhau.",
+      "Bốn góc bằng nhau."
+    ],
+    "ans": 0,
+    "exp": "Định nghĩa: Hình thang là tứ giác có hai cạnh đối song song (gọi là hai cạnh đáy)."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang ABCD (AB ∥ CD) có ∠A = 115°. Số đo ∠D là:",
+    "options": [
+      "115°",
+      "90°",
+      "65°",
+      "75°"
+    ],
+    "ans": 2,
+    "exp": "Vì AB ∥ CD nên ∠A và ∠D là hai góc trong cùng phía bù nhau ⇒ ∠D = 180° - 115° = 65°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Một hình thang có đáy nhỏ dài 6 cm, đáy lớn dài 10 cm. Độ dài đường trung bình của hình thang đó là:",
+    "options": [
+      "16 cm",
+      "8 cm",
+      "4 cm",
+      "60 cm"
+    ],
+    "ans": 1,
+    "exp": "Độ dài đường trung bình của hình thang bằng nửa tổng hai đáy: (6 + 10) : 2 = 8 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Một hình thang có độ dài đường trung bình bằng 12 cm và đáy nhỏ bằng 8 cm. Độ dài đáy lớn là:",
+    "options": [
+      "4 cm",
+      "20 cm",
+      "16 cm",
+      "10 cm"
+    ],
+    "ans": 2,
+    "exp": "Ta có (8 + đáy lớn) : 2 = 12 ⇒ 8 + đáy lớn = 24 ⇒ đáy lớn = 16 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang ABCD (AB ∥ CD) có ∠A - ∠D = 40°. Số đo ∠A là:",
+    "options": [
+      "70°",
+      "110°",
+      "100°",
+      "80°"
+    ],
+    "ans": 1,
+    "exp": "Ta có ∠A + ∠D = 180° và ∠A - ∠D = 40° ⇒ 2∠A = 220° ⇒ ∠A = 110°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Dấu hiệu nào sau đây giúp nhận biết một hình thang là hình thang cân?",
+    "options": [
+      "Hình thang có hai cạnh bên bằng nhau.",
+      "Hình thang có hai đường chéo vuông góc.",
+      "Hình thang có hai đường chéo bằng nhau.",
+      "Hình thang có hai góc đối bằng nhau."
+    ],
+    "ans": 2,
+    "exp": "Dấu hiệu nhận biết hình thang cân: Hình thang có hai góc kề một đáy bằng nhau HOẶC hình thang có hai đường chéo bằng nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Khẳng định nào sau đây là SAI về hình thang cân?",
+    "options": [
+      "Hai cạnh bên bằng nhau.",
+      "Hai đường chéo bằng nhau.",
+      "Hai góc kề một đáy bằng nhau.",
+      "Hai cạnh đáy bằng nhau."
+    ],
+    "ans": 3,
+    "exp": "Trong hình thang cân, hai cạnh đáy song song nhưng không bằng nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠C = 65°. Số đo ∠D là:",
+    "options": [
+      "65°",
+      "115°",
+      "125°",
+      "75°"
+    ],
+    "ans": 0,
+    "exp": "Trong hình thang cân ABCD (AB ∥ CD), hai góc kề đáy CD bằng nhau nên ∠D = ∠C = 65°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠A = 120°. Số đo ∠C là:",
+    "options": [
+      "120°",
+      "60°",
+      "90°",
+      "80°"
+    ],
+    "ans": 1,
+    "exp": "Ta có ∠B = ∠A = 120° (hai góc kề đáy AB). Vì AB ∥ CD nên ∠B + ∠C = 180° ⇒ ∠C = 60°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang cân ABCD (AB ∥ CD) có AB = 4 cm, CD = 10 cm, cạnh bên AD = 5 cm. Độ dài đường cao AH (H ∈ CD) của hình thang cân bằng:",
+    "options": [
+      "3 cm",
+      "4 cm",
+      "5 cm",
+      "2 cm"
+    ],
+    "ans": 1,
+    "exp": "Kẻ hai đường cao AH, BK xuống CD ta được DH = (10 - 4) : 2 = 3 cm. Áp dụng Pythagore cho ΔAHD vuông tại H: AH = √(5² - 3²) = 4 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình thang cân có bao nhiêu trục đối xứng?",
+    "options": [
+      "0 trục",
+      "1 trục",
+      "2 trục",
+      "4 trục"
+    ],
+    "ans": 1,
+    "exp": "Hình thang cân có đúng 1 trục đối xứng là đường thẳng đi qua trung điểm của hai đáy."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Khẳng định nào sau đây là SAI về dấu hiệu nhận biết Hình bình hành?",
+    "options": [
+      "Tứ giác có các cạnh đối song song là hình bình hành.",
+      "Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành.",
+      "Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau là hình bình hành.",
+      "Tứ giác có hai cạnh đối vừa song song vừa bằng nhau là hình bình hành."
+    ],
+    "ans": 2,
+    "exp": "Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau có thể là hình thang cân."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Trong hình bình hành, khẳng định nào sau đây là SAI?",
+    "options": [
+      "Các cạnh đối bằng nhau.",
+      "Các góc đối bằng nhau.",
+      "Hai đường chéo cắt nhau tại trung điểm của mỗi đường.",
+      "Hai đường chéo vuông góc với nhau."
+    ],
+    "ans": 3,
+    "exp": "Hình bình hành thông thường hai đường chéo không vuông góc với nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD có ∠A = 60°. Số đo ∠C bằng:",
+    "options": [
+      "120°",
+      "60°",
+      "30°",
+      "90°"
+    ],
+    "ans": 1,
+    "exp": "Trong hình bình hành, các góc đối bằng nhau nên ∠C = ∠A = 60°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD có ∠B = 135°. Số đo ∠A bằng:",
+    "options": [
+      "135°",
+      "55°",
+      "45°",
+      "90°"
+    ],
+    "ans": 2,
+    "exp": "Hai góc kề một cạnh của hình bình hành bù nhau ⇒ ∠A = 180° - 135° = 45°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD có chu vi bằng 30 cm và AB = 9 cm. Độ dài cạnh AD là:",
+    "options": [
+      "21 cm",
+      "6 cm",
+      "12 cm",
+      "9 cm"
+    ],
+    "ans": 1,
+    "exp": "Nửa chu vi AB + AD = 30 : 2 = 15 cm ⇒ AD = 15 - 9 = 6 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Tâm đối xứng của hình bình hành là:",
+    "options": [
+      "Trung điểm một cạnh bất kỳ.",
+      "Giao điểm hai đường chéo.",
+      "Một đỉnh bất kỳ của hình bình hành.",
+      "Hình bình hành không có tâm đối xứng."
+    ],
+    "ans": 1,
+    "exp": "Giao điểm hai đường chéo của hình bình hành là tâm đối xứng của hình bình hành đó."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD. Tia phân giác của ∠A cắt cạnh CD tại E. Biết AB = 8 cm, AD = 5 cm. Độ dài đoạn thẳng EC bằng:",
+    "options": [
+      "5 cm",
+      "3 cm",
+      "8 cm",
+      "4 cm"
+    ],
+    "ans": 1,
+    "exp": "Do AE là phân giác ∠A và AB ∥ CD nên ΔADE cân tại D ⇒ DE = AD = 5 cm ⇒ EC = CD - DE = 8 - 5 = 3 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Dấu hiệu nhận biết nào sau đây về hình chữ nhật là ĐÚNG?",
+    "options": [
+      "Tứ giác có hai góc vuông là hình chữ nhật.",
+      "Hình bình hành có hai đường chéo cắt nhau tại trung điểm mỗi đường là hình chữ nhật.",
+      "Hình thang cân có một góc vuông là hình chữ nhật.",
+      "Hình thang có hai góc vuông là hình chữ nhật."
+    ],
+    "ans": 2,
+    "exp": "Hình thang cân có một góc vuông là hình chữ nhật (ngoài ra còn: tứ giác có 3 góc vuông; hình bình hành có 1 góc vuông hoặc 2 đường chéo bằng nhau)."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Phát biểu nào sau đây là SAI về hình chữ nhật?",
+    "options": [
+      "Hình chữ nhật cũng là một hình bình hành.",
+      "Hình chữ nhật cũng là một hình thang cân.",
+      "Hình chữ nhật có hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường.",
+      "Hình chữ nhật có hai đường chéo vuông góc với nhau."
+    ],
+    "ans": 3,
+    "exp": "Hình chữ nhật thông thường hai đường chéo không vuông góc với nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho ΔABC vuông tại A, biết AB = 6 cm, AC = 8 cm. Độ dài đường trung tuyến AM ứng với cạnh huyền BC là:",
+    "options": [
+      "10 cm",
+      "5 cm",
+      "7 cm",
+      "4 cm"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng Pythagore: BC = √(6² + 8²) = 10 cm. Đường trung tuyến AM ứng với cạnh huyền bằng nửa cạnh huyền: AM = 10 : 2 = 5 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình chữ nhật có chiều dài 12 cm và chiều rộng 5 cm. Độ dài đường chéo của hình chữ nhật đó là:",
+    "options": [
+      "17 cm",
+      "13 cm",
+      "7 cm",
+      "60 cm"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng định lý Pythagore: d = √(12² + 5²) = √169 = 13 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình chữ nhật ABCD có hai đường chéo AC và BD cắt nhau tại O. Biết OA = 4,5 cm, độ dài đoạn thẳng BD là:",
+    "options": [
+      "4,5 cm",
+      "9 cm",
+      "2,25 cm",
+      "18 cm"
+    ],
+    "ans": 1,
+    "exp": "Ta có AC = 2·OA = 9 cm. Trong hình chữ nhật, hai đường chéo bằng nhau nên BD = AC = 9 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Sắp xếp theo thứ tự từ hình tổng quát nhất đến hình đặc biệt nhất (quan hệ tập hợp con):",
+    "options": [
+      "Tứ giác → Hình chữ nhật → Hình bình hành → Hình thang.",
+      "Tứ giác → Hình thang → Hình bình hành → Hình chữ nhật.",
+      "Hình thang → Tứ giác → Hình bình hành → Hình chữ nhật.",
+      "Tứ giác → Hình bình hành → Hình thang → Hình chữ nhật."
+    ],
+    "ans": 1,
+    "exp": "Mọi hình chữ nhật đều là hình bình hành; mọi hình bình hành đều là hình thang; mọi hình thang đều là tứ giác."
+  }
+]
