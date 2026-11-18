@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anh em nhà Heo- Đồng hành chinh phục kiến thức Lớp 8 (GDPT 2018)</title>
+    <title>HọcTốt8 - Đồng hành chinh phục kiến thức Lớp 8 (GDPT 2018)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,10 +76,11 @@
     <!-- ================= TOP HEADER & NAVIGATION ================= -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="flex items-center justify-between h-16 gap-3">
-                <button onclick="navigateTo('home')" class="flex items-center gap-3 text-left group focus:outline-none">
-                    <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-teal-500 via-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-md shadow-teal-600/25 ring-2 ring-teal-100 group-hover:scale-105 group-hover:rotate-1 transition-all shrink-0">
-                        <svg class="w-7 h-7" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="flex flex-wrap items-center justify-between min-h-[4rem] py-2 gap-2.5">
+                <!-- Logo -->
+                <button onclick="navigateTo('home')" class="flex items-center gap-2.5 text-left group focus:outline-none">
+                    <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-teal-500 via-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-md shadow-teal-600/25 ring-2 ring-teal-100 group-hover:scale-105 group-hover:rotate-1 transition-all shrink-0">
+                        <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 4L19.4 7.6L23 9L19.4 10.4L18 14L16.6 10.4L13 9L16.6 7.6L18 4Z" fill="#FDE047"/>
                             <path d="M7 14.5C7 13.67 7.67 13 8.5 13H15.5C16.88 13 18 14.12 18 15.5V27.5C18 26.4 17.1 25.5 16 25.5H8.5C7.67 25.5 7 24.83 7 24V14.5Z" fill="white" fill-opacity="0.95"/>
                             <path d="M29 14.5C29 13.67 28.33 13 27.5 13H20.5C19.12 13 18 14.12 18 15.5V27.5C18 26.4 18.9 25.5 20 25.5H27.5C28.33 25.5 29 24.83 29 24V14.5Z" fill="#CCFBF1"/>
@@ -94,53 +95,67 @@
                     <div>
                         <div class="flex items-center gap-1.5">
                             <span class="font-display font-extrabold text-lg sm:text-xl text-slate-800 tracking-tight">HọcTốt<span class="text-teal-600">8</span></span>
-                            <span class="hidden sm:inline-block text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-200/80">GDPT 2018</span>
-                            <span id="github-sync-badge" class="hidden sm:inline-flex items-center gap-1 text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200" title="Đã tự động đồng bộ câu hỏi từ file cau_hoi_bo_sung.json trên GitHub">
-                                ☁️ Đã đồng bộ GitHub
+                            <span class="hidden xl:inline-block text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-200/80">GDPT 2018</span>
+                            <span id="github-sync-badge" class="hidden text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200" title="Đã kết nối đồng bộ tự động với GitHub">
+                                ☁️ GitHub
                             </span>
                         </div>
-                        <p class="text-xs text-slate-500 hidden sm:block">Đồng hành chinh phục kiến thức Lớp 8</p>
+                        <p class="text-[11px] text-slate-500 hidden sm:block">Chinh phục kiến thức Lớp 8</p>
                     </div>
                 </button>
 
-                <!-- Thanh tìm kiếm nhanh trên Header -->
-                <div class="relative flex-1 max-w-md hidden md:block">
+                <!-- Thanh tìm kiếm nhanh -->
+                <div class="relative flex-1 max-w-xs lg:max-w-sm hidden md:block">
                     <div class="relative">
-                        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="M21 21l-4.35-4.35"></path>
                         </svg>
                         <input type="text" id="header-search-input"
-                            placeholder="Tìm nhanh bài học, công thức (VD: Hằng đẳng thức, Thalès...)"
-                            class="w-full pl-10 pr-4 py-2 text-sm bg-slate-100/90 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition-all"
+                            placeholder="Tìm bài học, công thức..."
+                            class="w-full pl-9 pr-3 py-1.5 text-xs sm:text-sm bg-slate-100/90 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition-all"
                             oninput="handleGlobalSearch(this.value, 'header-search-results')"
                             onfocus="handleGlobalSearch(this.value, 'header-search-results')">
                     </div>
                     <div id="header-search-results" class="hidden absolute left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-slate-200 max-h-80 overflow-y-auto z-50 divide-y divide-slate-100"></div>
                 </div>
 
-                <!-- Nút Quản lý Nhập/Xuất đề & Nút nhảy nhanh vào Luyện đề -->
-                <div class="flex items-center gap-2">
-                    <button onclick="openQuizManagerModal('import')"
-                        class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200 text-xs sm:text-sm font-bold transition-all active:scale-95">
-                        <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-                        </svg>
-                        <span class="hidden sm:inline">Nhập / Xuất Đề</span>
-                        <span class="sm:hidden">Đề CSV/JSON</span>
-                        <span id="header-custom-quiz-badge" class="hidden px-1.5 py-0.5 rounded-md bg-teal-600 text-white text-[10px] font-extrabold">+0</span>
+                <!-- BỘ CHỌN 2 HỌC SINH + LOG ĐIỂM + NHẬP XUẤT ĐỀ + CÀI ĐẶT GITHUB -->
+                <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                    <!-- Bộ chuyển đổi 2 Học sinh -->
+                    <div id="student-switcher-bar" class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200/90">
+                        <!-- Render bằng JS -->
+                    </div>
+
+                    <!-- Nút mở Nhật ký Log điểm -->
+                    <button onclick="openScoreLogModal()"
+                        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 text-xs font-extrabold transition-all active:scale-95"
+                        title="Xem lịch sử điểm số của 2 học sinh">
+                        <span>📊 Log điểm</span>
+                        <span id="header-log-count-badge" class="px-1.5 py-0.5 rounded-md bg-indigo-600 text-white text-[10px] font-extrabold">0</span>
                     </button>
-                    <button onclick="navigateTo('toan', 'quiz')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs sm:text-sm font-bold shadow-sm shadow-amber-500/25 transition-all active:scale-95">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Luyện đề ngay</span>
+
+                    <!-- Nút Quản lý Nhập/Xuất đề -->
+                    <button onclick="openQuizManagerModal('import')"
+                        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-extrabold shadow-xs transition-all active:scale-95"
+                        title="Bổ sung câu hỏi trắc nghiệm từ Excel (.csv) hoặc JSON">
+                        <span>📥 Nhập / Xuất Đề</span>
+                        <span id="header-custom-quiz-badge" class="hidden px-1.5 py-0.5 rounded-md bg-amber-400 text-slate-950 text-[10px] font-extrabold">+0</span>
+                    </button>
+
+                    <!-- Nút Cài đặt Đồng bộ GitHub Cloud -->
+                    <button onclick="openGitHubConfigModal()"
+                        id="btn-header-github-config"
+                        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-extrabold shadow-xs transition-all active:scale-95"
+                        title="Cài đặt Token lưu tự động Câu hỏi & Log điểm lên GitHub">
+                        <span>☁️ Đồng bộ GitHub</span>
+                        <span id="gh-status-dot" class="w-2 h-2 rounded-full bg-amber-400"></span>
                     </button>
                 </div>
             </div>
 
             <!-- Thanh Menu chính 8 mục -->
-            <nav aria-label="Menu môn học" class="flex items-center gap-1.5 py-2.5 overflow-x-auto no-scrollbar border-t border-slate-100" id="main-nav"></nav>
+            <nav aria-label="Menu môn học" class="flex items-center gap-1.5 py-2 overflow-x-auto no-scrollbar border-t border-slate-100" id="main-nav"></nav>
         </div>
     </header>
 
@@ -150,6 +165,177 @@
     <!-- ================= TOAST NOTIFICATION ================= -->
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
+    <!-- ================= MODAL CÀI ĐẶT ĐỒNG BỘ GITHUB TỰ ĐỘNG (TOKEN API) ================= -->
+    <div id="github-config-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-xs" onclick="closeGitHubConfigModal()"></div>
+        <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in">
+            <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-teal-900 text-white px-5 sm:px-6 py-4 flex items-center justify-between gap-3 shrink-0">
+                <div>
+                    <h3 class="font-display text-base sm:text-lg font-extrabold flex items-center gap-2">
+                        <span>☁️ Cài Đặt Lưu Tự Động Lên GitHub (Câu Hỏi &amp; Log Điểm)</span>
+                    </h3>
+                    <p class="text-xs text-slate-300 mt-0.5">
+                        Sử dụng GitHub API để lưu trực tiếp <code>cau_hoi_bo_sung.json</code> và <code>nhat_ky_diem.json</code> vào kho code của bạn
+                    </p>
+                </div>
+                <button onclick="closeGitHubConfigModal()" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold flex items-center justify-center transition">
+                    ✕
+                </button>
+            </div>
+
+            <div class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-4">
+                <!-- Trạng thái kết nối -->
+                <div id="gh-connection-banner" class="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-950 flex flex-wrap items-center justify-between gap-2">
+                    <span>⚠️ Chưa nhập GitHub Token. Hệ thống đang đọc dữ liệu công khai từ GitHub và lưu tạm trên máy.</span>
+                </div>
+
+                <!-- Form thông số kho GitHub -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="block text-xs font-extrabold text-slate-700 mb-1">Tên tài khoản GitHub (Owner)</label>
+                        <input type="text" id="gh-owner-input" value="anhemnhaheo" placeholder="VD: anhemnhaheo"
+                            class="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:border-teal-500 outline-none font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold text-slate-700 mb-1">Tên kho lưu trữ (Repository)</label>
+                        <input type="text" id="gh-repo-input" value="hoctap" placeholder="VD: hoctap"
+                            class="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:border-teal-500 outline-none font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold text-slate-700 mb-1">Nhánh (Branch)</label>
+                        <input type="text" id="gh-branch-input" value="main" placeholder="main"
+                            class="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:border-teal-500 outline-none font-mono">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-1">
+                        <label class="text-xs font-extrabold text-slate-700">GitHub Personal Access Token (Fine-grained / Classic)</label>
+                        <button type="button" onclick="toggleGhTokenVisibility()" class="text-[11px] font-bold text-teal-700 hover:underline">
+                            👁️ Hiện / Ẩn Token
+                        </button>
+                    </div>
+                    <input type="password" id="gh-token-input" placeholder="Dán mã github_pat_... hoặc ghp_... vào đây"
+                        class="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-300 focus:border-teal-500 outline-none font-mono bg-slate-50 focus:bg-white">
+                    <p class="text-[11px] text-slate-500 mt-1">
+                        Token chỉ được lưu trong trình duyệt trên máy của bạn, không bao giờ bị đẩy lên mã nguồn công khai.
+                    </p>
+                </div>
+
+                <!-- Tùy chọn tự động hóa -->
+                <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+                    <p class="text-xs font-extrabold text-slate-800">⚙️ Chế độ tự động đồng bộ khi đã có Token:</p>
+                    <label class="flex items-center gap-2.5 text-xs text-slate-700 cursor-pointer">
+                        <input type="checkbox" id="gh-auto-sync-quiz" checked class="accent-teal-600 w-4 h-4">
+                        <span><strong>Tự động lưu câu hỏi mới</strong> lên file <code>cau_hoi_bo_sung.json</code> ngay sau khi nạp từ Excel/JSON.</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 text-xs text-slate-700 cursor-pointer">
+                        <input type="checkbox" id="gh-auto-sync-logs" checked class="accent-indigo-600 w-4 h-4">
+                        <span><strong>Tự động lưu Log điểm &amp; tên 2 học sinh</strong> lên file <code>nhat_ky_diem.json</code> ngay sau mỗi lần nộp bài.</span>
+                    </label>
+                </div>
+
+                <!-- Nút hành động -->
+                <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100">
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="saveAndTestGitHubConfig()"
+                            class="px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs sm:text-sm font-extrabold shadow-sm transition">
+                            💾 Lưu cấu hình &amp; Kiểm tra kết nối
+                        </button>
+                        <button type="button" onclick="syncAllNowToGitHub()"
+                            class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-extrabold shadow-sm transition">
+                            ☁️ Đẩy toàn bộ dữ liệu lên GitHub ngay
+                        </button>
+                    </div>
+                    <button type="button" onclick="clearGitHubConfig()"
+                        class="px-3 py-2 rounded-xl text-xs font-bold text-rose-600 hover:bg-rose-50 transition">
+                        Xóa Token
+                    </button>
+                </div>
+
+                <!-- Hướng dẫn nhanh tạo Token 1 phút -->
+                <details class="rounded-2xl border border-slate-200 bg-slate-50/80 p-3.5 text-xs text-slate-600">
+                    <summary class="font-extrabold text-slate-800 cursor-pointer">📖 Hướng dẫn lấy GitHub Token trong 1 phút (Bấm để xem)</summary>
+                    <ol class="list-decimal pl-5 mt-2 space-y-1.5 leading-relaxed">
+                        <li>Đăng nhập GitHub → truy cập: <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-bold underline">github.com/settings/tokens?type=beta</a> → bấm <strong>Generate new token</strong>.</li>
+                        <li>Đặt tên Token (VD: <code>WebHocTap8</code>), chọn thời hạn (Expiration: <em>No expiration</em> hoặc 1 năm).</li>
+                        <li>Ở mục <strong>Repository access</strong>, chọn <strong>Only select repositories</strong> → chọn đúng kho <code>hoctap</code>.</li>
+                        <li>Mở mục <strong>Permissions → Repository permissions</strong> → tìm dòng <strong>Contents</strong> → đổi thành <strong>Read and write</strong>.</li>
+                        <li>Bấm <strong>Generate token</strong>, sao chép mã token bắt đầu bằng <code>github_pat_...</code> dán vào ô phía trên và bấm <strong>Lưu cấu hình</strong>.</li>
+                    </ol>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MODAL NHẬT KÝ LOG ĐIỂM 2 HỌC SINH ================= -->
+    <div id="score-log-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-xs" onclick="closeScoreLogModal()"></div>
+        <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in">
+            <div class="bg-gradient-to-r from-indigo-800 via-indigo-700 to-blue-700 text-white px-5 sm:px-6 py-4 flex items-center justify-between gap-3 shrink-0">
+                <div>
+                    <h3 class="font-display text-base sm:text-lg font-extrabold flex items-center gap-2">
+                        <span>📊 Nhật Ký Điểm Số &amp; Theo Dõi Tiến Bộ (2 Học Sinh)</span>
+                    </h3>
+                    <p class="text-xs text-indigo-100 mt-0.5">
+                        Tự động ghi nhận mỗi lần nộp bài trắc nghiệm • Đồng bộ qua file <code>nhat_ky_diem.json</code> trên GitHub
+                    </p>
+                </div>
+                <button onclick="closeScoreLogModal()" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold flex items-center justify-center transition">
+                    ✕
+                </button>
+            </div>
+
+            <div class="p-4 sm:p-5 bg-slate-50 border-b border-slate-200 space-y-4 shrink-0">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="student-profiles-cards"></div>
+
+                <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+                    <div class="flex flex-wrap items-center gap-1.5" id="log-filter-buttons"></div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button onclick="pushScoreLogsToGitHub(true)"
+                            class="px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-extrabold shadow-xs flex items-center gap-1.5 transition">
+                            <span>☁️ Lưu Log lên GitHub</span>
+                        </button>
+                        <button onclick="exportScoreLogsToCsv()"
+                            class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold shadow-xs flex items-center gap-1.5 transition">
+                            <span>📤 Xuất Excel (.csv)</span>
+                        </button>
+                        <button onclick="clearScoreLogs()"
+                            class="px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold transition">
+                            🗑️ Xóa log
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 sm:p-5 overflow-y-auto flex-1">
+                <div id="score-log-table-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= LIGHTBOX PHÓNG TO INFOGRAPHIC ================= -->
+    <div id="infographic-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-slate-950/85 backdrop-blur-xs" onclick="closeInfographicLightbox()">
+        <div class="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center animate-fade-in" onclick="event.stopPropagation()">
+            <div class="w-full flex items-center justify-between text-white mb-2.5 px-1">
+                <p id="lightbox-caption" class="text-xs sm:text-sm font-bold text-slate-200 truncate pr-4">Infographic tóm tắt kiến thức</p>
+                <div class="flex items-center gap-2 shrink-0">
+                    <a id="lightbox-open-raw" href="#" target="_blank" rel="noopener noreferrer"
+                        class="px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-bold transition">
+                        ↗ Mở tab mới
+                    </a>
+                    <button onclick="closeInfographicLightbox()"
+                        class="w-9 h-9 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-extrabold flex items-center justify-center transition">
+                        ✕
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-2 shadow-2xl overflow-auto max-h-[82vh] w-full flex items-center justify-center">
+                <img id="lightbox-img" src="" alt="Infographic phóng to" class="max-w-full max-h-[78vh] object-contain rounded-xl">
+            </div>
+        </div>
+    </div>
+
     <!-- ================= MODAL NHẬP / XUẤT ĐỀ (EXCEL CSV & JSON + ĐỒNG BỘ GITHUB) ================= -->
     <div id="quiz-manager-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-xs" onclick="closeQuizManagerModal()"></div>
@@ -158,10 +344,10 @@
             <div class="bg-gradient-to-r from-teal-700 via-teal-800 to-emerald-800 text-white px-5 sm:px-6 py-4 flex items-center justify-between gap-3 shrink-0">
                 <div>
                     <h3 class="font-display text-base sm:text-lg font-extrabold flex items-center gap-2">
-                        <span>📥 Quản lý &amp; Đồng bộ Câu Hỏi Trắc Nghiệm (Excel / JSON / GitHub)</span>
+                        <span>📥 Bổ Sung &amp; Đồng Bộ Câu Hỏi Trắc Nghiệm (Excel / JSON / GitHub)</span>
                     </h3>
                     <p id="qm-subtitle" class="text-xs text-teal-100 mt-0.5">
-                        Tự động đọc file <code>cau_hoi_bo_sung.json</code> từ GitHub + hỗ trợ nhập Excel (.csv)
+                        Tự động đồng bộ với file <code>cau_hoi_bo_sung.json</code> trên GitHub
                     </p>
                 </div>
                 <button onclick="closeQuizManagerModal()" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold flex items-center justify-center transition">
@@ -178,7 +364,7 @@
                     </button>
                     <button id="qm-tab-template" onclick="switchQmTab('template')"
                         class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-bold border-t border-x border-transparent text-slate-600 hover:text-slate-900">
-                        2. Xuất file GitHub &amp; File Mẫu
+                        2. Lưu lên GitHub &amp; File Mẫu
                     </button>
                     <button id="qm-tab-paste" onclick="switchQmTab('paste')"
                         class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-bold border-t border-x border-transparent text-slate-600 hover:text-slate-900">
@@ -197,10 +383,15 @@
 
                 <!-- TAB 1: NHẬP TỪ FILE -->
                 <div id="qm-panel-import" class="space-y-4">
-                    <!-- Hướng dẫn quy trình lưu vĩnh viễn lên GitHub -->
-                    <div class="rounded-2xl bg-sky-50 border border-sky-200 p-3.5 text-xs text-sky-950 space-y-1">
-                        <p class="font-extrabold text-sky-900">☁️ Quy trình lưu vĩnh viễn cho mọi học sinh trên GitHub:</p>
-                        <p>1. Nhập file Excel (<code>.csv</code>) hoặc <code>.json</code> của bạn ở dưới đây → 2. Sang <strong>Tab 2</strong> bấm nút <strong>"Xuất file cau_hoi_bo_sung.json để up lên GitHub"</strong> → 3. Tải file đó lên kho GitHub (cùng thư mục với <code>index.html</code>). Trang web sẽ tự động nạp mỗi khi học sinh mở link!</p>
+                    <div class="rounded-2xl bg-sky-50 border border-sky-200 p-3.5 text-xs text-sky-950 flex flex-wrap items-center justify-between gap-2">
+                        <div>
+                            <p class="font-extrabold text-sky-900">☁️ Tự động lưu vĩnh viễn lên GitHub:</p>
+                            <p>Nếu bạn đã cài <strong>GitHub Token</strong>, câu hỏi mới sẽ tự động được lưu thẳng vào <code>cau_hoi_bo_sung.json</code> trên GitHub ngay khi bấm xác nhận nạp!</p>
+                        </div>
+                        <button type="button" onclick="closeQuizManagerModal(); openGitHubConfigModal();"
+                            class="px-3 py-1.5 rounded-xl bg-slate-800 text-white font-bold text-xs shrink-0 hover:bg-slate-900">
+                            ⚙️ Cài đặt Token
+                        </button>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -220,7 +411,6 @@
                         </label>
                     </div>
 
-                    <!-- Vùng kéo thả / chọn file -->
                     <div id="qm-dropzone"
                         ondragover="handleQmDragOver(event)"
                         ondragleave="handleQmDragLeave(event)"
@@ -239,7 +429,6 @@
                         </p>
                     </div>
 
-                    <!-- Xem trước kết quả kiểm tra file -->
                     <div id="qm-preview-box" class="hidden space-y-3 animate-fade-in">
                         <div id="qm-preview-summary" class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm"></div>
                         <div id="qm-preview-errors" class="hidden p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 text-xs space-y-1 max-h-36 overflow-y-auto"></div>
@@ -258,34 +447,38 @@
                             </button>
                             <button id="qm-btn-apply" onclick="applyQmImportedQuestions()" disabled
                                 class="px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 disabled:bg-slate-200 disabled:text-slate-400 text-white font-extrabold text-xs sm:text-sm shadow-sm transition">
-                                ✅ Xác nhận nạp vào trang web
+                                ✅ Xác nhận nạp &amp; Lưu lên GitHub
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- TAB 2: XUẤT FILE ĐỒNG BỘ GITHUB & TẢI FILE MẪU -->
+                <!-- TAB 2: LƯU LÊN GITHUB & TẢI FILE MẪU -->
                 <div id="qm-panel-template" class="hidden space-y-5">
-                    <!-- Nút xuất trực tiếp file cau_hoi_bo_sung.json cho GitHub -->
                     <div class="rounded-2xl border-2 border-emerald-400 bg-gradient-to-r from-emerald-50 to-teal-50 p-5 space-y-3">
                         <div class="flex items-center justify-between flex-wrap gap-2">
                             <div class="flex items-center gap-2">
                                 <span class="text-xl">☁️</span>
-                                <h4 class="font-display font-extrabold text-sm sm:text-base text-emerald-950">Xuất file đồng bộ vĩnh viễn lên GitHub</h4>
+                                <h4 class="font-display font-extrabold text-sm sm:text-base text-emerald-950">Đồng bộ câu hỏi bổ sung lên GitHub</h4>
                             </div>
-                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-bold">Khuyên dùng</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-bold">1-Click Sync</span>
                         </div>
                         <p class="text-xs text-slate-700 leading-relaxed">
-                            Sau khi nhập câu hỏi từ Excel/JSON vào web, bấm nút dưới đây để tải về tệp <strong><code>cau_hoi_bo_sung.json</code></strong> (chứa toàn bộ câu hỏi bổ sung). Bạn chỉ cần tải tệp này lên kho GitHub (cùng chỗ với <code>index.html</code>) là tất cả học sinh sẽ thấy ngay!
+                            Bạn có thể bấm nút <strong>Lưu thẳng lên GitHub ngay</strong> (nếu đã nhập Token) hoặc tải tệp <code>cau_hoi_bo_sung.json</code> về máy để tải thủ công lên kho GitHub.
                         </p>
-                        <button onclick="exportGitHubSyncJson()"
-                            class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2 transition active:scale-95">
-                            <span>⬇️ Tải file cau_hoi_bo_sung.json để up lên GitHub</span>
-                        </button>
+                        <div class="flex flex-wrap gap-2.5">
+                            <button onclick="pushQuestionsToGitHub(true)"
+                                class="py-2.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2 transition active:scale-95">
+                                <span>☁️ Lưu thẳng câu hỏi lên GitHub ngay</span>
+                            </button>
+                            <button onclick="exportGitHubSyncJson()"
+                                class="py-2.5 px-4 rounded-xl bg-white hover:bg-slate-50 text-emerald-900 border border-emerald-300 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition">
+                                <span>⬇️ Tải file cau_hoi_bo_sung.json</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Tải Template -->
                         <div class="rounded-2xl border border-amber-200 bg-amber-50/50 p-5 space-y-3">
                             <div class="flex items-center gap-2">
                                 <span class="text-xl">📋</span>
@@ -306,7 +499,6 @@
                             </div>
                         </div>
 
-                        <!-- Xuất Toàn Bộ Đề Hiện Tại -->
                         <div class="rounded-2xl border border-teal-200 bg-teal-50/50 p-5 space-y-3">
                             <div class="flex items-center gap-2">
                                 <span class="text-xl">💾</span>
@@ -328,7 +520,6 @@
                         </div>
                     </div>
 
-                    <!-- Bảng hướng dẫn mã môn học & chuyên đề -->
                     <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs space-y-2.5">
                         <p class="font-extrabold text-slate-800">📌 Hướng dẫn điền cột <code class="text-teal-700">MonHoc</code> và <code class="text-teal-700">ChuyenDe</code> trong file Excel:</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-600">
@@ -361,7 +552,7 @@
   {
     "subject": "toan",
     "topicId": "toan-c2",
-    "q": "Khai triển (x + 2)² ta được:",
+    "q": "Khai triển hằng đẳng thức (x + 2)² ta được:",
     "options": ["x² + 4x + 4", "x² + 2x + 4", "x² + 4", "x² - 4x + 4"],
     "ans": 0,
     "exp": "Áp dụng hằng đẳng thức (A + B)² = A² + 2AB + B²."
@@ -428,6 +619,8 @@
                         quizTopicId: 'toan-c1',
                         title: 'Chương 1: Đa thức nhiều biến',
                         summary: 'Đơn thức, đa thức nhiều biến, các phép cộng, trừ, nhân đa thức và chia đa thức cho đơn thức.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Đơn thức nhiều biến:</strong> Là biểu thức đại số chỉ gồm một số, một biến hoặc một tích giữa các số và các biến. Bậc của đơn thức (khác 0) là tổng số mũ của tất cả các biến.',
                             '<strong>Thu gọn đa thức:</strong> Nhóm các hạng tử đồng dạng (có cùng phần biến) rồi cộng/trừ các hệ số với nhau.',
@@ -442,8 +635,10 @@
                         quizTopicId: 'toan-c2',
                         title: 'Chương 2: Hằng đẳng thức đáng nhớ & Ứng dụng',
                         summary: 'Bảy hằng đẳng thức cơ bản và các phương pháp phân tích đa thức thành nhân tử.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
-                           '<strong>1. Bình phương của một tổng:</strong> <span class="math-formula">(A + B)² = A² + 2AB + B²</span>',
+                            '<strong>1. Bình phương của một tổng:</strong> <span class="math-formula">(A + B)² = A² + 2AB + B²</span>',
                             '<strong>2. Bình phương của một hiệu:</strong> <span class="math-formula">(A - B)² = A² - 2AB + B²</span>',
                             '<strong>3. Hiệu hai bình phương:</strong> <span class="math-formula">A² - B² = (A - B)(A + B)</span>',
                             '<strong>4. Lập phương của một tổng:</strong> <span class="math-formula">(A + B)³ = A³ + 3A²B + 3AB² + B³</span>',
@@ -460,6 +655,8 @@
                         quizTopicId: 'toan-c3',
                         title: 'Chương 3: Tứ giác (Hình thang, Hình bình hành, HCN, Hình thoi, Hình vuông)',
                         summary: 'Tổng các góc của tứ giác, tính chất và dấu hiệu nhận biết các tứ giác đặc biệt.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Định lý tổng các góc tứ giác:</strong> Tổng 4 góc trong bằng <span class="math-formula">360°</span>.',
                             '<strong>Hình thang cân:</strong> Là hình thang có 2 góc kề một đáy bằng nhau hoặc 2 đường chéo bằng nhau.',
@@ -475,6 +672,8 @@
                         quizTopicId: 'toan-c4',
                         title: 'Chương 4: Định lí Thalès & Tam giác đồng dạng',
                         summary: 'Tỉ số đoạn thẳng, đường trung bình tam giác, đường phân giác và 3 trường hợp đồng dạng.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Định lí Thalès:</strong> Đường thẳng song song với một cạnh của tam giác và cắt hai cạnh còn lại định ra trên hai cạnh đó các đoạn thẳng tương ứng tỉ lệ: <span class="math-formula">AD/AB = AE/AC</span>.',
                             '<strong>Đường trung bình của tam giác:</strong> Song song với cạnh thứ ba và bằng nửa cạnh ấy: <span class="math-formula">MN = ½ BC</span>.',
@@ -489,6 +688,8 @@
                         quizTopicId: 'toan-c5',
                         title: 'Chương 5: Hàm số bậc nhất & Dữ liệu - Xác suất',
                         summary: 'Tọa độ trong mặt phẳng Oxy, đồ thị hàm số y = ax + b (a ≠ 0) và xác suất thực nghiệm.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Hàm số bậc nhất:</strong> Có dạng <span class="math-formula">y = ax + b (a ≠ 0)</span>. Đồ thị là một đường thẳng cắt trục tung tại điểm <span class="math-formula">(0; b)</span>.',
                             '<strong>Vị trí tương đối 2 đường thẳng:</strong> Song song khi <span class="math-formula">a = a\', b ≠ b\'</span>; Cắt nhau khi <span class="math-formula">a ≠ a\'</span>; Trùng nhau khi <span class="math-formula">a = a\', b = b\'</span>.',
@@ -596,6 +797,8 @@
                         quizTopicId: 'van-c1',
                         title: 'Chương 1: Truyện lịch sử & Thơ Đường luật',
                         summary: 'Đặc trưng cốt truyện, nhân vật lịch sử và quy tắc niêm, luật, đối trong thơ thất ngôn bát cú / tứ tuyệt.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Truyện lịch sử:</strong> Lấy đề tài từ các sự kiện, nhân vật có thật trong lịch sử; kết hợp giữa sự thật lịch sử và hư cấu nghệ thuật nhằm tái hiện không khí thời đại.',
                             '<strong>Thơ thất ngôn bát cú Đường luật:</strong> Gồm 8 câu, mỗi câu 7 chữ; chia 4 phần: <em>Đề (1-2) – Thực (3-4) – Luận (5-6) – Kết (7-8)</em>.',
@@ -609,6 +812,8 @@
                         quizTopicId: 'van-c2',
                         title: 'Chương 2: Văn bản nghị luận & Văn bản thông tin',
                         summary: 'Mối quan hệ giữa luận đề, luận điểm, lí lẽ, bằng chứng và cách trình bày văn bản thông tin giải thích hiện tượng tự nhiên.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Cấu trúc văn bản nghị luận:</strong> Luận đề (vấn đề trung tâm) → Các luận điểm chính → Lí lẽ sắc bén + Bằng chứng xác thực.',
                             '<strong>Văn bản thông tin giải thích hiện tượng tự nhiên:</strong> Thường triển khai theo trình tự nguyên nhân – kết quả, sử dụng thuật ngữ khoa học và phương tiện phi ngôn ngữ.'
@@ -621,6 +826,8 @@
                         quizTopicId: 'van-c3',
                         title: 'Chương 3: Truyện cười, Hài kịch & Thơ tự do',
                         summary: 'Thủ pháp gây cười, xung đột kịch và mạch cảm xúc phóng khoáng trong thơ tự do.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Truyện cười & Hài kịch:</strong> Tạo tiếng cười thông qua sự mâu thuẫn giữa cái bên trong và cái bên ngoài, thói hư tật xấu của con người.',
                             '<strong>Thơ tự do:</strong> Không bị ràng buộc bởi số chữ trong một dòng, số dòng trong một khổ hay quy tắc niêm luật cố định.'
@@ -633,6 +840,8 @@
                         quizTopicId: 'van-c4',
                         title: 'Chương 4: Thực hành Tiếng Việt & Tập làm văn',
                         summary: 'Biện pháp tu từ đảo ngữ, câu hỏi tu từ, nghĩa tường minh - hàm ý và dàn ý bài văn nghị luận.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Đảo ngữ:</strong> Thay đổi trật tự thông thường của từ ngữ trong câu để nhấn mạnh đặc điểm, cảm xúc.',
                             '<strong>Nghĩa tường minh & Hàm ý:</strong> Nghĩa tường minh diễn đạt trực tiếp; hàm ý suy ra từ ngữ cảnh.',
@@ -703,6 +912,8 @@
                         quizTopicId: 'anh-c1',
                         title: 'Chương 1: Leisure Time, Life in the Countryside & Teenagers',
                         summary: 'Động từ chỉ sự yêu thích (V-ing / to-V), So sánh hơn của trạng từ và Câu ghép (Compound sentences).',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Unit 1 (Verbs of liking):</strong> <em>detest, fancy, dislike, enjoy, mind</em> + <span class="math-formula">V-ing</span>; <em>like, love, hate, prefer</em> + <span class="math-formula">V-ing / to-V</span>.',
                             '<strong>Unit 2 (Comparative adverbs):</strong> Trạng từ ngắn: <span class="math-formula">adv + -er + than</span>; Trạng từ dài: <span class="math-formula">more/less + adv + than</span>.',
@@ -716,6 +927,8 @@
                         quizTopicId: 'anh-c2',
                         title: 'Chương 2: Ethnic Groups, Customs & Traditions, Lifestyles',
                         summary: 'Danh từ đếm được/không đếm được, Mạo từ (a/an/the/zero) & Thì tương lai đơn / Câu điều kiện loại 1.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Unit 4 (Nouns & Questions):</strong> Phân biệt danh từ đếm được (<em>a stilt house</em>) và không đếm được (<em>sticky rice</em>).',
                             '<strong>Unit 5 (Articles):</strong> Dùng <em>the</em> trước nhạc cụ, tên dân tộc; dùng <em>zero article (Ø)</em> trước bữa ăn, môn thể thao.',
@@ -729,6 +942,8 @@
                         quizTopicId: 'anh-c3',
                         title: 'Chương 3: Environmental Protection, Shopping & Natural Disasters',
                         summary: 'Mệnh đề trạng ngữ chỉ thời gian, Hiện tại đơn mang nghĩa tương lai & Quá khứ tiếp diễn.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Unit 7 (Time clauses):</strong> Dùng liên từ <em>when, while, before, after, as soon as, until</em>.',
                             '<strong>Unit 8 (Present Simple for future):</strong> Diễn tả lịch trình tàu xe, giờ mở/đóng cửa cố định.',
@@ -742,6 +957,8 @@
                         quizTopicId: 'anh-c4',
                         title: 'Chương 4: Communication, Science & Technology, Life on Other Planets',
                         summary: 'Giới từ chỉ thời gian & nơi chốn, Đại từ sở hữu (mine, yours, ours...) và Câu tường thuật.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Unit 10 (Possessive pronouns):</strong> <span class="math-formula">mine, yours, his, hers, ours, theirs</span>.',
                             '<strong>Unit 11–12 (Reported Speech):</strong> Lùi thì động từ và đổi trạng từ thời gian/nơi chốn.'
@@ -806,6 +1023,8 @@
                         quizTopicId: 'khtn-c1',
                         title: 'Chương 1: Phản ứng hóa học & Mol - Nồng độ dung dịch',
                         summary: 'Biến đổi vật lí – hóa học, lập phương trình hóa học, định luật bảo toàn khối lượng, mol, tỉ khối khí, độ tan, nồng độ dung dịch và hiệu suất phản ứng.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>1. Biến đổi vật lí &amp; Biến đổi hóa học:</strong><br>• <em>Biến đổi vật lí:</em> Chất chỉ biến đổi về trạng thái, hình dạng, kích thước (ví dụ: nước đá tan chảy, hòa tan đường vào nước), <strong>không</strong> tạo ra chất mới.<br>• <em>Biến đổi hóa học:</em> Có sự tạo thành <strong>chất mới</strong> có tính chất khác chất ban đầu (ví dụ: sắt bị gỉ, đốt cháy than). Dấu hiệu nhận biết: đổi màu sắc, xuất hiện chất khí (sủi bọt), tạo chất kết tủa, tỏa nhiệt/phát sáng.',
                             '<strong>2. Phản ứng hóa học &amp; Lập phương trình hóa học (PTHH):</strong><br>• Trong phản ứng hóa học, chỉ có liên kết giữa các nguyên tử thay đổi làm phân tử này biến đổi thành phân tử khác; <strong>số nguyên tử của mỗi nguyên tố được giữ nguyên</strong>.<br>• <em>3 bước lập PTHH:</em> (1) Viết sơ đồ phản ứng → (2) Cân bằng số nguyên tử mỗi nguyên tố bằng cách đặt hệ số thích hợp trước công thức hóa học (không thay đổi chỉ số chân) → (3) Viết thành PTHH hoàn chỉnh (dùng mũi tên <code>→</code>).',
@@ -823,6 +1042,8 @@
                         quizTopicId: 'khtn-c2',
                         title: 'Chương 2: Acid – Base – pH – Oxide – Muối',
                         summary: 'Tính chất hóa học đặc trưng và cách nhận biết các hợp chất vô cơ cơ bản.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Acid (HCl, H₂SO₄...):</strong> Làm quỳ tím hóa <strong>đỏ</strong>; tác dụng với nhiều kim loại (Mg, Zn, Fe...) giải phóng khí H₂.',
                             '<strong>Base (NaOH, Ca(OH)₂...):</strong> Base tan (kiềm) làm quỳ tím hóa <strong>xanh</strong>, làm phenolphthalein không màu hóa <strong>hồng</strong>.',
@@ -836,6 +1057,8 @@
                         quizTopicId: 'khtn-c3',
                         title: 'Chương 3: Khối lượng riêng & Áp suất',
                         summary: 'Khối lượng riêng của chất, áp suất trên một bề mặt, áp suất chất lỏng, khí quyển và lực đẩy Archimedes.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Khối lượng riêng:</strong> <span class="math-formula">D = m / V</span> (kg/m³ hoặc g/cm³).',
                             '<strong>Áp suất chất rắn:</strong> <span class="math-formula">p = F / S</span> (đơn vị: Pa hoặc N/m²).',
@@ -849,6 +1072,8 @@
                         quizTopicId: 'khtn-c4',
                         title: 'Chương 4: Tác dụng làm quay của lực & Điện học',
                         summary: 'Moment lực, đòn bẩy, dòng điện, nguồn điện và tác dụng của dòng điện.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Moment lực:</strong> Đặc trưng cho tác dụng làm quay của lực quanh một trục.',
                             '<strong>Chiều dòng điện quy ước:</strong> Đi từ cực dương qua dây dẫn tới cực âm của nguồn điện.'
@@ -861,6 +1086,8 @@
                         quizTopicId: 'khtn-c5',
                         title: 'Chương 5: Nhiệt học & Sinh học cơ thể người',
                         summary: 'Năng lượng nhiệt, truyền nhiệt, sự nở vì nhiệt và các hệ cơ quan trong cơ thể người.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Truyền nhiệt:</strong> Dẫn nhiệt, Đối lưu và Bức xạ nhiệt.',
                             '<strong>Máu & Hệ tuần hoàn:</strong> Hồng cầu vận chuyển O₂/CO₂; Bạch cầu bảo vệ cơ thể; Tiểu cầu giúp đông máu.'
@@ -939,6 +1166,8 @@
                         quizTopicId: 'sd-c1',
                         title: 'Chương 1: Lịch sử thế giới cận đại & Cách mạng công nghiệp',
                         summary: 'Các cuộc cách mạng tư sản tiêu biểu (Anh, Mỹ, Pháp) và tác động của Cách mạng công nghiệp thế kỷ XVIII–XIX.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Cách mạng tư sản Anh, Bắc Mỹ & Pháp (1789):</strong> Lật đổ chế độ phong kiến/thực dân, mở đường cho chủ nghĩa tư bản phát triển.',
                             '<strong>Cách mạng công nghiệp (bắt đầu từ nước Anh):</strong> Chuyển từ lao động thủ công sang lao động bằng máy móc.'
@@ -951,6 +1180,8 @@
                         quizTopicId: 'sd-c2',
                         title: 'Chương 2: Việt Nam từ thế kỷ XVI đến đầu thế kỷ XX',
                         summary: 'Phong trào Tây Sơn và cuộc kháng chiến chống thực dân Pháp xâm lược.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Phong trào Tây Sơn (1771–1789):</strong> Đánh tan quân Xiêm tại <em>Rạch Gầm – Xoài Mút (1785)</em> và đại phá 29 vạn quân Thanh tại <em>Ngọc Hồi – Đống Đa (1789)</em>.',
                             '<strong>Kháng chiến chống Pháp (1858–cuối TK XIX):</strong> Phong trào Cần vương và khởi nghĩa Yên Thế.'
@@ -963,6 +1194,8 @@
                         quizTopicId: 'sd-c3',
                         title: 'Chương 3: Vị trí địa lý, Địa hình & Khí hậu Việt Nam',
                         summary: 'Đặc điểm vị trí chiến lược, cấu trúc địa hình đồi núi và tính chất nhiệt đới ẩm gió mùa.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Địa hình:</strong> Đồi núi chiếm 3/4 diện tích; hai hướng chính là Tây Bắc – Đông Nam và vòng cung.',
                             '<strong>Khí hậu:</strong> Nhiệt đới ẩm gió mùa, phân hóa đa dạng.'
@@ -975,6 +1208,8 @@
                         quizTopicId: 'sd-c4',
                         title: 'Chương 4: Thủy văn, Thổ nhưỡng & Biển đảo Việt Nam',
                         summary: 'Mạng lưới sông ngòi, ba nhóm đất chính và chủ quyền biển đảo Việt Nam.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Ba nhóm đất chính:</strong> Đất feralit ở đồi núi, đất phù sa ở đồng bằng và đất mùn núi cao.',
                             '<strong>Biển đảo Việt Nam:</strong> Quần đảo Hoàng Sa (Đà Nẵng) và Trường Sa (Khánh Hòa).'
@@ -1039,6 +1274,8 @@
                         quizTopicId: 'tin-c1',
                         title: 'Chương 1: Lịch sử phát triển máy tính & Thông tin số',
                         summary: 'Các thế hệ máy tính điện tử và đặc điểm thông tin trong môi trường số.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>5 thế hệ máy tính:</strong> Đèn điện tử chân không → Bóng bán dẫn → Mạch tích hợp IC → Vi xử lý → Trí tuệ nhân tạo AI.',
                             '<strong>Thông tin số:</strong> Dễ sao chép, lan truyền nhanh, cần kiểm chứng độ tin cậy.'
@@ -1051,6 +1288,8 @@
                         quizTopicId: 'tin-c2',
                         title: 'Chương 2: Đạo đức, Pháp luật & Văn hóa trong môi trường số',
                         summary: 'Ứng xử văn minh trên mạng và tôn trọng bản quyền.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Tôn trọng bản quyền:</strong> Ghi rõ nguồn trích dẫn, không sao chép hoặc phát tán trái phép sản phẩm số có bản quyền.'
                         ]
@@ -1062,6 +1301,8 @@
                         quizTopicId: 'tin-c3',
                         title: 'Chương 3: Bảng tính điện tử nâng cao (Excel)',
                         summary: 'Địa chỉ tương đối/tuyệt đối, Sắp xếp và Lọc dữ liệu (Filter).',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Địa chỉ tuyệt đối ($A$1):</strong> Cố định cả cột và hàng bằng dấu <span class="math-formula">$</span> (phím tắt <strong>F4</strong>).'
                         ]
@@ -1073,6 +1314,8 @@
                         quizTopicId: 'tin-c4',
                         title: 'Chương 4: Lập trình trực quan Scratch (Biến, Rẽ nhánh & Lặp)',
                         summary: 'Sử dụng biến nhớ, biểu thức điều kiện và các cấu trúc điều khiển.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Biến (Variable):</strong> Vùng nhớ được đặt tên lưu trữ giá trị thay đổi trong quá trình chạy chương trình.'
                         ]
@@ -1134,6 +1377,8 @@
                         quizTopicId: 'gdcd-c1',
                         title: 'Chương 1: Tự hào truyền thống dân tộc & Tôn trọng sự đa dạng',
                         summary: 'Giữ gìn bản sắc văn hóa dân tộc Việt Nam và tôn trọng sự đa dạng của các dân tộc.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Truyền thống dân tộc:</strong> Yêu nước, đoàn kết, hiếu học, tôn sư trọng đạo, cần cù lao động.'
                         ]
@@ -1145,6 +1390,8 @@
                         quizTopicId: 'gdcd-c2',
                         title: 'Chương 2: Lao động cần cù, sáng tạo & Bảo vệ lẽ phải',
                         summary: 'Rèn luyện thái độ học tập tích cực và bản lĩnh bảo vệ điều đúng đắn.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Bảo vệ lẽ phải:</strong> Ủng hộ, tuân theo và bảo vệ những điều đúng đắn, phù hợp với đạo lý và pháp luật.'
                         ]
@@ -1156,6 +1403,8 @@
                         quizTopicId: 'gdcd-c3',
                         title: 'Chương 3: Bảo vệ môi trường & Phòng chống bạo lực gia đình',
                         summary: 'Trách nhiệm bảo vệ tài nguyên thiên nhiên và kỹ năng tự bảo vệ trước bạo lực.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Đường dây nóng bảo vệ trẻ em miễn phí 24/7:</strong> <strong>111</strong>.'
                         ]
@@ -1167,6 +1416,8 @@
                         quizTopicId: 'gdcd-c4',
                         title: 'Chương 4: Lập kế hoạch chi tiêu & Phòng ngừa tai nạn vũ khí, cháy nổ',
                         summary: 'Quản lý tiền tiêu vặt hợp lý và tuân thủ quy định an toàn phòng cháy chữa cháy.',
+                        infographicUrl: '',
+                        videoUrl: '',
                         points: [
                             '<strong>Số điện thoại cứu hỏa khẩn cấp:</strong> <strong>114</strong>.'
                         ]
@@ -1263,16 +1514,725 @@
         ];
 
         // ---------------------------------------------------------------------
-        // 2. TRẠNG THÁI ỨNG DỤNG (STATE)
+        // 2. HỆ THỐNG ĐỒNG BỘ TỰ ĐỘNG VỚI GITHUB API (CÂU HỎI + LOG ĐIỂM)
+        // ---------------------------------------------------------------------
+        const GITHUB_CONFIG_KEY = 'hoc_tot_lop_8_github_api_config_v1';
+        const GITHUB_QUESTIONS_PATH = 'cau_hoi_bo_sung.json';
+        const GITHUB_LOGS_PATH = 'nhat_ky_diem.json';
+
+        let githubConfig = {
+            owner: 'anhemnhaheo',
+            repo: 'hoctap',
+            branch: 'main',
+            token: '',
+            autoSyncQuiz: true,
+            autoSyncLogs: true
+        };
+
+        function loadGitHubConfig() {
+            try {
+                const raw = localStorage.getItem(GITHUB_CONFIG_KEY);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    githubConfig = { ...githubConfig, ...parsed };
+                }
+            } catch (e) {}
+            updateGitHubStatusIndicator();
+        }
+
+        function saveGitHubConfigToStorage() {
+            try {
+                localStorage.setItem(GITHUB_CONFIG_KEY, JSON.stringify(githubConfig));
+            } catch (e) {}
+            updateGitHubStatusIndicator();
+        }
+
+        function updateGitHubStatusIndicator() {
+            const dot = document.getElementById('gh-status-dot');
+            const badge = document.getElementById('github-sync-badge');
+            const hasToken = Boolean(githubConfig.token && githubConfig.token.trim().length > 10);
+
+            if (dot) {
+                dot.className = hasToken
+                    ? 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse'
+                    : 'w-2 h-2 rounded-full bg-amber-400';
+            }
+            if (badge && hasToken) {
+                badge.classList.remove('hidden');
+            }
+        }
+
+        function openGitHubConfigModal() {
+            const modal = document.getElementById('github-config-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            document.getElementById('gh-owner-input').value = githubConfig.owner || 'anhemnhaheo';
+            document.getElementById('gh-repo-input').value = githubConfig.repo || 'hoctap';
+            document.getElementById('gh-branch-input').value = githubConfig.branch || 'main';
+            document.getElementById('gh-token-input').value = githubConfig.token || '';
+            document.getElementById('gh-auto-sync-quiz').checked = githubConfig.autoSyncQuiz !== false;
+            document.getElementById('gh-auto-sync-logs').checked = githubConfig.autoSyncLogs !== false;
+            renderGitHubConnectionBanner();
+        }
+
+        function closeGitHubConfigModal() {
+            const modal = document.getElementById('github-config-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function toggleGhTokenVisibility() {
+            const inp = document.getElementById('gh-token-input');
+            inp.type = inp.type === 'password' ? 'text' : 'password';
+        }
+
+        function renderGitHubConnectionBanner(customMsg = null, isOk = false) {
+            const banner = document.getElementById('gh-connection-banner');
+            if (!banner) return;
+            const hasToken = Boolean(githubConfig.token && githubConfig.token.trim().length > 10);
+            if (customMsg) {
+                banner.className = isOk
+                    ? 'p-3.5 rounded-2xl bg-emerald-50 border border-emerald-300 text-xs text-emerald-950 font-semibold'
+                    : 'p-3.5 rounded-2xl bg-rose-50 border border-rose-300 text-xs text-rose-950 font-semibold';
+                banner.innerHTML = customMsg;
+                return;
+            }
+            if (hasToken) {
+                banner.className = 'p-3.5 rounded-2xl bg-emerald-50 border border-emerald-300 text-xs text-emerald-950';
+                banner.innerHTML = `✅ <strong>Đã kết nối GitHub:</strong> Kho <code>${escapeHtml(githubConfig.owner)}/${escapeHtml(githubConfig.repo)}</code> (nhánh <code>${escapeHtml(githubConfig.branch)}</code>). Mọi thay đổi sẽ tự động lưu lên GitHub!`;
+            } else {
+                banner.className = 'p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-950';
+                banner.innerHTML = `⚠️ <strong>Chưa nhập GitHub Token:</strong> Trang web vẫn tự đọc câu hỏi &amp; log điểm công khai từ GitHub, nhưng muốn <em>tự động ghi ngược lên GitHub</em> thì hãy dán Token ở dưới.`;
+            }
+        }
+
+        function utf8ToBase64(str) {
+            const bytes = new TextEncoder().encode(str);
+            let binary = '';
+            for (let i = 0; i < bytes.byteLength; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return btoa(binary);
+        }
+
+        function base64ToUtf8(b64) {
+            const clean = b64.replace(/\s/g, '');
+            const binary = atob(clean);
+            const bytes = new Uint8Array(binary.length);
+            for (let i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+            }
+            return new TextDecoder().decode(bytes);
+        }
+
+        // Hàm lõi đọc/ghi tệp trực tiếp vào GitHub Repository qua REST API
+        async function upsertFileToGitHub(filePath, jsonObject, commitMessage) {
+            if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo) {
+                throw new Error('Chưa cấu hình đầy đủ Owner, Repo hoặc GitHub Token.');
+            }
+
+            const apiUrl = `https://api.github.com/repos/${encodeURIComponent(githubConfig.owner)}/${encodeURIComponent(githubConfig.repo)}/contents/${filePath}`;
+            const headers = {
+                'Authorization': `Bearer ${githubConfig.token.trim()}`,
+                'Accept': 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28',
+                'Content-Type': 'application/json'
+            };
+
+            // Bước 1: Lấy SHA hiện tại của file nếu file đã tồn tại trên GitHub
+            let existingSha = null;
+            const getRes = await fetch(`${apiUrl}?ref=${encodeURIComponent(githubConfig.branch || 'main')}&t=${Date.now()}`, {
+                method: 'GET',
+                headers
+            });
+
+            if (getRes.ok) {
+                const fileMeta = await getRes.json();
+                existingSha = fileMeta.sha;
+            } else if (getRes.status !== 404) {
+                const errData = await getRes.json().catch(() => ({}));
+                throw new Error(errData.message || `Lỗi kết nối GitHub (${getRes.status})`);
+            }
+
+            // Bước 2: Ghi nội dung JSON mới lên GitHub
+            const contentBase64 = utf8ToBase64(JSON.stringify(jsonObject, null, 2));
+            const bodyPayload = {
+                message: commitMessage,
+                content: contentBase64,
+                branch: githubConfig.branch || 'main'
+            };
+            if (existingSha) {
+                bodyPayload.sha = existingSha;
+            }
+
+            const putRes = await fetch(apiUrl, {
+                method: 'PUT',
+                headers,
+                body: JSON.stringify(bodyPayload)
+            });
+
+            if (!putRes.ok) {
+                const errData = await putRes.json().catch(() => ({}));
+                throw new Error(errData.message || `Không thể ghi file ${filePath} (${putRes.status})`);
+            }
+
+            return await putRes.json();
+        }
+
+        async function saveAndTestGitHubConfig() {
+            githubConfig.owner = document.getElementById('gh-owner-input').value.trim() || 'anhemnhaheo';
+            githubConfig.repo = document.getElementById('gh-repo-input').value.trim() || 'hoctap';
+            githubConfig.branch = document.getElementById('gh-branch-input').value.trim() || 'main';
+            githubConfig.token = document.getElementById('gh-token-input').value.trim();
+            githubConfig.autoSyncQuiz = document.getElementById('gh-auto-sync-quiz').checked;
+            githubConfig.autoSyncLogs = document.getElementById('gh-auto-sync-logs').checked;
+
+            saveGitHubConfigToStorage();
+
+            if (!githubConfig.token) {
+                renderGitHubConnectionBanner('⚠️ Bạn đã xóa Token. Chế độ tự động đẩy lên GitHub đã tắt.', false);
+                return;
+            }
+
+            renderGitHubConnectionBanner('⏳ Đang kiểm tra quyền truy cập kho lưu trữ GitHub...', true);
+            try {
+                const res = await fetch(`https://api.github.com/repos/${encodeURIComponent(githubConfig.owner)}/${encodeURIComponent(githubConfig.repo)}`, {
+                    headers: {
+                        'Authorization': `Bearer ${githubConfig.token}`,
+                        'Accept': 'application/vnd.github+json'
+                    }
+                });
+                if (!res.ok) {
+                    const err = await res.json().catch(() => ({}));
+                    throw new Error(err.message || `Mã lỗi ${res.status}`);
+                }
+                const repoInfo = await res.json();
+                const canPush = repoInfo.permissions && repoInfo.permissions.push;
+                if (canPush === false) {
+                    renderGitHubConnectionBanner('⚠️ Kết nối được nhưng Token này chỉ có quyền Đọc (Read-only). Hãy bật quyền Contents: Read and write!', false);
+                } else {
+                    renderGitHubConnectionBanner(`✅ Kết nối thành công với kho <strong>${escapeHtml(repoInfo.full_name)}</strong>! Sẵn sàng lưu tự động Câu hỏi &amp; Log điểm.`, true);
+                    showToast('☁️ Đã kết nối thành công với GitHub!');
+                }
+            } catch (e) {
+                renderGitHubConnectionBanner(`❌ Lỗi kết nối GitHub: ${escapeHtml(e.message)}`, false);
+            }
+        }
+
+        function clearGitHubConfig() {
+            githubConfig.token = '';
+            document.getElementById('gh-token-input').value = '';
+            saveGitHubConfigToStorage();
+            renderGitHubConnectionBanner();
+            showToast('Đã xóa GitHub Token khỏi trình duyệt.');
+        }
+
+        function buildSupplementaryQuestionsList() {
+            const supplementary = [];
+            SUBJECTS.forEach(sub => {
+                const defaultSet = new Set((DEFAULT_QUIZ_SNAPSHOT[sub.id]?.quiz || []).map(q => q.q.trim()));
+                const topicMap = Object.fromEntries((sub.quizTopics || []).map(t => [t.id, t.name]));
+                sub.quiz.forEach(q => {
+                    if (!defaultSet.has(q.q.trim())) {
+                        supplementary.push({
+                            subject: sub.id,
+                            topicId: q.topicId,
+                            topicName: topicMap[q.topicId] || q.topicId,
+                            q: q.q,
+                            options: q.options,
+                            ans: q.ans,
+                            exp: q.exp
+                        });
+                    }
+                });
+            });
+            return supplementary;
+        }
+
+        async function pushQuestionsToGitHub(manualTrigger = false) {
+            if (!githubConfig.token) {
+                if (manualTrigger) {
+                    showToast('Vui lòng nhập GitHub Token trước để dùng tính năng lưu trực tiếp!', 'warning');
+                    openGitHubConfigModal();
+                }
+                return false;
+            }
+            const supplementary = buildSupplementaryQuestionsList();
+            try {
+                if (manualTrigger) showToast('⏳ Đang lưu câu hỏi lên GitHub...');
+                await upsertFileToGitHub(
+                    GITHUB_QUESTIONS_PATH,
+                    supplementary,
+                    `Cập nhật ngân hàng câu hỏi bổ sung (${supplementary.length} câu)`
+                );
+                showToast(`☁️ Đã lưu tự động ${supplementary.length} câu hỏi bổ sung lên GitHub!`);
+                return true;
+            } catch (e) {
+                showToast(`❌ Lỗi lưu câu hỏi lên GitHub: ${e.message}`, 'warning');
+                return false;
+            }
+        }
+
+        async function pushScoreLogsToGitHub(manualTrigger = false) {
+            if (!githubConfig.token) {
+                if (manualTrigger) {
+                    showToast('Vui lòng nhập GitHub Token trước để dùng tính năng lưu Log lên GitHub!', 'warning');
+                    openGitHubConfigModal();
+                }
+                return false;
+            }
+            const payload = {
+                updatedAt: new Date().toISOString(),
+                profiles: studentState.profiles.map(p => ({ id: p.id, name: p.name })),
+                logs: studentState.logs
+            };
+            try {
+                if (manualTrigger) showToast('⏳ Đang đồng bộ Log điểm lên GitHub...');
+                await upsertFileToGitHub(
+                    GITHUB_LOGS_PATH,
+                    payload,
+                    `Cập nhật nhật ký điểm số (${studentState.logs.length} lượt)`
+                );
+                showToast(`☁️ Đã lưu tự động Log điểm (${studentState.logs.length} lượt) lên GitHub!`);
+                return true;
+            } catch (e) {
+                showToast(`❌ Lỗi lưu Log điểm lên GitHub: ${e.message}`, 'warning');
+                return false;
+            }
+        }
+
+        async function syncAllNowToGitHub() {
+            if (!githubConfig.token) {
+                showToast('Hãy dán GitHub Token và bấm Lưu cấu hình trước nhé!', 'warning');
+                return;
+            }
+            showToast('⏳ Đang đồng bộ cả Câu hỏi và Log điểm lên GitHub...');
+            const qOk = await pushQuestionsToGitHub(false);
+            const lOk = await pushScoreLogsToGitHub(false);
+            if (qOk && lOk) {
+                renderGitHubConnectionBanner('✅ Đã đồng bộ thành công cả <strong>cau_hoi_bo_sung.json</strong> và <strong>nhat_ky_diem.json</strong> lên GitHub!', true);
+            }
+        }
+
+        async function loadExternalGitHubScoreLogs() {
+            try {
+                const res = await fetch(`./${GITHUB_LOGS_PATH}?v=${Date.now()}`, { cache: 'no-store' });
+                if (!res.ok) return;
+                const data = await res.json();
+                if (data && Array.isArray(data.profiles)) {
+                    data.profiles.forEach(remoteProf => {
+                        const localProf = studentState.profiles.find(p => p.id === remoteProf.id);
+                        if (localProf && remoteProf.name) {
+                            localProf.name = remoteProf.name;
+                        }
+                    });
+                }
+                if (data && Array.isArray(data.logs)) {
+                    const existingIds = new Set(studentState.logs.map(l => l.id));
+                    data.logs.forEach(item => {
+                        if (!existingIds.has(item.id)) {
+                            studentState.logs.push(item);
+                            existingIds.add(item.id);
+                        }
+                    });
+                    studentState.logs.sort((a, b) => Number(b.id) - Number(a.id));
+                    saveScoreLogs();
+                }
+            } catch (e) {}
+        }
+
+        // ---------------------------------------------------------------------
+        // 3. QUẢN LÝ 2 HỌC SINH & NHẬT KÝ LOG ĐIỂM (LOCALSTORAGE + GITHUB)
+        // ---------------------------------------------------------------------
+        const STUDENT_PROFILES_KEY = 'hoc_tot_lop_8_student_profiles_v1';
+        const SCORE_LOGS_KEY = 'hoc_tot_lop_8_score_logs_v1';
+
+        let studentState = {
+            activeStudentId: 'hs1',
+            profiles: [
+                { id: 'hs1', name: 'Học sinh 1', badgeBg: 'bg-teal-600', lightBg: 'bg-teal-50 border-teal-200 text-teal-900', avatar: '🧑‍🎓' },
+                { id: 'hs2', name: 'Học sinh 2', badgeBg: 'bg-amber-500', lightBg: 'bg-amber-50 border-amber-200 text-amber-900', avatar: '👩‍🎓' }
+            ],
+            sessions: {
+                hs1: { quizAnswers: {}, quizSubmitted: {}, selectedQuizTopic: {}, quizQuestionOrders: {}, quizOptionMaps: {} },
+                hs2: { quizAnswers: {}, quizSubmitted: {}, selectedQuizTopic: {}, quizQuestionOrders: {}, quizOptionMaps: {} }
+            },
+            logs: [],
+            logFilterStudent: 'all'
+        };
+
+        function loadStudentDataFromStorage() {
+            try {
+                const rawProfiles = localStorage.getItem(STUDENT_PROFILES_KEY);
+                if (rawProfiles) {
+                    const parsed = JSON.parse(rawProfiles);
+                    if (Array.isArray(parsed.profiles) && parsed.profiles.length === 2) {
+                        studentState.profiles = parsed.profiles;
+                    }
+                    if (parsed.activeStudentId === 'hs1' || parsed.activeStudentId === 'hs2') {
+                        studentState.activeStudentId = parsed.activeStudentId;
+                    }
+                }
+                const rawLogs = localStorage.getItem(SCORE_LOGS_KEY);
+                if (rawLogs) {
+                    const parsedLogs = JSON.parse(rawLogs);
+                    if (Array.isArray(parsedLogs)) {
+                        studentState.logs = parsedLogs;
+                    }
+                }
+            } catch (e) {
+                console.warn('Lỗi đọc dữ liệu hồ sơ học sinh:', e);
+            }
+        }
+
+        function saveStudentProfiles() {
+            try {
+                localStorage.setItem(STUDENT_PROFILES_KEY, JSON.stringify({
+                    activeStudentId: studentState.activeStudentId,
+                    profiles: studentState.profiles
+                }));
+            } catch (e) {}
+        }
+
+        function saveScoreLogs() {
+            try {
+                localStorage.setItem(SCORE_LOGS_KEY, JSON.stringify(studentState.logs));
+            } catch (e) {}
+            updateLogCountBadge();
+        }
+
+        function getActiveStudent() {
+            return studentState.profiles.find(p => p.id === studentState.activeStudentId) || studentState.profiles[0];
+        }
+
+        function getActiveSession() {
+            const id = studentState.activeStudentId;
+            if (!studentState.sessions[id]) {
+                studentState.sessions[id] = { quizAnswers: {}, quizSubmitted: {}, selectedQuizTopic: {}, quizQuestionOrders: {}, quizOptionMaps: {} };
+            }
+            return studentState.sessions[id];
+        }
+
+        function switchActiveStudent(studentId) {
+            if (studentState.activeStudentId === studentId) return;
+            studentState.activeStudentId = studentId;
+            saveStudentProfiles();
+            renderStudentSwitcher();
+            renderContent();
+            const st = getActiveStudent();
+            showToast(`👤 Đã chuyển sang tài khoản: ${st.name}`);
+        }
+
+        async function updateStudentName(studentId, newName) {
+            const trimmed = String(newName ?? '').trim();
+            if (!trimmed) {
+                showToast('Tên học sinh không được để trống!', 'warning');
+                return;
+            }
+            const prof = studentState.profiles.find(p => p.id === studentId);
+            if (!prof) return;
+            prof.name = trimmed;
+            studentState.logs.forEach(l => {
+                if (l.studentId === studentId) l.studentName = trimmed;
+            });
+            saveStudentProfiles();
+            saveScoreLogs();
+            renderStudentSwitcher();
+            renderScoreLogModalContent();
+            renderContent();
+            showToast(`✅ Đã cập nhật tên thành "${trimmed}"`);
+
+            if (githubConfig.token && githubConfig.autoSyncLogs) {
+                await pushScoreLogsToGitHub(false);
+            }
+        }
+
+        function updateLogCountBadge() {
+            const badge = document.getElementById('header-log-count-badge');
+            if (badge) {
+                badge.textContent = studentState.logs.length;
+            }
+        }
+
+        function renderStudentSwitcher() {
+            const bar = document.getElementById('student-switcher-bar');
+            if (!bar) return;
+
+            bar.innerHTML = studentState.profiles.map(p => {
+                const isActive = p.id === studentState.activeStudentId;
+                const activeStyle = p.id === 'hs1'
+                    ? 'bg-teal-600 text-white shadow-xs'
+                    : 'bg-amber-500 text-white shadow-xs';
+                return `
+                    <button type="button" onclick="switchActiveStudent('${p.id}')"
+                        class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-extrabold transition-all whitespace-nowrap ${isActive ? activeStyle : 'text-slate-600 hover:text-slate-900'}">
+                        <span>${p.avatar}</span>
+                        <span class="max-w-[85px] sm:max-w-[110px] truncate">${escapeHtml(p.name)}</span>
+                    </button>
+                `;
+            }).join('');
+            updateLogCountBadge();
+        }
+
+        async function recordScoreLog(sub, topicName, score10, correctCount, totalQ) {
+            const activeSt = getActiveStudent();
+            const now = new Date();
+            const pad = n => String(n).padStart(2, '0');
+            const timeStr = `${pad(now.getHours())}:${pad(now.getMinutes())} • ${pad(now.getDate())}/${pad(now.getMonth() + 1)}/${now.getFullYear()}`;
+
+            const entry = {
+                id: Date.now() + Math.floor(Math.random() * 1000),
+                studentId: activeSt.id,
+                studentName: activeSt.name,
+                subjectId: sub.id,
+                subjectName: sub.shortName,
+                topicName: topicName,
+                score: Number(score10),
+                correct: correctCount,
+                total: totalQ,
+                timestamp: timeStr
+            };
+
+            studentState.logs.unshift(entry);
+            saveScoreLogs();
+
+            if (githubConfig.token && githubConfig.autoSyncLogs) {
+                await pushScoreLogsToGitHub(false);
+            }
+        }
+
+        function openScoreLogModal() {
+            const modal = document.getElementById('score-log-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            renderScoreLogModalContent();
+        }
+
+        function closeScoreLogModal() {
+            const modal = document.getElementById('score-log-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function setLogFilterStudent(filterId) {
+            studentState.logFilterStudent = filterId;
+            renderScoreLogModalContent();
+        }
+
+        function renderScoreLogModalContent() {
+            const cardsEl = document.getElementById('student-profiles-cards');
+            if (cardsEl) {
+                cardsEl.innerHTML = studentState.profiles.map(p => {
+                    const stLogs = studentState.logs.filter(l => l.studentId === p.id);
+                    const count = stLogs.length;
+                    const avg = count > 0
+                        ? (stLogs.reduce((sum, l) => sum + Number(l.score), 0) / count).toFixed(1)
+                        : '—';
+                    const isCurrent = p.id === studentState.activeStudentId;
+
+                    return `
+                        <div class="bg-white rounded-2xl p-3.5 border ${isCurrent ? 'border-indigo-400 ring-2 ring-indigo-500/15' : 'border-slate-200'} shadow-2xs flex flex-col justify-between gap-2.5">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-2 flex-1 min-w-0">
+                                    <span class="w-8 h-8 rounded-xl ${p.badgeBg} text-white flex items-center justify-center text-sm shrink-0">${p.avatar}</span>
+                                    <input type="text" id="input-name-${p.id}" value="${escapeHtml(p.name)}"
+                                        onkeydown="if(event.key==='Enter') updateStudentName('${p.id}', this.value)"
+                                        class="w-full px-2.5 py-1 text-xs sm:text-sm font-extrabold text-slate-800 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:border-indigo-500 outline-none">
+                                </div>
+                                <button type="button" onclick="updateStudentName('${p.id}', document.getElementById('input-name-${p.id}').value)"
+                                    class="px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-indigo-600 hover:text-white text-slate-700 text-[11px] font-bold transition shrink-0">
+                                    Lưu tên
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between text-xs pt-1.5 border-t border-slate-100">
+                                <span class="text-slate-500">Số lần nộp bài: <strong class="text-slate-800">${count}</strong></span>
+                                <span class="text-slate-500">Điểm TB: <strong class="text-indigo-700 text-sm">${avg}</strong> / 10</span>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            const filterEl = document.getElementById('log-filter-buttons');
+            if (filterEl) {
+                const f = studentState.logFilterStudent;
+                const p1 = studentState.profiles[0];
+                const p2 = studentState.profiles[1];
+                filterEl.innerHTML = `
+                    <button onclick="setLogFilterStudent('all')"
+                        class="px-3 py-1.5 rounded-xl text-xs font-extrabold border transition ${f === 'all' ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'}">
+                        Tất cả (${studentState.logs.length})
+                    </button>
+                    <button onclick="setLogFilterStudent('hs1')"
+                        class="px-3 py-1.5 rounded-xl text-xs font-extrabold border transition ${f === 'hs1' ? 'bg-teal-600 text-white border-teal-600' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'}">
+                        ${p1.avatar} ${escapeHtml(p1.name)} (${studentState.logs.filter(l => l.studentId === 'hs1').length})
+                    </button>
+                    <button onclick="setLogFilterStudent('hs2')"
+                        class="px-3 py-1.5 rounded-xl text-xs font-extrabold border transition ${f === 'hs2' ? 'bg-amber-500 text-white border-amber-500' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'}">
+                        ${p2.avatar} ${escapeHtml(p2.name)} (${studentState.logs.filter(l => l.studentId === 'hs2').length})
+                    </button>
+                `;
+            }
+
+            const tableWrap = document.getElementById('score-log-table-container');
+            if (!tableWrap) return;
+
+            const filteredLogs = studentState.logs.filter(l =>
+                studentState.logFilterStudent === 'all' || l.studentId === studentState.logFilterStudent
+            );
+
+            if (filteredLogs.length === 0) {
+                tableWrap.innerHTML = `
+                    <div class="text-center py-12 px-4 rounded-2xl border-2 border-dashed border-slate-200">
+                        <p class="text-base font-extrabold text-slate-700 mb-1">📭 Chưa có dữ liệu điểm nào được ghi lại</p>
+                        <p class="text-xs sm:text-sm text-slate-500">Chọn học sinh ở thanh trên cùng, vào làm bài trắc nghiệm bất kỳ và bấm <strong>"Nộp bài &amp; Lưu điểm"</strong> để hệ thống tự động lưu log điểm tại đây!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            tableWrap.innerHTML = `
+                <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+                    <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+                                <th class="py-3 px-3.5 font-extrabold">Học sinh</th>
+                                <th class="py-3 px-3.5 font-extrabold">Môn học</th>
+                                <th class="py-3 px-3.5 font-extrabold">Nội dung / Chương</th>
+                                <th class="py-3 px-3.5 font-extrabold text-center">Kết quả</th>
+                                <th class="py-3 px-3.5 font-extrabold text-center">Điểm (/10)</th>
+                                <th class="py-3 px-3.5 font-extrabold text-right">Thời gian nộp</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            ${filteredLogs.map(log => {
+                                const isHs1 = log.studentId === 'hs1';
+                                const stBadge = isHs1
+                                    ? 'bg-teal-100 text-teal-800 border-teal-200'
+                                    : 'bg-amber-100 text-amber-900 border-amber-200';
+                                const scoreColor = Number(log.score) >= 8
+                                    ? 'bg-emerald-100 text-emerald-800'
+                                    : Number(log.score) >= 5
+                                        ? 'bg-sky-100 text-sky-800'
+                                        : 'bg-rose-100 text-rose-800';
+
+                                return `
+                                    <tr class="hover:bg-slate-50/80 transition-colors">
+                                        <td class="py-3 px-3.5 whitespace-nowrap">
+                                            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border text-xs font-extrabold ${stBadge}">
+                                                ${isHs1 ? '🧑‍🎓' : '👩‍🎓'} ${escapeHtml(log.studentName)}
+                                            </span>
+                                        </td>
+                                        <td class="py-3 px-3.5 font-bold text-slate-800 whitespace-nowrap">${escapeHtml(log.subjectName)}</td>
+                                        <td class="py-3 px-3.5 text-slate-600 max-w-xs truncate" title="${escapeHtml(log.topicName)}">${escapeHtml(log.topicName)}</td>
+                                        <td class="py-3 px-3.5 text-center font-semibold text-slate-700 whitespace-nowrap">${log.correct}/${log.total} câu</td>
+                                        <td class="py-3 px-3.5 text-center whitespace-nowrap">
+                                            <span class="px-2.5 py-1 rounded-lg font-extrabold text-xs ${scoreColor}">
+                                                ${Number(log.score).toFixed(1)}
+                                            </span>
+                                        </td>
+                                        <td class="py-3 px-3.5 text-right text-xs text-slate-400 whitespace-nowrap">${escapeHtml(log.timestamp)}</td>
+                                    </tr>
+                                `;
+                            }).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        function exportScoreLogsToCsv() {
+            if (studentState.logs.length === 0) {
+                showToast('Chưa có lịch sử điểm nào để xuất ra file Excel!', 'warning');
+                return;
+            }
+            const rows = [
+                ['STT', 'HocSinh', 'MonHoc', 'NoiDungChuong', 'SoCauDung', 'TongSoCau', 'DiemThang10', 'ThoiGianNop']
+            ];
+            studentState.logs.forEach((l, idx) => {
+                rows.push([
+                    idx + 1,
+                    l.studentName,
+                    l.subjectName,
+                    l.topicName,
+                    l.correct,
+                    l.total,
+                    Number(l.score).toFixed(1),
+                    l.timestamp
+                ]);
+            });
+            const csv = '\uFEFF' + rows.map(r => r.map(escapeCsvVal).join(',')).join('\r\n');
+            triggerFileDownload(csv, 'nhat_ky_diem_2_hoc_sinh_lop_8.csv', 'text/csv;charset=utf-8;');
+            showToast(`📤 Đã xuất ${studentState.logs.length} dòng nhật ký điểm ra file Excel (.csv)!`);
+        }
+
+        async function clearScoreLogs() {
+            if (studentState.logs.length === 0) return;
+            studentState.logs = [];
+            saveScoreLogs();
+            renderScoreLogModalContent();
+            showToast('🗑️ Đã xóa toàn bộ nhật ký điểm số.');
+            if (githubConfig.token && githubConfig.autoSyncLogs) {
+                await pushScoreLogsToGitHub(false);
+            }
+        }
+
+        // ---------------------------------------------------------------------
+        // 4. HÀM HỖ TRỢ CHUYỂN ĐỔI LINK YOUTUBE & MỞ LIGHTBOX INFOGRAPHIC
+        // ---------------------------------------------------------------------
+        function getYouTubeEmbedUrl(rawUrl) {
+            if (!rawUrl || typeof rawUrl !== 'string') return '';
+            const url = rawUrl.trim();
+            if (!url) return '';
+            if (url.includes('youtube.com/embed/')) return url;
+
+            const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/|live\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+            const match = url.match(regExp);
+            if (match && match[1]) {
+                return `https://www.youtube.com/embed/${match[1]}?rel=0`;
+            }
+            return '';
+        }
+
+        function openInfographicLightbox(imgUrl, caption) {
+            const modal = document.getElementById('infographic-lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            const rawLink = document.getElementById('lightbox-open-raw');
+            if (!modal || !img) return;
+
+            img.src = imgUrl;
+            if (cap) cap.textContent = caption || 'Infographic tóm tắt kiến thức';
+            if (rawLink) rawLink.href = imgUrl;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeInfographicLightbox() {
+            const modal = document.getElementById('infographic-lightbox');
+            const img = document.getElementById('lightbox-img');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            if (img) img.src = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeInfographicLightbox();
+                closeQuizManagerModal();
+                closeScoreLogModal();
+                closeGitHubConfigModal();
+            }
+        });
+
+        // ---------------------------------------------------------------------
+        // 5. TRẠNG THÁI GIAO DIỆN & XÁO TRỘN THEO TỪNG HỌC SINH
         // ---------------------------------------------------------------------
         let appState = {
             currentView: 'home',
             currentTab: 'theory',
-            selectedQuizTopic: {},
-            quizQuestionOrders: {},
-            quizOptionMaps: {},
-            quizAnswers: {},
-            quizSubmitted: {},
             expandedTheory: {}
         };
 
@@ -1285,27 +2245,37 @@
             return copy;
         }
 
-        function randomizeSubjectQuizOrder(subId) {
+        function randomizeSubjectQuizOrder(subId, targetSession = null) {
             const sub = SUBJECTS.find(s => s.id === subId);
             if (!sub) return;
+            const sess = targetSession || getActiveSession();
             const indices = sub.quiz.map((_, idx) => idx);
-            appState.quizQuestionOrders[subId] = fisherYatesShuffle(indices);
-            appState.quizOptionMaps[subId] = {};
+            sess.quizQuestionOrders[subId] = fisherYatesShuffle(indices);
+            sess.quizOptionMaps[subId] = {};
             sub.quiz.forEach((_, idx) => {
-                appState.quizOptionMaps[subId][idx] = fisherYatesShuffle([0, 1, 2, 3]);
+                sess.quizOptionMaps[subId][idx] = fisherYatesShuffle([0, 1, 2, 3]);
             });
         }
 
-        SUBJECTS.forEach(s => {
-            if (s.theory.length > 0) {
-                appState.expandedTheory[s.theory[0].id] = true;
-            }
-            appState.selectedQuizTopic[s.id] = 'all';
-            randomizeSubjectQuizOrder(s.id);
-        });
+        function initAllStudentSessions() {
+            ['hs1', 'hs2'].forEach(stId => {
+                const sess = studentState.sessions[stId];
+                SUBJECTS.forEach(s => {
+                    sess.selectedQuizTopic[s.id] = 'all';
+                    randomizeSubjectQuizOrder(s.id, sess);
+                });
+            });
+            SUBJECTS.forEach(s => {
+                if (s.theory.length > 0) {
+                    appState.expandedTheory[s.theory[0].id] = true;
+                }
+            });
+        }
+
+        initAllStudentSessions();
 
         // ---------------------------------------------------------------------
-        // 3. ĐIỀU HƯỚNG & RENDER MENU
+        // 6. ĐIỀU HƯỚNG & RENDER MENU
         // ---------------------------------------------------------------------
         function renderNavigation() {
             const nav = document.getElementById('main-nav');
@@ -1337,14 +2307,15 @@
 
         function navigateTo(viewId, tabId = 'theory', targetId = null) {
             appState.currentView = viewId;
+            const sess = getActiveSession();
             if (viewId !== 'home') {
                 appState.currentTab = tabId;
                 if (tabId === 'theory' && targetId) {
                     appState.expandedTheory[targetId] = true;
                 } else if (tabId === 'quiz') {
-                    if (targetId) appState.selectedQuizTopic[viewId] = targetId;
-                    if (!appState.quizSubmitted[viewId]) {
-                        randomizeSubjectQuizOrder(viewId);
+                    if (targetId) sess.selectedQuizTopic[viewId] = targetId;
+                    if (!sess.quizSubmitted[viewId]) {
+                        randomizeSubjectQuizOrder(viewId, sess);
                     }
                 }
             }
@@ -1355,11 +2326,12 @@
         }
 
         function jumpToChapterQuiz(subId, quizTopicId) {
+            const sess = getActiveSession();
             appState.currentView = subId;
             appState.currentTab = 'quiz';
-            appState.selectedQuizTopic[subId] = quizTopicId || 'all';
-            appState.quizSubmitted[subId] = false;
-            randomizeSubjectQuizOrder(subId);
+            sess.selectedQuizTopic[subId] = quizTopicId || 'all';
+            sess.quizSubmitted[subId] = false;
+            randomizeSubjectQuizOrder(subId, sess);
             renderNavigation();
             renderContent();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1367,17 +2339,18 @@
 
         function switchSubjectTab(tabId) {
             appState.currentTab = tabId;
+            const sess = getActiveSession();
             if (tabId === 'quiz' && appState.currentView !== 'home') {
                 const subId = appState.currentView;
-                if (!appState.quizSubmitted[subId]) {
-                    randomizeSubjectQuizOrder(subId);
+                if (!sess.quizSubmitted[subId]) {
+                    randomizeSubjectQuizOrder(subId, sess);
                 }
             }
             renderContent();
         }
 
         // ---------------------------------------------------------------------
-        // 4. TÌM KIẾM BÀI HỌC NHANH
+        // 7. TÌM KIẾM BÀI HỌC NHANH
         // ---------------------------------------------------------------------
         function buildSearchIndex() {
             const index = [];
@@ -1483,9 +2456,13 @@
         }
 
         // ---------------------------------------------------------------------
-        // 5. RENDER TRANG CHỦ
+        // 8. RENDER TRANG CHỦ
         // ---------------------------------------------------------------------
         function renderHomeView() {
+            const activeSt = getActiveStudent();
+            const recentLogs = studentState.logs.slice(0, 4);
+            const hasGhToken = Boolean(githubConfig.token && githubConfig.token.trim().length > 10);
+
             return `
                 <div class="space-y-8 animate-fade-in">
                     <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-800 text-white p-6 sm:p-10 shadow-lg shadow-teal-900/10">
@@ -1493,14 +2470,20 @@
                         <div class="absolute right-10 bottom-0 w-48 h-48 rounded-full bg-amber-400/20 blur-xl pointer-events-none"></div>
 
                         <div class="relative z-10 max-w-3xl">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-xs font-bold uppercase tracking-wider text-teal-100 mb-4">
-                                ✨ Chương trình Giáo dục Phổ thông 2018
-                            </span>
+                            <div class="flex flex-wrap items-center gap-2 mb-4">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-xs font-bold uppercase tracking-wider text-teal-100">
+                                    ✨ Chương trình Giáo dục Phổ thông 2018
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-extrabold shadow-xs">
+                                    ${activeSt.avatar} Đang học: ${escapeHtml(activeSt.name)}
+                                </span>
+                            </div>
+
                             <h1 class="font-display text-2xl sm:text-4xl font-extrabold leading-tight mb-3">
-                                Chào mừng Anh em nhà Heo <span class="text-amber-300">Lớp 8</span>!
+                                Chào mừng <span class="text-amber-300">${escapeHtml(activeSt.name)}</span> đến với HọcTốt8!
                             </h1>
                             <p class="text-teal-50 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
-                                Hệ thống tóm tắt lý thuyết trọng tâm, kho đề cương PDF miễn phí và phòng luyện trắc nghiệm chấm điểm tự động cho đầy đủ 7 môn học lớp 8.
+                                Hệ thống tóm tắt lý thuyết trọng tâm (kèm Infographic &amp; Video bài giảng), kho đề cương PDF miễn phí và phòng luyện trắc nghiệm tự động lưu dữ liệu lên GitHub.
                             </p>
 
                             <div class="relative max-w-2xl">
@@ -1536,11 +2519,47 @@
                         </div>
                     </section>
 
+                    <!-- Bảng tóm tắt Đồng bộ GitHub, Log điểm 2 HS & Ngân hàng đề -->
+                    <section class="bg-white rounded-2xl border border-indigo-200/80 p-4 sm:p-5 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                        <div class="flex items-start sm:items-center gap-3">
+                            <div class="w-11 h-11 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl shrink-0">
+                                ☁️
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <h2 class="font-display font-extrabold text-sm sm:text-base text-slate-800">Đồng bộ GitHub Cloud &amp; Nhật ký điểm 2 học sinh</h2>
+                                    <span class="px-2 py-0.5 rounded-full ${hasGhToken ? 'bg-emerald-100 text-emerald-800 border-emerald-200' : 'bg-amber-100 text-amber-800 border-amber-200'} text-[11px] font-bold border">
+                                        ${hasGhToken ? '● Đang bật lưu tự động GitHub' : '○ Chưa nhập Token lưu tự động'}
+                                    </span>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-0.5">
+                                    ${recentLogs.length > 0
+                                        ? `Gần nhất: <strong>${escapeHtml(recentLogs[0].studentName)}</strong> đạt <strong class="text-emerald-700">${Number(recentLogs[0].score).toFixed(1)}/10</strong> môn ${escapeHtml(recentLogs[0].subjectName)} (${escapeHtml(recentLogs[0].timestamp)})`
+                                        : 'Cài đặt GitHub Token 1 lần để tự động lưu Câu hỏi mới & Log điểm của 2 học sinh lên kho GitHub!'}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 shrink-0">
+                            <button onclick="openGitHubConfigModal()"
+                                class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-extrabold shadow-xs transition">
+                                ☁️ Cài đặt Token GitHub
+                            </button>
+                            <button onclick="openQuizManagerModal('import')"
+                                class="px-3.5 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-extrabold shadow-xs transition">
+                                📥 Bổ sung câu hỏi
+                            </button>
+                            <button onclick="openScoreLogModal()"
+                                class="px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-extrabold shadow-xs transition">
+                                📊 Log điểm (${studentState.logs.length})
+                            </button>
+                        </div>
+                    </section>
+
                     <section>
                         <div class="flex items-center justify-between mb-4">
                             <div>
                                 <h2 class="font-display text-xl font-extrabold text-slate-800">Khám phá 7 Môn học Lớp 8</h2>
-                                <p class="text-xs sm:text-sm text-slate-500">Chọn môn học để xem lý thuyết, tải tài liệu PDF và làm bài trắc nghiệm</p>
+                                <p class="text-xs sm:text-sm text-slate-500">Chọn môn học để xem lý thuyết, Infographic, video bài giảng và làm bài trắc nghiệm</p>
                             </div>
                         </div>
 
@@ -1639,10 +2658,11 @@
         }
 
         // ---------------------------------------------------------------------
-        // 6. RENDER TRANG MÔN HỌC
+        // 9. RENDER TRANG MÔN HỌC
         // ---------------------------------------------------------------------
         function renderSubjectView(sub) {
             const tab = appState.currentTab;
+            const activeSt = getActiveStudent();
 
             return `
                 <div class="space-y-6 animate-fade-in">
@@ -1657,7 +2677,10 @@
                                 <h1 class="font-display text-2xl sm:text-3xl font-extrabold mb-1.5">Môn ${sub.name} — Lớp 8</h1>
                                 <p class="text-sm text-white/90 max-w-2xl">${sub.desc}</p>
                             </div>
-                            <div class="flex items-center gap-2 self-start sm:self-center">
+                            <div class="flex flex-wrap items-center gap-2 self-start sm:self-center">
+                                <span class="px-3.5 py-1.5 rounded-xl bg-amber-400 text-slate-950 text-xs font-extrabold shadow-xs">
+                                    ${activeSt.avatar} ${escapeHtml(activeSt.name)}
+                                </span>
                                 <span class="px-3.5 py-1.5 rounded-xl bg-white/15 border border-white/25 text-xs font-bold">
                                     Chuẩn GDPT 2018
                                 </span>
@@ -1698,6 +2721,65 @@
             `;
         }
 
+        function renderTheoryMediaBlock(item) {
+            const infographics = Array.isArray(item.infographicUrl)
+                ? item.infographicUrl.filter(u => u && u.trim() !== '')
+                : (item.infographicUrl && item.infographicUrl.trim() !== '' ? [item.infographicUrl.trim()] : []);
+
+            const embedVideoUrl = getYouTubeEmbedUrl(item.videoUrl);
+
+            if (infographics.length === 0 && !embedVideoUrl) return '';
+
+            return `
+                <div class="pt-3 border-t border-slate-200/80 grid grid-cols-1 ${infographics.length > 0 && embedVideoUrl ? 'lg:grid-cols-2' : ''} gap-4">
+                    ${infographics.length > 0 ? `
+                        <div class="bg-white rounded-2xl p-3.5 border border-teal-200/80 shadow-2xs space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-extrabold text-teal-800 flex items-center gap-1.5">
+                                    <span>📊 Infographic tóm tắt trực quan</span>
+                                </span>
+                                <span class="text-[11px] font-semibold text-slate-400">Bấm vào ảnh để phóng to 🔍</span>
+                            </div>
+                            <div class="space-y-2.5">
+                                ${infographics.map((imgUrl, idx) => `
+                                    <div onclick="openInfographicLightbox('${escapeHtml(imgUrl)}', '${escapeHtml(item.title)} ${infographics.length > 1 ? '(Phần ' + (idx + 1) + ')' : ''}')"
+                                        class="group relative rounded-xl overflow-hidden border border-slate-200 cursor-zoom-in bg-slate-50">
+                                        <img src="${escapeHtml(imgUrl)}" alt="Infographic ${escapeHtml(item.title)}" loading="lazy"
+                                            class="w-full max-h-80 object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-300">
+                                        <div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-slate-900/75 text-white text-[11px] font-bold opacity-90 group-hover:opacity-100 transition">
+                                            🔍 Phóng to toàn màn hình
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+
+                    ${embedVideoUrl ? `
+                        <div class="bg-white rounded-2xl p-3.5 border border-rose-200/80 shadow-2xs space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-extrabold text-rose-700 flex items-center gap-1.5">
+                                    <span>▶️ Video bài giảng YouTube minh họa</span>
+                                </span>
+                                <span class="text-[11px] font-semibold text-slate-400">Phát trực tiếp</span>
+                            </div>
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-200 bg-slate-900 shadow-inner">
+                                <iframe class="w-full h-full"
+                                    src="${escapeHtml(embedVideoUrl)}"
+                                    title="Video bài giảng ${escapeHtml(item.title)}"
+                                    loading="lazy"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
         function renderTheoryTab(sub) {
             return `
                 <div class="space-y-4">
@@ -1714,6 +2796,11 @@
 
                     ${sub.theory.map(item => {
                         const isOpen = !!appState.expandedTheory[item.id];
+                        const hasInfographic = Array.isArray(item.infographicUrl)
+                            ? item.infographicUrl.some(u => u && u.trim() !== '')
+                            : Boolean(item.infographicUrl && item.infographicUrl.trim() !== '');
+                        const hasVideo = Boolean(getYouTubeEmbedUrl(item.videoUrl));
+
                         const semBadge = item.semester === 'HK1'
                             ? 'bg-sky-100 text-sky-800'
                             : item.semester === 'HK2'
@@ -1732,6 +2819,8 @@
                                             <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md ${sub.badgeColor}">
                                                 ${item.chapter}
                                             </span>
+                                            ${hasInfographic ? `<span class="inline-block text-[11px] font-bold px-2 py-0.5 rounded-md bg-teal-50 text-teal-700 border border-teal-200">📊 Infographic</span>` : ''}
+                                            ${hasVideo ? `<span class="inline-block text-[11px] font-bold px-2 py-0.5 rounded-md bg-rose-50 text-rose-700 border border-rose-200">▶️ Video YouTube</span>` : ''}
                                         </div>
                                         <h3 class="font-display font-bold text-base sm:text-lg text-slate-800">${item.title}</h3>
                                         <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${item.summary}</p>
@@ -1753,6 +2842,9 @@
                                                 </li>
                                             `).join('')}
                                         </ul>
+
+                                        ${renderTheoryMediaBlock(item)}
+
                                         ${item.quizTopicId ? `
                                             <div class="pt-3 border-t border-slate-200/80 flex items-center justify-end">
                                                 <button type="button" onclick="jumpToChapterQuiz('${sub.id}', '${item.quizTopicId}')"
@@ -1870,23 +2962,25 @@
         }
 
         function renderQuizTab(sub) {
-            const activeTopic = appState.selectedQuizTopic[sub.id] || 'all';
-            const subAnswers = appState.quizAnswers[sub.id] || {};
-            const isSubmitted = !!appState.quizSubmitted[sub.id];
+            const sess = getActiveSession();
+            const activeSt = getActiveStudent();
+            const activeTopic = sess.selectedQuizTopic[sub.id] || 'all';
+            const subAnswers = sess.quizAnswers[sub.id] || {};
+            const isSubmitted = !!sess.quizSubmitted[sub.id];
 
-            if (!appState.quizQuestionOrders[sub.id] || appState.quizQuestionOrders[sub.id].length !== sub.quiz.length) {
-                randomizeSubjectQuizOrder(sub.id);
+            if (!sess.quizQuestionOrders[sub.id] || sess.quizQuestionOrders[sub.id].length !== sub.quiz.length) {
+                randomizeSubjectQuizOrder(sub.id, sess);
             }
-            if (!appState.quizOptionMaps[sub.id]) {
-                appState.quizOptionMaps[sub.id] = {};
+            if (!sess.quizOptionMaps[sub.id]) {
+                sess.quizOptionMaps[sub.id] = {};
             }
             sub.quiz.forEach((_, idx) => {
-                if (!appState.quizOptionMaps[sub.id][idx]) {
-                    appState.quizOptionMaps[sub.id][idx] = fisherYatesShuffle([0, 1, 2, 3]);
+                if (!sess.quizOptionMaps[sub.id][idx]) {
+                    sess.quizOptionMaps[sub.id][idx] = fisherYatesShuffle([0, 1, 2, 3]);
                 }
             });
 
-            const shuffledOrder = appState.quizQuestionOrders[sub.id];
+            const shuffledOrder = sess.quizQuestionOrders[sub.id];
             const filteredItems = shuffledOrder
                 .map(globalIdx => ({ qObj: sub.quiz[globalIdx], globalIdx }))
                 .filter(item => item.qObj && (activeTopic === 'all' || item.qObj.topicId === activeTopic));
@@ -1915,16 +3009,20 @@
                                     📚 Chọn Chương luyện tập:
                                 </span>
                                 <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
-                                    🔀 Tự động xáo trộn câu hỏi &amp; đáp án
+                                    ${activeSt.avatar} Ghi điểm cho: ${escapeHtml(activeSt.name)}
                                 </span>
                             </div>
                             <div class="flex flex-wrap items-center gap-2">
                                 <button type="button" onclick="openQuizManagerModal('import')"
-                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border border-teal-200 bg-teal-50 hover:bg-teal-100 text-teal-800 transition-all">
-                                    <span>📥 Nhập thêm câu hỏi (Excel/JSON)</span>
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-extrabold border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-900 transition-all">
+                                    <span>➕ Bổ sung câu hỏi</span>
+                                </button>
+                                <button type="button" onclick="openScoreLogModal()"
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border border-indigo-200 bg-indigo-50 hover:bg-indigo-100 text-indigo-800 transition-all">
+                                    <span>📊 Xem Log điểm (${studentState.logs.length})</span>
                                 </button>
                                 <button type="button" onclick="reshuffleSubjectQuiz('${sub.id}')"
-                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border bg-indigo-600 hover:bg-indigo-700 text-white border-indigo-600 shadow-sm transition-all active:scale-95">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border bg-teal-600 hover:bg-teal-700 text-white border-teal-600 shadow-sm transition-all active:scale-95">
                                     <span>🔀 Đảo đề &amp; đáp án mới</span>
                                 </button>
                             </div>
@@ -1952,9 +3050,14 @@
                         <div class="rounded-2xl bg-gradient-to-r from-teal-50 via-white to-amber-50 border-2 border-teal-500 p-5 sm:p-6 shadow-md animate-fade-in">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                 <div>
-                                    <span class="inline-block text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-teal-100 text-teal-800 mb-2">
-                                        Kết quả • ${activeTopic === 'all' ? 'Tổng hợp ' + sub.name : (topicTitleMap[activeTopic] || sub.name)}
-                                    </span>
+                                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                                        <span class="inline-block text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-teal-100 text-teal-800">
+                                            ${activeSt.avatar} ${escapeHtml(activeSt.name)} • ${activeTopic === 'all' ? 'Tổng hợp ' + sub.name : (topicTitleMap[activeTopic] || sub.name)}
+                                        </span>
+                                        <span class="inline-block text-[11px] font-bold px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800">
+                                            ✓ Đã lưu vào Log điểm ${githubConfig.token ? '& GitHub' : ''}
+                                        </span>
+                                    </div>
                                     <div class="flex flex-wrap items-baseline gap-4">
                                         <p class="font-display text-2xl sm:text-3xl font-extrabold text-slate-800">
                                             Điểm số: <span class="text-teal-600">${score10}</span> / 10
@@ -1968,13 +3071,16 @@
                                         Xem khung <strong>Giải thích chi tiết</strong> bên dưới mỗi câu hỏi để nắm chắc phương pháp giải nhé!
                                     </p>
                                 </div>
-                                <button onclick="resetSubjectQuiz('${sub.id}')"
-                                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-sm transition-all shrink-0">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                                    </svg>
-                                    <span>Làm lại nội dung này</span>
-                                </button>
+                                <div class="flex flex-wrap sm:flex-col gap-2 shrink-0">
+                                    <button onclick="openScoreLogModal()"
+                                        class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-sm transition-all">
+                                        <span>📊 Mở bảng Log điểm</span>
+                                    </button>
+                                    <button onclick="resetSubjectQuiz('${sub.id}')"
+                                        class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-sm transition-all">
+                                        <span>🔄 Làm lại nội dung này</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ` : `
@@ -1993,7 +3099,7 @@
                             const userChoice = subAnswers[globalIdx];
                             const hasChosen = userChoice !== undefined;
                             const isCorrect = hasChosen && userChoice === qObj.ans;
-                            const optOrder = appState.quizOptionMaps[sub.id][globalIdx] || [0, 1, 2, 3];
+                            const optOrder = sess.quizOptionMaps[sub.id][globalIdx] || [0, 1, 2, 3];
 
                             let cardBorder = 'border-slate-200/90';
                             if (isSubmitted) {
@@ -2081,7 +3187,7 @@
 
                     <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm flex flex-wrap items-center justify-between gap-3">
                         <span class="text-xs sm:text-sm text-slate-500">
-                            ${isSubmitted ? 'Bạn có thể bấm "Làm lại nội dung này" hoặc chọn chuyên đề khác ở phía trên.' : `Hoàn thành ${answeredCount}/${totalQ} câu hỏi trong nội dung này.`}
+                            ${isSubmitted ? `Đã lưu kết quả của <strong>${escapeHtml(activeSt.name)}</strong> vào Nhật ký Log điểm.` : `Hoàn thành ${answeredCount}/${totalQ} câu hỏi cho <strong>${escapeHtml(activeSt.name)}</strong>.`}
                         </span>
                         <div class="flex items-center gap-3">
                             ${isSubmitted ? `
@@ -2092,7 +3198,7 @@
                             ` : `
                                 <button onclick="submitSubjectQuiz('${sub.id}')"
                                     class="px-6 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md shadow-teal-600/20 transition-all active:scale-95">
-                                    ✅ Nộp bài &amp; Chấm điểm (${answeredCount}/${totalQ})
+                                    ✅ Nộp bài &amp; Lưu điểm (${answeredCount}/${totalQ})
                                 </button>
                             `}
                         </div>
@@ -2102,65 +3208,85 @@
         }
 
         function selectQuizTopicFilter(subId, topicId) {
-            appState.selectedQuizTopic[subId] = topicId;
-            appState.quizSubmitted[subId] = false;
-            randomizeSubjectQuizOrder(subId);
+            const sess = getActiveSession();
+            sess.selectedQuizTopic[subId] = topicId;
+            sess.quizSubmitted[subId] = false;
+            randomizeSubjectQuizOrder(subId, sess);
             renderContent();
         }
 
         function reshuffleSubjectQuiz(subId) {
-            if (appState.quizSubmitted[subId]) {
+            const sess = getActiveSession();
+            if (sess.quizSubmitted[subId]) {
                 resetSubjectQuiz(subId);
                 showToast('🔀 Đã làm mới bài và xáo trộn ngẫu nhiên thứ tự câu hỏi cùng đáp án A, B, C, D!');
                 return;
             }
-            randomizeSubjectQuizOrder(subId);
+            randomizeSubjectQuizOrder(subId, sess);
             renderContent();
             showToast('🔀 Đã xáo trộn ngẫu nhiên thứ tự câu hỏi và các đáp án A, B, C, D!');
         }
 
         function selectQuizOption(subId, qIdx, origOptIdx) {
-            if (appState.quizSubmitted[subId]) return;
-            if (!appState.quizAnswers[subId]) {
-                appState.quizAnswers[subId] = {};
+            const sess = getActiveSession();
+            if (sess.quizSubmitted[subId]) return;
+            if (!sess.quizAnswers[subId]) {
+                sess.quizAnswers[subId] = {};
             }
-            appState.quizAnswers[subId][qIdx] = origOptIdx;
+            sess.quizAnswers[subId][qIdx] = origOptIdx;
             renderContent();
         }
 
-        function submitSubjectQuiz(subId) {
+        async function submitSubjectQuiz(subId) {
             const sub = SUBJECTS.find(s => s.id === subId);
             if (!sub) return;
-            const activeTopic = appState.selectedQuizTopic[subId] || 'all';
-            const ansObj = appState.quizAnswers[subId] || {};
-            const filteredIndices = sub.quiz
-                .map((q, idx) => ({ q, idx }))
-                .filter(item => activeTopic === 'all' || item.q.topicId === activeTopic)
-                .map(item => item.idx);
+            const sess = getActiveSession();
+            const activeTopic = sess.selectedQuizTopic[subId] || 'all';
+            const ansObj = sess.quizAnswers[subId] || {};
 
-            const answeredInFilter = filteredIndices.filter(idx => ansObj[idx] !== undefined).length;
+            const filteredItems = sub.quiz
+                .map((q, idx) => ({ q, idx }))
+                .filter(item => activeTopic === 'all' || item.q.topicId === activeTopic);
+
+            const answeredInFilter = filteredItems.filter(item => ansObj[item.idx] !== undefined).length;
             if (answeredInFilter === 0) {
                 showToast('Bạn hãy chọn ít nhất 1 đáp án trong nội dung này trước khi bấm Nộp bài nhé!', 'warning');
                 return;
             }
-            appState.quizSubmitted[subId] = true;
+
+            let correctCount = 0;
+            filteredItems.forEach(item => {
+                if (ansObj[item.idx] === item.q.ans) correctCount++;
+            });
+            const totalQ = filteredItems.length;
+            const score10 = totalQ > 0 ? ((correctCount / totalQ) * 10).toFixed(1) : '0.0';
+
+            const topicTitleMap = Object.fromEntries((sub.quizTopics || []).map(t => [t.id, t.name]));
+            const topicLabel = activeTopic === 'all' ? 'Tổng hợp tất cả chương' : (topicTitleMap[activeTopic] || activeTopic);
+
+            sess.quizSubmitted[subId] = true;
             renderContent();
             window.scrollTo({ top: 180, behavior: 'smooth' });
+
+            const activeSt = getActiveStudent();
+            showToast(`📊 Đã ghi điểm ${score10}/10 cho ${activeSt.name} vào Nhật ký Log điểm!`);
+            await recordScoreLog(sub, topicLabel, score10, correctCount, totalQ);
         }
 
         function resetSubjectQuiz(subId) {
             const sub = SUBJECTS.find(s => s.id === subId);
             if (!sub) return;
-            const activeTopic = appState.selectedQuizTopic[subId] || 'all';
-            if (!appState.quizAnswers[subId]) appState.quizAnswers[subId] = {};
+            const sess = getActiveSession();
+            const activeTopic = sess.selectedQuizTopic[subId] || 'all';
+            if (!sess.quizAnswers[subId]) sess.quizAnswers[subId] = {};
 
             sub.quiz.forEach((q, idx) => {
                 if (activeTopic === 'all' || q.topicId === activeTopic) {
-                    delete appState.quizAnswers[subId][idx];
+                    delete sess.quizAnswers[subId][idx];
                 }
             });
-            appState.quizSubmitted[subId] = false;
-            randomizeSubjectQuizOrder(subId);
+            sess.quizSubmitted[subId] = false;
+            randomizeSubjectQuizOrder(subId, sess);
             renderContent();
         }
 
@@ -2198,7 +3324,7 @@
         }
 
         // ---------------------------------------------------------------------
-        // 8. QUẢN LÝ NHẬP / XUẤT ĐỀ + TỰ ĐỘNG ĐỒNG BỘ FILE cau_hoi_bo_sung.json TỪ GITHUB
+        // 10. QUẢN LÝ NHẬP / XUẤT ĐỀ + TỰ ĐỘNG ĐỒNG BỘ FILE cau_hoi_bo_sung.json
         // ---------------------------------------------------------------------
         const CUSTOM_QUIZ_STORAGE_KEY = 'hoc_tot_lop_8_custom_quizzes_v2';
         const GITHUB_SYNC_FILE = './cau_hoi_bo_sung.json';
@@ -2212,9 +3338,8 @@
 
         let qmPendingQuestions = [];
         let qmPendingMode = 'append';
-        let githubSyncedQuestions = []; // Lưu danh sách câu hỏi đã tải từ file cau_hoi_bo_sung.json trên GitHub
+        let githubSyncedQuestions = [];
 
-        // Gộp danh sách câu hỏi chuẩn hóa vào SUBJECTS (tránh trùng lặp nội dung câu hỏi)
         function mergeQuestionsIntoSubjects(normalizedList, mode = 'append') {
             const groupedBySub = {};
             normalizedList.forEach(item => {
@@ -2253,11 +3378,10 @@
             return affectedSubIds;
         }
 
-        // Tự động tải file cau_hoi_bo_sung.json cùng thư mục trên GitHub Pages (nếu có)
         async function loadExternalGitHubQuestions() {
             try {
                 const res = await fetch(`${GITHUB_SYNC_FILE}?v=${Date.now()}`, { cache: 'no-store' });
-                if (!res.ok) return 0; // Chưa có file cau_hoi_bo_sung.json trên GitHub -> bỏ qua êm ái
+                if (!res.ok) return 0;
                 const rawText = await res.text();
                 const parsed = validateQmJson(rawText);
                 if (parsed.valid.length > 0) {
@@ -2266,13 +3390,11 @@
                     const badge = document.getElementById('github-sync-badge');
                     if (badge) {
                         badge.classList.remove('hidden');
-                        badge.textContent = `☁️ +${parsed.valid.length} câu từ GitHub`;
+                        badge.textContent = `☁️ +${parsed.valid.length} câu`;
                     }
                     return parsed.valid.length;
                 }
-            } catch (e) {
-                // Bỏ qua nếu mở trực tiếp file:// trên máy tính mà trình duyệt chặn fetch cục bộ
-            }
+            } catch (e) {}
             return 0;
         }
 
@@ -2722,17 +3844,20 @@
             document.getElementById('qm-preview-box').classList.add('hidden');
         }
 
-        function applyQmImportedQuestions() {
+        async function applyQmImportedQuestions() {
             if (!qmPendingQuestions || qmPendingQuestions.length === 0) return;
 
             const countAdded = qmPendingQuestions.length;
             const affectedSubIds = mergeQuestionsIntoSubjects(qmPendingQuestions, qmPendingMode);
 
-            affectedSubIds.forEach(subId => {
-                appState.quizAnswers[subId] = {};
-                appState.quizSubmitted[subId] = false;
-                appState.selectedQuizTopic[subId] = 'all';
-                randomizeSubjectQuizOrder(subId);
+            ['hs1', 'hs2'].forEach(stId => {
+                const sess = studentState.sessions[stId];
+                affectedSubIds.forEach(subId => {
+                    sess.quizAnswers[subId] = {};
+                    sess.quizSubmitted[subId] = false;
+                    sess.selectedQuizTopic[subId] = 'all';
+                    randomizeSubjectQuizOrder(subId, sess);
+                });
             });
 
             saveCustomQuizzesToStorage();
@@ -2741,7 +3866,12 @@
 
             const targetSubId = affectedSubIds[0];
             navigateTo(targetSubId, 'quiz');
-            showToast(`🎉 Đã nạp ${countAdded} câu hỏi! Vào Tab 2 xuất file cau_hoi_bo_sung.json để lưu lên GitHub nhé.`);
+
+            if (githubConfig.token && githubConfig.autoSyncQuiz) {
+                await pushQuestionsToGitHub(false);
+            } else {
+                showToast(`🎉 Đã nạp ${countAdded} câu hỏi! Cài đặt GitHub Token để tự động lưu lên GitHub nhé.`);
+            }
         }
 
         function handleQmDirectPaste() {
@@ -2791,11 +3921,14 @@
             if (githubSyncedQuestions.length > 0) {
                 mergeQuestionsIntoSubjects(githubSyncedQuestions, 'append');
             }
-            SUBJECTS.forEach(sub => {
-                appState.quizAnswers[sub.id] = {};
-                appState.quizSubmitted[sub.id] = false;
-                appState.selectedQuizTopic[sub.id] = 'all';
-                randomizeSubjectQuizOrder(sub.id);
+            ['hs1', 'hs2'].forEach(stId => {
+                const sess = studentState.sessions[stId];
+                SUBJECTS.forEach(sub => {
+                    sess.quizAnswers[sub.id] = {};
+                    sess.quizSubmitted[sub.id] = false;
+                    sess.selectedQuizTopic[sub.id] = 'all';
+                    randomizeSubjectQuizOrder(sub.id, sess);
+                });
             });
             updateCustomQuizHeaderBadge();
             closeQuizManagerModal();
@@ -2820,27 +3953,8 @@
             URL.revokeObjectURL(url);
         }
 
-        // Xuất riêng các câu hỏi bổ sung (ngoài bộ đề mặc định) thành file cau_hoi_bo_sung.json để tải thẳng lên GitHub
         function exportGitHubSyncJson() {
-            const supplementary = [];
-            SUBJECTS.forEach(sub => {
-                const defaultSet = new Set((DEFAULT_QUIZ_SNAPSHOT[sub.id]?.quiz || []).map(q => q.q.trim()));
-                const topicMap = Object.fromEntries((sub.quizTopics || []).map(t => [t.id, t.name]));
-                sub.quiz.forEach(q => {
-                    if (!defaultSet.has(q.q.trim())) {
-                        supplementary.push({
-                            subject: sub.id,
-                            topicId: q.topicId,
-                            topicName: topicMap[q.topicId] || q.topicId,
-                            q: q.q,
-                            options: q.options,
-                            ans: q.ans,
-                            exp: q.exp
-                        });
-                    }
-                });
-            });
-
+            const supplementary = buildSupplementaryQuestionsList();
             if (supplementary.length === 0) {
                 showToast('Chưa có câu hỏi bổ sung mới nào. Hãy nhập thêm câu hỏi ở Tab 1 hoặc Tab 3 trước nhé!', 'warning');
                 return;
@@ -2940,11 +4054,15 @@
             showToast(`📤 Đã xuất ${payload.length} câu hỏi ra file JSON (.json)!`);
         }
 
-        // Khởi chạy ứng dụng & tự động đồng bộ từ GitHub
+        // Khởi chạy ứng dụng & tự động đồng bộ từ GitHub + tải hồ sơ 2 học sinh
         window.addEventListener('DOMContentLoaded', async () => {
+            loadGitHubConfig();
+            loadStudentDataFromStorage();
+            await loadExternalGitHubScoreLogs();
+            renderStudentSwitcher();
             await loadExternalGitHubQuestions();
             loadCustomQuizzesFromStorage();
-            SUBJECTS.forEach(sub => randomizeSubjectQuizOrder(sub.id));
+            initAllStudentSessions();
             renderNavigation();
             renderContent();
         });
