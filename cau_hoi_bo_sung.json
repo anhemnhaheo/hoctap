@@ -1,1 +1,814 @@
-[]
+[
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Tổng số đo bốn góc trong của một tứ giác bất kỳ bằng:",
+    "options": [
+      "180°",
+      "270°",
+      "360°",
+      "540°"
+    ],
+    "ans": 2,
+    "exp": "Định lý: Tổng các góc trong của một tứ giác bằng 360°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho tứ giác ABCD có tỉ lệ các góc ∠A : ∠B : ∠C : ∠D = 1 : 2 : 3 : 4. Số đo góc lớn nhất của tứ giác ABCD là:",
+    "options": [
+      "108°",
+      "120°",
+      "144°",
+      "150°"
+    ],
+    "ans": 2,
+    "exp": "Tổng số phần bằng nhau: 1 + 2 + 3 + 4 = 10 phần ⇒ 1 phần = 360° : 10 = 36°. Góc lớn nhất ∠D = 4 × 36° = 144°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho tứ giác ABCD có ∠A = 85°. Số đo góc ngoài tại đỉnh A của tứ giác ABCD là:",
+    "options": [
+      "85°",
+      "95°",
+      "105°",
+      "275°"
+    ],
+    "ans": 1,
+    "exp": "Góc ngoài và góc trong tại đỉnh A kề bù nhau nên góc ngoài tại đỉnh A = 180° - 85° = 95°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Một tứ giác lồi có nhiều nhất bao nhiêu góc nhọn?",
+    "options": [
+      "1 góc nhọn",
+      "2 góc nhọn",
+      "3 góc nhọn",
+      "4 góc nhọn"
+    ],
+    "ans": 2,
+    "exp": "Nếu cả 4 góc đều nhọn (< 90°) thì tổng 4 góc nhỏ hơn 360° (vô lý), do đó tứ giác có nhiều nhất 3 góc nhọn."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình thang là tứ giác có:",
+    "options": [
+      "Hai cạnh đối song song.",
+      "Hai cạnh đối bằng nhau.",
+      "Hai cạnh kề bằng nhau.",
+      "Bốn góc bằng nhau."
+    ],
+    "ans": 0,
+    "exp": "Định nghĩa: Hình thang là tứ giác có hai cạnh đối song song (gọi là hai cạnh đáy)."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang ABCD (AB ∥ CD) có ∠A = 115°. Số đo ∠D là:",
+    "options": [
+      "115°",
+      "90°",
+      "65°",
+      "75°"
+    ],
+    "ans": 2,
+    "exp": "Vì AB ∥ CD nên ∠A và ∠D là hai góc trong cùng phía bù nhau ⇒ ∠D = 180° - 115° = 65°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Một hình thang có đáy nhỏ dài 6 cm, đáy lớn dài 10 cm. Độ dài đường trung bình của hình thang đó là:",
+    "options": [
+      "16 cm",
+      "8 cm",
+      "4 cm",
+      "60 cm"
+    ],
+    "ans": 1,
+    "exp": "Độ dài đường trung bình của hình thang bằng nửa tổng hai đáy: (6 + 10) : 2 = 8 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Một hình thang có độ dài đường trung bình bằng 12 cm và đáy nhỏ bằng 8 cm. Độ dài đáy lớn là:",
+    "options": [
+      "4 cm",
+      "20 cm",
+      "16 cm",
+      "10 cm"
+    ],
+    "ans": 2,
+    "exp": "Ta có (8 + đáy lớn) : 2 = 12 ⇒ 8 + đáy lớn = 24 ⇒ đáy lớn = 16 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang ABCD (AB ∥ CD) có ∠A - ∠D = 40°. Số đo ∠A là:",
+    "options": [
+      "70°",
+      "110°",
+      "100°",
+      "80°"
+    ],
+    "ans": 1,
+    "exp": "Ta có ∠A + ∠D = 180° và ∠A - ∠D = 40° ⇒ 2∠A = 220° ⇒ ∠A = 110°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Dấu hiệu nào sau đây giúp nhận biết một hình thang là hình thang cân?",
+    "options": [
+      "Hình thang có hai cạnh bên bằng nhau.",
+      "Hình thang có hai đường chéo vuông góc.",
+      "Hình thang có hai đường chéo bằng nhau.",
+      "Hình thang có hai góc đối bằng nhau."
+    ],
+    "ans": 2,
+    "exp": "Dấu hiệu nhận biết hình thang cân: Hình thang có hai góc kề một đáy bằng nhau HOẶC hình thang có hai đường chéo bằng nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Khẳng định nào sau đây là SAI về hình thang cân?",
+    "options": [
+      "Hai cạnh bên bằng nhau.",
+      "Hai đường chéo bằng nhau.",
+      "Hai góc kề một đáy bằng nhau.",
+      "Hai cạnh đáy bằng nhau."
+    ],
+    "ans": 3,
+    "exp": "Trong hình thang cân, hai cạnh đáy song song nhưng không bằng nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠C = 65°. Số đo ∠D là:",
+    "options": [
+      "65°",
+      "115°",
+      "125°",
+      "75°"
+    ],
+    "ans": 0,
+    "exp": "Trong hình thang cân ABCD (AB ∥ CD), hai góc kề đáy CD bằng nhau nên ∠D = ∠C = 65°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠A = 120°. Số đo ∠C là:",
+    "options": [
+      "120°",
+      "60°",
+      "90°",
+      "80°"
+    ],
+    "ans": 1,
+    "exp": "Ta có ∠B = ∠A = 120° (hai góc kề đáy AB). Vì AB ∥ CD nên ∠B + ∠C = 180° ⇒ ∠C = 60°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình thang cân ABCD (AB ∥ CD) có AB = 4 cm, CD = 10 cm, cạnh bên AD = 5 cm. Độ dài đường cao AH (H ∈ CD) của hình thang cân bằng:",
+    "options": [
+      "3 cm",
+      "4 cm",
+      "5 cm",
+      "2 cm"
+    ],
+    "ans": 1,
+    "exp": "Kẻ hai đường cao AH, BK xuống CD ta được DH = (10 - 4) : 2 = 3 cm. Áp dụng Pythagore cho ΔAHD vuông tại H: AH = √(5² - 3²) = 4 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình thang cân có bao nhiêu trục đối xứng?",
+    "options": [
+      "0 trục",
+      "1 trục",
+      "2 trục",
+      "4 trục"
+    ],
+    "ans": 1,
+    "exp": "Hình thang cân có đúng 1 trục đối xứng là đường thẳng đi qua trung điểm của hai đáy."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Khẳng định nào sau đây là SAI về dấu hiệu nhận biết Hình bình hành?",
+    "options": [
+      "Tứ giác có các cạnh đối song song là hình bình hành.",
+      "Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành.",
+      "Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau là hình bình hành.",
+      "Tứ giác có hai cạnh đối vừa song song vừa bằng nhau là hình bình hành."
+    ],
+    "ans": 2,
+    "exp": "Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau có thể là hình thang cân."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Trong hình bình hành, khẳng định nào sau đây là SAI?",
+    "options": [
+      "Các cạnh đối bằng nhau.",
+      "Các góc đối bằng nhau.",
+      "Hai đường chéo cắt nhau tại trung điểm của mỗi đường.",
+      "Hai đường chéo vuông góc với nhau."
+    ],
+    "ans": 3,
+    "exp": "Hình bình hành thông thường hai đường chéo không vuông góc với nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD có ∠A = 60°. Số đo ∠C bằng:",
+    "options": [
+      "120°",
+      "60°",
+      "30°",
+      "90°"
+    ],
+    "ans": 1,
+    "exp": "Trong hình bình hành, các góc đối bằng nhau nên ∠C = ∠A = 60°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD có ∠B = 135°. Số đo ∠A bằng:",
+    "options": [
+      "135°",
+      "55°",
+      "45°",
+      "90°"
+    ],
+    "ans": 2,
+    "exp": "Hai góc kề một cạnh của hình bình hành bù nhau ⇒ ∠A = 180° - 135° = 45°."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD có chu vi bằng 30 cm và AB = 9 cm. Độ dài cạnh AD là:",
+    "options": [
+      "21 cm",
+      "6 cm",
+      "12 cm",
+      "9 cm"
+    ],
+    "ans": 1,
+    "exp": "Nửa chu vi AB + AD = 30 : 2 = 15 cm ⇒ AD = 15 - 9 = 6 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Tâm đối xứng của hình bình hành là:",
+    "options": [
+      "Trung điểm một cạnh bất kỳ.",
+      "Giao điểm hai đường chéo.",
+      "Một đỉnh bất kỳ của hình bình hành.",
+      "Hình bình hành không có tâm đối xứng."
+    ],
+    "ans": 1,
+    "exp": "Giao điểm hai đường chéo của hình bình hành là tâm đối xứng của hình bình hành đó."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho hình bình hành ABCD. Tia phân giác của ∠A cắt cạnh CD tại E. Biết AB = 8 cm, AD = 5 cm. Độ dài đoạn thẳng EC bằng:",
+    "options": [
+      "5 cm",
+      "3 cm",
+      "8 cm",
+      "4 cm"
+    ],
+    "ans": 1,
+    "exp": "Do AE là phân giác ∠A và AB ∥ CD nên ΔADE cân tại D ⇒ DE = AD = 5 cm ⇒ EC = CD - DE = 8 - 5 = 3 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Dấu hiệu nhận biết nào sau đây về hình chữ nhật là ĐÚNG?",
+    "options": [
+      "Tứ giác có hai góc vuông là hình chữ nhật.",
+      "Hình bình hành có hai đường chéo cắt nhau tại trung điểm mỗi đường là hình chữ nhật.",
+      "Hình thang cân có một góc vuông là hình chữ nhật.",
+      "Hình thang có hai góc vuông là hình chữ nhật."
+    ],
+    "ans": 2,
+    "exp": "Hình thang cân có một góc vuông là hình chữ nhật (ngoài ra còn: tứ giác có 3 góc vuông; hình bình hành có 1 góc vuông hoặc 2 đường chéo bằng nhau)."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Phát biểu nào sau đây là SAI về hình chữ nhật?",
+    "options": [
+      "Hình chữ nhật cũng là một hình bình hành.",
+      "Hình chữ nhật cũng là một hình thang cân.",
+      "Hình chữ nhật có hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường.",
+      "Hình chữ nhật có hai đường chéo vuông góc với nhau."
+    ],
+    "ans": 3,
+    "exp": "Hình chữ nhật thông thường hai đường chéo không vuông góc với nhau."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Cho ΔABC vuông tại A, biết AB = 6 cm, AC = 8 cm. Độ dài đường trung tuyến AM ứng với cạnh huyền BC là:",
+    "options": [
+      "10 cm",
+      "5 cm",
+      "7 cm",
+      "4 cm"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng Pythagore: BC = √(6² + 8²) = 10 cm. Đường trung tuyến AM ứng với cạnh huyền bằng nửa cạnh huyền: AM = 10 : 2 = 5 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình chữ nhật có chiều dài 12 cm và chiều rộng 5 cm. Độ dài đường chéo của hình chữ nhật đó là:",
+    "options": [
+      "17 cm",
+      "13 cm",
+      "7 cm",
+      "60 cm"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng định lý Pythagore: d = √(12² + 5²) = √169 = 13 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Hình chữ nhật ABCD có hai đường chéo AC và BD cắt nhau tại O. Biết OA = 4,5 cm, độ dài đoạn thẳng BD là:",
+    "options": [
+      "4,5 cm",
+      "9 cm",
+      "2,25 cm",
+      "18 cm"
+    ],
+    "ans": 1,
+    "exp": "Ta có AC = 2·OA = 9 cm. Trong hình chữ nhật, hai đường chéo bằng nhau nên BD = AC = 9 cm."
+  },
+  {
+    "subject": "toan",
+    "topicId": "toan-c3",
+    "topicName": "Chương 3: Tứ giác",
+    "q": "Sắp xếp theo thứ tự từ hình tổng quát nhất đến hình đặc biệt nhất (quan hệ tập hợp con):",
+    "options": [
+      "Tứ giác → Hình chữ nhật → Hình bình hành → Hình thang.",
+      "Tứ giác → Hình thang → Hình bình hành → Hình chữ nhật.",
+      "Hình thang → Tứ giác → Hình bình hành → Hình chữ nhật.",
+      "Tứ giác → Hình bình hành → Hình thang → Hình chữ nhật."
+    ],
+    "ans": 1,
+    "exp": "Mọi hình chữ nhật đều là hình bình hành; mọi hình bình hành đều là hình thang; mọi hình thang đều là tứ giác."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Sự biến đổi nào sau đây là biến đổi hóa học?",
+    "options": [
+      "Hòa tan muối ăn vào nước tạo thành dung dịch nước muối.",
+      "Nước lỏng bay hơi thành hơi nước khi đun sôi.",
+      "Đốt cháy hoàn toàn dải kim loại magnesium tạo ra chất rắn màu trắng.",
+      "Cắt nhỏ một sợi dây đồng thành nhiều đoạn ngắn."
+    ],
+    "ans": 2,
+    "exp": "Đốt cháy magnesium tạo ra chất mới (magnesium oxide - MgO), nên đây là biến đổi hóa học. Các hiện tượng còn lại chỉ thay đổi trạng thái hoặc hình dạng."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Trong một phản ứng hóa học, đại lượng nào sau đây luôn được bảo toàn?",
+    "options": [
+      "Số phân tử của các chất.",
+      "Tổng khối lượng của các chất.",
+      "Thể tích của các chất khí.",
+      "Trạng thái vật lý của các chất."
+    ],
+    "ans": 1,
+    "exp": "Theo định luật bảo toàn khối lượng, trong một phản ứng hóa học, tổng khối lượng của các chất sản phẩm bằng tổng khối lượng của các chất tham gia phản ứng."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Nung nóng 100 kg đá vôi (chứa 100% CaCO₃), thu được 56 kg vôi sống (CaO) và khí carbon dioxide (CO₂). Khối lượng khí CO₂ thoát ra là bao nhiêu?",
+    "options": [
+      "156 kg",
+      "56 kg",
+      "44 kg",
+      "39,6 kg"
+    ],
+    "ans": 2,
+    "exp": "Áp dụng định luật bảo toàn khối lượng: m(CaCO₃) = m(CaO) + m(CO₂) => m(CO₂) = 100 - 56 = 44 kg."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Cho 6,5 gam kim loại zinc (Zn) phản ứng hoàn toàn với 100 gam dung dịch HCl, giải phóng 0,2 gam khí hydrogen (H₂). Khối lượng dung dịch thu được sau phản ứng là bao nhiêu?",
+    "options": [
+      "106,5 gam",
+      "106,3 gam",
+      "106,7 gam",
+      "93,7 gam"
+    ],
+    "ans": 1,
+    "exp": "Khối lượng dung dịch sau phản ứng: m(dd sau) = m(Zn) + m(dd HCl) - m(H₂) = 6,5 + 100 - 0,2 = 106,3 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Hệ số cân bằng lần lượt của các chất trong phương trình hóa học Al + O₂ → Al₂O₃ (điều kiện nhiệt độ) là",
+    "options": [
+      "2, 3, 1",
+      "4, 3, 2",
+      "2, 3, 2",
+      "4, 2, 2"
+    ],
+    "ans": 1,
+    "exp": "Phương trình cân bằng đúng là: 4Al + 3O₂ → 2Al₂O₃. Vậy hệ số lần lượt là 4, 3, 2."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Cho sơ đồ phản ứng: Fe₃O₄ + HCl → FeCl₂ + FeCl₃ + H₂O. Sau khi cân bằng với các hệ số nguyên tối giản, hệ số của HCl là",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "ans": 2,
+    "exp": "Phương trình hóa học cân bằng là: Fe₃O₄ + 8HCl → FeCl₂ + 2FeCl₃ + 4H₂O. Hệ số của HCl là 8."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Tỉ lệ số phân tử CH₄ : số phân tử O₂ : số phân tử CO₂ : số phân tử H₂O trong phản ứng đốt cháy khí methane hoàn toàn là",
+    "options": [
+      "1 : 1 : 1 : 2",
+      "1 : 2 : 1 : 1",
+      "1 : 2 : 1 : 2",
+      "2 : 3 : 2 : 4"
+    ],
+    "ans": 2,
+    "exp": "Phương trình hóa học: CH₄ + 2O₂ → CO₂ + 2H₂O. Tỉ lệ số phân tử tương ứng là 1 : 2 : 1 : 2."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Mol là lượng chất có chứa bao nhiêu nguyên tử hoặc phân tử của chất đó?",
+    "options": [
+      "6,022 × 10²²",
+      "6,022 × 10²³",
+      "6,022 × 10²⁴",
+      "24,79 × 10²³"
+    ],
+    "ans": 1,
+    "exp": "Theo định nghĩa, mol là lượng chất có chứa NA = 6,022 × 10²³ nguyên tử hoặc phân tử chất đó."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Số mol của 5,6 gam kim loại iron (Fe, M = 56 g/mol) là bao nhiêu?",
+    "options": [
+      "0,1 mol",
+      "0,2 mol",
+      "0,5 mol",
+      "1,0 mol"
+    ],
+    "ans": 0,
+    "exp": "Áp dụng công thức n = m / M = 5,6 / 56 = 0,1 mol."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Khối lượng của 0,3 mol khí carbon dioxide (CO₂, M = 44 g/mol) là",
+    "options": [
+      "13,2 gam",
+      "14,6 gam",
+      "8,4 gam",
+      "132 gam"
+    ],
+    "ans": 0,
+    "exp": "Áp dụng công thức m = n × M = 0,3 × 44 = 13,2 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Ở điều kiện chuẩn (25°C, 1 bar), 1 mol chất khí bất kì chiếm thể tích là",
+    "options": [
+      "22,4 lít",
+      "24,79 lít",
+      "24,0 lít",
+      "25,0 lít"
+    ],
+    "ans": 1,
+    "exp": "Theo chương trình KHTN 8 (GDPT 2018), ở điều kiện chuẩn (25°C, 1 bar), 1 mol chất khí bất kì chiếm thể tích 24,79 lít."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Một bình kín chứa 4,958 lít khí oxygen (O₂) ở điều kiện chuẩn (25°C, 1 bar). Số mol khí O₂ trong bình là",
+    "options": [
+      "0,1 mol",
+      "0,2 mol",
+      "0,25 mol",
+      "0,5 mol"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng công thức n = V / 24,79 = 4,958 / 24,79 = 0,2 mol."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Thể tích của 0,25 mol khí hydrogen (H₂) đo ở điều kiện chuẩn (25°C, 1 bar) là",
+    "options": [
+      "5,6 lít",
+      "6,1975 lít",
+      "4,958 lít",
+      "12,395 lít"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng công thức V = n × 24,79 = 0,25 × 24,79 = 6,1975 lít."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Ở cùng điều kiện về nhiệt độ và áp suất, một bình chứa khí CO₂ có thể tích bằng thể tích của bình chứa 0,15 mol khí N₂. Số mol khí CO₂ trong bình là",
+    "options": [
+      "0,15 mol",
+      "0,30 mol",
+      "0,075 mol",
+      "0,24 mol"
+    ],
+    "ans": 0,
+    "exp": "Theo định luật Avogadro, ở cùng điều kiện nhiệt độ và áp suất, các thể tích bằng nhau của các chất khí khác nhau chứa cùng một số mol: V(CO₂) = V(N₂) => n(CO₂) = n(N₂) = 0,15 mol."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Công thức tính tỉ khối của khí A đối với không khí là",
+    "options": [
+      "d(A/kk) = M(A) / 29",
+      "d(A/kk) = 29 / M(A)",
+      "d(A/kk) = M(A) × 29",
+      "d(A/kk) = M(A) / 28"
+    ],
+    "ans": 0,
+    "exp": "Khối lượng mol trung bình của không khí là 29 g/mol, nên tỉ khối của khí A đối với không khí là d(A/kk) = M(A) / 29."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Khí carbon dioxide (CO₂, M = 44 g/mol) nặng hay nhẹ hơn không khí bao nhiêu lần, và khi thu khí CO₂ bằng phương pháp dời chỗ không khí ta đặt bình thu như thế nào?",
+    "options": [
+      "Nặng hơn không khí khoảng 1,52 lần; đặt ngửa bình thu.",
+      "Nặng hơn không khí khoảng 1,52 lần; đặt úp bình thu.",
+      "Nhẹ hơn không khí khoảng 0,66 lần; đặt úp bình thu.",
+      "Nhẹ hơn không khí khoảng 0,66 lần; đặt ngửa bình thu."
+    ],
+    "ans": 0,
+    "exp": "d(CO₂/kk) = 44 / 29 ≈ 1,52 > 1 nên khí CO₂ nặng hơn không khí 1,52 lần, chìm xuống đáy bình nên phải đặt ngửa bình thu."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Ở 25°C, độ tan của muối ăn (NaCl) trong nước là 36 g. Cần hòa tan bao nhiêu gam NaCl vào 250 gam nước ở nhiệt độ này để thu được dung dịch bão hòa?",
+    "options": [
+      "36 gam",
+      "72 gam",
+      "90 gam",
+      "108 gam"
+    ],
+    "ans": 2,
+    "exp": "Áp dụng công thức tính khối lượng chất tan từ độ tan: m(ct) = (S × m(dm)) / 100 = (36 × 250) / 100 = 90 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Hòa tan hoàn toàn 15 gam đường vào nước thu được 150 gam dung dịch nước đường. Nồng độ phần trăm (C%) của dung dịch thu được là",
+    "options": [
+      "10%",
+      "11,1%",
+      "15%",
+      "9%"
+    ],
+    "ans": 0,
+    "exp": "Áp dụng công thức C% = (m(ct) / m(dd)) × 100% = (15 / 150) × 100% = 10%."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Cần lấy bao nhiêu gam muối tinh khiết (NaCl) để pha chế được 300 gam dung dịch nước muối sinh lý có nồng độ 0,9%?",
+    "options": [
+      "27 gam",
+      "2,7 gam",
+      "0,27 gam",
+      "3,0 gam"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng công thức m(ct) = (C% × m(dd)) / 100% = (0,9 × 300) / 100 = 2,7 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Hòa tan hoàn toàn 0,4 mol muối ăn (NaCl) vào nước tạo thành 500 mL dung dịch. Nồng độ mol (CM) của dung dịch NaCl thu được là",
+    "options": [
+      "0,2 M",
+      "0,4 M",
+      "0,8 M",
+      "1,25 M"
+    ],
+    "ans": 2,
+    "exp": "Đổi V(dd) = 500 mL = 0,5 lít. Nồng độ mol: CM = n / V(dd) = 0,4 / 0,5 = 0,8 M."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Số mol chất tan NaOH có trong 200 mL dung dịch NaOH nồng độ 1,5 M là",
+    "options": [
+      "0,3 mol",
+      "3,0 mol",
+      "0,75 mol",
+      "300 mol"
+    ],
+    "ans": 0,
+    "exp": "Đổi V(dd) = 200 mL = 0,2 lít. Số mol chất tan: n = CM × V(dd) = 1,5 × 0,2 = 0,3 mol."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Một chai cồn có thể tích 250 mL, biết khối lượng riêng của dung dịch cồn là D = 0,8 g/mL. Khối lượng của lượng dung dịch cồn này là",
+    "options": [
+      "200 gam",
+      "312,5 gam",
+      "250 gam",
+      "180 gam"
+    ],
+    "ans": 0,
+    "exp": "Áp dụng công thức m(dd) = V(dd) × D = 250 × 0,8 = 200 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Một dung dịch sulfuric acid (H₂SO₄, M = 98 g/mol) có nồng độ 19,6% và khối lượng riêng D = 1,14 g/mL. Nồng độ mol của dung dịch này là",
+    "options": [
+      "2,00 M",
+      "2,28 M",
+      "1,75 M",
+      "2,50 M"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng công thức chuyển đổi: CM = (10 × D × C%) / M = (10 × 1,14 × 19,6) / 98 = 2,28 M."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Hòa tan hoàn toàn 2,7 gam kim loại aluminium (Al, M = 27 g/mol) vào dung dịch HCl vừa đủ theo phương trình: 2Al + 6HCl → 2AlCl₃ + 3H₂↑. Thể tích khí H₂ thu được ở điều kiện chuẩn là",
+    "options": [
+      "2,479 lít",
+      "3,7185 lít",
+      "4,958 lít",
+      "1,2395 lít"
+    ],
+    "ans": 1,
+    "exp": "n(Al) = 2,7 / 27 = 0,1 mol. Theo phương trình, n(H₂) = (3/2) × n(Al) = 0,15 mol. Thể tích H₂ ở đkc: V = 0,15 × 24,79 = 3,7185 lít."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Nung hoàn toàn 25 gam calcium carbonate (CaCO₃, M = 100 g/mol) theo phản ứng: CaCO₃ → CaO + CO₂↑ (điều kiện nhiệt độ). Khối lượng vôi sống (CaO, M = 56 g/mol) thu được là",
+    "options": [
+      "11 gam",
+      "14 gam",
+      "28 gam",
+      "56 gam"
+    ],
+    "ans": 1,
+    "exp": "n(CaCO₃) = 25 / 100 = 0,25 mol. Theo phương trình, n(CaO) = n(CaCO₃) = 0,25 mol => m(CaO) = 0,25 × 56 = 14 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Cho 4,8 gam magnesium (Mg, M = 24 g/mol) vào dung dịch chứa 0,3 mol HCl theo phản ứng: Mg + 2HCl → MgCl₂ + H₂↑. Sau phản ứng, chất nào còn dư và dư bao nhiêu gam?",
+    "options": [
+      "Mg dư 1,2 gam",
+      "Mg dư 2,4 gam",
+      "HCl dư 3,65 gam",
+      "Phản ứng vừa đủ, không chất nào dư"
+    ],
+    "ans": 0,
+    "exp": "n(Mg) = 4,8 / 24 = 0,2 mol; n(HCl) = 0,3 mol. Xét tỉ lệ: 0,2/1 > 0,3/2 => Mg dư, HCl hết. Số mol Mg phản ứng = 0,3 / 2 = 0,15 mol => Mg dư = (0,2 - 0,15) × 24 = 1,2 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Dẫn 0,15 mol khí H₂ đi qua bột copper(II) oxide (CuO) dư nung nóng theo phản ứng: H₂ + CuO → Cu + H₂O (điều kiện nhiệt độ). Khối lượng kim loại đồng (Cu, M = 64 g/mol) thu được là",
+    "options": [
+      "6,4 gam",
+      "9,6 gam",
+      "12,8 gam",
+      "19,2 gam"
+    ],
+    "ans": 1,
+    "exp": "Theo phương trình, n(Cu) = n(H₂) = 0,15 mol. Khối lượng Cu thu được: m(Cu) = 0,15 × 64 = 9,6 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Trộn 100 mL dung dịch Ba(OH)₂ 1 M với 100 mL dung dịch H₂SO₄ 0,5 M xảy ra phản ứng: Ba(OH)₂ + H₂SO₄ → BaSO₄↓ + 2H₂O. Khối lượng kết tủa trắng BaSO₄ (M = 233 g/mol) thu được là",
+    "options": [
+      "11,65 gam",
+      "23,30 gam",
+      "5,825 gam",
+      "17,475 gam"
+    ],
+    "ans": 0,
+    "exp": "n(Ba(OH)₂) = 0,1 × 1 = 0,1 mol; n(H₂SO₄) = 0,1 × 0,5 = 0,05 mol. Ba(OH)₂ dư nên n(BaSO₄) tính theo H₂SO₄ bằng 0,05 mol => m(BaSO₄) = 0,05 × 233 = 11,65 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Cho 4,958 lít khí N₂ (ở điều kiện chuẩn) tác dụng với khí H₂ dư theo phương trình: N₂ + 3H₂ ⇌ 2NH₃. Nếu hiệu suất phản ứng đạt 100% thì khối lượng khí ammonia (NH₃, M = 17 g/mol) thu được theo lý thuyết là",
+    "options": [
+      "3,4 gam",
+      "6,8 gam",
+      "1,7 gam",
+      "13,6 gam"
+    ],
+    "ans": 1,
+    "exp": "n(N₂) = 4,958 / 24,79 = 0,2 mol. Theo phương trình, n(NH₃) = 2 × n(N₂) = 0,4 mol => m(NH₃) lý thuyết = 0,4 × 17 = 6,8 gam."
+  },
+  {
+    "subject": "khtn",
+    "topicId": "khtn-c1",
+    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
+    "q": "Từ 4,958 lít khí N₂ (đkc) phản ứng với H₂ dư, thực tế chỉ thu được 2,72 gam khí NH₃ (biết lượng NH₃ tính theo lý thuyết là 6,8 gam). Hiệu suất của phản ứng tổng hợp trên là",
+    "options": [
+      "20%",
+      "40%",
+      "50%",
+      "80%"
+    ],
+    "ans": 1,
+    "exp": "Áp dụng công thức tính hiệu suất: H% = [m(thực tế) / m(lý thuyết)] × 100% = (2,72 / 6,8) × 100% = 40%."
+  }
+]
