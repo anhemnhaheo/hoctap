@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T08:09:39.743Z",
+  "updatedAt": "2026-11-18T08:11:44.519Z",
   "profiles": [
     {
       "id": "hs1",
@@ -10,5 +10,18 @@
       "name": "Học sinh 2"
     }
   ],
-  "logs": []
+  "logs": [
+    {
+      "id": 1794989504692,
+      "studentId": "hs1",
+      "studentName": "Học sinh 1",
+      "subjectId": "toan",
+      "subjectName": "Toán học",
+      "topicName": "Chương 3: Tứ giác",
+      "score": 0.3,
+      "correct": 1,
+      "total": 30,
+      "timestamp": "15:11 • 18/11/2026"
+    }
+  ]
 }
