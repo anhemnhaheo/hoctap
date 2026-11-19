@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HọcTốt8 - Đồng hành chinh phục kiến thức Lớp 8 (GDPT 2018)</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
@@ -184,12 +185,10 @@
             </div>
 
             <div class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-4">
-                <!-- Trạng thái kết nối -->
                 <div id="gh-connection-banner" class="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-950 flex flex-wrap items-center justify-between gap-2">
                     <span>⚠️ Chưa nhập GitHub Token. Hệ thống đang đọc dữ liệu công khai từ GitHub và lưu tạm trên máy.</span>
                 </div>
 
-                <!-- Form thông số kho GitHub -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div>
                         <label class="block text-xs font-extrabold text-slate-700 mb-1">Tên tài khoản GitHub (Owner)</label>
@@ -222,7 +221,6 @@
                     </p>
                 </div>
 
-                <!-- Tùy chọn tự động hóa -->
                 <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
                     <p class="text-xs font-extrabold text-slate-800">⚙️ Chế độ tự động đồng bộ khi đã có Token:</p>
                     <label class="flex items-center gap-2.5 text-xs text-slate-700 cursor-pointer">
@@ -235,7 +233,6 @@
                     </label>
                 </div>
 
-                <!-- Nút hành động -->
                 <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100">
                     <div class="flex flex-wrap gap-2">
                         <button type="button" onclick="saveAndTestGitHubConfig()"
@@ -253,7 +250,6 @@
                     </button>
                 </div>
 
-                <!-- Hướng dẫn nhanh tạo Token 1 phút -->
                 <details class="rounded-2xl border border-slate-200 bg-slate-50/80 p-3.5 text-xs text-slate-600">
                     <summary class="font-extrabold text-slate-800 cursor-pointer">📖 Hướng dẫn lấy GitHub Token trong 1 phút (Bấm để xem)</summary>
                     <ol class="list-decimal pl-5 mt-2 space-y-1.5 leading-relaxed">
@@ -340,7 +336,6 @@
     <div id="quiz-manager-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-xs" onclick="closeQuizManagerModal()"></div>
         <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in">
-            <!-- Header Modal -->
             <div class="bg-gradient-to-r from-teal-700 via-teal-800 to-emerald-800 text-white px-5 sm:px-6 py-4 flex items-center justify-between gap-3 shrink-0">
                 <div>
                     <h3 class="font-display text-base sm:text-lg font-extrabold flex items-center gap-2">
@@ -355,7 +350,6 @@
                 </button>
             </div>
 
-            <!-- Thanh Tabs trong Modal -->
             <div class="bg-slate-100 px-5 pt-3 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2 shrink-0">
                 <div class="flex gap-1.5 overflow-x-auto no-scrollbar">
                     <button id="qm-tab-import" onclick="switchQmTab('import')"
@@ -378,10 +372,8 @@
                 </button>
             </div>
 
-            <!-- Nội dung Modal -->
             <div class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-5">
 
-                <!-- TAB 1: NHẬP TỪ FILE -->
                 <div id="qm-panel-import" class="space-y-4">
                     <div class="rounded-2xl bg-sky-50 border border-sky-200 p-3.5 text-xs text-sky-950 flex flex-wrap items-center justify-between gap-2">
                         <div>
@@ -453,7 +445,6 @@
                     </div>
                 </div>
 
-                <!-- TAB 2: LƯU LÊN GITHUB & TẢI FILE MẪU -->
                 <div id="qm-panel-template" class="hidden space-y-5">
                     <div class="rounded-2xl border-2 border-emerald-400 bg-gradient-to-r from-emerald-50 to-teal-50 p-5 space-y-3">
                         <div class="flex items-center justify-between flex-wrap gap-2">
@@ -536,7 +527,6 @@
                     </div>
                 </div>
 
-                <!-- TAB 3: DÁN TRỰC TIẾP MÃ JSON -->
                 <div id="qm-panel-paste" class="hidden space-y-4">
                     <div class="flex flex-wrap items-center justify-between gap-2">
                         <p class="text-xs sm:text-sm text-slate-600">
@@ -808,9 +798,9 @@
                     }
                 ],
                 docs: [
+                    { title: 'Bộ 5 Đề Thi Cuối Học Kỳ I Môn Toán 8 (Chuẩn THCS Trưng Vương) - File Word .docx', type: 'DOCX • Bộ 5 Đề Thi', pages: '06 trang', size: '125 KB', action: 'download5ExamsDocx' },
                     { title: 'Tổng hợp Công thức Đại số & Hình học Lớp 8 trọng tâm', type: 'PDF • Tóm tắt', pages: '12 trang', size: '1.4 MB', url: '' },
-                    { title: 'Chuyên đề 7 Hằng đẳng thức đáng nhớ & Phân tích đa thức', type: 'PDF • Chuyên đề', pages: '15 trang', size: '1.8 MB', url: '' },
-                    { title: 'Bộ 10 đề kiểm tra Giữa kỳ & Cuối kỳ Toán 8 (Có lời giải)', type: 'PDF • Đề thi', pages: '24 trang', size: '3.1 MB', url: '' }
+                    { title: 'Chuyên đề 7 Hằng đẳng thức đáng nhớ & Phân tích đa thức', type: 'PDF • Chuyên đề', pages: '15 trang', size: '1.8 MB', url: '' }
                 ],
                 quizTopics: [
                     { id: 'toan-c1', name: 'Chương 1: Đa thức nhiều biến' },
@@ -1136,13 +1126,10 @@
                         infographicUrl: '',
                         videoUrl: '',
                         points: [
-                            '<strong>1. Biến đổi vật lí &amp; Biến đổi hóa học:</strong><br>• <em>Biến đổi vật lí:</em> Chất chỉ biến đổi về trạng thái, hình dạng, kích thước (ví dụ: nước đá tan chảy, hòa tan đường vào nước), <strong>không</strong> tạo ra chất mới.<br>• <em>Biến đổi hóa học:</em> Có sự tạo thành <strong>chất mới</strong> có tính chất khác chất ban đầu (ví dụ: sắt bị gỉ, đốt cháy than). Dấu hiệu nhận biết: đổi màu sắc, xuất hiện chất khí (sủi bọt), tạo chất kết tủa, tỏa nhiệt/phát sáng.',
-                            '<strong>2. Phản ứng hóa học &amp; Lập phương trình hóa học (PTHH):</strong><br>• Trong phản ứng hóa học, chỉ có liên kết giữa các nguyên tử thay đổi làm phân tử này biến đổi thành phân tử khác; <strong>số nguyên tử của mỗi nguyên tố được giữ nguyên</strong>.<br>• <em>3 bước lập PTHH:</em> (1) Viết sơ đồ phản ứng → (2) Cân bằng số nguyên tử mỗi nguyên tố bằng cách đặt hệ số thích hợp trước công thức hóa học (không thay đổi chỉ số chân) → (3) Viết thành PTHH hoàn chỉnh (dùng mũi tên <code>→</code>).',
-                            '<strong>3. Định luật bảo toàn khối lượng (ĐLBTKL):</strong><br>• Trong một phản ứng hóa học, tổng khối lượng của các chất sản phẩm bằng tổng khối lượng của các chất tham gia phản ứng:<br><span class="math-formula">m<sub>A</sub> + m<sub>B</sub> = m<sub>C</sub> + m<sub>D</sub></span> (với phản ứng A + B → C + D).',
-                            '<strong>4. Mol &amp; Các công thức chuyển đổi (n, m, V):</strong><br>• Tính số mol theo khối lượng: <span class="math-formula">n = m / M</span> ⇒ <span class="math-formula">m = n × M</span> ; <span class="math-formula">M = m / n</span>.<br>• Tính số mol chất khí ở <strong>điều kiện chuẩn (25°C, 1 bar)</strong>: <span class="math-formula">n = V / 24,79</span> ⇒ <span class="math-formula">V = n × 24,79</span>.',
-                            '<strong>5. Tỉ khối của chất khí:</strong><br>• <span class="math-formula">d<sub>A/B</sub> = M<sub>A</sub> / M<sub>B</sub></span> ; Với không khí (<span class="math-formula">M<sub>kk</sub> ≈ 29</span>): <span class="math-formula">d<sub>A/kk</sub> = M<sub>A</sub> / 29</span>.',
-                            '<strong>6. Độ tan (S) &amp; Nồng độ dung dịch (C%, C<sub>M</sub>):</strong><br>• <em>Độ tan:</em> <span class="math-formula">S = (m<sub>ct</sub> / m<sub>H₂O</sub>) × 100</span> (g/100g nước).<br>• <em>Nồng độ phần trăm:</em> <span class="math-formula">C% = (m<sub>ct</sub> / m<sub>dd</sub>) × 100%</span> ; <em>Nồng độ mol:</em> <span class="math-formula">C<sub>M</sub> = n / V</span>.',
-                            '<strong>7. Hiệu suất phản ứng (H%):</strong> <span class="math-formula">H% = (m<sub>thực tế</sub> / m<sub>lí thuyết</sub>) × 100%</span>.'
+                            '<strong>1. Biến đổi vật lí &amp; Biến đổi hóa học:</strong><br>• <em>Biến đổi vật lí:</em> Chất chỉ biến đổi về trạng thái, hình dạng, kích thước (ví dụ: nước đá tan chảy, hòa tan đường vào nước), <strong>không</strong> tạo ra chất mới.<br>• <em>Biến đổi hóa học:</em> Có sự tạo thành <strong>chất mới</strong> có tính chất khác chất ban đầu (ví dụ: sắt bị gỉ, đốt cháy than).',
+                            '<strong>2. Định luật bảo toàn khối lượng (ĐLBTKL):</strong><br><span class="math-formula">m<sub>A</sub> + m<sub>B</sub> = m<sub>C</sub> + m<sub>D</sub></span> (với phản ứng A + B → C + D).',
+                            '<strong>3. Mol &amp; Các công thức chuyển đổi:</strong><br>• <span class="math-formula">n = m / M</span> ; Ở đkc (25°C, 1 bar): <span class="math-formula">n = V / 24,79</span>.',
+                            '<strong>4. Tỉ khối chất khí &amp; Nồng độ dung dịch:</strong><br>• <span class="math-formula">d<sub>A/B</sub> = M<sub>A</sub> / M<sub>B</sub></span> ; <span class="math-formula">C% = (m<sub>ct</sub> / m<sub>dd</sub>) × 100%</span> ; <span class="math-formula">C<sub>M</sub> = n / V</span>.'
                         ]
                     },
                     {
@@ -1624,6 +1611,245 @@
         ];
 
         // ---------------------------------------------------------------------
+        // 1B. HỆ THỐNG TỰ ĐỘNG QUÉT THƯ MỤC ĐỀ THI TRÊN GITHUB (FOLDER: de_thi/)
+        // ---------------------------------------------------------------------
+        const GITHUB_EXAMS_FOLDER = 'de_thi';
+        let githubFolderExams = []; // Lưu danh sách đề quét động từ thư mục de_thi/ trên GitHub
+        let isScanningGithubExams = false;
+
+        // Xác định môn học dựa theo tên thư mục con hoặc tiền tố tên file (VD: toan_..., van_..., anh_..., khtn_..., sudi_..., tinhoc_..., gdcd_...)
+        function detectSubjectFromPath(filePath, fileName) {
+            const combined = `${filePath}/${fileName}`.toLowerCase();
+            if (combined.includes('/van/') || /^(van|ngu_van|nguvan)[_-]/.test(fileName.toLowerCase())) return 'van';
+            if (combined.includes('/anh/') || /^(anh|tieng_anh|tienganh|eng)[_-]/.test(fileName.toLowerCase())) return 'anh';
+            if (combined.includes('/khtn/') || /^(khtn|ly|hoa|sinh)[_-]/.test(fileName.toLowerCase())) return 'khtn';
+            if (combined.includes('/sudi/') || /^(sudi|su|dia|lich_su|dia_ly)[_-]/.test(fileName.toLowerCase())) return 'sudi';
+            if (combined.includes('/tinhoc/') || /^(tinhoc|tin|tin_hoc)[_-]/.test(fileName.toLowerCase())) return 'tinhoc';
+            if (combined.includes('/gdcd/') || /^(gdcd|cong_dan)[_-]/.test(fileName.toLowerCase())) return 'gdcd';
+            return 'toan'; // Mặc định vào môn Toán nếu không ghi tiền tố
+        }
+
+        function formatFileTitleFromName(fileName) {
+            return fileName
+                .replace(/\.(docx|doc|pdf|json)$/i, '')
+                .replace(/^(toan|van|ngu_van|anh|tieng_anh|khtn|sudi|tinhoc|gdcd)[_-]+/i, '')
+                .replace(/[_-]+/g, ' ')
+                .replace(/\b\w/g, c => c.toUpperCase())
+                .trim();
+        }
+
+        function formatBytes(bytes) {
+            if (!bytes || bytes <= 0) return 'Tệp GitHub';
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        // Quét đệ quy thư mục de_thi/ (và các thư mục con theo môn nếu có) qua GitHub API
+        async function scanGitHubExamsFolder(manualToast = false) {
+            if (isScanningGithubExams) return;
+            isScanningGithubExams = true;
+            if (manualToast) renderContent();
+
+            const owner = githubConfig.owner || 'anhemnhaheo';
+            const repo = githubConfig.repo || 'hoctap';
+            const branch = githubConfig.branch || 'main';
+            const headers = { 'Accept': 'application/vnd.github+json' };
+            if (githubConfig.token && githubConfig.token.trim().length > 10) {
+                headers['Authorization'] = `Bearer ${githubConfig.token.trim()}`;
+            }
+
+            const collected = [];
+
+            async function crawlDir(dirPath) {
+                const apiUrl = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${dirPath}?ref=${encodeURIComponent(branch)}&t=${Date.now()}`;
+                const res = await fetch(apiUrl, { headers });
+                if (!res.ok) return;
+                const items = await res.json();
+                if (!Array.isArray(items)) return;
+
+                for (const item of items) {
+                    if (item.type === 'dir') {
+                        await crawlDir(item.path);
+                    } else if (item.type === 'file') {
+                        const lower = item.name.toLowerCase();
+                        if (lower.endsWith('.docx') || lower.endsWith('.doc') || lower.endsWith('.pdf') || lower.endsWith('.json')) {
+                            const ext = lower.split('.').pop().toUpperCase();
+                            const subId = detectSubjectFromPath(item.path, item.name);
+                            const rawUrl = item.download_url || `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${item.path}`;
+                            collected.push({
+                                name: item.name,
+                                path: item.path,
+                                ext: ext,
+                                subjectId: subId,
+                                title: formatFileTitleFromName(item.name),
+                                size: formatBytes(item.size),
+                                downloadUrl: rawUrl
+                            });
+                        }
+                    }
+                }
+            }
+
+            try {
+                await crawlDir(GITHUB_EXAMS_FOLDER);
+                githubFolderExams = collected;
+                if (manualToast) {
+                    showToast(collected.length > 0
+                        ? `☁️ Đã đồng bộ ${collected.length} đề thi từ thư mục "${GITHUB_EXAMS_FOLDER}/" trên GitHub!`
+                        : `📂 Thư mục "${GITHUB_EXAMS_FOLDER}/" trên GitHub hiện chưa có file đề thi nào.`, collected.length > 0 ? 'success' : 'warning');
+                }
+            } catch (err) {
+                console.warn('Lỗi quét thư mục đề thi GitHub:', err);
+                if (manualToast) showToast('Không thể kết nối tới thư mục đề thi trên GitHub.', 'warning');
+            } finally {
+                isScanningGithubExams = false;
+                renderContent();
+            }
+        }
+
+        // Tải hoặc chuyển đổi file từ thư mục de_thi/ trên GitHub (Nếu là .json cấu trúc đề thi -> tự xuất ra .docx không đáp án)
+        async function downloadGitHubFolderExam(examIdx) {
+            const item = githubFolderExams[examIdx];
+            if (!item) return;
+
+            if (item.ext === 'JSON') {
+                showToast(`⏳ Đang tạo bản Word (.docx) từ "${item.name}"...`);
+                try {
+                    const res = await fetch(`${item.downloadUrl}?t=${Date.now()}`);
+                    if (!res.ok) throw new Error('Không đọc được dữ liệu đề JSON');
+                    const examJson = await res.json();
+                    await generateCleanDocxFromJsonExam(examJson, item.title);
+                } catch (e) {
+                    showToast(`❌ Lỗi tạo file Word: ${e.message}`, 'warning');
+                }
+                return;
+            }
+
+            // Với file .docx / .doc / .pdf tải sẵn lên thư mục de_thi/ trên GitHub -> tải trực tiếp về máy
+            const a = document.createElement('a');
+            a.href = item.downloadUrl;
+            a.download = item.name;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            showToast(`⬇️ Đang tải đề thi "${item.title}" (${item.ext}) từ GitHub!`);
+        }
+
+        // Hàm tổng quát tạo file Word (.docx - Không đáp án) từ bất kỳ file JSON đề thi nào trong thư mục de_thi/
+        async function generateCleanDocxFromJsonExam(examData, fallbackTitle) {
+            if (!window.docx) {
+                showToast('Thư viện xuất Word đang tải, vui lòng thử lại sau 2 giây!', 'warning');
+                return;
+            }
+            const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, AlignmentType, BorderStyle } = window.docx;
+            const makeRun = (text, bold = false, italics = false, size = 26) =>
+                new TextRun({ text: String(text ?? ''), bold, italics, size, font: 'Times New Roman' });
+            const noBorders = {
+                top: { style: BorderStyle.NONE, size: 0 },
+                bottom: { style: BorderStyle.NONE, size: 0 },
+                left: { style: BorderStyle.NONE, size: 0 },
+                right: { style: BorderStyle.NONE, size: 0 },
+            };
+
+            const examLabel = examData.code || examData.num || fallbackTitle.toUpperCase();
+            const subjectLabel = examData.subjectName || 'Môn: Toán 8';
+            const timeLabel = examData.duration || 'Thời gian: 90 phút (không kể thời gian giao đề)';
+            const mcqs = Array.isArray(examData.mcqs) ? examData.mcqs : [];
+            const essays = Array.isArray(examData.essays) ? examData.essays : [];
+
+            const children = [
+                new Table({
+                    width: { size: 100, type: WidthType.PERCENTAGE },
+                    rows: [
+                        new TableRow({
+                            children: [
+                                new TableCell({
+                                    width: { size: 45, type: WidthType.PERCENTAGE },
+                                    borders: noBorders,
+                                    children: [
+                                        new Paragraph({ alignment: AlignmentType.CENTER, children: [makeRun('PHÒNG GIÁO DỤC VÀ ĐÀO TẠO', true, false, 24)] }),
+                                        new Paragraph({ alignment: AlignmentType.CENTER, children: [makeRun('TRƯỜNG THCS ............................', true, false, 24)] }),
+                                        new Paragraph({ alignment: AlignmentType.CENTER, children: [makeRun(examLabel, true, false, 25)] })
+                                    ]
+                                }),
+                                new TableCell({
+                                    width: { size: 55, type: WidthType.PERCENTAGE },
+                                    borders: noBorders,
+                                    children: [
+                                        new Paragraph({ alignment: AlignmentType.CENTER, children: [makeRun(examData.title || 'KIỂM TRA ĐỊNH KỲ', true, false, 25)] }),
+                                        new Paragraph({ alignment: AlignmentType.CENTER, children: [makeRun('NĂM HỌC 2026 – 2027', true, false, 24)] }),
+                                        new Paragraph({ alignment: AlignmentType.CENTER, children: [makeRun(subjectLabel, true, false, 25)] }),
+                                        new Paragraph({ alignment: AlignmentType.CENTER, children: [makeRun(timeLabel, false, true, 23)] })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                new Paragraph({
+                    spacing: { before: 140, after: 140 },
+                    children: [makeRun('Họ và tên học sinh: ...................................................................... Lớp: 8/...... SBD: ............', true, false, 25)]
+                })
+            ];
+
+            if (mcqs.length > 0) {
+                children.push(
+                    new Paragraph({ spacing: { before: 80, after: 60 }, children: [makeRun(`I. TRẮC NGHIỆM: (${mcqs.length} câu hỏi)`, true, false, 26)] }),
+                    new Paragraph({ spacing: { after: 80 }, children: [makeRun('Chọn phương án trả lời đúng nhất cho mỗi câu hỏi sau đây:', false, true, 25)] })
+                );
+                mcqs.forEach((qItem, idx) => {
+                    const qText = Array.isArray(qItem) ? qItem[0] : `Câu ${idx + 1}. ${qItem.q || ''}`;
+                    const opts = Array.isArray(qItem) ? qItem.slice(1) : (qItem.options || []).map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`);
+                    children.push(
+                        new Paragraph({ spacing: { before: 70, after: 30 }, children: [makeRun(qText, true, false, 25)] }),
+                        new Paragraph({ spacing: { after: 50 }, children: opts.map(o => makeRun(`${o}        `, false, false, 25)) })
+                    );
+                });
+            }
+
+            if (essays.length > 0) {
+                children.push(
+                    new Paragraph({ spacing: { before: 160, after: 80 }, children: [makeRun('II. TỰ LUẬN:', true, false, 26)] })
+                );
+                essays.forEach(es => {
+                    if (typeof es === 'string') {
+                        children.push(new Paragraph({ spacing: { before: 70, after: 50 }, children: [makeRun(es, false, false, 25)] }));
+                    } else if (es && typeof es === 'object') {
+                        children.push(new Paragraph({ spacing: { before: 70, after: 30 }, children: [makeRun(es.head || '', true, false, 25)] }));
+                        (es.lines || []).forEach(ln => {
+                            children.push(new Paragraph({ spacing: { before: 20, after: 30 }, indent: { left: 300 }, children: [makeRun(ln, false, false, 25)] }));
+                        });
+                    }
+                });
+            }
+
+            children.push(
+                new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 180, after: 60 }, children: [makeRun('--- HẾT ---', true, false, 25)] })
+            );
+
+            const doc = new Document({
+                sections: [{
+                    properties: { page: { margin: { top: 1000, right: 1000, bottom: 1000, left: 1000 } } },
+                    children
+                }]
+            });
+
+            const blob = await Packer.toBlob(doc);
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${fallbackTitle.replace(/[^\p{L}\p{N}\s_-]/gu, '').trim().replace(/\s+/g, '_')}.docx`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast(`✅ Đã tải đề thi "${fallbackTitle}.docx" (Bản đề thi không đáp án)!`);
+        }
+
+        // ---------------------------------------------------------------------
         // 2. HỆ THỐNG ĐỒNG BỘ TỰ ĐỘNG VỚI GITHUB API (CÂU HỎI + LOG ĐIỂM)
         // ---------------------------------------------------------------------
         const GITHUB_CONFIG_KEY = 'hoc_tot_lop_8_github_api_config_v1';
@@ -1726,17 +1952,6 @@
             return btoa(binary);
         }
 
-        function base64ToUtf8(b64) {
-            const clean = b64.replace(/\s/g, '');
-            const binary = atob(clean);
-            const bytes = new Uint8Array(binary.length);
-            for (let i = 0; i < binary.length; i++) {
-                bytes[i] = binary.charCodeAt(i);
-            }
-            return new TextDecoder().decode(bytes);
-        }
-
-        // Hàm lõi đọc/ghi tệp trực tiếp vào GitHub Repository qua REST API
         async function upsertFileToGitHub(filePath, jsonObject, commitMessage) {
             if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo) {
                 throw new Error('Chưa cấu hình đầy đủ Owner, Repo hoặc GitHub Token.');
@@ -1750,7 +1965,6 @@
                 'Content-Type': 'application/json'
             };
 
-            // Bước 1: Lấy SHA hiện tại của file nếu file đã tồn tại trên GitHub
             let existingSha = null;
             const getRes = await fetch(`${apiUrl}?ref=${encodeURIComponent(githubConfig.branch || 'main')}&t=${Date.now()}`, {
                 method: 'GET',
@@ -1765,7 +1979,6 @@
                 throw new Error(errData.message || `Lỗi kết nối GitHub (${getRes.status})`);
             }
 
-            // Bước 2: Ghi nội dung JSON mới lên GitHub
             const contentBase64 = utf8ToBase64(JSON.stringify(jsonObject, null, 2));
             const bodyPayload = {
                 message: commitMessage,
@@ -1991,9 +2204,7 @@
                         studentState.logs = parsedLogs;
                     }
                 }
-            } catch (e) {
-                console.warn('Lỗi đọc dữ liệu hồ sơ học sinh:', e);
-            }
+            } catch (e) {}
         }
 
         function saveStudentProfiles() {
@@ -2488,7 +2699,7 @@
                 });
                 sub.docs.forEach(doc => {
                     index.push({
-                        type: 'Tài liệu PDF',
+                        type: 'Tài liệu',
                         subjectId: sub.id,
                         subjectName: sub.name,
                         tab: 'docs',
@@ -2593,7 +2804,7 @@
                                 Chào mừng <span class="text-amber-300">${escapeHtml(activeSt.name)}</span> đến với HọcTốt8!
                             </h1>
                             <p class="text-teal-50 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
-                                Hệ thống tóm tắt lý thuyết trọng tâm (kèm Infographic &amp; Video bài giảng), kho đề cương PDF miễn phí và phòng luyện trắc nghiệm tự động lưu dữ liệu lên GitHub.
+                                Hệ thống tóm tắt lý thuyết trọng tâm (kèm Infographic &amp; Video bài giảng), kho đề cương miễn phí và phòng luyện trắc nghiệm tự động lưu dữ liệu lên GitHub.
                             </p>
 
                             <div class="relative max-w-2xl">
@@ -2629,7 +2840,6 @@
                         </div>
                     </section>
 
-                    <!-- Bảng tóm tắt Đồng bộ GitHub, Log điểm 2 HS & Ngân hàng đề -->
                     <section class="bg-white rounded-2xl border border-indigo-200/80 p-4 sm:p-5 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                         <div class="flex items-start sm:items-center gap-3">
                             <div class="w-11 h-11 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl shrink-0">
@@ -2653,10 +2863,6 @@
                             <button onclick="openGitHubConfigModal()"
                                 class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-extrabold shadow-xs transition">
                                 ☁️ Cài đặt Token GitHub
-                            </button>
-                            <button onclick="openQuizManagerModal('import')"
-                                class="px-3.5 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-extrabold shadow-xs transition">
-                                📥 Bổ sung câu hỏi
                             </button>
                             <button onclick="openScoreLogModal()"
                                 class="px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-extrabold shadow-xs transition">
@@ -2801,25 +3007,16 @@
                     <div class="bg-white p-1.5 rounded-2xl border border-slate-200/90 shadow-sm grid grid-cols-1 sm:grid-cols-3 gap-1.5">
                         <button onclick="switchSubjectTab('theory')"
                             class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold transition-all ${tab === 'theory' ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100'}">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
                             <span>1. Tóm tắt lý thuyết trọng tâm</span>
                         </button>
 
                         <button onclick="switchSubjectTab('docs')"
                             class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold transition-all ${tab === 'docs' ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100'}">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            <span>2. Kho tài liệu &amp; Đề thi PDF</span>
+                            <span>2. Kho tài liệu &amp; Đề thi</span>
                         </button>
 
                         <button onclick="switchSubjectTab('quiz')"
                             class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold transition-all ${tab === 'quiz' ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100'}">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
                             <span>3. Luyện tập trắc nghiệm (${sub.quiz.length} câu)</span>
                         </button>
                     </div>
@@ -2987,19 +3184,90 @@
         }
 
         function renderDocsTab(sub) {
+            const subGithubExams = githubFolderExams
+                .map((item, globalIdx) => ({ ...item, globalIdx }))
+                .filter(item => item.subjectId === sub.id);
+
             return `
-                <div class="space-y-4">
-                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center justify-between gap-3">
+                <div class="space-y-5">
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3">
                         <p class="text-xs sm:text-sm text-amber-900">
-                            📥 Tất cả đề cương và tài liệu ôn tập môn <strong>${sub.name}</strong> đều được biên soạn chuẩn theo chương trình GDPT 2018 và miễn phí tải về.
+                            📥 Tất cả đề cương và đề thi môn <strong>${sub.name}</strong> được đồng bộ tự động từ thư mục <code>de_thi/</code> trên GitHub và miễn phí tải về.
                         </p>
+                        <button onclick="scanGitHubExamsFolder(true)"
+                            class="px-3.5 py-2 rounded-xl bg-white hover:bg-amber-100 text-amber-900 border border-amber-300 text-xs font-extrabold shadow-2xs transition flex items-center gap-1.5 shrink-0">
+                            <span>${isScanningGithubExams ? '⏳ Đang quét GitHub...' : '🔄 Cập nhật đề mới từ GitHub'}</span>
+                        </button>
+                    </div>
+
+                    <!-- KHU VỰC ĐỀ THI TỰ ĐỘNG ĐỒNG BỘ TỪ THƯ MỤC de_thi/ TRÊN GITHUB -->
+                    <div class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-3xl p-5 sm:p-6 border-2 border-blue-200 shadow-sm space-y-4">
+                        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-blue-100 pb-3.5">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2 mb-1">
+                                    <span class="inline-block px-2.5 py-0.5 rounded-full bg-blue-600 text-white text-[11px] font-extrabold uppercase tracking-wider">
+                                        ☁️ Đồng bộ tự động từ thư mục GitHub: de_thi/
+                                    </span>
+                                    <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">
+                                        ${subGithubExams.length} đề thi
+                                    </span>
+                                </div>
+                                <h3 class="font-display font-extrabold text-base sm:text-lg text-slate-800">
+                                    Kho Đề Kiểm Tra Môn ${sub.name} (Bản Đề Thi Không Đáp Án)
+                                </h3>
+                                <p class="text-xs text-slate-500 mt-0.5">
+                                    Chỉ cần tải tệp <code>.docx</code>, <code>.pdf</code> hoặc <code>.json</code> vào thư mục <code>de_thi/</code> trên GitHub (đặt tên bắt đầu bằng <code>${sub.id}_...</code>), web sẽ tự động hiển thị tại đây!
+                                </p>
+                            </div>
+                        </div>
+
+                        ${subGithubExams.length > 0 ? `
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                                ${subGithubExams.map(ex => {
+                                    const extBadge = ex.ext === 'PDF'
+                                        ? 'bg-rose-100 text-rose-800'
+                                        : ex.ext === 'JSON'
+                                            ? 'bg-amber-100 text-amber-800'
+                                            : 'bg-blue-100 text-blue-800';
+                                    return `
+                                        <div class="bg-white rounded-2xl p-4 border border-slate-200 hover:border-blue-400 shadow-2xs flex flex-col justify-between gap-3 transition">
+                                            <div>
+                                                <div class="flex items-center justify-between gap-2 mb-1.5">
+                                                    <span class="inline-block px-2 py-0.5 rounded-md ${extBadge} text-[11px] font-extrabold">
+                                                        ${ex.ext === 'JSON' ? 'DOCX (Tự tạo từ JSON)' : ex.ext}
+                                                    </span>
+                                                    <span class="text-[11px] text-slate-400">${ex.size}</span>
+                                                </div>
+                                                <p class="font-bold text-xs sm:text-sm text-slate-800 leading-snug">
+                                                    ${escapeHtml(ex.title)}
+                                                </p>
+                                                <p class="text-[11px] font-mono text-slate-400 mt-1 truncate" title="${escapeHtml(ex.path)}">${escapeHtml(ex.name)}</p>
+                                            </div>
+                                            <button onclick="downloadGitHubFolderExam(${ex.globalIdx})"
+                                                class="w-full py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition active:scale-95">
+                                                <span>⬇️ Tải đề thi (${ex.ext === 'JSON' ? 'DOCX' : ex.ext})</span>
+                                            </button>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        ` : `
+                            <div class="bg-white/80 rounded-2xl p-5 border border-dashed border-blue-300 text-center space-y-1.5">
+                                <p class="text-xs sm:text-sm font-bold text-slate-700">
+                                    📂 Chưa tìm thấy tệp đề thi nào của môn ${sub.name} trong thư mục <code>de_thi/</code> trên GitHub.
+                                </p>
+                                <p class="text-xs text-slate-500">
+                                    Hãy tạo thư mục <code>de_thi</code> trên kho GitHub <code>${escapeHtml(githubConfig.owner)}/${escapeHtml(githubConfig.repo)}</code> và tải các file đề thi (VD: <code>${sub.id}_de_01.docx</code>) vào đó — trang web sẽ tự động nhận diện ngay!
+                                </p>
+                            </div>
+                        `}
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         ${sub.docs.map((doc, idx) => `
                             <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:border-teal-400 transition-all flex flex-col justify-between gap-4">
                                 <div class="flex items-start gap-3.5">
-                                    <div class="w-11 h-11 rounded-xl bg-rose-50 text-rose-600 border border-rose-200 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                    <div class="w-11 h-11 rounded-xl bg-rose-50 text-rose-600 border-rose-200 border flex items-center justify-center font-extrabold text-xs shrink-0">
                                         PDF
                                     </div>
                                     <div>
@@ -3011,10 +3279,7 @@
 
                                 <button onclick="downloadStudyDoc('${sub.id}', ${idx})"
                                     class="w-full py-2.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                    </svg>
-                                    <span>Tải xuống tài liệu</span>
+                                    <span>⬇️ Tải xuống tài liệu</span>
                                 </button>
                             </div>
                         `).join('')}
@@ -3522,9 +3787,7 @@
                         sub.quiz = savedMap[sub.id].quiz || sub.quiz;
                     }
                 });
-            } catch (e) {
-                console.warn('Lỗi đọc dữ liệu trắc nghiệm tùy chỉnh:', e);
-            }
+            } catch (e) {}
             updateCustomQuizHeaderBadge();
         }
 
@@ -3538,9 +3801,7 @@
                     };
                 });
                 localStorage.setItem(CUSTOM_QUIZ_STORAGE_KEY, JSON.stringify(payload));
-            } catch (e) {
-                console.warn('Lỗi lưu dữ liệu trắc nghiệm:', e);
-            }
+            } catch (e) {}
             updateCustomQuizHeaderBadge();
         }
 
@@ -3782,7 +4043,7 @@
 
                 const subId = normalizeSubjectId(r[0]);
                 if (!subId) {
-                    errors.push(`Dòng ${lineNum}: Mã môn học "${r[0]}" không hợp lệ (dùng: toan, van, anh, khtn, sudi, tinhoc, gdcd).`);
+                    errors.push(`Dòng ${lineNum}: Mã môn học "${r[0]}" không hợp lệ.`);
                     continue;
                 }
 
@@ -3792,16 +4053,8 @@
                 const ansIdx = normalizeAnsIndex(r[7]);
                 const expText = (r[8] || '').trim() || `Đáp án đúng là ${['A', 'B', 'C', 'D'][ansIdx]}.`;
 
-                if (!qText) {
-                    errors.push(`Dòng ${lineNum}: Nội dung câu hỏi (CauHoi) bị trống.`);
-                    continue;
-                }
-                if (opts.some(o => !o)) {
-                    errors.push(`Dòng ${lineNum}: Phải điền đầy đủ cả 4 phương án A, B, C, D.`);
-                    continue;
-                }
-                if (ansIdx === -1) {
-                    errors.push(`Dòng ${lineNum}: Cột DapAnDung ("${r[7]}") không hợp lệ (chỉ nhận A, B, C hoặc D).`);
+                if (!qText || opts.some(o => !o) || ansIdx === -1) {
+                    errors.push(`Dòng ${lineNum}: Dữ liệu câu hỏi hoặc đáp án không hợp lệ.`);
                     continue;
                 }
 
@@ -3838,14 +4091,11 @@
 
             list.forEach((item, idx) => {
                 const num = idx + 1;
-                if (!item || typeof item !== 'object') {
-                    errors.push(`Mục #${num}: Không phải đối tượng câu hỏi hợp lệ.`);
-                    return;
-                }
+                if (!item || typeof item !== 'object') return;
 
                 const subId = normalizeSubjectId(item.subject ?? item.monHoc ?? item.MonHoc);
                 if (!subId) {
-                    errors.push(`Mục #${num}: Mã môn học "${item.subject || ''}" không hợp lệ.`);
+                    errors.push(`Mục #${num}: Mã môn học không hợp lệ.`);
                     return;
                 }
 
@@ -3863,16 +4113,8 @@
                 const expText = String(item.exp ?? item.explanation ?? item.GiaiThich ?? '').trim()
                     || `Đáp án đúng là ${['A', 'B', 'C', 'D'][ansIdx]}.`;
 
-                if (!qText) {
-                    errors.push(`Mục #${num}: Thiếu nội dung câu hỏi.`);
-                    return;
-                }
-                if (opts.length !== 4 || opts.some(o => !o)) {
-                    errors.push(`Mục #${num}: Phải có đủ 4 phương án trả lời không rỗng.`);
-                    return;
-                }
-                if (ansIdx === -1) {
-                    errors.push(`Mục #${num}: Đáp án đúng không hợp lệ (dùng 0..3 hoặc A..D).`);
+                if (!qText || opts.length !== 4 || opts.some(o => !o) || ansIdx === -1) {
+                    errors.push(`Mục #${num}: Thiếu dữ liệu câu hỏi hoặc phương án.`);
                     return;
                 }
 
@@ -3904,9 +4146,6 @@
             summary.innerHTML = `
                 <div class="font-bold text-slate-700">
                     📄 Tệp: <span class="text-teal-700">${escapeHtml(sourceName)}</span>
-                    <span class="ml-2 px-2 py-0.5 rounded bg-slate-200 text-slate-700 text-[11px]">
-                        ${qmPendingMode === 'append' ? 'Thêm nối tiếp' : 'Thay thế câu hỏi của môn'}
-                    </span>
                 </div>
                 <div class="flex items-center gap-2 font-extrabold">
                     <span class="text-emerald-700">✓ Hợp lệ: ${validList.length}</span>
@@ -3916,12 +4155,7 @@
 
             if (errorList.length > 0) {
                 errBox.classList.remove('hidden');
-                errBox.innerHTML = `
-                    <p class="font-extrabold mb-1">⚠️ Các dòng gặp lỗi định dạng (sẽ được bỏ qua):</p>
-                    <ul class="list-disc pl-4 space-y-0.5">
-                        ${errorList.map(e => `<li>${escapeHtml(e)}</li>`).join('')}
-                    </ul>
-                `;
+                errBox.innerHTML = `<ul class="list-disc pl-4 space-y-0.5">${errorList.map(e => `<li>${escapeHtml(e)}</li>`).join('')}</ul>`;
             } else {
                 errBox.classList.add('hidden');
             }
@@ -4007,14 +4241,6 @@
                     options: ["x² + 4x + 4", "x² + 2x + 4", "x² + 4", "x² - 4x + 4"],
                     ans: 0,
                     exp: "Áp dụng hằng đẳng thức (A + B)² = A² + 2AB + B² với A = x, B = 2."
-                },
-                {
-                    subject: "anh",
-                    topicId: "anh-c1",
-                    q: "Lan enjoys _______ folk music in her leisure time.",
-                    options: ["listen to", "listening to", "to listen", "listened"],
-                    ans: 1,
-                    exp: "Sau động từ 'enjoy' luôn dùng động từ đuôi -ing (enjoy + V-ing)."
                 }
             ];
             document.getElementById('qm-paste-textarea').value = JSON.stringify(sample, null, 2);
@@ -4066,25 +4292,17 @@
         function exportGitHubSyncJson() {
             const supplementary = buildSupplementaryQuestionsList();
             if (supplementary.length === 0) {
-                showToast('Chưa có câu hỏi bổ sung mới nào. Hãy nhập thêm câu hỏi ở Tab 1 hoặc Tab 3 trước nhé!', 'warning');
+                showToast('Chưa có câu hỏi bổ sung mới nào!', 'warning');
                 return;
             }
-
-            triggerFileDownload(
-                JSON.stringify(supplementary, null, 2),
-                'cau_hoi_bo_sung.json',
-                'application/json;charset=utf-8;'
-            );
-            showToast(`☁️ Đã xuất ${supplementary.length} câu hỏi bổ sung ra file cau_hoi_bo_sung.json! Hãy tải file này lên GitHub.`);
+            triggerFileDownload(JSON.stringify(supplementary, null, 2), 'cau_hoi_bo_sung.json', 'application/json;charset=utf-8;');
+            showToast(`☁️ Đã xuất ${supplementary.length} câu hỏi bổ sung ra file cau_hoi_bo_sung.json!`);
         }
 
         function downloadSubjectCsvTemplate() {
             const rows = [
                 ['MonHoc', 'ChuyenDe', 'CauHoi', 'DapAnA', 'DapAnB', 'DapAnC', 'DapAnD', 'DapAnDung', 'GiaiThich'],
-                ['toan', '2', 'Khai triển hằng đẳng thức (x + 2)² ta được kết quả nào?', 'x² + 4x + 4', 'x² + 2x + 4', 'x² + 4', 'x² - 4x + 4', 'A', 'Áp dụng (A + B)² = A² + 2AB + B² với A = x, B = 2.'],
-                ['van', '1', 'Bài thơ "Qua Đèo Ngang" của Bà Huyện Thanh Quan được viết theo thể thơ nào?', 'Lục bát', 'Thất ngôn bát cú Đường luật', 'Song thất lục bát', 'Thơ tự do', 'B', 'Bài thơ gồm 8 câu, mỗi câu 7 chữ theo niêm luật Đường luật.'],
-                ['anh', '1', 'My brother is fond of _______ DIY projects at weekends.', 'do', 'doing', 'to do', 'did', 'B', 'Cấu trúc "be fond of + V-ing" (yêu thích làm gì).'],
-                ['khtn', '2', 'Dung dịch acid làm giấy quỳ tím chuyển sang màu gì?', 'Màu xanh', 'Màu đỏ', 'Không đổi màu', 'Màu hồng', 'B', 'Dung dịch acid làm quỳ tím hóa đỏ, dung dịch base tan làm quỳ tím hóa xanh.']
+                ['toan', '2', 'Khai triển hằng đẳng thức (x + 2)² ta được kết quả nào?', 'x² + 4x + 4', 'x² + 2x + 4', 'x² + 4', 'x² - 4x + 4', 'A', 'Áp dụng (A + B)² = A² + 2AB + B².']
             ];
             const csv = '\uFEFF' + rows.map(r => r.map(escapeCsvVal).join(',')).join('\r\n');
             triggerFileDownload(csv, 'mau_nhap_trac_nghiem_lop_8.csv', 'text/csv;charset=utf-8;');
@@ -4099,40 +4317,20 @@
                     q: "Khai triển hằng đẳng thức (x + 2)² ta được kết quả nào?",
                     options: ["x² + 4x + 4", "x² + 2x + 4", "x² + 4", "x² - 4x + 4"],
                     ans: 0,
-                    exp: "Áp dụng (A + B)² = A² + 2AB + B² với A = x, B = 2."
-                },
-                {
-                    subject: "anh",
-                    topicId: "anh-c1",
-                    q: "My brother is fond of _______ DIY projects at weekends.",
-                    options: ["do", "doing", "to do", "did"],
-                    ans: 1,
-                    exp: "Cấu trúc 'be fond of + V-ing' (yêu thích làm gì)."
+                    exp: "Áp dụng (A + B)² = A² + 2AB + B²."
                 }
             ];
             triggerFileDownload(JSON.stringify(sample, null, 2), 'mau_nhap_trac_nghiem_lop_8.json', 'application/json;charset=utf-8;');
-            showToast('📄 Đã tải file JSON mẫu (mau_nhap_trac_nghiem_lop_8.json)!');
+            showToast('📄 Đã tải file JSON mẫu!');
         }
 
         function exportAllSubjectsToCsv() {
             const letters = ['A', 'B', 'C', 'D'];
-            const rows = [
-                ['MonHoc', 'ChuyenDe', 'CauHoi', 'DapAnA', 'DapAnB', 'DapAnC', 'DapAnD', 'DapAnDung', 'GiaiThich']
-            ];
+            const rows = [['MonHoc', 'ChuyenDe', 'CauHoi', 'DapAnA', 'DapAnB', 'DapAnC', 'DapAnD', 'DapAnDung', 'GiaiThich']];
             SUBJECTS.forEach(sub => {
                 const topicMap = Object.fromEntries((sub.quizTopics || []).map(t => [t.id, t.name]));
                 sub.quiz.forEach(q => {
-                    rows.push([
-                        sub.id,
-                        topicMap[q.topicId] || q.topicId || '1',
-                        q.q,
-                        q.options[0] || '',
-                        q.options[1] || '',
-                        q.options[2] || '',
-                        q.options[3] || '',
-                        letters[q.ans] || 'A',
-                        q.exp || ''
-                    ]);
+                    rows.push([sub.id, topicMap[q.topicId] || q.topicId || '1', q.q, q.options[0] || '', q.options[1] || '', q.options[2] || '', q.options[3] || '', letters[q.ans] || 'A', q.exp || '']);
                 });
             });
             const csv = '\uFEFF' + rows.map(r => r.map(escapeCsvVal).join(',')).join('\r\n');
@@ -4145,26 +4343,13 @@
             SUBJECTS.forEach(sub => {
                 const topicMap = Object.fromEntries((sub.quizTopics || []).map(t => [t.id, t.name]));
                 sub.quiz.forEach(q => {
-                    payload.push({
-                        subject: sub.id,
-                        topicId: q.topicId,
-                        topicName: topicMap[q.topicId] || q.topicId,
-                        q: q.q,
-                        options: q.options,
-                        ans: q.ans,
-                        exp: q.exp
-                    });
+                    payload.push({ subject: sub.id, topicId: q.topicId, topicName: topicMap[q.topicId] || q.topicId, q: q.q, options: q.options, ans: q.ans, exp: q.exp });
                 });
             });
-            triggerFileDownload(
-                JSON.stringify(payload, null, 2),
-                `ngan_hang_trac_nghiem_lop_8_${payload.length}_cau.json`,
-                'application/json;charset=utf-8;'
-            );
-            showToast(`📤 Đã xuất ${payload.length} câu hỏi ra file JSON (.json)!`);
+            triggerFileDownload(JSON.stringify(payload, null, 2), `ngan_hang_trac_nghiem_lop_8_${payload.length}_cau.json`, 'application/json;charset=utf-8;');
+            showToast(`📤 Đã xuất ${payload.length} câu hỏi ra file JSON!`);
         }
 
-        // Khởi chạy ứng dụng & tự động đồng bộ từ GitHub + tải hồ sơ 2 học sinh
         window.addEventListener('DOMContentLoaded', async () => {
             loadGitHubConfig();
             loadStudentDataFromStorage();
@@ -4175,6 +4360,7 @@
             initAllStudentSessions();
             renderNavigation();
             renderContent();
+            scanGitHubExamsFolder(false);
         });
     </script>
 </body>
