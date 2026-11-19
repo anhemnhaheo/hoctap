@@ -1,814 +1,422 @@
 [
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Tổng số đo bốn góc trong của một tứ giác bất kỳ bằng:",
-    "options": [
-      "180°",
-      "270°",
-      "360°",
-      "540°"
-    ],
-    "ans": 2,
-    "exp": "Định lý: Tổng các góc trong của một tứ giác bằng 360°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho tứ giác ABCD có tỉ lệ các góc ∠A : ∠B : ∠C : ∠D = 1 : 2 : 3 : 4. Số đo góc lớn nhất của tứ giác ABCD là:",
-    "options": [
-      "108°",
-      "120°",
-      "144°",
-      "150°"
-    ],
-    "ans": 2,
-    "exp": "Tổng số phần bằng nhau: 1 + 2 + 3 + 4 = 10 phần ⇒ 1 phần = 360° : 10 = 36°. Góc lớn nhất ∠D = 4 × 36° = 144°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho tứ giác ABCD có ∠A = 85°. Số đo góc ngoài tại đỉnh A của tứ giác ABCD là:",
-    "options": [
-      "85°",
-      "95°",
-      "105°",
-      "275°"
-    ],
-    "ans": 1,
-    "exp": "Góc ngoài và góc trong tại đỉnh A kề bù nhau nên góc ngoài tại đỉnh A = 180° - 85° = 95°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Một tứ giác lồi có nhiều nhất bao nhiêu góc nhọn?",
-    "options": [
-      "1 góc nhọn",
-      "2 góc nhọn",
-      "3 góc nhọn",
-      "4 góc nhọn"
-    ],
-    "ans": 2,
-    "exp": "Nếu cả 4 góc đều nhọn (< 90°) thì tổng 4 góc nhỏ hơn 360° (vô lý), do đó tứ giác có nhiều nhất 3 góc nhọn."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Hình thang là tứ giác có:",
-    "options": [
-      "Hai cạnh đối song song.",
-      "Hai cạnh đối bằng nhau.",
-      "Hai cạnh kề bằng nhau.",
-      "Bốn góc bằng nhau."
-    ],
-    "ans": 0,
-    "exp": "Định nghĩa: Hình thang là tứ giác có hai cạnh đối song song (gọi là hai cạnh đáy)."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình thang ABCD (AB ∥ CD) có ∠A = 115°. Số đo ∠D là:",
-    "options": [
-      "115°",
-      "90°",
-      "65°",
-      "75°"
-    ],
-    "ans": 2,
-    "exp": "Vì AB ∥ CD nên ∠A và ∠D là hai góc trong cùng phía bù nhau ⇒ ∠D = 180° - 115° = 65°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Một hình thang có đáy nhỏ dài 6 cm, đáy lớn dài 10 cm. Độ dài đường trung bình của hình thang đó là:",
-    "options": [
-      "16 cm",
-      "8 cm",
-      "4 cm",
-      "60 cm"
-    ],
-    "ans": 1,
-    "exp": "Độ dài đường trung bình của hình thang bằng nửa tổng hai đáy: (6 + 10) : 2 = 8 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Một hình thang có độ dài đường trung bình bằng 12 cm và đáy nhỏ bằng 8 cm. Độ dài đáy lớn là:",
-    "options": [
-      "4 cm",
-      "20 cm",
-      "16 cm",
-      "10 cm"
-    ],
-    "ans": 2,
-    "exp": "Ta có (8 + đáy lớn) : 2 = 12 ⇒ 8 + đáy lớn = 24 ⇒ đáy lớn = 16 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình thang ABCD (AB ∥ CD) có ∠A - ∠D = 40°. Số đo ∠A là:",
-    "options": [
-      "70°",
-      "110°",
-      "100°",
-      "80°"
-    ],
-    "ans": 1,
-    "exp": "Ta có ∠A + ∠D = 180° và ∠A - ∠D = 40° ⇒ 2∠A = 220° ⇒ ∠A = 110°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Dấu hiệu nào sau đây giúp nhận biết một hình thang là hình thang cân?",
-    "options": [
-      "Hình thang có hai cạnh bên bằng nhau.",
-      "Hình thang có hai đường chéo vuông góc.",
-      "Hình thang có hai đường chéo bằng nhau.",
-      "Hình thang có hai góc đối bằng nhau."
-    ],
-    "ans": 2,
-    "exp": "Dấu hiệu nhận biết hình thang cân: Hình thang có hai góc kề một đáy bằng nhau HOẶC hình thang có hai đường chéo bằng nhau."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Khẳng định nào sau đây là SAI về hình thang cân?",
-    "options": [
-      "Hai cạnh bên bằng nhau.",
-      "Hai đường chéo bằng nhau.",
-      "Hai góc kề một đáy bằng nhau.",
-      "Hai cạnh đáy bằng nhau."
-    ],
-    "ans": 3,
-    "exp": "Trong hình thang cân, hai cạnh đáy song song nhưng không bằng nhau."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠C = 65°. Số đo ∠D là:",
-    "options": [
-      "65°",
-      "115°",
-      "125°",
-      "75°"
-    ],
-    "ans": 0,
-    "exp": "Trong hình thang cân ABCD (AB ∥ CD), hai góc kề đáy CD bằng nhau nên ∠D = ∠C = 65°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠A = 120°. Số đo ∠C là:",
-    "options": [
-      "120°",
-      "60°",
-      "90°",
-      "80°"
-    ],
-    "ans": 1,
-    "exp": "Ta có ∠B = ∠A = 120° (hai góc kề đáy AB). Vì AB ∥ CD nên ∠B + ∠C = 180° ⇒ ∠C = 60°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình thang cân ABCD (AB ∥ CD) có AB = 4 cm, CD = 10 cm, cạnh bên AD = 5 cm. Độ dài đường cao AH (H ∈ CD) của hình thang cân bằng:",
-    "options": [
-      "3 cm",
-      "4 cm",
-      "5 cm",
-      "2 cm"
-    ],
-    "ans": 1,
-    "exp": "Kẻ hai đường cao AH, BK xuống CD ta được DH = (10 - 4) : 2 = 3 cm. Áp dụng Pythagore cho ΔAHD vuông tại H: AH = √(5² - 3²) = 4 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Hình thang cân có bao nhiêu trục đối xứng?",
-    "options": [
-      "0 trục",
-      "1 trục",
-      "2 trục",
-      "4 trục"
-    ],
-    "ans": 1,
-    "exp": "Hình thang cân có đúng 1 trục đối xứng là đường thẳng đi qua trung điểm của hai đáy."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Khẳng định nào sau đây là SAI về dấu hiệu nhận biết Hình bình hành?",
-    "options": [
-      "Tứ giác có các cạnh đối song song là hình bình hành.",
-      "Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành.",
-      "Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau là hình bình hành.",
-      "Tứ giác có hai cạnh đối vừa song song vừa bằng nhau là hình bình hành."
-    ],
-    "ans": 2,
-    "exp": "Tứ giác có hai cạnh đối song song và hai cạnh còn lại bằng nhau có thể là hình thang cân."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Trong hình bình hành, khẳng định nào sau đây là SAI?",
-    "options": [
-      "Các cạnh đối bằng nhau.",
-      "Các góc đối bằng nhau.",
-      "Hai đường chéo cắt nhau tại trung điểm của mỗi đường.",
-      "Hai đường chéo vuông góc với nhau."
-    ],
-    "ans": 3,
-    "exp": "Hình bình hành thông thường hai đường chéo không vuông góc với nhau."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình bình hành ABCD có ∠A = 60°. Số đo ∠C bằng:",
-    "options": [
-      "120°",
-      "60°",
-      "30°",
-      "90°"
-    ],
-    "ans": 1,
-    "exp": "Trong hình bình hành, các góc đối bằng nhau nên ∠C = ∠A = 60°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình bình hành ABCD có ∠B = 135°. Số đo ∠A bằng:",
-    "options": [
-      "135°",
-      "55°",
-      "45°",
-      "90°"
-    ],
-    "ans": 2,
-    "exp": "Hai góc kề một cạnh của hình bình hành bù nhau ⇒ ∠A = 180° - 135° = 45°."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình bình hành ABCD có chu vi bằng 30 cm và AB = 9 cm. Độ dài cạnh AD là:",
-    "options": [
-      "21 cm",
-      "6 cm",
-      "12 cm",
-      "9 cm"
-    ],
-    "ans": 1,
-    "exp": "Nửa chu vi AB + AD = 30 : 2 = 15 cm ⇒ AD = 15 - 9 = 6 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Tâm đối xứng của hình bình hành là:",
-    "options": [
-      "Trung điểm một cạnh bất kỳ.",
-      "Giao điểm hai đường chéo.",
-      "Một đỉnh bất kỳ của hình bình hành.",
-      "Hình bình hành không có tâm đối xứng."
-    ],
-    "ans": 1,
-    "exp": "Giao điểm hai đường chéo của hình bình hành là tâm đối xứng của hình bình hành đó."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho hình bình hành ABCD. Tia phân giác của ∠A cắt cạnh CD tại E. Biết AB = 8 cm, AD = 5 cm. Độ dài đoạn thẳng EC bằng:",
-    "options": [
-      "5 cm",
-      "3 cm",
-      "8 cm",
-      "4 cm"
-    ],
-    "ans": 1,
-    "exp": "Do AE là phân giác ∠A và AB ∥ CD nên ΔADE cân tại D ⇒ DE = AD = 5 cm ⇒ EC = CD - DE = 8 - 5 = 3 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Dấu hiệu nhận biết nào sau đây về hình chữ nhật là ĐÚNG?",
-    "options": [
-      "Tứ giác có hai góc vuông là hình chữ nhật.",
-      "Hình bình hành có hai đường chéo cắt nhau tại trung điểm mỗi đường là hình chữ nhật.",
-      "Hình thang cân có một góc vuông là hình chữ nhật.",
-      "Hình thang có hai góc vuông là hình chữ nhật."
-    ],
-    "ans": 2,
-    "exp": "Hình thang cân có một góc vuông là hình chữ nhật (ngoài ra còn: tứ giác có 3 góc vuông; hình bình hành có 1 góc vuông hoặc 2 đường chéo bằng nhau)."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Phát biểu nào sau đây là SAI về hình chữ nhật?",
-    "options": [
-      "Hình chữ nhật cũng là một hình bình hành.",
-      "Hình chữ nhật cũng là một hình thang cân.",
-      "Hình chữ nhật có hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường.",
-      "Hình chữ nhật có hai đường chéo vuông góc với nhau."
-    ],
-    "ans": 3,
-    "exp": "Hình chữ nhật thông thường hai đường chéo không vuông góc với nhau."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Cho ΔABC vuông tại A, biết AB = 6 cm, AC = 8 cm. Độ dài đường trung tuyến AM ứng với cạnh huyền BC là:",
-    "options": [
-      "10 cm",
-      "5 cm",
-      "7 cm",
-      "4 cm"
-    ],
-    "ans": 1,
-    "exp": "Áp dụng Pythagore: BC = √(6² + 8²) = 10 cm. Đường trung tuyến AM ứng với cạnh huyền bằng nửa cạnh huyền: AM = 10 : 2 = 5 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Hình chữ nhật có chiều dài 12 cm và chiều rộng 5 cm. Độ dài đường chéo của hình chữ nhật đó là:",
-    "options": [
-      "17 cm",
-      "13 cm",
-      "7 cm",
-      "60 cm"
-    ],
-    "ans": 1,
-    "exp": "Áp dụng định lý Pythagore: d = √(12² + 5²) = √169 = 13 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Hình chữ nhật ABCD có hai đường chéo AC và BD cắt nhau tại O. Biết OA = 4,5 cm, độ dài đoạn thẳng BD là:",
-    "options": [
-      "4,5 cm",
-      "9 cm",
-      "2,25 cm",
-      "18 cm"
-    ],
-    "ans": 1,
-    "exp": "Ta có AC = 2·OA = 9 cm. Trong hình chữ nhật, hai đường chéo bằng nhau nên BD = AC = 9 cm."
-  },
-  {
-    "subject": "toan",
-    "topicId": "toan-c3",
-    "topicName": "Chương 3: Tứ giác",
-    "q": "Sắp xếp theo thứ tự từ hình tổng quát nhất đến hình đặc biệt nhất (quan hệ tập hợp con):",
-    "options": [
-      "Tứ giác → Hình chữ nhật → Hình bình hành → Hình thang.",
-      "Tứ giác → Hình thang → Hình bình hành → Hình chữ nhật.",
-      "Hình thang → Tứ giác → Hình bình hành → Hình chữ nhật.",
-      "Tứ giác → Hình bình hành → Hình thang → Hình chữ nhật."
-    ],
-    "ans": 1,
-    "exp": "Mọi hình chữ nhật đều là hình bình hành; mọi hình bình hành đều là hình thang; mọi hình thang đều là tứ giác."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Sự biến đổi nào sau đây là biến đổi hóa học?",
-    "options": [
-      "Hòa tan muối ăn vào nước tạo thành dung dịch nước muối.",
-      "Nước lỏng bay hơi thành hơi nước khi đun sôi.",
-      "Đốt cháy hoàn toàn dải kim loại magnesium tạo ra chất rắn màu trắng.",
-      "Cắt nhỏ một sợi dây đồng thành nhiều đoạn ngắn."
-    ],
-    "ans": 2,
-    "exp": "Đốt cháy magnesium tạo ra chất mới (magnesium oxide - MgO), nên đây là biến đổi hóa học. Các hiện tượng còn lại chỉ thay đổi trạng thái hoặc hình dạng."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Trong một phản ứng hóa học, đại lượng nào sau đây luôn được bảo toàn?",
-    "options": [
-      "Số phân tử của các chất.",
-      "Tổng khối lượng của các chất.",
-      "Thể tích của các chất khí.",
-      "Trạng thái vật lý của các chất."
-    ],
-    "ans": 1,
-    "exp": "Theo định luật bảo toàn khối lượng, trong một phản ứng hóa học, tổng khối lượng của các chất sản phẩm bằng tổng khối lượng của các chất tham gia phản ứng."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Nung nóng 100 kg đá vôi (chứa 100% CaCO₃), thu được 56 kg vôi sống (CaO) và khí carbon dioxide (CO₂). Khối lượng khí CO₂ thoát ra là bao nhiêu?",
-    "options": [
-      "156 kg",
-      "56 kg",
-      "44 kg",
-      "39,6 kg"
-    ],
-    "ans": 2,
-    "exp": "Áp dụng định luật bảo toàn khối lượng: m(CaCO₃) = m(CaO) + m(CO₂) => m(CO₂) = 100 - 56 = 44 kg."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Cho 6,5 gam kim loại zinc (Zn) phản ứng hoàn toàn với 100 gam dung dịch HCl, giải phóng 0,2 gam khí hydrogen (H₂). Khối lượng dung dịch thu được sau phản ứng là bao nhiêu?",
-    "options": [
-      "106,5 gam",
-      "106,3 gam",
-      "106,7 gam",
-      "93,7 gam"
-    ],
-    "ans": 1,
-    "exp": "Khối lượng dung dịch sau phản ứng: m(dd sau) = m(Zn) + m(dd HCl) - m(H₂) = 6,5 + 100 - 0,2 = 106,3 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Hệ số cân bằng lần lượt của các chất trong phương trình hóa học Al + O₂ → Al₂O₃ (điều kiện nhiệt độ) là",
-    "options": [
-      "2, 3, 1",
-      "4, 3, 2",
-      "2, 3, 2",
-      "4, 2, 2"
-    ],
-    "ans": 1,
-    "exp": "Phương trình cân bằng đúng là: 4Al + 3O₂ → 2Al₂O₃. Vậy hệ số lần lượt là 4, 3, 2."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Cho sơ đồ phản ứng: Fe₃O₄ + HCl → FeCl₂ + FeCl₃ + H₂O. Sau khi cân bằng với các hệ số nguyên tối giản, hệ số của HCl là",
-    "options": [
-      "4",
-      "6",
-      "8",
-      "10"
-    ],
-    "ans": 2,
-    "exp": "Phương trình hóa học cân bằng là: Fe₃O₄ + 8HCl → FeCl₂ + 2FeCl₃ + 4H₂O. Hệ số của HCl là 8."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Tỉ lệ số phân tử CH₄ : số phân tử O₂ : số phân tử CO₂ : số phân tử H₂O trong phản ứng đốt cháy khí methane hoàn toàn là",
-    "options": [
-      "1 : 1 : 1 : 2",
-      "1 : 2 : 1 : 1",
-      "1 : 2 : 1 : 2",
-      "2 : 3 : 2 : 4"
-    ],
-    "ans": 2,
-    "exp": "Phương trình hóa học: CH₄ + 2O₂ → CO₂ + 2H₂O. Tỉ lệ số phân tử tương ứng là 1 : 2 : 1 : 2."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Mol là lượng chất có chứa bao nhiêu nguyên tử hoặc phân tử của chất đó?",
-    "options": [
-      "6,022 × 10²²",
-      "6,022 × 10²³",
-      "6,022 × 10²⁴",
-      "24,79 × 10²³"
-    ],
-    "ans": 1,
-    "exp": "Theo định nghĩa, mol là lượng chất có chứa NA = 6,022 × 10²³ nguyên tử hoặc phân tử chất đó."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Số mol của 5,6 gam kim loại iron (Fe, M = 56 g/mol) là bao nhiêu?",
-    "options": [
-      "0,1 mol",
-      "0,2 mol",
-      "0,5 mol",
-      "1,0 mol"
-    ],
-    "ans": 0,
-    "exp": "Áp dụng công thức n = m / M = 5,6 / 56 = 0,1 mol."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Khối lượng của 0,3 mol khí carbon dioxide (CO₂, M = 44 g/mol) là",
-    "options": [
-      "13,2 gam",
-      "14,6 gam",
-      "8,4 gam",
-      "132 gam"
-    ],
-    "ans": 0,
-    "exp": "Áp dụng công thức m = n × M = 0,3 × 44 = 13,2 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Ở điều kiện chuẩn (25°C, 1 bar), 1 mol chất khí bất kì chiếm thể tích là",
-    "options": [
-      "22,4 lít",
-      "24,79 lít",
-      "24,0 lít",
-      "25,0 lít"
-    ],
-    "ans": 1,
-    "exp": "Theo chương trình KHTN 8 (GDPT 2018), ở điều kiện chuẩn (25°C, 1 bar), 1 mol chất khí bất kì chiếm thể tích 24,79 lít."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Một bình kín chứa 4,958 lít khí oxygen (O₂) ở điều kiện chuẩn (25°C, 1 bar). Số mol khí O₂ trong bình là",
-    "options": [
-      "0,1 mol",
-      "0,2 mol",
-      "0,25 mol",
-      "0,5 mol"
-    ],
-    "ans": 1,
-    "exp": "Áp dụng công thức n = V / 24,79 = 4,958 / 24,79 = 0,2 mol."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Thể tích của 0,25 mol khí hydrogen (H₂) đo ở điều kiện chuẩn (25°C, 1 bar) là",
-    "options": [
-      "5,6 lít",
-      "6,1975 lít",
-      "4,958 lít",
-      "12,395 lít"
-    ],
-    "ans": 1,
-    "exp": "Áp dụng công thức V = n × 24,79 = 0,25 × 24,79 = 6,1975 lít."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Ở cùng điều kiện về nhiệt độ và áp suất, một bình chứa khí CO₂ có thể tích bằng thể tích của bình chứa 0,15 mol khí N₂. Số mol khí CO₂ trong bình là",
-    "options": [
-      "0,15 mol",
-      "0,30 mol",
-      "0,075 mol",
-      "0,24 mol"
-    ],
-    "ans": 0,
-    "exp": "Theo định luật Avogadro, ở cùng điều kiện nhiệt độ và áp suất, các thể tích bằng nhau của các chất khí khác nhau chứa cùng một số mol: V(CO₂) = V(N₂) => n(CO₂) = n(N₂) = 0,15 mol."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Công thức tính tỉ khối của khí A đối với không khí là",
-    "options": [
-      "d(A/kk) = M(A) / 29",
-      "d(A/kk) = 29 / M(A)",
-      "d(A/kk) = M(A) × 29",
-      "d(A/kk) = M(A) / 28"
-    ],
-    "ans": 0,
-    "exp": "Khối lượng mol trung bình của không khí là 29 g/mol, nên tỉ khối của khí A đối với không khí là d(A/kk) = M(A) / 29."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Khí carbon dioxide (CO₂, M = 44 g/mol) nặng hay nhẹ hơn không khí bao nhiêu lần, và khi thu khí CO₂ bằng phương pháp dời chỗ không khí ta đặt bình thu như thế nào?",
-    "options": [
-      "Nặng hơn không khí khoảng 1,52 lần; đặt ngửa bình thu.",
-      "Nặng hơn không khí khoảng 1,52 lần; đặt úp bình thu.",
-      "Nhẹ hơn không khí khoảng 0,66 lần; đặt úp bình thu.",
-      "Nhẹ hơn không khí khoảng 0,66 lần; đặt ngửa bình thu."
-    ],
-    "ans": 0,
-    "exp": "d(CO₂/kk) = 44 / 29 ≈ 1,52 > 1 nên khí CO₂ nặng hơn không khí 1,52 lần, chìm xuống đáy bình nên phải đặt ngửa bình thu."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Ở 25°C, độ tan của muối ăn (NaCl) trong nước là 36 g. Cần hòa tan bao nhiêu gam NaCl vào 250 gam nước ở nhiệt độ này để thu được dung dịch bão hòa?",
-    "options": [
-      "36 gam",
-      "72 gam",
-      "90 gam",
-      "108 gam"
-    ],
-    "ans": 2,
-    "exp": "Áp dụng công thức tính khối lượng chất tan từ độ tan: m(ct) = (S × m(dm)) / 100 = (36 × 250) / 100 = 90 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Hòa tan hoàn toàn 15 gam đường vào nước thu được 150 gam dung dịch nước đường. Nồng độ phần trăm (C%) của dung dịch thu được là",
-    "options": [
-      "10%",
-      "11,1%",
-      "15%",
-      "9%"
-    ],
-    "ans": 0,
-    "exp": "Áp dụng công thức C% = (m(ct) / m(dd)) × 100% = (15 / 150) × 100% = 10%."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Cần lấy bao nhiêu gam muối tinh khiết (NaCl) để pha chế được 300 gam dung dịch nước muối sinh lý có nồng độ 0,9%?",
-    "options": [
-      "27 gam",
-      "2,7 gam",
-      "0,27 gam",
-      "3,0 gam"
-    ],
-    "ans": 1,
-    "exp": "Áp dụng công thức m(ct) = (C% × m(dd)) / 100% = (0,9 × 300) / 100 = 2,7 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Hòa tan hoàn toàn 0,4 mol muối ăn (NaCl) vào nước tạo thành 500 mL dung dịch. Nồng độ mol (CM) của dung dịch NaCl thu được là",
-    "options": [
-      "0,2 M",
-      "0,4 M",
-      "0,8 M",
-      "1,25 M"
-    ],
-    "ans": 2,
-    "exp": "Đổi V(dd) = 500 mL = 0,5 lít. Nồng độ mol: CM = n / V(dd) = 0,4 / 0,5 = 0,8 M."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Số mol chất tan NaOH có trong 200 mL dung dịch NaOH nồng độ 1,5 M là",
-    "options": [
-      "0,3 mol",
-      "3,0 mol",
-      "0,75 mol",
-      "300 mol"
-    ],
-    "ans": 0,
-    "exp": "Đổi V(dd) = 200 mL = 0,2 lít. Số mol chất tan: n = CM × V(dd) = 1,5 × 0,2 = 0,3 mol."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Một chai cồn có thể tích 250 mL, biết khối lượng riêng của dung dịch cồn là D = 0,8 g/mL. Khối lượng của lượng dung dịch cồn này là",
-    "options": [
-      "200 gam",
-      "312,5 gam",
-      "250 gam",
-      "180 gam"
-    ],
-    "ans": 0,
-    "exp": "Áp dụng công thức m(dd) = V(dd) × D = 250 × 0,8 = 200 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Một dung dịch sulfuric acid (H₂SO₄, M = 98 g/mol) có nồng độ 19,6% và khối lượng riêng D = 1,14 g/mL. Nồng độ mol của dung dịch này là",
-    "options": [
-      "2,00 M",
-      "2,28 M",
-      "1,75 M",
-      "2,50 M"
-    ],
-    "ans": 1,
-    "exp": "Áp dụng công thức chuyển đổi: CM = (10 × D × C%) / M = (10 × 1,14 × 19,6) / 98 = 2,28 M."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Hòa tan hoàn toàn 2,7 gam kim loại aluminium (Al, M = 27 g/mol) vào dung dịch HCl vừa đủ theo phương trình: 2Al + 6HCl → 2AlCl₃ + 3H₂↑. Thể tích khí H₂ thu được ở điều kiện chuẩn là",
-    "options": [
-      "2,479 lít",
-      "3,7185 lít",
-      "4,958 lít",
-      "1,2395 lít"
-    ],
-    "ans": 1,
-    "exp": "n(Al) = 2,7 / 27 = 0,1 mol. Theo phương trình, n(H₂) = (3/2) × n(Al) = 0,15 mol. Thể tích H₂ ở đkc: V = 0,15 × 24,79 = 3,7185 lít."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Nung hoàn toàn 25 gam calcium carbonate (CaCO₃, M = 100 g/mol) theo phản ứng: CaCO₃ → CaO + CO₂↑ (điều kiện nhiệt độ). Khối lượng vôi sống (CaO, M = 56 g/mol) thu được là",
-    "options": [
-      "11 gam",
-      "14 gam",
-      "28 gam",
-      "56 gam"
-    ],
-    "ans": 1,
-    "exp": "n(CaCO₃) = 25 / 100 = 0,25 mol. Theo phương trình, n(CaO) = n(CaCO₃) = 0,25 mol => m(CaO) = 0,25 × 56 = 14 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Cho 4,8 gam magnesium (Mg, M = 24 g/mol) vào dung dịch chứa 0,3 mol HCl theo phản ứng: Mg + 2HCl → MgCl₂ + H₂↑. Sau phản ứng, chất nào còn dư và dư bao nhiêu gam?",
-    "options": [
-      "Mg dư 1,2 gam",
-      "Mg dư 2,4 gam",
-      "HCl dư 3,65 gam",
-      "Phản ứng vừa đủ, không chất nào dư"
-    ],
-    "ans": 0,
-    "exp": "n(Mg) = 4,8 / 24 = 0,2 mol; n(HCl) = 0,3 mol. Xét tỉ lệ: 0,2/1 > 0,3/2 => Mg dư, HCl hết. Số mol Mg phản ứng = 0,3 / 2 = 0,15 mol => Mg dư = (0,2 - 0,15) × 24 = 1,2 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Dẫn 0,15 mol khí H₂ đi qua bột copper(II) oxide (CuO) dư nung nóng theo phản ứng: H₂ + CuO → Cu + H₂O (điều kiện nhiệt độ). Khối lượng kim loại đồng (Cu, M = 64 g/mol) thu được là",
-    "options": [
-      "6,4 gam",
-      "9,6 gam",
-      "12,8 gam",
-      "19,2 gam"
-    ],
-    "ans": 1,
-    "exp": "Theo phương trình, n(Cu) = n(H₂) = 0,15 mol. Khối lượng Cu thu được: m(Cu) = 0,15 × 64 = 9,6 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Trộn 100 mL dung dịch Ba(OH)₂ 1 M với 100 mL dung dịch H₂SO₄ 0,5 M xảy ra phản ứng: Ba(OH)₂ + H₂SO₄ → BaSO₄↓ + 2H₂O. Khối lượng kết tủa trắng BaSO₄ (M = 233 g/mol) thu được là",
-    "options": [
-      "11,65 gam",
-      "23,30 gam",
-      "5,825 gam",
-      "17,475 gam"
-    ],
-    "ans": 0,
-    "exp": "n(Ba(OH)₂) = 0,1 × 1 = 0,1 mol; n(H₂SO₄) = 0,1 × 0,5 = 0,05 mol. Ba(OH)₂ dư nên n(BaSO₄) tính theo H₂SO₄ bằng 0,05 mol => m(BaSO₄) = 0,05 × 233 = 11,65 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Cho 4,958 lít khí N₂ (ở điều kiện chuẩn) tác dụng với khí H₂ dư theo phương trình: N₂ + 3H₂ ⇌ 2NH₃. Nếu hiệu suất phản ứng đạt 100% thì khối lượng khí ammonia (NH₃, M = 17 g/mol) thu được theo lý thuyết là",
-    "options": [
-      "3,4 gam",
-      "6,8 gam",
-      "1,7 gam",
-      "13,6 gam"
-    ],
-    "ans": 1,
-    "exp": "n(N₂) = 4,958 / 24,79 = 0,2 mol. Theo phương trình, n(NH₃) = 2 × n(N₂) = 0,4 mol => m(NH₃) lý thuyết = 0,4 × 17 = 6,8 gam."
-  },
-  {
-    "subject": "khtn",
-    "topicId": "khtn-c1",
-    "topicName": "Chương 1: Phản ứng hóa học & Mol - Nồng độ",
-    "q": "Từ 4,958 lít khí N₂ (đkc) phản ứng với H₂ dư, thực tế chỉ thu được 2,72 gam khí NH₃ (biết lượng NH₃ tính theo lý thuyết là 6,8 gam). Hiệu suất của phản ứng tổng hợp trên là",
-    "options": [
-      "20%",
-      "40%",
-      "50%",
-      "80%"
-    ],
-    "ans": 1,
-    "exp": "Áp dụng công thức tính hiệu suất: H% = [m(thực tế) / m(lý thuyết)] × 100% = (2,72 / 6,8) × 100% = 40%."
-  }
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Khẳng định nào sau đây nêu đúng TÍNH CHẤT của hình thang cân?",
+"options": [
+"Hai cạnh đáy bằng nhau.",
+"Hai đường chéo vuông góc với nhau.",
+"Hai đường chéo bằng nhau.",
+"Hai đường chéo cắt nhau tại trung điểm của mỗi đường."
+],
+"ans": 2,
+"exp": "Tính chất hình thang cân: Hai cạnh bên bằng nhau, hai góc kề một đáy bằng nhau và hai đường chéo bằng nhau."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Dấu hiệu nhận biết nào sau đây giúp chứng minh một hình thang là HÌNH THANG CÂN?",
+"options": [
+"Hình thang có hai cạnh bên bằng nhau.",
+"Hình thang có hai góc kề một đáy bằng nhau.",
+"Hình thang có hai góc đối bằng nhau.",
+"Hình thang có hai đường chéo cắt nhau tại trung điểm mỗi đường."
+],
+"ans": 1,
+"exp": "Dấu hiệu nhận biết hình thang cân: Hình thang có hai góc kề một đáy bằng nhau HOẶC có hai đường chéo bằng nhau. (Lưu ý: Hình thang có 2 cạnh bên bằng nhau có thể là hình bình hành)."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho tứ giác ABCD có AB ∥ CD và AC = BD. Khẳng định nào sau đây là chính xác nhất?",
+"options": [
+"ABCD là hình thang cân.",
+"ABCD là hình chữ nhật.",
+"ABCD là hình thoi.",
+"ABCD là hình vuông."
+],
+"ans": 0,
+"exp": "Vì AB ∥ CD nên ABCD là hình thang. Hình thang có hai đường chéo bằng nhau (AC = BD) là hình thang cân."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Trong các khẳng định sau về HÌNH BÌNH HÀNH, khẳng định nào SAI?",
+"options": [
+"Các cạnh đối song song và bằng nhau.",
+"Các góc đối bằng nhau.",
+"Hai đường chéo cắt nhau tại trung điểm của mỗi đường.",
+"Hai đường chéo vuông góc với nhau."
+],
+"ans": 3,
+"exp": "Trong hình bình hành thông thường, hai đường chéo chỉ cắt nhau tại trung điểm của mỗi đường chứ không vuông góc với nhau."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Dấu hiệu nào sau đây KHÔNG đủ để kết luận tứ giác ABCD là hình bình hành?",
+"options": [
+"AB ∥ CD và AD ∥ BC.",
+"AB = CD và AD = BC.",
+"AB ∥ CD và AD = BC.",
+"AB ∥ CD và AB = CD."
+],
+"ans": 2,
+"exp": "Tứ giác có hai cạnh đối song song (AB ∥ CD) và hai cạnh đối còn lại bằng nhau (AD = BC) có thể là hình thang cân, chưa chắc là hình bình hành."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Tứ giác MNPQ có hai đường chéo MP và NQ cắt nhau tại I sao cho IM = IP và IN = IQ. Tứ giác MNPQ là hình gì?",
+"options": [
+"Hình thang cân.",
+"Hình bình hành.",
+"Hình chữ nhật.",
+"Hình thoi."
+],
+"ans": 1,
+"exp": "Dấu hiệu nhận biết: Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Tính chất nào sau đây đúng với HÌNH CHỮ NHẬT?",
+"options": [
+"Hai đường chéo vuông góc với nhau.",
+"Hai đường chéo là đường phân giác của các góc.",
+"Hai đường chéo bằng nhau và cắt nhau tại trung điểm của mỗi đường.",
+"Bốn cạnh bằng nhau."
+],
+"ans": 2,
+"exp": "Hình chữ nhật có đầy đủ tính chất của hình bình hành và hình thang cân nên hai đường chéo vừa bằng nhau vừa cắt nhau tại trung điểm của mỗi đường."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Dấu hiệu nhận biết nào sau đây về HÌNH CHỮ NHẬT là ĐÚNG?",
+"options": [
+"Tứ giác có hai góc vuông là hình chữ nhật.",
+"Hình bình hành có hai cạnh kề bằng nhau là hình chữ nhật.",
+"Hình thang cân có một góc vuông là hình chữ nhật.",
+"Hình bình hành có hai đường chéo vuông góc là hình chữ nhật."
+],
+"ans": 2,
+"exp": "Dấu hiệu nhận biết hình chữ nhật: Tứ giác có 3 góc vuông; Hình thang cân có 1 góc vuông; Hình bình hành có 1 góc vuông hoặc có 2 đường chéo bằng nhau."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Hình bình hành ABCD sẽ trở thành HÌNH CHỮ NHẬT nếu có thêm điều kiện nào sau đây?",
+"options": [
+"AC = BD",
+"AC ⊥ BD",
+"AB = BC",
+"AC là tia phân giác của góc A"
+],
+"ans": 0,
+"exp": "Theo dấu hiệu nhận biết: Hình bình hành có hai đường chéo bằng nhau (AC = BD) là hình chữ nhật."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Tính chất nào sau đây chỉ có ở HÌNH THOI mà không có ở hình bình hành thông thường?",
+"options": [
+"Các cạnh đối song song.",
+"Các góc đối bằng nhau.",
+"Hai đường chéo vuông góc với nhau và là phân giác của các góc.",
+"Hai đường chéo cắt nhau tại trung điểm của mỗi đường."
+],
+"ans": 2,
+"exp": "Trong hình thoi, hai đường chéo vuông góc với nhau và mỗi đường chéo là đường phân giác của các góc của hình thoi."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Dấu hiệu nhận biết nào sau đây về HÌNH THOI là SAI?",
+"options": [
+"Tứ giác có bốn cạnh bằng nhau là hình thoi.",
+"Hình bình hành có hai cạnh kề bằng nhau là hình thoi.",
+"Hình bình hành có hai đường chéo vuông góc với nhau là hình thoi.",
+"Hình bình hành có hai đường chéo bằng nhau là hình thoi."
+],
+"ans": 3,
+"exp": "Hình bình hành có hai đường chéo bằng nhau là HÌNH CHỮ NHẬT, không phải hình thoi."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình bình hành ABCD có tia phân giác của góc A đi qua đỉnh C. Tứ giác ABCD là hình gì?",
+"options": [
+"Hình chữ nhật.",
+"Hình thoi.",
+"Hình thang cân.",
+"Hình vuông."
+],
+"ans": 1,
+"exp": "Tia phân giác góc A đi qua C nghĩa là đường chéo AC là phân giác của góc A. Hình bình hành có một đường chéo là phân giác của một góc là hình thoi."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Khẳng định nào sau đây nêu đầy đủ TÍNH CHẤT của hai đường chéo trong HÌNH VUÔNG?",
+"options": [
+"Bằng nhau và cắt nhau tại trung điểm mỗi đường.",
+"Vuông góc với nhau và là phân giác các góc.",
+"Bằng nhau, vuông góc với nhau, cắt nhau tại trung điểm mỗi đường và là phân giác các góc.",
+"Bằng nhau và tạo với cạnh một góc 60°."
+],
+"ans": 2,
+"exp": "Hình vuông vừa là hình chữ nhật vừa là hình thoi nên hai đường chéo bằng nhau, vuông góc, cắt nhau tại trung điểm mỗi đường và là phân giác các góc."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Hình chữ nhật cần có thêm điều kiện nào sau đây để trở thành HÌNH VUÔNG?",
+"options": [
+"Có hai đường chéo bằng nhau.",
+"Có bốn góc vuông.",
+"Có hai đường chéo vuông góc với nhau.",
+"Có các cạnh đối bằng nhau."
+],
+"ans": 2,
+"exp": "Dấu hiệu nhận biết hình vuông từ hình chữ nhật: Hình chữ nhật có hai cạnh kề bằng nhau, hoặc hai đường chéo vuông góc, hoặc một đường chéo là phân giác của một góc."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Hình thoi cần có thêm điều kiện nào sau đây để trở thành HÌNH VUÔNG?",
+"options": [
+"Có hai đường chéo bằng nhau.",
+"Có hai đường chéo vuông góc.",
+"Có bốn cạnh bằng nhau.",
+"Có một đường chéo là phân giác của một góc."
+],
+"ans": 0,
+"exp": "Dấu hiệu nhận biết hình vuông từ hình thoi: Hình thoi có một góc vuông HOẶC hình thoi có hai đường chéo bằng nhau."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Tứ giác nào dưới đây có hai đường chéo vừa bằng nhau, vừa vuông góc với nhau tại trung điểm của mỗi đường?",
+"options": [
+"Hình chữ nhật.",
+"Hình thoi.",
+"Hình vuông.",
+"Hình thang cân."
+],
+"ans": 2,
+"exp": "Cắt nhau tại trung điểm mỗi đường ⇒ Hình bình hành; Bằng nhau ⇒ Hình chữ nhật; Vuông góc ⇒ Hình vuông."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Khẳng định nào sau đây là SAI?",
+"options": [
+"Mọi hình vuông đều là hình chữ nhật.",
+"Mọi hình vuông đều là hình thoi.",
+"Mọi hình chữ nhật đều là hình bình hành.",
+"Mọi hình thoi đều là hình vuông."
+],
+"ans": 3,
+"exp": "Hình thoi không có góc vuông thì không phải là hình vuông. Ngược lại, mọi hình vuông đều là hình thoi."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Gọi M, N, P, Q lần lượt là trung điểm các cạnh AB, BC, CD, DA của hình chữ nhật ABCD. Tứ giác MNPQ là hình gì?",
+"options": [
+"Hình chữ nhật.",
+"Hình thoi.",
+"Hình vuông.",
+"Hình thang cân."
+],
+"ans": 1,
+"exp": "MNPQ là hình bình hành có các cạnh bằng nửa hai đường chéo AC và BD. Vì trong hình chữ nhật AC = BD nên 4 cạnh của MNPQ bằng nhau ⇒ MNPQ là hình thoi."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho tứ giác ABCD có hai đường chéo AC và BD vuông góc với nhau. Gọi E, F, G, H lần lượt là trung điểm của AB, BC, CD, DA. Tứ giác EFGH là hình gì?",
+"options": [
+"Hình chữ nhật.",
+"Hình thoi.",
+"Hình thang cân.",
+"Hình bình hành không có góc vuông."
+],
+"ans": 0,
+"exp": "EFGH là hình bình hành có EF ∥ AC và EH ∥ BD. Vì AC ⊥ BD nên EF ⊥ EH ⇒ ∠FEH = 90° ⇒ EFGH là hình chữ nhật."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Trong các hình sau, hình nào KHÔNG nhất thiết có trục đối xứng?",
+"options": [
+"Hình thang cân.",
+"Hình bình hành.",
+"Hình chữ nhật.",
+"Hình thoi."
+],
+"ans": 1,
+"exp": "Hình bình hành thông thường chỉ có tâm đối xứng (giao điểm 2 đường chéo) mà không có trục đối xứng."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Quan sát hình vẽ tứ giác ABCD dưới đây. Số đo góc x (∠D) bằng bao nhiêu?<div class='my-3 flex justify-center'><svg width='260' height='165' viewBox='0 0 260 165' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='55,35 190,25 225,130 35,130' fill='#e0f2fe' stroke='#0369a1' stroke-width='2.2'/><text x='42' y='28' font-size='13' font-weight='bold' fill='#0f172a'>A</text><text x='195' y='23' font-size='13' font-weight='bold' fill='#0f172a'>B</text><text x='230' y='138' font-size='13' font-weight='bold' fill='#0f172a'>C</text><text x='20' y='138' font-size='13' font-weight='bold' fill='#0f172a'>D</text><text x='62' y='53' font-size='12' font-weight='bold' fill='#0369a1'>105°</text><text x='158' y='46' font-size='12' font-weight='bold' fill='#0369a1'>110°</text><text x='184' y='122' font-size='12' font-weight='bold' fill='#0369a1'>65°</text><text x='46' y='122' font-size='13' font-weight='bold' fill='#dc2626'>x = ?</text></svg></div>",
+"options": [
+"80°",
+"90°",
+"75°",
+"100°"
+],
+"ans": 0,
+"exp": "Tổng 4 góc trong của tứ giác ABCD bằng 360° ⇒ x = 360° - (105° + 110° + 65°) = 360° - 280° = 80°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Quan sát tứ giác ABCD có các số đo góc như hình vẽ. Giá trị của x là:<div class='my-3 flex justify-center'><svg width='260' height='165' viewBox='0 0 260 165' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='60,30 185,35 220,130 40,130' fill='#fef3c7' stroke='#b45309' stroke-width='2.2'/><text x='46' y='26' font-size='13' font-weight='bold' fill='#0f172a'>A</text><text x='190' y='30' font-size='13' font-weight='bold' fill='#0f172a'>B</text><text x='225' y='138' font-size='13' font-weight='bold' fill='#0f172a'>C</text><text x='24' y='138' font-size='13' font-weight='bold' fill='#0f172a'>D</text><text x='66' y='50' font-size='12' font-weight='bold' fill='#b45309'>2x</text><text x='162' y='53' font-size='12' font-weight='bold' fill='#b45309'>3x</text><text x='184' y='122' font-size='12' font-weight='bold' fill='#b45309'>x</text><text x='48' y='122' font-size='12' font-weight='bold' fill='#dc2626'>4x</text></svg></div>",
+"options": [
+"18°",
+"36°",
+"45°",
+"30°"
+],
+"ans": 1,
+"exp": "Tổng các góc của tứ giác bằng 360° ⇒ 2x + 3x + x + 4x = 360° ⇔ 10x = 360° ⇒ x = 36°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho tứ giác ABCD có ∠C = 60°, ∠D = 80° và hai tia phân giác của ∠A, ∠B cắt nhau tại I như hình vẽ. Số đo ∠AIB bằng:<div class='my-3 flex justify-center'><svg width='265' height='170' viewBox='0 0 265 170' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='45,135 220,135 190,30 70,40' fill='#f0fdf4' stroke='#15803d' stroke-width='2.2'/><line x1='45' y1='135' x2='132' y2='92' stroke='#dc2626' stroke-width='1.8' stroke-dasharray='4,3'/><line x1='220' y1='135' x2='132' y2='92' stroke='#dc2626' stroke-width='1.8' stroke-dasharray='4,3'/><circle cx='132' cy='92' r='3.5' fill='#dc2626'/><text x='30' y='145' font-size='13' font-weight='bold'>A</text><text x='224' y='145' font-size='13' font-weight='bold'>B</text><text x='194' y='26' font-size='13' font-weight='bold'>C</text><text x='56' y='36' font-size='13' font-weight='bold'>D</text><text x='128' y='83' font-size='13' font-weight='bold' fill='#dc2626'>I</text><text x='78' y='55' font-size='12' font-weight='bold' fill='#15803d'>80°</text><text x='168' y='48' font-size='12' font-weight='bold' fill='#15803d'>60°</text><text x='122' y='112' font-size='12' font-weight='bold' fill='#dc2626'>?</text></svg></div>",
+"options": [
+"70°",
+"110°",
+"140°",
+"80°"
+],
+"ans": 0,
+"exp": "Ta có ∠A + ∠B = 360° - (60° + 80°) = 220°. Trong ΔAIB: ∠IAB + ∠IBA = (∠A + ∠B)/2 = 110° ⇒ ∠AIB = 180° - 110° = 70°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình thang ABCD (AB ∥ CD) có số đo các góc như hình vẽ. Tổng x + y bằng bao nhiêu?<div class='my-3 flex justify-center'><svg width='265' height='160' viewBox='0 0 265 160' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='70,35 185,35 225,130 35,130' fill='#eff6ff' stroke='#1d4ed8' stroke-width='2.2'/><text x='56' y='30' font-size='13' font-weight='bold'>A</text><text x='190' y='30' font-size='13' font-weight='bold'>B</text><text x='230' y='138' font-size='13' font-weight='bold'>C</text><text x='20' y='138' font-size='13' font-weight='bold'>D</text><text x='75' y='54' font-size='12' font-weight='bold' fill='#1d4ed8'>115°</text><text x='160' y='54' font-size='12' font-weight='bold' fill='#dc2626'>y</text><text x='188' y='122' font-size='12' font-weight='bold' fill='#1d4ed8'>55°</text><text x='48' y='122' font-size='12' font-weight='bold' fill='#dc2626'>x</text></svg></div>",
+"options": [
+"180°",
+"190°",
+"170°",
+"200°"
+],
+"ans": 1,
+"exp": "Vì AB ∥ CD nên ∠A + ∠D = 180° ⇒ x = 180° - 115° = 65°; và ∠B + ∠C = 180° ⇒ y = 180° - 55° = 125°. Vậy x + y = 65° + 125° = 190°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình thang cân ABCD (AB ∥ CD) có ∠D = 68° như hình vẽ. Số đo góc B bằng:<div class='my-3 flex justify-center'><svg width='265' height='160' viewBox='0 0 265 160' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='75,35 190,35 230,130 35,130' fill='#fdf4ff' stroke='#86198f' stroke-width='2.2'/><text x='62' y='30' font-size='13' font-weight='bold'>A</text><text x='194' y='30' font-size='13' font-weight='bold'>B</text><text x='234' y='138' font-size='13' font-weight='bold'>C</text><text x='20' y='138' font-size='13' font-weight='bold'>D</text><text x='48' y='122' font-size='12' font-weight='bold' fill='#86198f'>68°</text><text x='164' y='55' font-size='12' font-weight='bold' fill='#dc2626'>∠B = ?</text></svg></div>",
+"options": [
+"68°",
+"112°",
+"122°",
+"102°"
+],
+"ans": 1,
+"exp": "Trong hình thang cân ABCD (AB ∥ CD), hai góc kề đáy CD bằng nhau nên ∠C = ∠D = 68°. Vì AB ∥ CD nên ∠B + ∠C = 180° ⇒ ∠B = 180° - 68° = 112°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình bình hành ABCD có ∠A = 65° như hình vẽ. Số đo góc C và góc D lần lượt là:<div class='my-3 flex justify-center'><svg width='275' height='155' viewBox='0 0 275 155' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='75,35 235,35 195,125 35,125' fill='#ecfdf5' stroke='#047857' stroke-width='2.2'/><text x='62' y='30' font-size='13' font-weight='bold'>D</text><text x='240' y='30' font-size='13' font-weight='bold'>C</text><text x='198' y='136' font-size='13' font-weight='bold'>B</text><text x='20' y='136' font-size='13' font-weight='bold'>A</text><text x='48' y='118' font-size='12' font-weight='bold' fill='#047857'>65°</text><text x='204' y='54' font-size='12' font-weight='bold' fill='#dc2626'>C?</text><text x='78' y='54' font-size='12' font-weight='bold' fill='#dc2626'>D?</text></svg></div>",
+"options": [
+"65° và 115°",
+"115° và 65°",
+"65° và 125°",
+"125° và 65°"
+],
+"ans": 0,
+"exp": "Trong hình bình hành ABCD: các góc đối bằng nhau nên ∠C = ∠A = 65°; hai góc kề một cạnh bù nhau nên ∠D = 180° - 65° = 115°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình bình hành ABCD có ∠BAD = 110°, tia phân giác góc A cắt cạnh CD tại E như hình vẽ. Số đo góc ∠AEC bằng:<div class='my-3 flex justify-center'><svg width='275' height='155' viewBox='0 0 275 155' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='40,35 200,35 235,125 75,125' fill='#fff7ed' stroke='#c2410c' stroke-width='2.2'/><line x1='40' y1='35' x2='155' y2='125' stroke='#dc2626' stroke-width='1.8'/><text x='26' y='30' font-size='13' font-weight='bold'>A</text><text x='204' y='30' font-size='13' font-weight='bold'>B</text><text x='240' y='136' font-size='13' font-weight='bold'>C</text><text x='62' y='136' font-size='13' font-weight='bold'>D</text><text x='150' y='140' font-size='13' font-weight='bold' fill='#dc2626'>E</text><text x='48' y='55' font-size='11' font-weight='bold' fill='#c2410c'>110°</text><text x='158' y='116' font-size='12' font-weight='bold' fill='#dc2626'>?</text></svg></div>",
+"options": [
+"55°",
+"125°",
+"110°",
+"70°"
+],
+"ans": 1,
+"exp": "AE là phân giác ∠BAD = 110° ⇒ ∠BAE = 55°. Vì AB ∥ CD nên ∠AEC + ∠BAE = 180° (trong cùng phía) ⇒ ∠AEC = 180° - 55° = 125°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình chữ nhật ABCD có hai đường chéo cắt nhau tại O và ∠ABD = 32° như hình vẽ. Số đo góc ∠AOD bằng:<div class='my-3 flex justify-center'><svg width='270' height='155' viewBox='0 0 270 155' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><rect x='40' y='30' width='190' height='95' fill='#f0f9ff' stroke='#0284c7' stroke-width='2.2'/><line x1='40' y1='30' x2='230' y2='125' stroke='#0284c7' stroke-width='1.6'/><line x1='230' y1='30' x2='40' y2='125' stroke='#0284c7' stroke-width='1.6'/><text x='26' y='26' font-size='13' font-weight='bold'>A</text><text x='234' y='26' font-size='13' font-weight='bold'>B</text><text x='234' y='136' font-size='13' font-weight='bold'>C</text><text x='26' y='136' font-size='13' font-weight='bold'>D</text><text x='131' y='67' font-size='13' font-weight='bold'>O</text><text x='186' y='47' font-size='11' font-weight='bold' fill='#0284c7'>32°</text><text x='106' y='82' font-size='12' font-weight='bold' fill='#dc2626'>?</text></svg></div>",
+"options": [
+"32°",
+"64°",
+"116°",
+"58°"
+],
+"ans": 1,
+"exp": "Trong hình chữ nhật, OA = OB nên ΔOAB cân tại O ⇒ ∠OAB = ∠OBA = 32°. Góc ∠AOD là góc ngoài tại đỉnh O của ΔOAB nên ∠AOD = 32° + 32° = 64°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình thoi ABCD có ∠B = 110° như hình vẽ. Số đo góc ∠ACD bằng:<div class='my-3 flex justify-center'><svg width='265' height='165' viewBox='0 0 265 165' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><polygon points='132,20 225,82 132,145 40,82' fill='#faf5ff' stroke='#7e22ce' stroke-width='2.2'/><line x1='40' y1='82' x2='225' y2='82' stroke='#7e22ce' stroke-width='1.6' stroke-dasharray='4,3'/><text x='25' y='86' font-size='13' font-weight='bold'>A</text><text x='128' y='15' font-size='13' font-weight='bold'>B</text><text x='230' y='86' font-size='13' font-weight='bold'>C</text><text x='128' y='160' font-size='13' font-weight='bold'>D</text><text x='120' y='42' font-size='11' font-weight='bold' fill='#7e22ce'>110°</text><text x='182' y='96' font-size='12' font-weight='bold' fill='#dc2626'>?</text></svg></div>",
+"options": [
+"55°",
+"35°",
+"70°",
+"45°"
+],
+"ans": 1,
+"exp": "Trong hình thoi ABCD, ∠BCD = 180° - ∠B = 180° - 110° = 70°. Vì đường chéo CA là tia phân giác của ∠BCD nên ∠ACD = 70° : 2 = 35°."
+},
+{
+"subject": "toan",
+"topicId": "toan-c3",
+"topicName": "Chương 3: Tứ giác",
+"q": "Cho hình vuông ABCD và tam giác đều ABE nằm bên trong hình vuông như hình vẽ. Số đo góc ∠DEC bằng bao nhiêu?<div class='my-3 flex justify-center'><svg width='240' height='185' viewBox='0 0 240 185' class='bg-slate-50 rounded-xl border border-slate-200 p-2'><rect x='55' y='25' width='130' height='130' fill='#f0fdfa' stroke='#0f766e' stroke-width='2.2'/><polygon points='55,155 185,155 120,42' fill='#ccfbf1' stroke='#0f766e' stroke-width='1.8'/><line x1='55' y1='25' x2='120' y2='42' stroke='#dc2626' stroke-width='1.8'/><line x1='185' y1='25' x2='120' y2='42' stroke='#dc2626' stroke-width='1.8'/><text x='41' y='24' font-size='13' font-weight='bold'>D</text><text x='190' y='24' font-size='13' font-weight='bold'>C</text><text x='190' y='162' font-size='13' font-weight='bold'>B</text><text x='41' y='162' font-size='13' font-weight='bold'>A</text><text x='116' y='60' font-size='13' font-weight='bold' fill='#dc2626'>E</text><text x='115' y='37' font-size='12' font-weight='bold' fill='#dc2626'>?</text></svg></div>",
+"options": [
+"120°",
+"150°",
+"135°",
+"140°"
+],
+"ans": 1,
+"exp": "Vì ΔABE đều nên ∠EAB = 60° và AE = AB = AD ⇒ ΔDAE cân tại A có ∠DAE = 90° - 60° = 30° ⇒ ∠ADE = (180° - 30°)/2 = 75° ⇒ ∠EDC = 90° - 75° = 15°. Tương tự ∠ECD = 15° ⇒ ∠DEC = 180° - (15° + 15°) = 150°."
+}
 ]
